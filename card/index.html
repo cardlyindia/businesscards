@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <style>
+            .white
+            {
+                background: white !important;
+                border-radius: 19px !important;
+                border: 1px solid #000;
+            }
+            .card
+            {
+                border: 0px !important;
+            }
+
+.imagecp {
+    /*margin-top: 15px;*/
+    object-fit: cover;
+    width: 100%;
+    height: 350px;
+    border-radius: 17px;
+}
+
+
+
+/* Container holding the image and the text */
+
+.container-im {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+
+/* Bottom left text */
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+
+/* Top left text */
+
+.top-left {
+    position: absolute;
+    top: 25px;
+    left: 16px;
+}
+
+
+/* Top right text */
+
+.top-right {
+    position: absolute;
+    top: 25px;
+    right: 16px;
+}
+
+
+/* Bottom right text */
+
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+
+/* Centered text */
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.centered-left {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+/* [1] The container */
+.img-hover-zoom {
+ 
+  border-radius: 17px;
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img.zoom {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img.zoom {
+  transform: scale(1.5);
+}
+
+
+
+
+
+/* Brightness-zoom Container */
+.img-hover-zoom--brightness img.zoom {
+  transition: transform 2s, filter 1.5s ease-in-out;
+  transform-origin: center center;
+  filter: brightness(50%);
+  
+}
+
+/* The Transformation */
+.img-hover-zoom--brightness:hover img.zoom {
+  filter: brightness(100%);
+  transform: scale(1.3);
+  height: 350px;
+}
+
+
+.profile_rounded
+{
+   max-height: 180px !important;
+    border-radius: 50%;
+}
+.name
+{
+    margin-top: 0px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .profile_rounded
+            {
+                max-height: 157px !important;
+                border-radius: 50%;
+            }
+            h1,h2
+            {
+                font-size:17px !important;
+                line-height: 17px !important;
+            }
+
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-20%, -50%);
+}
+
+}
+
+
+        </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <div class="card text-center   white ">
+            <!-- <div class="card-header ">
+                <a href="https://technologytalks.in/guiding-cios-and-it-executives-to-accelerate-digital-business/" class="d-flex align-items-center text-dark text-decoration-none">
+               
+                <img src="" height="32" class="me-2">
+                <span class="fs-4">Gartner, Inc. and/or its affiliates</span>
+                </a>
+            </div> -->
+            <!-- <img src="unsplash-photo-3.jpg" class="card-img-top imagecp news-story-img" alt="...">
+            -->
+            <div class="container-im img-hover-zoom img-hover-zoom--brightness">
+                <img src="2.jpeg" class="card-img-top imagecp news-story-img zoom"  alt="...">
+        
+                
+                <div class="bottom-left edate">
+                 <div>14 – 16 November 2022 </div>
+                <div class="timed">
+                
+                </div>
+                </div>
+                <div class="top-left ">ss</div>
+                <div class="top-right">
+                    <button type="button" class="btn btn-primary btn-sm">Download</button>
+
+                </div>
+                <div class="bottom-right">ss</div>
+                <div class="centered "> 
+
+                   
+                  
+                      
+                        <div class="row">
+                          <div class="col-3 ">
+                            <img src="photo.jpg" class=" img-fluid    profile_rounded" alt="...">
+                          </div>
+                          <div class="col-9   align-self-center   " >
+
+                            
+
+                                <div class="text-start ">
+                                    <h1 class="name">SAJI JACOB s</h5>
+                                    <h2 class="text-decoration-none">Star Creation</h2>
+                      
+                                  </div>
+
+
+                            
+                          </div>
+                        </div>
+                   
+
+
+
+
+                </div>
+                <div class="centered-left "> 
+
+
+                    <!-- <div class="container">
+
+
+                      
+
+
+                    </div> -->
+
+                      
+                   
+
+
+                </div>
+            </div>
+            
+            
+            <div class="card-body">
+                <h5 class="card-title">hello</h5>
+                 
+            </div>
+            <div class="card-footer text-muted  cmpadd">
+            
+            </div>
+            </div>
+
+    
+
+    </div>
+
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+    <script src="colornode.js"></script>
+
+</body>
+
+</html>
