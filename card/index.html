@@ -1192,25 +1192,44 @@
     <script src="colornode.js"></script>
     <script>
 
+// // Get all elements with class "img-hover-zoom"
+// var imgHoverZoomElements = document.querySelectorAll(".img-hover-zoom");
+
+// // Function to apply zoom effect based on scroll position
+// function applyImageZoom() {
+//     var scroll = window.pageYOffset || document.documentElement.scrollTop;
+
+//     imgHoverZoomElements.forEach(function(element) {
+//         var zoomedImage = element.querySelector("img.zoom");
+//         var scaleFactor = 1 + scroll / 500; // Adjust the divisor for desired zoom effect sensitivity
+
+//         zoomedImage.style.transform = "scale(" + scaleFactor + ")";
+//     });
+// }
+
+// // Add scroll event listener
+// window.addEventListener("scroll", applyImageZoom);
+
 // Get all elements with class "img-hover-zoom"
 var imgHoverZoomElements = document.querySelectorAll(".img-hover-zoom");
 
 // Function to apply zoom effect based on scroll position
 function applyImageZoom() {
-    var scroll = window.pageYOffset || document.documentElement.scrollTop;
+  var scroll = window.pageYOffset || document.documentElement.scrollTop;
 
-    imgHoverZoomElements.forEach(function(element) {
-        var zoomedImage = element.querySelector("img.zoom");
-        var scaleFactor = 1 + scroll / 500; // Adjust the divisor for desired zoom effect sensitivity
+  imgHoverZoomElements.forEach(function(element) {
+    var zoomedImage = element.querySelector("img.zoom");
+    var scaleFactor = 1 + scroll / 500; // Adjust the divisor for desired zoom effect sensitivity
 
-        zoomedImage.style.transform = "scale(" + scaleFactor + ")";
-    });
+    zoomedImage.style.transform = "scale(" + scaleFactor + ")";
+  });
+
+  // Request next frame
+  requestAnimationFrame(applyImageZoom);
 }
 
-// Add scroll event listener
-window.addEventListener("scroll", applyImageZoom);
-
-
+// Initiate smooth scrolling effect
+requestAnimationFrame(applyImageZoom);
 
 
 
