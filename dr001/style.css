@@ -1,0 +1,280 @@
+
+.text-black {
+    color: #000;
+  }
+
+  body {
+    background-color: #000000;
+  }
+
+  #con a {
+    color: #FFFFFF
+  }
+
+  .owl-carousel .owl-stage {
+    background: #e4e4e4 !important;
+    max-height: 400px !important;
+    overflow: hidden;
+  }
+
+
+  .avatar-wrap {
+    width: 130px;
+    height: 130px;
+    position: relative;
+  }
+
+  .avatar {
+    vertical-align: middle;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+  }
+
+  .avatar-wrap span {
+    position: absolute;
+    bottom: 10px;
+    left: 120px;
+    /*   background: deepskyblue; */
+    border-radius: 100%;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  * {
+    margin: 0;
+    padding: 0
+  }
+
+
+
+  .card {
+    width: 350px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s
+  }
+
+  .zoom img {
+    transition: all 0.5s
+  }
+
+  .card:hover .zoom img {
+    transform: scale(1.5)
+  }
+
+  .btn {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%
+  }
+
+  .name {
+    font-size: 22px;
+    font-weight: bold
+  }
+
+  .idd {
+    font-size: 14px;
+    font-weight: 600
+  }
+
+  .idd1 {
+    font-size: 12px
+  }
+
+  .number {
+    font-size: 22px;
+    font-weight: bold
+  }
+
+  .follow {
+    font-size: 12px;
+    font-weight: 500;
+    color: #444444
+  }
+
+  .btn1 {
+    height: 40px;
+    width: 150px;
+    border: none;
+    background-color: #000;
+    color: #aeaeae;
+    font-size: 15px
+  }
+
+  .text span {
+    font-size: 13px;
+    color: #545454;
+    font-weight: 500
+  }
+
+  .icons i {
+    font-size: 19px
+  }
+
+  hr .new1 {
+    border: 1px solid
+  }
+
+  .join {
+    font-size: 14px;
+    color: #a0a0a0;
+    font-weight: bold
+  }
+
+  .date {
+    background-color: #ccc
+  }
+
+  a {
+    text-decoration: none;
+
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .padextra {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .zoom {
+    border-radius: 50%;
+  }
+
+  body {
+    /*  background: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);*/
+  }
+
+  .bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+
+  .bubble {
+    position: absolute;
+    bottom: -100px;
+    width: 40px;
+    height: 40px;
+    background: #f1f1f1;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: rise 10s infinite ease-in;
+  }
+
+  .bubble:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    left: 10%;
+    animation-duration: 8s;
+  }
+
+  .bubble:nth-child(2) {
+    width: 20px;
+    height: 20px;
+    left: 20%;
+    animation-duration: 5s;
+    animation-delay: 1s;
+  }
+
+  .bubble:nth-child(3) {
+    width: 50px;
+    height: 50px;
+    left: 35%;
+    animation-duration: 7s;
+    animation-delay: 2s;
+  }
+
+  .bubble:nth-child(4) {
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    animation-duration: 11s;
+    animation-delay: 0s;
+  }
+
+  .bubble:nth-child(5) {
+    width: 35px;
+    height: 35px;
+    left: 55%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+  }
+
+  .bubble:nth-child(6) {
+    width: 45px;
+    height: 45px;
+    left: 65%;
+    animation-duration: 8s;
+    animation-delay: 3s;
+  }
+
+  .bubble:nth-child(7) {
+    width: 90px;
+    height: 90px;
+    left: 70%;
+    animation-duration: 12s;
+    animation-delay: 2s;
+  }
+
+  .bubble:nth-child(8) {
+    width: 25px;
+    height: 25px;
+    left: 80%;
+    animation-duration: 6s;
+    animation-delay: 2s;
+  }
+
+  .bubble:nth-child(9) {
+    width: 15px;
+    height: 15px;
+    left: 70%;
+    animation-duration: 5s;
+    animation-delay: 1s;
+  }
+
+  .bubble:nth-child(10) {
+    width: 90px;
+    height: 90px;
+    left: 25%;
+    animation-duration: 10s;
+    animation-delay: 4s;
+  }
+
+  @keyframes rise {
+    0% {
+      bottom: -100px;
+      transform: translateX(0);
+    }
+
+    50% {
+      transform: translate(100px);
+    }
+
+    100% {
+      bottom: 1080px;
+      transform: translateX(-200px);
+    }
+  }
+
+  .card-footer {
+
+    background-color: rgb(255 255 255 / 3%);
+    border-top: 1px solid rgba(0, 0, 0, .125);
+  }
+
+  .service p {
+    color: #000 !important;
+  }
