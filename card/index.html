@@ -15,6 +15,10 @@
 {
     font-family: 'Roboto Condensed', sans-serif;
 }
+html
+{
+    scroll-behavior: auto !important;
+}
         .white {
             background: white !important;
             border-radius: 19px !important;
@@ -1352,24 +1356,7 @@
         integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
         crossorigin="anonymous"></script>
     <script src="colornode.js"></script>
-   <script>
-
-window.addEventListener('scroll', function() {
-  var container = document.querySelector('.container-im');
-  var image = document.querySelector('.card-img-top');
-  var containerHeight = container.offsetHeight;
-  var containerTop = container.getBoundingClientRect().top;
-  var containerBottom = containerTop + containerHeight;
-  var windowHeight = window.innerHeight;
-
-  if (containerBottom > 0 && containerTop < windowHeight) {
-    image.classList.add('zoomed');
-  } else {
-    image.classList.remove('zoomed');
-  }
-});
-
-   </script>
+  
 
 </body>
 
