@@ -15,10 +15,6 @@
 {
     font-family: 'Roboto Condensed', sans-serif;
 }
-html
-{
-    scroll-behavior: auto !important;
-}
         .white {
             background: white !important;
             border-radius: 19px !important;
@@ -437,16 +433,6 @@ html
         {
             background: none !important;
         }
-
-
-
-
-
-
-
-
-
-
     </style>
 </head>
 
@@ -535,11 +521,7 @@ html
 
                     <div class="row">
                         <div class="col-3 ">
-
                             <img src="photo.jpg" class=" img-fluid    profile_rounded" alt="...">
-                          
-
-                            
                         </div>
                         <div class="col-9   align-self-center   ">
 
@@ -597,7 +579,7 @@ html
 
                     <div class="card-body">
         
-
+                        
                       <div class="row">
         
                         <!-- <div class="col-1 align-self-center">s</div> -->
@@ -1356,78 +1338,24 @@ html
         integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
         crossorigin="anonymous"></script>
     <script src="colornode.js"></script>
-  
-    <script>
+   <script>
 
-       
-        
-        // // Get all elements with class "img-hover-zoom"
-        // var imgHoverZoomElements = document.querySelectorAll(".img-hover-zoom");
-        
-        // // Function to apply zoom effect based on scroll position
-        // function applyImageZoom() {
-        //   var scroll = window.pageYOffset || document.documentElement.scrollTop;
-        
-        //   imgHoverZoomElements.forEach(function(element) {
-        //     var zoomedImage = element.querySelector("img.zoom");
-        //     var scaleFactor = 1 + scroll / 500; // Adjust the divisor for desired zoom effect sensitivity
-        
-        //     zoomedImage.style.transform = "scale(" + scaleFactor + ")";
-        //   });
-        
-        //   // Request next frame
-        //   requestAnimationFrame(applyImageZoom);
-        // }
-        
-        // // Initiate smooth scrolling effect
-        // requestAnimationFrame(applyImageZoom);
-        
-        
+window.addEventListener('scroll', function() {
+  var container = document.querySelector('.container-im');
+  var image = document.querySelector('.card-img-top');
+  var containerHeight = container.offsetHeight;
+  var containerTop = container.getBoundingClientRect().top;
+  var containerBottom = containerTop + containerHeight;
+  var windowHeight = window.innerHeight;
 
-        var imgHoverZoomElements = document.querySelectorAll(".img-hover-zoom");
-var ticking = false;
-
-// Function to apply zoom effect based on scroll position
-function applyImageZoom() {
-  var scroll = window.pageYOffset || document.documentElement.scrollTop;
-
-  imgHoverZoomElements.forEach(function (element) {
-    var zoomedImage = element.querySelector("img.zoom");
-    var scaleFactor = 1 + scroll / 500; // Adjust the divisor for desired zoom effect sensitivity
-
-    zoomedImage.style.transform = "scale(" + scaleFactor + ")";
-  });
-
-  ticking = false;
-}
-
-// Throttle scroll event
-function handleScroll() {
-  if (!ticking) {
-    requestAnimationFrame(applyImageZoom);
-    ticking = true;
+  if (containerBottom > 0 && containerTop < windowHeight) {
+    image.classList.add('zoomed');
+  } else {
+    image.classList.remove('zoomed');
   }
-}
+});
 
-// Debounce resize event
-function debounce(func, delay) {
-  var timeout;
-  return function () {
-    clearTimeout(timeout);
-    timeout = setTimeout(func, delay);
-  };
-}
-
-// Initiate smooth scrolling effect
-requestAnimationFrame(applyImageZoom);
-
-// Add event listeners for scroll and resize events
-window.addEventListener("scroll", handleScroll);
-window.addEventListener("resize", debounce(applyImageZoom, 250));
-
-        
-            </script>
-        
+   </script>
 
 </body>
 
