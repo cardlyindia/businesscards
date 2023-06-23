@@ -1461,64 +1461,102 @@ navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
 
 
 ///////////////////////////button
-function downloadVCard() {
-  var jsonData = {
-    firstName: "John",
-    lastName: "Doe",
-    organization: "Company Name",
-    jobTitle: "Founder",
-    phoneNumber: "123456789",
-    cellNumber: "987654321",
-    email: "john.doe@example.com",
-    website: "http://www.example.com",
-    socialProfiles: {
-      twitter: "http://www.twitter.com/johndoe",
-      linkedin: "http://www.linkedin.com/in/johndoe",
-      facebook: "http://www.facebook.com/johndoe",
-      instagram: "http://www.instagram.com/johndoe",
-      youtube: "http://www.youtube.com/johndoe",
-      pinterest: "http://www.pinterest.com/johndoe"
-    },
-    whatsapp: "+123456789",
-    paypalEmail: "john.doe@example.com"
-  };
 
-  var vCardData = "BEGIN:VCARD\n" +
-                  "VERSION:3.0\n" +
-                  "N:" + jsonData.lastName + ";" + jsonData.firstName + ";;\n" +
-                  "FN:" + jsonData.firstName + " " + jsonData.lastName + "\n" +
-                  "ORG:" + jsonData.organization + "\n" +
-                  "TITLE:" + jsonData.jobTitle + "\n" +
-                  "TEL;TYPE=work,voice:" + jsonData.phoneNumber + "\n" +
-                  "TEL;TYPE=cell:" + jsonData.cellNumber + "\n" +
-                  "EMAIL:" + jsonData.email + "\n" +
-                  "URL:" + jsonData.website + "\n" +
-                  "X-SOCIALPROFILE;type=twitter:" + jsonData.socialProfiles.twitter + "\n" +
-                  "X-SOCIALPROFILE;type=linkedin:" + jsonData.socialProfiles.linkedin + "\n" +
-                  "X-SOCIALPROFILE;type=facebook:" + jsonData.socialProfiles.facebook + "\n" +
-                  "X-SOCIALPROFILE;type=instagram:" + jsonData.socialProfiles.instagram + "\n" +
-                  "X-SOCIALPROFILE;type=youtube:" + jsonData.socialProfiles.youtube + "\n" +
-                  "X-SOCIALPROFILE;type=pinterest:" + jsonData.socialProfiles.pinterest + "\n" +
-                  "X-SOCIALPROFILE;type=whatsapp:" + jsonData.whatsapp + "\n" +
-                  "X-PAYPAL-EMAIL:" + jsonData.paypalEmail + "\n" +
-                  "END:VCARD";
+// JSON object representing the vCard data
+var vCardData = {
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "johndoe@example.com",
+  "phone": "+123456789",
+  "addressType": "home",
+  "address": {
+    "street": "123 Main St",
+    "city": "New York",
+    "state": "NY",
+    "country": "USA",
+    "postalCode": "12345"
+  },
+  "socialMedia": {
+    "whatsapp": "+1234567890",
+    "instagram": "@johndoe",
+    "twitter": "@johndoe",
+    "facebook": "JohnDoe",
+    "linkedin": "/in/johndoe",
+    "youtube": "JohnDoeChannel"
+  },
+  "website": "https://example.com",
+  "jobTitle": "Developer",
+  "organization": "ABC Company"
+};
 
-  var fileName = "contact.vcf";
-  var blob = new Blob([vCardData], { type: "text/vcard" });
+// Function to create the vCard string
+function createVCard(vCardData) {
+  var vCard = "BEGIN:VCARD\n";
+  vCard += "VERSION:3.0\n";
+  vCard += "N:" + (vCardData.lastName || "") + ";" + (vCardData.firstName || "") + ";;;\n";
+  vCard += "FN:" + (vCardData.firstName || "") + " " + (vCardData.lastName || "") + "\n";
+  vCard += "EMAIL:" + (vCardData.email || "") + "\n";
+  vCard += "TEL:" + (vCardData.phone || "") + "\n";
 
-  if (navigator.msSaveBlob) {
-    // For IE/Edge browsers
-    navigator.msSaveBlob(blob, fileName);
-  } else {
-    // For other browsers
-    var link = document.createElement("a");
-    link.href = window.URL.createObjectURL(blob);
-    link.setAttribute("download", fileName);
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  if (vCardData.address) {
+    var addressType = vCardData.addressType === "office" ? "WORK" : "HOME";
+    vCard += "ADR;TYPE=" + addressType + ":;;" + (vCardData.address.street || "") + ";" + (vCardData.address.city || "") + ";" + (vCardData.address.state || "") + ";" + (vCardData.address.postalCode || "") + ";" + (vCardData.address.country || "") + "\n";
   }
+
+  if (vCardData.socialMedia) {
+    if (vCardData.socialMedia.whatsapp) {
+      vCard += "X-SOCIALPROFILE;TYPE=whatsapp:" + vCardData.socialMedia.whatsapp + "\n";
+    }
+    
+    if (vCardData.socialMedia.instagram) {
+      vCard += "X-SOCIALPROFILE;TYPE=instagram:" + vCardData.socialMedia.instagram + "\n";
+    }
+    
+    if (vCardData.socialMedia.twitter) {
+      vCard += "X-SOCIALPROFILE;TYPE=twitter:" + vCardData.socialMedia.twitter + "\n";
+    }
+    
+    if (vCardData.socialMedia.facebook) {
+      vCard += "X-SOCIALPROFILE;TYPE=facebook:" + vCardData.socialMedia.facebook + "\n";
+    }
+    
+    if (vCardData.socialMedia.linkedin) {
+      vCard += "X-SOCIALPROFILE;TYPE=linkedin:" + vCardData.socialMedia.linkedin + "\n";
+    }
+    
+    if (vCardData.socialMedia.youtube) {
+      vCard += "X-SOCIALPROFILE;TYPE=youtube:" + vCardData.socialMedia.youtube + "\n";
+    }
+  }
+  
+  if (vCardData.website) {
+    vCard += "URL:" + vCardData.website + "\n";
+  }
+
+  if (vCardData.jobTitle) {
+    vCard += "TITLE:" + vCardData.jobTitle + "\n";
+  }
+
+  if (vCardData.organization) {
+    vCard += "ORG:" + vCardData.organization + "\n";
+  }
+
+  vCard += "END:VCARD";
+  return vCard;
 }
+
+// Function to download the vCard file
+function downloadVCard() {
+  var vCard = createVCard(vCardData);
+  var element = document.createElement("a");
+  element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(vCard));
+  element.setAttribute("download", "contact.vcf");
+  element.style.display = "none";
+  document.body.appendChild(element);
+  element.click();
+  document.body.removeChild(element);
+}
+
 
 var downloadButton = document.getElementById("downloadvcard");
 downloadButton.addEventListener("click", downloadVCard);
