@@ -71,7 +71,7 @@
 .redbg{
   background: rgba(236, 236, 236, 0.692);
 }
-.whitebg
+.whitebg,.justwhitebg
 {
   background: #fff !important;
 }
@@ -417,11 +417,25 @@ html
             padding: 30px !important;
         }
 
+
+        #header-shape-gradient {
+  --color-stop: #f12c06;
+  --color-bot: #faed34;
+}
+
         .socialme
         {
-
+            /* fill: red !important; */
+            fill:  #4a2280 !important; 
             height: 50px !important;
         }
+        .socialme:hover
+        {
+            /* fill: red !important; */
+            fill: #dd0303 !important; 
+            height: 50px !important;
+        }
+
         a.socialbox
         {
             text-decoration: none !important;
@@ -1295,18 +1309,19 @@ html
               <div class="container-fluid-not">
 
 
-                <div class="card contact-card1 p-4 whitebg">
+                <div class="card contact-card1 p-4 justwhitebg">
 
                     <div class="card-title">
 
-                        <h3>Social media    </h3>
+                        <h3>My Presence in Social Media    </h3>
 
                     </div>
                     <div class="card-body">
                 <div class="container">
                     <div class="row justify-content-center">
                    
-                      <div class="col">
+                      <div class="col-md-12 d-flex gap-2 justify-content-center">
+                        
                         
                         <a target="_blank"  href="https://www.facebook.com/starvithura/" class="socialbox">
                         <div class="card nobg">
@@ -1320,13 +1335,13 @@ html
                         </div>
                            </a>
 
-                      </div>
+                      <!-- </div>
 
 
 
 
 
-                      <div class="col">
+                      <div class="col"> -->
                         
                         <a target="_blank"  href="https://www.instagram.com/starvithura/" class="socialbox">
                         <div class="card nobg">
@@ -1341,11 +1356,11 @@ html
                         </div>
                            </a>
 
-                      </div>
+                      <!-- </div>
 
 
 
-                      <div class="col">
+                      <div class="col"> -->
                         
                         <a target="_blank" href="https://www.youtube.com/channel/UCkY01c0SYvVhClgRgnk4oGg" class="socialbox">
                         <div class="card nobg">
@@ -1353,7 +1368,7 @@ html
                           
                             
                                 <svg class="socialme" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.84499 4.77535C10.4365 4.40822 13.5635 4.40822 16.155 4.77535C18.5096 5.10891 20.3341 6.76142 20.6831 8.54141C21.1056 10.6962 21.1056 13.3038 20.6831 15.4586C20.3341 17.2386 18.5096 18.8911 16.1551 19.2247C13.5635 19.5918 10.4365 19.5918 7.84499 19.2247C5.49049 18.8911 3.666 17.2386 3.31691 15.4586C2.89434 13.3038 2.89438 10.6962 3.31692 8.54142C3.66596 6.76141 5.49048 5.10891 7.84499 4.77535ZM16.4356 2.79512C13.658 2.40163 10.3421 2.40163 7.56446 2.79512C4.54986 3.22219 1.90016 5.37282 1.35429 8.15657C0.881927 10.5655 0.881875 13.4345 1.3543 15.8434C1.90021 18.6272 4.54984 20.7778 7.56446 21.2049C10.3421 21.5984 13.658 21.5984 16.4356 21.2049C19.4502 20.7778 22.0999 18.6272 22.6458 15.8434C23.1181 13.4345 23.1181 10.5655 22.6458 8.15658C22.0999 5.37281 19.4502 3.22219 16.4356 2.79512ZM10.5547 7.16795C10.2478 6.96338 9.8533 6.94431 9.52814 7.11833C9.20299 7.29234 9 7.6312 9 8V16C9 16.3688 9.20299 16.7077 9.52814 16.8817C9.8533 17.0557 10.2478 17.0366 10.5547 16.8321L16.5547 12.8321C16.8329 12.6466 17 12.3344 17 12C17 11.6656 16.8329 11.3534 16.5547 11.1679L10.5547 7.16795ZM14.1972 12L11 14.1315V9.86852L14.1972 12Z" fill="#000000"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.84499 4.77535C10.4365 4.40822 13.5635 4.40822 16.155 4.77535C18.5096 5.10891 20.3341 6.76142 20.6831 8.54141C21.1056 10.6962 21.1056 13.3038 20.6831 15.4586C20.3341 17.2386 18.5096 18.8911 16.1551 19.2247C13.5635 19.5918 10.4365 19.5918 7.84499 19.2247C5.49049 18.8911 3.666 17.2386 3.31691 15.4586C2.89434 13.3038 2.89438 10.6962 3.31692 8.54142C3.66596 6.76141 5.49048 5.10891 7.84499 4.77535ZM16.4356 2.79512C13.658 2.40163 10.3421 2.40163 7.56446 2.79512C4.54986 3.22219 1.90016 5.37282 1.35429 8.15657C0.881927 10.5655 0.881875 13.4345 1.3543 15.8434C1.90021 18.6272 4.54984 20.7778 7.56446 21.2049C10.3421 21.5984 13.658 21.5984 16.4356 21.2049C19.4502 20.7778 22.0999 18.6272 22.6458 15.8434C23.1181 13.4345 23.1181 10.5655 22.6458 8.15658C22.0999 5.37281 19.4502 3.22219 16.4356 2.79512ZM10.5547 7.16795C10.2478 6.96338 9.8533 6.94431 9.52814 7.11833C9.20299 7.29234 9 7.6312 9 8V16C9 16.3688 9.20299 16.7077 9.52814 16.8817C9.8533 17.0557 10.2478 17.0366 10.5547 16.8321L16.5547 12.8321C16.8329 12.6466 17 12.3344 17 12C17 11.6656 16.8329 11.3534 16.5547 11.1679L10.5547 7.16795ZM14.1972 12L11 14.1315V9.86852L14.1972 12Z" />
                                     </svg>
 
                             <p class="card-text">Youtube</p>
@@ -1425,7 +1440,7 @@ html
 
 
 
-              <div class="container-fluid whitebg mb-3 mt-3">
+              <div class="container-fluid justwhitebg  mt-3">
 
                 <img src="logo.jpg" class="img-fluid m-3" >
 
