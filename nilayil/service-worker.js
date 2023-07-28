@@ -14,6 +14,8 @@ const cacheNames = {
   const filesToCache = [
     '/',
     '/nilayil/index.html',
+    '/nilayil/vithura.html',
+    '/nilayil/aryanadu.html',
     '/nilayil/bg1.jpg',
     '/nilayil/logo.png',
     // Add more local resources to cache as needed
