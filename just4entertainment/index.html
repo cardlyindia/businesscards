@@ -869,6 +869,34 @@
 
    <script>
   
+  const imageURI = 'logo.png';
+  let imageb64 = '';
+// Fetch the image data
+fetch(imageURI)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.arrayBuffer();
+  })
+  .then((imageData) => {
+    // Encode the image data to base64
+    const base64Image = btoa(
+      new Uint8Array(imageData).reduce(
+        (data, byte) => data + String.fromCharCode(byte),
+        ''
+      )
+    );
+
+    // Now you have the base64 encoded image
+    imageb64=base64Image;
+    console.log(base64Image);
+  })
+  .catch((error) => {
+    console.error('Error fetching or encoding the image:', error);
+  });
+
+
      document.getElementById('downloadvcard').addEventListener('click', function() {
     // vCard data
     let vcfContent = ''
@@ -885,9 +913,10 @@ vcfContent += "URL:www.just4entertainment.com\n";
 vcfContent += "X-FACEBOOK:https://www.facebook.com/people/Just-4-Entertainment/100095367826617/\n";
 vcfContent += "X-GOOGLE-MAP:https://maps.app.goo.gl/7PxDzNKZNGRDZ3Xw8\n";
 vcfContent += "NOTE:A Powerhouse for Event Ticketing\n";
-vcfContent += "PHOTO;VALUE=URL;TYPE=PNG:https://www.cardly.in/just4entertainment/photo.png\n";
+// vcfContent += "PHOTO;VALUE=URL;TYPE=PNG:https://www.cardly.in/just4entertainment/photo.png\n";
 vcfContent += "LOGO;VALUE=URL;TYPE=PNG:https://www.cardly.in/just4entertainment/logo.png\n";
-vcfContent += "END:VCARD"
+vcfContent += "PHOTO;ENCODING=BASE64;TYPE=PNG:"+imageb64;
+vcfContent += "\nEND:VCARD"
 
     // Create a Blob containing the vCard data
     const blob = new Blob([vcfContent], { type: 'text/vcard' });
