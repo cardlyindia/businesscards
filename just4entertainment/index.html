@@ -889,7 +889,7 @@ vcfContent += "END:VCARD"
      function downloadVCard() {
        var vCard = createVCard(vCardData);
        var element = document.createElement("a");
-       element.setAttribute("href", "data:text/plain;charset=utf-8,"); encodeURIComponent(vCard));
+       element.setAttribute("href", "data:text/plain;charset=utf-8,"); encodeURIComponent(vCard);
        element.setAttribute("download", "contact.vcf");
        element.style.display = "none";
        document.body.appendChild(element);
