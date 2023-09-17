@@ -929,6 +929,7 @@ vcfContent += "\nEND:VCARD"
     // Set the download link's href and click it programmatically
     const downloadLink = document.getElementById('downloadLink');
     downloadLink.href = url;
+    downloadLink.setAttribute('download', 'Just4Entertainment.vcf');
     downloadLink.style.display = 'block';
     downloadLink.click();
 
