@@ -865,39 +865,47 @@
        }
      });
    </script>
+     <a id="downloadLink" style="display:none" download="contact.vcf"></a>
+
    <script>
-     function createVCard(vCardData) {
-let vcfContent = ''
-vcfContent += "BEGIN:VCARD"
-vcfContent += "VERSION:3.0"
-vcfContent += "FN:John Doe"
-vcfContent += "N:Just4Entertainment;;;;"
-vcfContent += "ORG:Just4Entertainment"
-vcfContent += "TITLE:Just4Entertainment"
-vcfContent += "EMAIL;TYPE=INTERNET:rahul.jayalal@gmail.com"
-vcfContent += "TEL;TYPE=WORK,VOICE:+971-56-55-44-777"
-vcfContent += "ADR;TYPE=WORK:;;Musaffah - M-39 - Abu Dhabi - United Arab Emiratesn;;;UAE"
-vcfContent += "URL:www.just4entertainment.com"
-vcfContent += "X-FACEBOOK:https://www.facebook.com/people/Just-4-Entertainment/100095367826617/"
-vcfContent += "X-GOOGLE-MAP:https://maps.app.goo.gl/7PxDzNKZNGRDZ3Xw8"
-vcfContent += "NOTE:A Powerhouse for Event Ticketing"
-vcfContent += "PHOTO;VALUE=URL;TYPE=PNG:https://www.cardly.in/just4entertainment/photo.png"
-vcfContent += "LOGO;VALUE=URL;TYPE=PNG:https://www.cardly.in/just4entertainment/logo.png"
+  
+     document.getElementById('downloadvcard').addEventListener('click', function() {
+    // vCard data
+    let vcfContent = ''
+vcfContent += "BEGIN:VCARD\n";
+vcfContent += "VERSION:3.0\n";
+vcfContent += "FN:John Doe\n";
+vcfContent += "N:Just4Entertainment;;;;\n";
+vcfContent += "ORG:Just4Entertainment\n";
+vcfContent += "TITLE:Just4Entertainment\n";
+vcfContent += "EMAIL;TYPE=INTERNET:rahul.jayalal@gmail.\n";
+vcfContent += "TEL;TYPE=WORK,VOICE:+971-56-55-44-777\n";
+vcfContent += "ADR;TYPE=WORK:;;Musaffah - M-39 - Abu Dhabi - United Arab Emiratesn;;;UAE\n";
+vcfContent += "URL:www.just4entertainment.com\n";
+vcfContent += "X-FACEBOOK:https://www.facebook.com/people/Just-4-Entertainment/100095367826617/\n";
+vcfContent += "X-GOOGLE-MAP:https://maps.app.goo.gl/7PxDzNKZNGRDZ3Xw8\n";
+vcfContent += "NOTE:A Powerhouse for Event Ticketing\n";
+vcfContent += "PHOTO;VALUE=URL;TYPE=PNG:https://www.cardly.in/just4entertainment/photo.png\n";
+vcfContent += "LOGO;VALUE=URL;TYPE=PNG:https://www.cardly.in/just4entertainment/logo.png\n";
 vcfContent += "END:VCARD"
-       return vcfContent;}
-     // Function to download the vCard file
-     function downloadVCard() {
-       var vCard = createVCard();
-       var element = document.createElement("a");
-       element.setAttribute("href", "data:text/plain;charset=utf-8,"); encodeURIComponent(vCard);
-       element.setAttribute("download", "contact.vcf");
-       element.style.display = "none";
-       document.body.appendChild(element);
-       element.click();
-       document.body.removeChild(element);
-     }
-     var downloadButton = document.getElementById("downloadvcard");
-     downloadButton.addEventListener("click", downloadVCard);
+
+    // Create a Blob containing the vCard data
+    const blob = new Blob([vcfContent], { type: 'text/vcard' });
+
+    // Create an object URL for the Blob
+    const url = URL.createObjectURL(blob);
+
+    // Set the download link's href and click it programmatically
+    const downloadLink = document.getElementById('downloadLink');
+    downloadLink.href = url;
+    downloadLink.style.display = 'block';
+    downloadLink.click();
+
+    // Clean up by revoking the object URL
+    URL.revokeObjectURL(url);
+});
+
+
    </script>
    <!-- Google tag (gtag.js) -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GED109S1GN"></script>
