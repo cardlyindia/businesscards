@@ -823,7 +823,7 @@ PACKER NO KRL/THI/P_11979/2022<br/>
        imgHoverZoomElements.forEach(function (element) {
          var zoomedImage = element.querySelector("img.zoom");
          var scaleFactor = 1 + scroll / 500; // Adjust the divisor for desired zoom effect sensitivity
-         zoomedImage.style.transform = "scale("); scaleFactor + ")";
+         zoomedImage.style.transform = "scale("+ scaleFactor + ")";
        });
        ticking = false;
      }
@@ -880,7 +880,7 @@ fetch(imageURI)
 
     // Now you have the base64 encoded image
     imageb64=base64Image;
-    console.log(base64Image);
+    // console.log(base64Image);
   })
   .catch((error) => {
     console.error('Error fetching or encoding the image:', error);
@@ -923,6 +923,7 @@ vcfContent += "\nEND:VCARD"
 });
 
    </script>
+    <a id="downloadLink" style="display:none" download="contact.vcf"></a>
    <!-- Google tag (gtag.js) -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GED109S1GN"></script>
    <script>
