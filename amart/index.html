@@ -1010,7 +1010,7 @@
            imgHoverZoomElements.forEach(function (element) {
              var zoomedImage = element.querySelector("img.zoom");
              var scaleFactor = 1 + scroll / 500; // Adjust the divisor for desired zoom effect sensitivity
-             zoomedImage.style.transform = "scale("); scaleFactor + ")";
+             zoomedImage.style.transform = "scale("+ scaleFactor + ")";
            });
            ticking = false;
          }

@@ -943,7 +943,7 @@
              </div>
            </a>
 
-           
+
          </div>
          <div class="container-fluid-not">
            <div class="card contact-card1 p-4 justwhitebg">
@@ -1057,7 +1057,7 @@
        imgHoverZoomElements.forEach(function (element) {
          var zoomedImage = element.querySelector("img.zoom");
          var scaleFactor = 1 + scroll / 500; // Adjust the divisor for desired zoom effect sensitivity
-         zoomedImage.style.transform = "scale("); scaleFactor + ")";
+         zoomedImage.style.transform = "scale("+ scaleFactor + ")";
        });
        ticking = false;
      }
