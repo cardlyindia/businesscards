@@ -637,7 +637,7 @@
                </div>
              </div>
            </a>
-           <a target="_self" href="#" class="socialboxlink whitebg">
+           <a target="_self" href="https://cardly.in/kunjuveettil" class="socialboxlink whitebg">
              <div class="card contact-card1 whitebg">
                <div class="card-body">
                  <div class="row">
@@ -651,7 +651,7 @@
                            stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" />
                        </svg>
                      </h4>
-                     <h3 class="cdata">#</h3>
+                     <h3 class="cdata">https://cardly.in/kunjuveettil</h3>
                    </div>
                    <div class="col align-self-center text-end">
                      <svg class="wp51px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -942,6 +942,8 @@
                </div>
              </div>
            </a>
+
+           
          </div>
          <div class="container-fluid-not">
            <div class="card contact-card1 p-4 justwhitebg">
@@ -1010,14 +1012,20 @@
            </div>
          </div>
          <div class="container-fluid justwhitebg  mt-3">
-           <img src="logo.jpeg" class="img-fluid m-3">
+           <img src="logo.jpeg" class="img-fluid m-3" style="height: 200px !important;">
          </div>
          <div class="container-fluid bg-grand">
            <div class="p-5 text-start">
              <!-- <img src="logo.jpg" class="img-fluid"> -->
              <h1 class="text">Our Services</h1>
              <p class="col mt-2 mx-auto fs-5 text">
-Kunjuveettil Bakers
+              Welcome to Kunjuveettil Bakery, your go-to destination for delectable baked goods in the heart of Vithura. We take pride in using the finest, locally sourced ingredients to craft a diverse array of treats, including bread, pastries, cakes, and cookies.
+
+              Our talented bakers infuse passion and creativity into every creation, offering both classic favorites and unique specialties like our signature lavender-infused cupcakes. We also cater to dietary preferences with gluten-free and vegan options.
+              
+              Enjoy our cozy ambiance and friendly staff while savoring our freshly brewed, ethically sourced coffee. Kunjuveettil Bakery is your place for delicious moments baked with love.
+              
+              Visit us and stay updated on our latest creations and promotions on social media. Thank you for choosing Kunjuveettil Bakery
                 </p>
              <!-- <div class="d-inline-flex gap-2 mb-5">
                      <button class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
@@ -1086,105 +1094,78 @@ Kunjuveettil Bakers
      });
      ///////////////////////////button
      // JSON object representing the vCard data
-     var vCardData = {
-       "firstName": "SAJI JACOB",
-       "lastName": "",
-       "email": "starvithura@gmail.com",
-       "phone": "+917907030929",
-       "addressType": "office",
-       "address": {
-         "street": "Star Creations",
-         "city": "Market JUnction, Vithura",
-         "state": "KL",
-         "country": "India",
-         "postalCode": "695551"
-       },
-       "socialMedia": {
-         "whatsapp": "+919495152850",
-         "instagram": "https://www.instagram.com/starvithura/",
-         "twitter": "",
-         "facebook": "https://www.facebook.com/starvithura/",
-         "linkedin": "",
-         "youtube": "https://www.youtube.com/channel/UCkY01c0SYvVhClgRgnk4oGg"
-       },
-       "website": "https://cardly.in/starvithura",
-       "jobTitle": "Owner",
-       "organization": "Star Creations"
-     };
-     // Function to create the vCard string
-     function createVCard(vCardData) {
-       var vCard = "BEGIN:VCARD
-";
-       vCard += "VERSION:3.0
-";
-       vCard += "N:"); (vCardData.lastName || "") + ";"); (vCardData.firstName || "") + ";;;
-";
-       vCard += "FN:"); (vCardData.firstName || "") + " "); (vCardData.lastName || "") + "
-";
-       vCard += "EMAIL:"); (vCardData.email || "") + "
-";
-       vCard += "TEL:"); (vCardData.phone || "") + "
-";
-       if (vCardData.address) {
-         var addressType = vCardData.addressType === "office" ? "WORK" : "HOME";
-         vCard += "ADR;TYPE="); addressType + ":;;"); (vCardData.address.street || "") + ";"); (vCardData.address.city || "") + ";"); (vCardData.address.state || "") + ";"); (vCardData.address.postalCode || "") + ";"); (vCardData.address.country || "") + "
-";
-       }
-       if (vCardData.socialMedia) {
-         if (vCardData.socialMedia.whatsapp) {
-           vCard += "X-SOCIALPROFILE;TYPE=whatsapp:"); vCardData.socialMedia.whatsapp + "
-";
-         }
-         if (vCardData.socialMedia.instagram) {
-           vCard += "X-SOCIALPROFILE;TYPE=instagram:"); vCardData.socialMedia.instagram + "
-";
-         }
-         if (vCardData.socialMedia.twitter) {
-           vCard += "X-SOCIALPROFILE;TYPE=twitter:"); vCardData.socialMedia.twitter + "
-";
-         }
-         if (vCardData.socialMedia.facebook) {
-           vCard += "X-SOCIALPROFILE;TYPE=facebook:"); vCardData.socialMedia.facebook + "
-";
-         }
-         if (vCardData.socialMedia.linkedin) {
-           vCard += "X-SOCIALPROFILE;TYPE=linkedin:"); vCardData.socialMedia.linkedin + "
-";
-         }
-         if (vCardData.socialMedia.youtube) {
-           vCard += "X-SOCIALPROFILE;TYPE=youtube:"); vCardData.socialMedia.youtube + "
-";
-         }
-       }
-       if (vCardData.website) {
-         vCard += "URL:"); vCardData.website + "
-";
-       }
-       if (vCardData.jobTitle) {
-         vCard += "TITLE:"); vCardData.jobTitle + "
-";
-       }
-       if (vCardData.organization) {
-         vCard += "ORG:"); vCardData.organization + "
-";
-       }
-       vCard += "END:VCARD";
-       return vCard;
-     }
-     // Function to download the vCard file
-     function downloadVCard() {
-       var vCard = createVCard(vCardData);
-       var element = document.createElement("a");
-       element.setAttribute("href", "data:text/plain;charset=utf-8,"); encodeURIComponent(vCard));
-       element.setAttribute("download", "contact.vcf");
-       element.style.display = "none";
-       document.body.appendChild(element);
-       element.click();
-       document.body.removeChild(element);
-     }
-     var downloadButton = document.getElementById("downloadvcard");
-     downloadButton.addEventListener("click", downloadVCard);
+     
+     </script>
+
+
+<script> const imageURI = 'logo.jpeg';
+  let imageb64 = '';
+// Fetch the image data
+fetch(imageURI)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.arrayBuffer();
+  })
+  .then((imageData) => {
+    // Encode the image data to base64
+    const base64Image = btoa(
+      new Uint8Array(imageData).reduce(
+        (data, byte) => data + String.fromCharCode(byte),
+        ''
+      )
+    );
+
+    // Now you have the base64 encoded image
+    imageb64=base64Image;
+    console.log(base64Image);
+  })
+  .catch((error) => {
+    console.error('Error fetching or encoding the image:', error);
+  });
+
+
+     document.getElementById('downloadvcard').addEventListener('click', function() {
+    // vCard data
+    let vcfContent = ''
+vcfContent += "BEGIN:VCARD\n";
+vcfContent += "VERSION:3.0\n";
+vcfContent += "FN:Kunjuveetil\n";
+vcfContent += "N:Kunjuveetil;;;;\n";
+vcfContent += "ORG:Kunjuveetil\n";
+vcfContent += "TITLE:Kunjuveetil\n";
+vcfContent += "EMAIL;TYPE=INTERNET:kunchuveettil88@gmail.com\n";
+vcfContent += "TEL;TYPE=WORK,VOICE:+917907857841\n";
+vcfContent += "ADR;TYPE=WORK:;;Kunjuveetil ;;;IN\n";
+vcfContent += "URL:https://cardly.in/kunjuveettil\n";
+// vcfContent += "PHOTO;VALUE=URL;TYPE=PNG:https://www.cardly.in/just4entertainment/photo.png\n";
+vcfContent += "LOGO;VALUE=URL;TYPE=PNG:https://www.cardly.in/kunjuveetil/logo.jpeg\n";
+vcfContent += "PHOTO;ENCODING=BASE64;TYPE=PNG:"+imageb64;
+vcfContent += "\nEND:VCARD"
+
+    // Create a Blob containing the vCard data
+    const blob = new Blob([vcfContent], { type: 'text/vcard' });
+
+    // Create an object URL for the Blob
+    const url = URL.createObjectURL(blob);
+
+    // Set the download link's href and click it programmatically
+    const downloadLink = document.getElementById('downloadLink');
+    downloadLink.href = url;
+    downloadLink.setAttribute('download', 'card.vcf');
+    downloadLink.style.display = 'block';
+    downloadLink.click();
+
+    // Clean up by revoking the object URL
+    URL.revokeObjectURL(url);
+});
+
    </script>
+    <a id="downloadLink" style="display:none" download="contact.vcf"></a>
+
+
+
    <!-- Google tag (gtag.js) -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GED109S1GN"></script>
    <script>
