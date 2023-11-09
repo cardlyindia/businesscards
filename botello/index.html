@@ -759,7 +759,7 @@
            imgHoverZoomElements.forEach(function (element) {
              var zoomedImage = element.querySelector("img.zoom");
              var scaleFactor = 1 + scroll / 500; // Adjust the divisor for desired zoom effect sensitivity
-             zoomedImage.style.transform = "scale("); scaleFactor + ")";
+             zoomedImage.style.transform = "scale("+ scaleFactor + ")";
            });
            ticking = false;
          }
@@ -868,6 +868,21 @@
          gtag('js', new Date());
          gtag('config', 'G-GED109S1GN');
        </script>
+
+
+
+
+
+<div class="chat-widget-container" style="position: fixed; bottom: 20px; right: 20px; width: 500px; border: none;">
+  <iframe src="https://botello.in/chatwidget.html?email=deepaksurendran768@gmail.com"
+    id="chat-widget"
+    style="width: 100%; height: 500px; border: none; overflow-y: scroll;"></iframe>
+</div> 
+
+
+
+
+
       </body>
       </html>
 
