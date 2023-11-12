@@ -1053,7 +1053,7 @@
         const transactionId = generateRandomTransactionId();
         const currency = "INR";
 
-        const paymentLink = `upi://pay?pa=${payeeAddress}&pn=${payeeName}&tr=${transactionId}&mc=&cu=${currency}`;
+        const paymentLink = `upi://pay?pa=${payeeAddress}&pn=${payeeName}&tr=${transactionId}&mc=${transactionId}&cu=${currency}`;
 
         return paymentLink;
     }
