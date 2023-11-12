@@ -1051,9 +1051,12 @@
         const payeeAddress = "kunchuveettil88-1@okaxis";
         const payeeName = "Kunjuveettil Bakers";
         const transactionId = generateRandomTransactionId();
+        const transactionId2 = generateRandomTransactionId();
         const currency = "INR";
 
-        const paymentLink = `upi://pay?pa=${payeeAddress}&pn=${payeeName}&tr=${transactionId}&mc=${transactionId}&cu=${currency}`;
+        upi://pay?pn=with%20Upilink.in%20&pa=ss@oksbi&cu=INR&am=1.0
+
+        const paymentLink = `upi://pay?pa=${payeeAddress}&pn=${payeeName}&tr=${transactionId}&mc=${transactionId2}&cu=${currency}`;
 
         return paymentLink;
     }
