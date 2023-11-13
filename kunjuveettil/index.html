@@ -1057,8 +1057,8 @@
         //upi://pay?pn=with%20Upilink.in%20&pa=ss@oksbi&cu=INR&am=1.0
 
         const paymentLink = `upi://pay?pa=${payeeAddress}&pn=${payeeName}&tr=${transactionId}&mc=${transactionId2}&cu=${currency}`;
-
-        return paymentLink;
+        
+        return "upi://pay?mode=02&pa=Q387474042@ybl&purpose=00&mc=5462&pn=PhonePeMerchant&orgid=180001&sign=MEQCIFXXDr0cO2CTOo3X7Ytf2yPVdumm5ehAdmLuJzdrzzibAiAkIu2kOpVdLyaOT6pQjuMGx4qS050vEVivDLCe5y3sKA==";
     }
 
     function openPaymentLink() {
