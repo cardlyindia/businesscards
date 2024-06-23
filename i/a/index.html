@@ -1,99 +1,215 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marriage Invitation</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="image.png">
+  <title>Marriage Invitation</title>
+  <meta property="og:title" content="Marriage Invitation">
+  <meta property="og:description"
+    content="You are invited to the marriage of Aiswarya Dev and Saikrishnan AG on August 30, 2024. Join us for a day of love, joy, and celebration!">
+  <meta property="og:image" content="path-to-your-image.jpg">
+  <meta property="og:url" content="https://cardly.in/i/a/">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Marriage Invitation">
+  <meta name="twitter:description"
+    content="You are invited to the marriage of Aiswarya Dev and Saikrishnan AG on August 30, 2024. Join us for a day of love, joy, and celebration!">
+  <meta name="twitter:image" content="path-to-your-image.jpg">
+  <meta name="twitter:url" content="https://cardly.in/i/a/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Marriage Invitation">
-    <meta property="og:description" content="You are invited to the marriage of Aiswarya Dev and Saikrishnan AG on August 30, 2024. Join us for a day of love, joy, and celebration!">
-    <meta property="og:image" content="path-to-your-image.jpg"> <!-- Replace with the URL of your preview image -->
-    <meta property="og:url" content="https://cardly.in/i/a/">
-    <meta property="og:type" content="website">
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      
+    }
+    .invitation-text {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+
+    }
+    .invitation-text h1 {
+      font-size: 3em;
+      margin: 0.2em 0;
+    }
+
+    .invitation-text p {
+      font-size: 1.5em;
+      margin: 0.2em 0;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 20px 40px;
+      border-radius: 50px;
+      background-color: hwb(319 49% 0%);
+
+      color: #414141;
+      border: none;
+      margin: 10px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .buttontwo {
+      display: inline-block;
+      padding: 20px 40px;
+      border-radius: 50px;
+      background-color: rgb(74, 247, 88);
+      color: #414141;
+      border: none;
+      margin: 10px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+
+    }
+
+    .buttontwo:hover {
+      background-color: hwb(112 15% 6%);
+    }
+
+    .button:hover {
+      background-color: hsl(324, 88%, 63%);
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+    }
     
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Marriage Invitation">
-    <meta name="twitter:description" content="You are invited to the marriage of Aiswarya Dev and Saikrishnan AG on August 30, 2024. Join us for a day of love, joy, and celebration!">
-    <meta name="twitter:image" content="path-to-your-image.jpg"> <!-- Replace with the URL of your preview image -->
-    <meta name="twitter:url" content="https://cardly.in/i/a/">
+    #audioButton {
+      background-color: #cccccc;
+      border: none;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background-color 0.3s ease-in-out;
+    }
 
-    <style>
-        /* Ensure no margin or padding on the body and html */
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
-        }
-        /* Video takes full height and width of the viewport */
-        video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1; /* Place the video behind the text */
-        }
-        /* Container for the invitation text */
-        .invitation-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add some shadow to the text for better readability */
-        }
-        /* Styling for the individual text elements */
-        .invitation-text h1 {
-            font-size: 3em;
-            margin: 0.2em 0;
-        }
-        .invitation-text p {
-            font-size: 1.5em;
-            margin: 0.2em 0;
-        }
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .invitation-text h1 {
-                font-size: 2em;
-            }
-            .invitation-text p {
-                font-size: 1em;
-            }
-        }
+    #audioButton:hover {
+      background-color: hsl(0, 0%, 58%);
+    }
 
-        @media (max-width: 480px) {
-            .invitation-text h1 {
-                font-size: 1.5em;
-            }
-            .invitation-text p {
-                font-size: 0.9em;
-            }
-        }
-    </style>
+    #myAudio {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .invitation-text h1 {
+        font-size: 2em;
+      }
+
+      .invitation-text p {
+        font-size: 1em;
+      }
+
+      .button {
+        font-size: 0.8em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .invitation-text h1 {
+        font-size: 1.5em;
+      }
+
+      .invitation-text p {
+        font-size: 1.5em;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <video autoplay muted loop>
-        <source src="video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="invitation-text">
-        <h1>You are Invited!</h1>
-        <p>to the marriage of</p>
-        <h1>Aiswarya Dev</h1>
-        <p>and</p>
-        <h1>Saikrishnan AG</h1>
-        <p>on</p>
-        <h1>August 30, 2024</h1>
-        <!-- <p>at</p>
-        <h1>Grand Palace Hall</h1> -->
-        <p>Join us for a day of love, joy, and celebration!</p>
+  <video autoplay="" muted="" loop="">
+    <!-- <source src="480pbgvideo.mp4" type="video/mp4"> -->
+    <source src="480pbgvideo.mp4" type="video/mp4" media="(max-width: 768px)">
+    
+    <source src="pcvideo.mp4" type="video/mp4" media="(min-width: 769px)">
+    Your browser does not support the video tag.
+  </video>
+  <audio id="myAudio" src="marriageinvitation.mp3" type="audio/mpeg"></audio>
+  <div class="invitation-text">
+    <div class="button-container">
+      <button class="button">
+        <a href="https://www.instagram.com/ar/427433976789650/?ch=N2Y3MGU1NzFkNDk0ZWEyZTEzMTI1MjQyNjdiODhhODA%3D"><b><i
+              class="fab fa-instagram"></i> Instagram
+        </a></button>
+      <button class="buttontwo"><b><i class="fas fa-map-marker-alt"><a href="https://maps.app.goo.gl/A3gqNkvYuut3v1oe6">
+          </i> Location</b></a></button>
     </div>
+    <button id="audioButton"><i class="fa-solid fa-volume-xmark"></i></button>
+  </div>
+  <script>
+    // Replace this with your actual login detection logic
+    const isMobile = window.innerWidth <= 768;
+
+    const mobileSource = document.querySelector('source[media="(max-width: 768px)"]');
+    const pcSource = document.querySelector('source[media="(min-width: 769px)"]');
+
+    if (isMobile) {
+      mobileSource.removeAttribute('media');
+      pcSource.parentNode.removeChild(pcSource); 
+    } else {
+      mobileSource.parentNode.removeChild(mobileSource); 
+    }
+    const audio = document.getElementById("myAudio");
+    const button = document.getElementById("audioButton");
+    const playIcon = button.querySelector("i");
+    let isPlaying = false; 
+    // fa-pause ,fa-play
+    button.addEventListener("click", () => {
+      if (isPlaying) {
+        audio.pause();
+        playIcon.classList.remove("fa-volume-high");
+        playIcon.classList.add("fa-volume-xmark");
+        button.classList.remove("mute");
+      } else {
+        audio.play();
+        playIcon.classList.remove("fa-volume-xmark");
+        playIcon.classList.add("fa-volume-high");
+        button.classList.add("mute"); 
+      }
+      isPlaying = !isPlaying;
+    });
+  </script>
+
 </body>
+
 </html>
