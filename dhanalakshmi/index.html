@@ -869,7 +869,7 @@ EXIMS
 
         <div class="container-fluid justwhitebg  mt-3">
 
-          <img src="logo.png" class="img-fluid m-3">
+          <img src="logo.png" class="img-fluid m-3" style="width: 200px;height: auto;">
 
         </div>
 
@@ -974,107 +974,7 @@ EXIMS
     });
 
 
-    ///////////////////////////button
-
-    // JSON object representing the vCard data
-    var vCardData = {
-      "firstName": "SAJI JACOB",
-      "lastName": "",
-      "email": "starvithura@gmail.com",
-      "phone": "+917907030929",
-      "addressType": "office",
-      "address": {
-        "street": "Star Creations",
-        "city": "Market JUnction, Vithura",
-        "state": "KL",
-        "country": "India",
-        "postalCode": "695551"
-      },
-      "socialMedia": {
-        "whatsapp": "+919495152850",
-        "instagram": "https://www.instagram.com/starvithura/",
-        "twitter": "",
-        "facebook": "https://www.facebook.com/starvithura/",
-        "linkedin": "",
-        "youtube": "https://www.youtube.com/channel/UCkY01c0SYvVhClgRgnk4oGg"
-      },
-      "website": "https://cardly.in/starvithura",
-      "jobTitle": "Owner",
-      "organization": "Star Creations"
-    };
-
-    // Function to create the vCard string
-    function createVCard(vCardData) {
-      var vCard = "BEGIN:VCARD\n";
-      vCard += "VERSION:3.0\n";
-      vCard += "N:" + (vCardData.lastName || "") + ";" + (vCardData.firstName || "") + ";;;\n";
-      vCard += "FN:" + (vCardData.firstName || "") + " " + (vCardData.lastName || "") + "\n";
-      vCard += "EMAIL:" + (vCardData.email || "") + "\n";
-      vCard += "TEL:" + (vCardData.phone || "") + "\n";
-
-      if (vCardData.address) {
-        var addressType = vCardData.addressType === "office" ? "WORK" : "HOME";
-        vCard += "ADR;TYPE=" + addressType + ":;;" + (vCardData.address.street || "") + ";" + (vCardData.address.city || "") + ";" + (vCardData.address.state || "") + ";" + (vCardData.address.postalCode || "") + ";" + (vCardData.address.country || "") + "\n";
-      }
-
-      if (vCardData.socialMedia) {
-        if (vCardData.socialMedia.whatsapp) {
-          vCard += "X-SOCIALPROFILE;TYPE=whatsapp:" + vCardData.socialMedia.whatsapp + "\n";
-        }
-
-        if (vCardData.socialMedia.instagram) {
-          vCard += "X-SOCIALPROFILE;TYPE=instagram:" + vCardData.socialMedia.instagram + "\n";
-        }
-
-        if (vCardData.socialMedia.twitter) {
-          vCard += "X-SOCIALPROFILE;TYPE=twitter:" + vCardData.socialMedia.twitter + "\n";
-        }
-
-        if (vCardData.socialMedia.facebook) {
-          vCard += "X-SOCIALPROFILE;TYPE=facebook:" + vCardData.socialMedia.facebook + "\n";
-        }
-
-        if (vCardData.socialMedia.linkedin) {
-          vCard += "X-SOCIALPROFILE;TYPE=linkedin:" + vCardData.socialMedia.linkedin + "\n";
-        }
-
-        if (vCardData.socialMedia.youtube) {
-          vCard += "X-SOCIALPROFILE;TYPE=youtube:" + vCardData.socialMedia.youtube + "\n";
-        }
-      }
-
-      if (vCardData.website) {
-        vCard += "URL:" + vCardData.website + "\n";
-      }
-
-      if (vCardData.jobTitle) {
-        vCard += "TITLE:" + vCardData.jobTitle + "\n";
-      }
-
-      if (vCardData.organization) {
-        vCard += "ORG:" + vCardData.organization + "\n";
-      }
-
-      vCard += "END:VCARD";
-      return vCard;
-    }
-
-    // Function to download the vCard file
-    function downloadVCard() {
-      var vCard = createVCard(vCardData);
-      var element = document.createElement("a");
-      element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(vCard));
-      element.setAttribute("download", "contact.vcf");
-      element.style.display = "none";
-      document.body.appendChild(element);
-      element.click();
-      document.body.removeChild(element);
-    }
-
-
-    var downloadButton = document.getElementById("downloadvcard");
-    downloadButton.addEventListener("click", downloadVCard);
-
+    
 //////////////////////////////
 
 
