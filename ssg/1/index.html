@@ -1,0 +1,472 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Grace Villa</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../assets/heroes.css" rel="stylesheet">
+  <meta name='robots' content='max-image-preview:large' />
+  <link rel="apple-touch-icon-precomposed" sizes="192x192" href="../icon/icon.jpg">
+  <meta name="generator" content="Cardly" />
+  <link rel="canonical" href="#" />
+  <link rel='shortlink' href='#' />
+  <meta name="pwaforwp" content="wordpress-plugin" />
+  <meta name="theme-color" content="#D5E0EB">
+  <meta name="apple-mobile-web-app-title" content="Cardly :)">
+  <meta name="application-name" content="Cardly :)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content=" Cardly :)">
+  <meta name="apple-touch-fullscreen" content="YES">
+  <link rel="apple-touch-startup-image" href="../icon/icon.jpg">
+  <link rel="apple-touch-icon" sizes="192x192" href="../icon/icon.jpg">
+  <link rel="apple-touch-icon" sizes="512x512" href="../icon/icon.jpg">
+
+
+
+
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%237d6ee7%22></rect><path d=%22M17.73 39.97L17.73 39.97Q17.73 40.78 17.31 41.39Q16.89 42.00 16.33 42.35L16.33 42.35Q15.42 41.76 14.35 41.30Q13.28 40.85 11.81 40.85L11.81 40.85Q9.01 40.85 7.44 42.61Q5.86 44.38 5.86 47.64L5.86 47.64Q5.86 51.00 7.53 52.69Q9.19 54.39 12.09 54.39L12.09 54.39Q13.60 54.39 14.67 53.99Q15.73 53.59 16.64 53.03L16.64 53.03Q17.17 53.45 17.50 54.09Q17.83 54.74 17.83 55.55L17.83 55.55Q17.83 56.25 17.47 56.86Q17.10 57.47 16.19 57.89L16.19 57.89Q15.49 58.24 14.30 58.54Q13.11 58.84 11.36 58.84L11.36 58.84Q9.01 58.84 6.98 58.17Q4.95 57.51 3.45 56.14Q1.94 54.78 1.09 52.66Q0.23 50.54 0.23 47.64L0.23 47.64Q0.23 44.91 1.09 42.81Q1.94 40.71 3.41 39.29Q4.88 37.87 6.84 37.14Q8.80 36.40 11.04 36.40L11.04 36.40Q14.23 36.40 15.98 37.42Q17.73 38.43 17.73 39.97ZM27.91 54.85L27.91 54.85Q28.68 54.85 29.44 54.69Q30.19 54.53 30.57 54.29L30.57 54.29L30.57 51.07L27.70 51.31Q26.58 51.42 25.90 51.82Q25.22 52.22 25.22 53.03L25.22 53.03Q25.22 53.87 25.85 54.36Q26.48 54.85 27.91 54.85ZM27.70 40.88L27.70 40.88Q29.52 40.88 31.01 41.25Q32.50 41.62 33.55 42.39Q34.60 43.16 35.18 44.35Q35.75 45.54 35.75 47.15L35.75 47.15L35.75 55.06Q35.75 55.97 35.28 56.51Q34.81 57.05 34.14 57.44L34.14 57.44Q33.06 58.10 31.48 58.45Q29.91 58.80 27.91 58.80L27.91 58.80Q24.31 58.80 22.17 57.42Q20.04 56.04 20.04 53.20L20.04 53.20Q20.04 50.79 21.47 49.53Q22.91 48.27 25.88 47.95L25.88 47.95L30.54 47.46L30.54 47.08Q30.54 45.96 29.63 45.43Q28.72 44.91 27.00 44.91L27.00 44.91Q25.67 44.91 24.40 45.22Q23.12 45.54 22.10 45.96L22.10 45.96Q21.68 45.68 21.39 45.10Q21.09 44.52 21.09 43.86L21.09 43.86Q21.09 42.32 22.70 41.65L22.70 41.65Q23.71 41.27 25.06 41.07Q26.41 40.88 27.70 40.88ZM44.99 46.03L44.99 58.21Q44.64 58.31 44.01 58.40Q43.38 58.49 42.61 58.49L42.61 58.49Q41.04 58.49 40.34 57.98Q39.64 57.47 39.64 56.00L39.64 56.00L39.64 45.33Q39.64 44.35 40.13 43.65Q40.62 42.95 41.49 42.42L41.49 42.42Q42.65 41.72 44.28 41.32Q45.90 40.92 47.69 40.92L47.69 40.92Q51.33 40.92 51.33 43.37L51.33 43.37Q51.33 43.96 51.15 44.45Q50.98 44.94 50.77 45.29L50.77 45.29Q49.96 45.12 48.81 45.12L48.81 45.12Q47.79 45.12 46.78 45.36Q45.76 45.61 44.99 46.03L44.99 46.03ZM61.86 40.88L61.86 40.88Q62.67 40.88 63.39 41.00Q64.10 41.13 64.70 41.34L64.70 41.34L64.70 35.46Q65.08 35.35 65.71 35.25Q66.34 35.14 67.11 35.14L67.11 35.14Q68.69 35.14 69.37 35.67Q70.05 36.19 70.05 37.66L70.05 37.66L70.05 54.71Q70.05 55.55 69.70 56.12Q69.35 56.70 68.58 57.19L68.58 57.19Q67.60 57.79 66.06 58.28Q64.52 58.77 62.53 58.77L62.53 58.77Q58.12 58.77 55.58 56.54Q53.04 54.32 53.04 49.88L53.04 49.88Q53.04 47.57 53.73 45.89Q54.41 44.21 55.60 43.09Q56.79 41.97 58.40 41.42Q60.01 40.88 61.86 40.88ZM64.73 54.01L64.73 45.61Q64.28 45.40 63.74 45.24Q63.19 45.08 62.60 45.08L62.60 45.08Q60.71 45.08 59.59 46.24Q58.47 47.39 58.47 49.91L58.47 49.91Q58.47 52.33 59.54 53.43Q60.60 54.53 62.49 54.53L62.49 54.53Q63.23 54.53 63.81 54.37Q64.38 54.22 64.73 54.01L64.73 54.01ZM77.23 58.49L77.23 58.49Q75.65 58.49 74.97 57.98Q74.29 57.47 74.29 56.00L74.29 56.00L74.29 35.46Q74.64 35.35 75.29 35.25Q75.93 35.14 76.70 35.14L76.70 35.14Q78.24 35.14 78.94 35.67Q79.64 36.19 79.64 37.66L79.64 37.66L79.64 58.21Q79.26 58.31 78.63 58.40Q78.00 58.49 77.23 58.49ZM86.58 54.04L86.58 54.04Q85.77 52.29 84.74 49.47Q83.70 46.66 82.58 42.18L82.58 42.18Q83.00 41.72 83.76 41.39Q84.51 41.06 85.38 41.06L85.38 41.06Q86.50 41.06 87.20 41.53Q87.91 42.00 88.29 43.26L88.29 43.26Q89.06 45.82 89.85 48.30Q90.63 50.79 91.44 53.31L91.44 53.31L91.58 53.31Q92 52.12 92.45 50.70Q92.91 49.28 93.33 47.76Q93.75 46.24 94.12 44.68Q94.48 43.12 94.77 41.65L94.77 41.65Q95.85 41.06 97.04 41.06L97.04 41.06Q98.16 41.06 98.97 41.55Q99.77 42.04 99.77 43.16L99.77 43.16Q99.77 44.42 99.33 46.36Q98.89 48.30 98.18 50.42Q97.46 52.54 96.57 54.62Q95.67 56.70 94.73 58.28L94.73 58.28Q92.77 61.60 91.19 63.23Q89.62 64.86 88.01 64.86L88.01 64.86Q86.72 64.86 85.88 64.07Q85.03 63.28 84.86 62.06L84.86 62.06Q85.98 61.08 87.19 59.76Q88.39 58.45 89.23 57.12L89.23 57.12Q88.64 56.95 87.99 56.33Q87.34 55.72 86.58 54.04Z%22 fill=%22%23fff%22></path></svg>" />
+
+
+
+  <style>
+    .text-black {
+      color: #000;
+    }
+
+    body {
+      background-color: #000000;
+    }
+
+    #con a {
+      color: #FFFFFF
+    }
+
+    .owl-carousel .owl-stage {
+      background: #e4e4e4 !important;
+      max-height: 400px !important;
+      overflow: hidden;
+    }
+
+
+    .avatar-wrap {
+      width: 130px;
+      height: 130px;
+      position: relative;
+    }
+
+    .avatar {
+      vertical-align: middle;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+    }
+
+    .avatar-wrap span {
+      position: absolute;
+      bottom: 10px;
+      left: 120px;
+      /*   background: deepskyblue; */
+      border-radius: 100%;
+      color: #fff;
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      font-size: 40px;
+      line-height: 40px;
+    }
+  </style>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0
+    }
+
+
+
+    .card {
+      width: 350px;
+      background-color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: all 0.5s
+    }
+
+    .zoom img {
+      transition: all 0.5s
+    }
+
+    .card:hover .zoom img {
+      transform: scale(1.5)
+    }
+
+    .btn {
+      height: 140px;
+      width: 140px;
+      border-radius: 50%
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: bold
+    }
+
+    .idd {
+      font-size: 14px;
+      font-weight: 600
+    }
+
+    .idd1 {
+      font-size: 12px
+    }
+
+    .number {
+      font-size: 22px;
+      font-weight: bold
+    }
+
+    .follow {
+      font-size: 12px;
+      font-weight: 500;
+      color: #444444
+    }
+
+    .btn1 {
+      height: 40px;
+      width: 150px;
+      border: none;
+      background-color: #000;
+      color: #aeaeae;
+      font-size: 15px
+    }
+
+    .text span {
+      font-size: 13px;
+      color: #545454;
+      font-weight: 500
+    }
+
+    .icons i {
+      font-size: 19px
+    }
+
+    hr .new1 {
+      border: 1px solid
+    }
+
+    .join {
+      font-size: 14px;
+      color: #a0a0a0;
+      font-weight: bold
+    }
+
+    .date {
+      background-color: #ccc
+    }
+
+    a {
+      text-decoration: none;
+
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .padextra {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    .zoom {
+      border-radius: 50%;
+    }
+
+    body {
+      /*  background: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);*/
+    }
+
+    .bubbles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+    }
+
+    .bubble {
+      position: absolute;
+      bottom: -100px;
+      width: 40px;
+      height: 40px;
+      background: #f1f1f1;
+      border-radius: 50%;
+      opacity: 0.5;
+      animation: rise 10s infinite ease-in;
+    }
+
+    .bubble:nth-child(1) {
+      width: 40px;
+      height: 40px;
+      left: 10%;
+      animation-duration: 8s;
+    }
+
+    .bubble:nth-child(2) {
+      width: 20px;
+      height: 20px;
+      left: 20%;
+      animation-duration: 5s;
+      animation-delay: 1s;
+    }
+
+    .bubble:nth-child(3) {
+      width: 50px;
+      height: 50px;
+      left: 35%;
+      animation-duration: 7s;
+      animation-delay: 2s;
+    }
+
+    .bubble:nth-child(4) {
+      width: 80px;
+      height: 80px;
+      left: 50%;
+      animation-duration: 11s;
+      animation-delay: 0s;
+    }
+
+    .bubble:nth-child(5) {
+      width: 35px;
+      height: 35px;
+      left: 55%;
+      animation-duration: 6s;
+      animation-delay: 1s;
+    }
+
+    .bubble:nth-child(6) {
+      width: 45px;
+      height: 45px;
+      left: 65%;
+      animation-duration: 8s;
+      animation-delay: 3s;
+    }
+
+    .bubble:nth-child(7) {
+      width: 90px;
+      height: 90px;
+      left: 70%;
+      animation-duration: 12s;
+      animation-delay: 2s;
+    }
+
+    .bubble:nth-child(8) {
+      width: 25px;
+      height: 25px;
+      left: 80%;
+      animation-duration: 6s;
+      animation-delay: 2s;
+    }
+
+    .bubble:nth-child(9) {
+      width: 15px;
+      height: 15px;
+      left: 70%;
+      animation-duration: 5s;
+      animation-delay: 1s;
+    }
+
+    .bubble:nth-child(10) {
+      width: 90px;
+      height: 90px;
+      left: 25%;
+      animation-duration: 10s;
+      animation-delay: 4s;
+    }
+
+    @keyframes rise {
+      0% {
+        bottom: -100px;
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translate(100px);
+      }
+
+      100% {
+        bottom: 1080px;
+        transform: translateX(-200px);
+      }
+    }
+
+    .card-footer {
+
+      background-color: rgb(255 255 255 / 3%);
+      border-top: 1px solid rgba(0, 0, 0, .125);
+    }
+
+    .service p {
+      color: #000 !important;
+    }
+  </style>
+
+</head>
+
+
+
+
+<body id="top" class="post-template-default single single-post postid-6 single-format-standard">
+
+  
+
+
+<section class="sticky"  style="background-image:url('images/bg.jpg');background-repeat: no-repeat no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover; -o-background-size: cover;background-size: cover;min-height :200px !important;">
+
+
+
+  <main class=" mains" style="background: radial-gradient(#00000022, #000000);" >
+    
+  
+    
+  <div class="container text-white roundedx bg-darkx readx" 
+   >
+  
+    
+    
+  <!-- 	NEW LOGIC -->
+    <div class="row">
+    <div class="col-md-12">
+      <div class="page-hero d-flex align-items-center justify-content-center">
+      
+         <!-- <img src="images/photo.png" alt="Avatar" style="width:150px;height:150px;border-radius:50%;margin-top:20px;">
+         -->
+    </div>
+      </div>
+    </div>
+    
+    <div class="row">
+    <div class="col-md-12">
+      <div class="page-hero d-flex align-items-center justify-content-center">
+      <h1 class="display-4 fst">Welcome to our sweet home 
+           
+        
+      </h1>
+      
+    </div>
+      </div>
+    </div>
+    
+    <div class="row">
+    <div class="col-md-12">
+      <div class="page-hero d-flex align-items-center justify-content-center">
+      
+      <h2 class="justify-content-center text-center org text-white">Grace Villa</h2>
+    </div>
+      </div>
+    </div>
+    
+      <div class="page-hero d-flex align-items-center justify-content-center">
+   <div>
+     
+       <p class="lead my-3">
+        
+        <a  href="tel:+919539459077" target="_blank" class="btn-reg " >
+            
+            Call Now          
+            
+            </a>
+    
+&nbsp; &nbsp;
+             
+        <a  href="tel:+919539459077" target="_blank" class="btn-reg " >
+            
+          Whatsapp          
+          
+          </a>
+  
+
+
+    </p>
+      
+      </div>
+  </div>
+      
+    
+  <!-- 	NEW LOGIC -->
+  
+    
+  
+  
+  </div>
+  
+    
+    
+  <div class="container">
+    
+    														
+    </div>	
+  
+    
+    
+    
+    
+  
+  
+  
+  
+  
+  </main>
+  </section>
+  
+  
+  <footer>
+    <div id="scrolltop">
+      <a class="top-button" href="#top">&uarr;</a>
+    </div>
+  </footer>
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+
+    const scrollTop = document.getElementById('scrolltop')
+    window.onscroll = () => {
+      if (window.scrollY > 0) {
+        scrollTop.style.visibility = "visible";
+        scrollTop.style.opacity = 1;
+      } else {
+        scrollTop.style.visibility = "hidden";
+        scrollTop.style.opacity = 0;
+      }
+    };
+
+
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GED109S1GN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-GED109S1GN');
+  </script>
+
+</body>
+
+</html>
