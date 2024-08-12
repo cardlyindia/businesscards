@@ -25,11 +25,22 @@
         }
 
         body {
-    background-image: url('images/home.jpeg');
+    /* background-image: url('images/home.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed; */
+
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url('images/home.jpeg');
+    background-size: contain; /* Ensures the full image is shown */
+    background-position: top center; /* Positions the image at the top center */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: scroll; /* Allows the image to scroll with the content */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
         .content {
@@ -45,7 +56,7 @@
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-        }
+        
 
         .title {
             font-size: 1.5rem;
@@ -93,6 +104,11 @@
     <div class="title">Welcome to our sweet home</div>
     <div class="bigger-title">Grace Villa</div>
     <div class="mt-5">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         <a class="btn btn-glossy"  href="tel:+919539459077"  target="_blank">
           
 
