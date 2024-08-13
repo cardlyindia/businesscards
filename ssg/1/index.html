@@ -35,25 +35,19 @@
     padding: 0;
     height: 100vh;
     width: 100%;
-    background-image: url('images/bg1.png');
-    background-size: contain; /* Ensures the full image is shown */
-    background-position: top center; /* Positions the image at the top center */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-attachment: scroll; /* Allows the image to scroll with the content */
+    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+ background-blend-mode: multiply;
+    
     overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
         .content {
             
-            margin-top:400px;
+            margin-top:20px;
             /* background:#343434b0; */
     border-radius: 15px; /* Rounded corners */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    padding: 20px; /* Optional padding */
-    min-width: 300px; /* Adjust as needed */
-    min-height: 100px; /* Adjust as needed */
-    padding: 20px;
-    margin:10px;
+   
+   
     /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); */
 }
 
@@ -105,14 +99,12 @@
 
 <div class="content">
    
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-
+  <img src="images/home.jpeg" style="width:100%;border-radius: 20px; margin-top:20px "/>
+  <br/>
+  <br/>
     <div class="title">Welcome to our sweet home</div>
     <div class="bigger-title">Grace Villa</div>
+   
     <div class="mt-5">
        
         <a class="btn btn-glossy"  href="tel:+919539459077"  target="_blank">
@@ -131,6 +123,8 @@
             WhatsApp
         </a>
     </div>
+
+    <span style="font-size: 11px !important;">Designed by <a target="_blank" href="https://www.spaceled.in">https://www.spaceled.in</a></span>
 </div>
 
 <!-- Bootstrap JS and dependencies -->
