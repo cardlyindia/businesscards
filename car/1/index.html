@@ -104,7 +104,7 @@ border: 1px solid rgba(236, 225, 225, 0.918);
 
 .bignumber
 {
-  font-size: 40px;
+  font-size: 30px;
   background: linear-gradient(to right, rgb(58, 244, 157) , rgb(7, 88, 188));
 			-webkit-text-fill-color: transparent;
 			-webkit-background-clip: text;
@@ -259,7 +259,7 @@ border: 1px solid rgba(236, 225, 225, 0.918);
  function deriveKeyFromPIN(pin) {
             // Ensure the pin is exactly 5 digits long
             if (pin.length !== 5) {
-                alert("PIN must be exactly 5 digits long.");
+                alert("Please provide a valid PIN");
                 throw new Error("Invalid PIN length");
             }
     
