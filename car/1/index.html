@@ -1,120 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAR DLY</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAR DLY</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Slabo+27px&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Slabo+27px&display=swap');
+    * {
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      font-style: normal;
 
-      *
-      {
-        font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-       
-      }
-       
-        body, html {
-           
-           
-          background: #000;  /* fallback for old browsers */
+    }
 
-        }
+    body,
+    html {
 
 
-.preenter
-{
-  font-family: "Righteous", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+      background: #000;
+      /* fallback for old browsers */
 
-    color: #ffffff !important;
-    background: linear-gradient(to right, rgb(255, 177, 112) , rgb(208, 18, 141));
-			-webkit-text-fill-color: transparent;
-			-webkit-background-clip: text;
-}
-.enter
-{
-  font-family: "Righteous", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-    text-decoration: none !important;
-    color: #ffffff !important;
-    /* background: linear-gradient(to right, red , blue);
+    }
+
+
+    .preenter {
+      font-family: "Righteous", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+
+      color: #ffffff !important;
+      background: linear-gradient(to right, rgb(255, 177, 112), rgb(208, 18, 141));
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+    }
+
+    .enter {
+      font-family: "Righteous", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: none !important;
+      color: #ffffff !important;
+      /* background: linear-gradient(to right, red , blue);
 			-webkit-text-fill-color: transparent;
 			-webkit-background-clip: text; */
-}
-a.enter::after {
-    content: "";
-    display: block;
-    width: 52px;
-    padding-top: 2px;
-    border-bottom: 5px solid #a200ff;
-  }
-  .small-about
-  {
-    color: #dedede;
-    font-size: 11px;
-  }
-        .bgcar
-        {
-          background: url(../pexels-yaroslav-shuraev-1834403.jpg) no-repeat;
-          color: #fff;
-          background-size: cover;
+    }
 
-        }
-        .overlay
-        {
-          background: #020202be;
-        }
+    a.enter::after {
+      content: "";
+      display: block;
+      width: 52px;
+      padding-top: 2px;
+      border-bottom: 5px solid #a200ff;
+    }
 
-      
+    .small-about {
+      color: #dedede;
+      font-size: 11px;
+    }
+
+    .bgcar {
+      background: url(../pexels-yaroslav-shuraev-1834403.jpg) no-repeat;
+      color: #fff;
+      background-size: cover;
+
+    }
+
+    .overlay {
+      background: #020202be;
+    }
+
+
 
     .btn-grad2 {
 
-display: inline-block;
-padding: 10px 15px 10px 15px;
-border: 0;
-text-decoration: none;
-border-radius: 15px;
-background-color: rgba(255, 255, 255, 0.1);
-border: 1px solid rgba(255, 255, 255, 0.1);
-backdrop-filter: blur(30px);
-color: rgba(255, 255, 255, 0.8);
-font-weight: bold;
-cursor: pointer;
-text-transform: uppercase;
-}
+      display: inline-block;
+      padding: 10px 15px 10px 15px;
+      border: 0;
+      text-decoration: none;
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(30px);
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: bold;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
 
-.btn-grad2:hover {
-
-
-background-image: linear-gradient(to right, rgb(1 134 218), rgb(182 49 167));
-color: #fff;
-border: 1px solid rgba(236, 225, 225, 0.918);
-}
+    .btn-grad2:hover {
 
 
-.bignumber
-{
-  font-size: 30px;
-  background: linear-gradient(to right, rgb(58, 244, 157) , rgb(7, 88, 188));
-			-webkit-text-fill-color: transparent;
-			-webkit-background-clip: text;
-}
+      background-image: linear-gradient(to right, rgb(1 134 218), rgb(182 49 167));
+      color: #fff;
+      border: 1px solid rgba(236, 225, 225, 0.918);
+    }
 
-    </style>
+
+    .bignumber {
+      font-size: 30px;
+      background: linear-gradient(to right, rgb(58, 244, 157), rgb(7, 88, 188));
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+    }
+  </style>
 </head>
+
 <body>
 
-  <div class="modal " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" >
+  <div class="modal " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -143,162 +143,201 @@ border: 1px solid rgba(236, 225, 225, 0.918);
 
 
 
-    <div class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog" id="modalTour">
-        <div class="modal-dialog " role="document">
-         
-          <div class="modal-content bgcar rounded-4 shadow">
-            <!-- <div class="modal-header">Am i blocking your way?</div> -->
-            <div class="modal-body overlay p-5">
-            
-              <h3 class="preenter">Am I
+  <div class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog"
+    id="modalTour">
+    <div class="modal-dialog " role="document">
 
-                <!-- EN: Login -->
-                <a class="enter"> blocking your way?
-                    <!-- EN: to your Account -->
+      <div class="modal-content bgcar rounded-4 shadow">
+        <!-- <div class="modal-header">Am i blocking your way?</div> -->
+        <div class="modal-body overlay p-5">
 
-                </a>
-            </h3>
+          <h3 class="preenter">Am I
 
-              Maruti Vitara Brezza 
-              <h2 class="fw-bold mb-0">KL 01 CL 6508</h2>
+            <!-- EN: Login -->
+            <a class="enter"> blocking your way?
+              <!-- EN: to your Account -->
 
-             <div class="getprofile mt-3">
+            </a>
+          </h3>
 
-             <div id="unlockblock">
+          Maruti Vitara Brezza
+          <h2 class="fw-bold mb-0">KL 01 CL 6508</h2>
+
+          <div class="getprofile mt-3">
+
+            <div id="unlockblock">
               <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label"> 
-                  
-                  I’m extremely sorry. Please reach out to me, and I can help you. Provide the Cardly PIN to get my contact details
+                <label for="exampleFormControlInput1" class="form-label">
+
+                  I’m extremely sorry. Please reach out to me, and I can help you. Provide the Cardly PIN to get my
+                  contact details
                 </label>
                 <input type="text" class="form-control" id="getpin" placeholder="See the Card displayed in my car">
               </div>
 
-              <a href="#" id="unlock"  data-crypt="czsJ80C5xMNdPZD4PEmdmAbqkKOtvS8er/jzEHCinS79Lc/PMZcG5JcJzJqTzKJZqSGdEeYyScXEiupXxXsfFIduf1lPOfpiA66q7W4wrFM=" class="btn btn-grad2 btn-sm">
+              <a href="#" id="unlock"
+                data-crypt="czsJ80C5xMNdPZD4PEmdmAbqkKOtvS8er/jzEHCinS79Lc/PMZcG5JcJzJqTzKJZqSGdEeYyScXEiupXxXsfFIduf1lPOfpiA66q7W4wrFM="
+                class="btn btn-grad2 btn-sm">
 
-              
 
-                <svg  width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 14.5V16.5M7 10.0288C7.47142 10 8.05259 10 8.8 10H15.2C15.9474 10 16.5286 10 17 10.0288M7 10.0288C6.41168 10.0647 5.99429 10.1455 5.63803 10.327C5.07354 10.6146 4.6146 11.0735 4.32698 11.638C4 12.2798 4 13.1198 4 14.8V16.2C4 17.8802 4 18.7202 4.32698 19.362C4.6146 19.9265 5.07354 20.3854 5.63803 20.673C6.27976 21 7.11984 21 8.8 21H15.2C16.8802 21 17.7202 21 18.362 20.673C18.9265 20.3854 19.3854 19.9265 19.673 19.362C20 18.7202 20 17.8802 20 16.2V14.8C20 13.1198 20 12.2798 19.673 11.638C19.3854 11.0735 18.9265 10.6146 18.362 10.327C18.0057 10.1455 17.5883 10.0647 17 10.0288M7 10.0288V8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8V10.0288" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
 
-  
+                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  stroke="#000000">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M12 14.5V16.5M7 10.0288C7.47142 10 8.05259 10 8.8 10H15.2C15.9474 10 16.5286 10 17 10.0288M7 10.0288C6.41168 10.0647 5.99429 10.1455 5.63803 10.327C5.07354 10.6146 4.6146 11.0735 4.32698 11.638C4 12.2798 4 13.1198 4 14.8V16.2C4 17.8802 4 18.7202 4.32698 19.362C4.6146 19.9265 5.07354 20.3854 5.63803 20.673C6.27976 21 7.11984 21 8.8 21H15.2C16.8802 21 17.7202 21 18.362 20.673C18.9265 20.3854 19.3854 19.9265 19.673 19.362C20 18.7202 20 17.8802 20 16.2V14.8C20 13.1198 20 12.2798 19.673 11.638C19.3854 11.0735 18.9265 10.6146 18.362 10.327C18.0057 10.1455 17.5883 10.0647 17 10.0288M7 10.0288V8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8V10.0288"
+                      stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </g>
+                </svg>
+
+
                 Unlock details</a>
 
-             </div>
             </div>
-
-            <div  id="unlocked"  class=" d-none">
-             <span> I’m extremely sorry. Please reach out to me, and I can help you.</span>
-              <ul class="d-grid gap-4 my-2 list-unstyled small">
-              
-                <li class="d-flex gap-4">
-                  
-                  <svg  width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 13H16C17.7107 13 19.1506 14.2804 19.3505 15.9795L20 21.5M8 13C5.2421 12.3871 3.06717 10.2687 2.38197 7.52787L2 6M8 13V18C8 19.8856 8 20.8284 8.58579 21.4142C9.17157 22 10.1144 22 12 22C13.8856 22 14.8284 22 15.4142 21.4142C16 20.8284 16 19.8856 16 18V17" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> <circle cx="12" cy="6" r="4" stroke="#ffffff" stroke-width="1.5"></circle> </g></svg>
-
-                  <div>
-                    Name
-                    <h5 class="mb-0" id="name">***</h5>
-                    
-                  </div>
-                </li>
-                
-                <li class="d-flex gap-4 mt-5">
-                  
-                  <div>
-                    Mobile
-                    <h5 class="mb-0 bignumber" id="mobile" >***</h5>
-                    <div class="mt-2">
-
-
-<a id="whatsapp" href="#">
-
-  
-<svg  width="42" height="42"   viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17.6 6.31999C16.8669 5.58141 15.9943 4.99596 15.033 4.59767C14.0716 4.19938 13.0406 3.99622 12 3.99999C10.6089 4.00135 9.24248 4.36819 8.03771 5.06377C6.83294 5.75935 5.83208 6.75926 5.13534 7.96335C4.4386 9.16745 4.07046 10.5335 4.06776 11.9246C4.06507 13.3158 4.42793 14.6832 5.12 15.89L4 20L8.2 18.9C9.35975 19.5452 10.6629 19.8891 11.99 19.9C14.0997 19.9001 16.124 19.0668 17.6222 17.5816C19.1205 16.0965 19.9715 14.0796 19.99 11.97C19.983 10.9173 19.7682 9.87634 19.3581 8.9068C18.948 7.93725 18.3505 7.05819 17.6 6.31999ZM12 18.53C10.8177 18.5308 9.65701 18.213 8.64 17.61L8.4 17.46L5.91 18.12L6.57 15.69L6.41 15.44C5.55925 14.0667 5.24174 12.429 5.51762 10.8372C5.7935 9.24545 6.64361 7.81015 7.9069 6.80322C9.1702 5.79628 10.7589 5.28765 12.3721 5.37368C13.9853 5.4597 15.511 6.13441 16.66 7.26999C17.916 8.49818 18.635 10.1735 18.66 11.93C18.6442 13.6859 17.9355 15.3645 16.6882 16.6006C15.441 17.8366 13.756 18.5301 12 18.53ZM15.61 13.59C15.41 13.49 14.44 13.01 14.26 12.95C14.08 12.89 13.94 12.85 13.81 13.05C13.6144 13.3181 13.404 13.5751 13.18 13.82C13.07 13.96 12.95 13.97 12.75 13.82C11.6097 13.3694 10.6597 12.5394 10.06 11.47C9.85 11.12 10.26 11.14 10.64 10.39C10.6681 10.3359 10.6827 10.2759 10.6827 10.215C10.6827 10.1541 10.6681 10.0941 10.64 10.04C10.64 9.93999 10.19 8.95999 10.03 8.56999C9.87 8.17999 9.71 8.23999 9.58 8.22999H9.19C9.08895 8.23154 8.9894 8.25465 8.898 8.29776C8.8066 8.34087 8.72546 8.403 8.66 8.47999C8.43562 8.69817 8.26061 8.96191 8.14676 9.25343C8.03291 9.54495 7.98287 9.85749 8 10.17C8.0627 10.9181 8.34443 11.6311 8.81 12.22C9.6622 13.4958 10.8301 14.5293 12.2 15.22C12.9185 15.6394 13.7535 15.8148 14.58 15.72C14.8552 15.6654 15.1159 15.5535 15.345 15.3915C15.5742 15.2296 15.7667 15.0212 15.91 14.78C16.0428 14.4856 16.0846 14.1583 16.03 13.84C15.94 13.74 15.81 13.69 15.61 13.59Z" fill="#ffffff"></path> </g></svg>
-
-</a>
-
-
-<a id="call" href="#">
-
-  <svg  width="40" height="40"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M18.4 20.75H18.17C15.5788 20.4681 13.0893 19.5846 10.9 18.17C8.86618 16.8747 7.13938 15.1513 5.84 13.12C4.42216 10.925 3.53852 8.42823 3.26 5.83001C3.22816 5.52011 3.2596 5.20696 3.35243 4.90958C3.44525 4.6122 3.59752 4.33677 3.8 4.10001C3.99694 3.86008 4.24002 3.66211 4.51486 3.51782C4.78969 3.37354 5.09068 3.28587 5.4 3.26001H8C8.56312 3.26058 9.10747 3.46248 9.53476 3.82925C9.96205 4.19602 10.2441 4.70349 10.33 5.26001C10.425 5.97489 10.6028 6.67628 10.86 7.35001C11.0164 7.77339 11.0487 8.23264 10.9531 8.67375C10.8574 9.11485 10.6378 9.51947 10.32 9.84001L9.71 10.45C10.6704 11.9662 11.9587 13.2477 13.48 14.2L14.09 13.6C14.4105 13.2822 14.8152 13.0626 15.2563 12.9669C15.6974 12.8713 16.1566 12.9036 16.58 13.06C17.2545 13.3148 17.9556 13.4926 18.67 13.59C19.236 13.6751 19.7515 13.9638 20.1198 14.402C20.488 14.8403 20.6837 15.3978 20.67 15.97V18.37C20.67 18.9942 20.4227 19.593 19.9823 20.0353C19.5419 20.4776 18.9442 20.7274 18.32 20.73L18.4 20.75ZM8 4.75001H5.61C5.49265 4.75777 5.37809 4.78924 5.27325 4.84252C5.1684 4.8958 5.07545 4.96979 5 5.06001C4.92658 5.14452 4.871 5.24302 4.83663 5.34957C4.80226 5.45612 4.7898 5.56852 4.8 5.68001C5.04249 8.03679 5.83362 10.304 7.11 12.3C8.28664 14.1467 9.85332 15.7134 11.7 16.89C13.6973 18.1798 15.967 18.9878 18.33 19.25C18.4529 19.2569 18.5759 19.2383 18.6912 19.1953C18.8065 19.1522 18.9117 19.0857 19 19C19.1592 18.8368 19.2489 18.6181 19.25 18.39V16C19.2545 15.7896 19.1817 15.5848 19.0453 15.4244C18.9089 15.2641 18.7184 15.1593 18.51 15.13C17.6839 15.0189 16.8724 14.8177 16.09 14.53C15.9359 14.4724 15.7686 14.4596 15.6075 14.4933C15.4464 14.5269 15.2982 14.6055 15.18 14.72L14.18 15.72C14.0629 15.8342 13.912 15.9076 13.7499 15.9292C13.5877 15.9508 13.423 15.9195 13.28 15.84C11.1462 14.6342 9.37997 12.8715 8.17 10.74C8.08718 10.598 8.05402 10.4324 8.07575 10.2694C8.09748 10.1065 8.17286 9.95538 8.29 9.84001L9.29 8.84001C9.40468 8.72403 9.48357 8.57751 9.51726 8.41793C9.55095 8.25835 9.53802 8.09244 9.48 7.94001C9.19119 7.15799 8.98997 6.34637 8.88 5.52001C8.85519 5.30528 8.75133 5.10747 8.58865 4.96513C8.42597 4.82278 8.21613 4.7461 8 4.75001Z" fill="#ffffff"></path> </g></svg>
-
-  
-
-</a>
-
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-              
-
-<span class="small-about">
-  Powered by cardly| 000000001</span>
-
-              </div>
           </div>
+
+          <div id="unlocked" class=" d-none">
+            <span> I’m extremely sorry. Please reach out to me, and I can help you.</span>
+            <ul class="d-grid gap-4 my-2 list-unstyled small">
+
+              <li class="d-flex gap-4">
+
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M8 13H16C17.7107 13 19.1506 14.2804 19.3505 15.9795L20 21.5M8 13C5.2421 12.3871 3.06717 10.2687 2.38197 7.52787L2 6M8 13V18C8 19.8856 8 20.8284 8.58579 21.4142C9.17157 22 10.1144 22 12 22C13.8856 22 14.8284 22 15.4142 21.4142C16 20.8284 16 19.8856 16 18V17"
+                      stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path>
+                    <circle cx="12" cy="6" r="4" stroke="#ffffff" stroke-width="1.5"></circle>
+                  </g>
+                </svg>
+
+                <div>
+                  Name
+                  <h5 class="mb-0" id="name">***</h5>
+
+                </div>
+              </li>
+
+              <li class="d-flex gap-4 mt-5">
+
+                <div>
+                  Mobile
+                  <h5 class="mb-0 bignumber" id="mobile">***</h5>
+                  <div class="mt-2">
+
+
+                    <a id="whatsapp" href="#">
+
+
+                      <svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            d="M17.6 6.31999C16.8669 5.58141 15.9943 4.99596 15.033 4.59767C14.0716 4.19938 13.0406 3.99622 12 3.99999C10.6089 4.00135 9.24248 4.36819 8.03771 5.06377C6.83294 5.75935 5.83208 6.75926 5.13534 7.96335C4.4386 9.16745 4.07046 10.5335 4.06776 11.9246C4.06507 13.3158 4.42793 14.6832 5.12 15.89L4 20L8.2 18.9C9.35975 19.5452 10.6629 19.8891 11.99 19.9C14.0997 19.9001 16.124 19.0668 17.6222 17.5816C19.1205 16.0965 19.9715 14.0796 19.99 11.97C19.983 10.9173 19.7682 9.87634 19.3581 8.9068C18.948 7.93725 18.3505 7.05819 17.6 6.31999ZM12 18.53C10.8177 18.5308 9.65701 18.213 8.64 17.61L8.4 17.46L5.91 18.12L6.57 15.69L6.41 15.44C5.55925 14.0667 5.24174 12.429 5.51762 10.8372C5.7935 9.24545 6.64361 7.81015 7.9069 6.80322C9.1702 5.79628 10.7589 5.28765 12.3721 5.37368C13.9853 5.4597 15.511 6.13441 16.66 7.26999C17.916 8.49818 18.635 10.1735 18.66 11.93C18.6442 13.6859 17.9355 15.3645 16.6882 16.6006C15.441 17.8366 13.756 18.5301 12 18.53ZM15.61 13.59C15.41 13.49 14.44 13.01 14.26 12.95C14.08 12.89 13.94 12.85 13.81 13.05C13.6144 13.3181 13.404 13.5751 13.18 13.82C13.07 13.96 12.95 13.97 12.75 13.82C11.6097 13.3694 10.6597 12.5394 10.06 11.47C9.85 11.12 10.26 11.14 10.64 10.39C10.6681 10.3359 10.6827 10.2759 10.6827 10.215C10.6827 10.1541 10.6681 10.0941 10.64 10.04C10.64 9.93999 10.19 8.95999 10.03 8.56999C9.87 8.17999 9.71 8.23999 9.58 8.22999H9.19C9.08895 8.23154 8.9894 8.25465 8.898 8.29776C8.8066 8.34087 8.72546 8.403 8.66 8.47999C8.43562 8.69817 8.26061 8.96191 8.14676 9.25343C8.03291 9.54495 7.98287 9.85749 8 10.17C8.0627 10.9181 8.34443 11.6311 8.81 12.22C9.6622 13.4958 10.8301 14.5293 12.2 15.22C12.9185 15.6394 13.7535 15.8148 14.58 15.72C14.8552 15.6654 15.1159 15.5535 15.345 15.3915C15.5742 15.2296 15.7667 15.0212 15.91 14.78C16.0428 14.4856 16.0846 14.1583 16.03 13.84C15.94 13.74 15.81 13.69 15.61 13.59Z"
+                            fill="#ffffff"></path>
+                        </g>
+                      </svg>
+
+                    </a>
+
+
+                    <a id="call" href="#">
+
+                      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            d="M18.4 20.75H18.17C15.5788 20.4681 13.0893 19.5846 10.9 18.17C8.86618 16.8747 7.13938 15.1513 5.84 13.12C4.42216 10.925 3.53852 8.42823 3.26 5.83001C3.22816 5.52011 3.2596 5.20696 3.35243 4.90958C3.44525 4.6122 3.59752 4.33677 3.8 4.10001C3.99694 3.86008 4.24002 3.66211 4.51486 3.51782C4.78969 3.37354 5.09068 3.28587 5.4 3.26001H8C8.56312 3.26058 9.10747 3.46248 9.53476 3.82925C9.96205 4.19602 10.2441 4.70349 10.33 5.26001C10.425 5.97489 10.6028 6.67628 10.86 7.35001C11.0164 7.77339 11.0487 8.23264 10.9531 8.67375C10.8574 9.11485 10.6378 9.51947 10.32 9.84001L9.71 10.45C10.6704 11.9662 11.9587 13.2477 13.48 14.2L14.09 13.6C14.4105 13.2822 14.8152 13.0626 15.2563 12.9669C15.6974 12.8713 16.1566 12.9036 16.58 13.06C17.2545 13.3148 17.9556 13.4926 18.67 13.59C19.236 13.6751 19.7515 13.9638 20.1198 14.402C20.488 14.8403 20.6837 15.3978 20.67 15.97V18.37C20.67 18.9942 20.4227 19.593 19.9823 20.0353C19.5419 20.4776 18.9442 20.7274 18.32 20.73L18.4 20.75ZM8 4.75001H5.61C5.49265 4.75777 5.37809 4.78924 5.27325 4.84252C5.1684 4.8958 5.07545 4.96979 5 5.06001C4.92658 5.14452 4.871 5.24302 4.83663 5.34957C4.80226 5.45612 4.7898 5.56852 4.8 5.68001C5.04249 8.03679 5.83362 10.304 7.11 12.3C8.28664 14.1467 9.85332 15.7134 11.7 16.89C13.6973 18.1798 15.967 18.9878 18.33 19.25C18.4529 19.2569 18.5759 19.2383 18.6912 19.1953C18.8065 19.1522 18.9117 19.0857 19 19C19.1592 18.8368 19.2489 18.6181 19.25 18.39V16C19.2545 15.7896 19.1817 15.5848 19.0453 15.4244C18.9089 15.2641 18.7184 15.1593 18.51 15.13C17.6839 15.0189 16.8724 14.8177 16.09 14.53C15.9359 14.4724 15.7686 14.4596 15.6075 14.4933C15.4464 14.5269 15.2982 14.6055 15.18 14.72L14.18 15.72C14.0629 15.8342 13.912 15.9076 13.7499 15.9292C13.5877 15.9508 13.423 15.9195 13.28 15.84C11.1462 14.6342 9.37997 12.8715 8.17 10.74C8.08718 10.598 8.05402 10.4324 8.07575 10.2694C8.09748 10.1065 8.17286 9.95538 8.29 9.84001L9.29 8.84001C9.40468 8.72403 9.48357 8.57751 9.51726 8.41793C9.55095 8.25835 9.53802 8.09244 9.48 7.94001C9.19119 7.15799 8.98997 6.34637 8.88 5.52001C8.85519 5.30528 8.75133 5.10747 8.58865 4.96513C8.42597 4.82278 8.21613 4.7461 8 4.75001Z"
+                            fill="#ffffff"></path>
+                        </g>
+                      </svg>
+
+
+
+                    </a>
+
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+
+
+          <span class="small-about">
+            Powered by cardly &nbsp;|&nbsp; 000000001</span>
+
         </div>
       </div>
+    </div>
+  </div>
 
 
 
-<!-- Bootstrap JS and dependencies -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
- <!-- Google tag (gtag.js) -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-GED109S1GN"></script>
- <script>
-   window.dataLayer = window.dataLayer || [];
-   function gtag() { dataLayer.push(arguments); }
-   gtag('js', new Date());
-   gtag('config', 'G-GED109S1GN');
- </script>
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GED109S1GN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-GED109S1GN');
+  </script>
 
-<script>
+  <script>
 
- function deriveKeyFromPIN(pin) {
-            // Ensure the pin is exactly 5 digits long
-            if (pin.length !== 5) {
-                alert("Please provide a valid PIN");
-                throw new Error("Invalid PIN length");
-            }
-    
-            // Derive the key by repeating the PIN to 32 characters
-            const keyMaterial = new TextEncoder().encode(pin.repeat(Math.ceil(32 / pin.length)).slice(0, 32));
-    
-            // Import the key material to create a CryptoKey object
-            return  crypto.subtle.importKey(
-                "raw",
-                keyMaterial,
-                { name: "AES-CBC", length: 256 },
-                false,
-                ["encrypt", "decrypt"]
-            );
-        }
-    
-        function deriveIVFromPIN(pin) {
-            // Derive the IV by repeating the PIN to 16 characters
-            const iv = new TextEncoder().encode(pin.repeat(Math.ceil(16 / pin.length)).slice(0, 16));
-            return iv;
-        }
-    
-        
-  // Function to decrypt the encrypted data
-  async function decryptData(encryptedData, pin) {
-    debugger;
+    function deriveKeyFromPIN(pin) {
+      // Ensure the pin is exactly 5 digits long
+      if (pin.length !== 5) {
+        alert("Please provide a valid PIN");
+        throw new Error("Invalid PIN length");
+      }
+
+      // Derive the key by repeating the PIN to 32 characters
+      const keyMaterial = new TextEncoder().encode(pin.repeat(Math.ceil(32 / pin.length)).slice(0, 32));
+
+      // Import the key material to create a CryptoKey object
+      return crypto.subtle.importKey(
+        "raw",
+        keyMaterial,
+        { name: "AES-CBC", length: 256 },
+        false,
+        ["encrypt", "decrypt"]
+      );
+    }
+
+    function deriveIVFromPIN(pin) {
+      // Derive the IV by repeating the PIN to 16 characters
+      const iv = new TextEncoder().encode(pin.repeat(Math.ceil(16 / pin.length)).slice(0, 16));
+      return iv;
+    }
+
+
+    // Function to decrypt the encrypted data
+    async function decryptData(encryptedData, pin) {
+      debugger;
       // Example decryption logic: This would be a more complex logic depending on the encryption used
       // In this example, assume the decryption method is a simple base64 decode with the pin used somehow
 
       const key = await deriveKeyFromPIN(pin);
-            const iv = deriveIVFromPIN(pin);
-    
-            const encryptedBytes = Uint8Array.from(atob(encryptedData), c => c.charCodeAt(0));
-    
-    try {
+      const iv = deriveIVFromPIN(pin);
+
+      const encryptedBytes = Uint8Array.from(atob(encryptedData), c => c.charCodeAt(0));
+
+      try {
         const decrypted = await crypto.subtle.decrypt(
-            { name: "AES-CBC", iv: iv },
-            key,
-            encryptedBytes
+          { name: "AES-CBC", iv: iv },
+          key,
+          encryptedBytes
         );
 
         // Decode decrypted data from Uint8Array back to a JSON string
@@ -323,30 +362,31 @@ border: 1px solid rgba(236, 225, 225, 0.918);
           document.getElementById('unlocked').classList.remove('d-none');
           // Show the details section
           document.getElementById('unlockblock').classList.add('d-none');
-      } else {
+        } else {
           alert("Invalid PIN or decryption failed.");
-      }
+        }
 
-       // document.getElementById("decryptedData").value = readableData;
+        // document.getElementById("decryptedData").value = readableData;
         return parsedData;
-    } catch (error) {
-      console.error(error);
+      } catch (error) {
+        console.error(error);
         alert("Decryption failed. Please make sure the PIN is correct and try again.");
+      }
     }
-  }
 
-  // Event listener for unlocking details
-  document.getElementById('unlock').addEventListener('click', function(event) {
+    // Event listener for unlocking details
+    document.getElementById('unlock').addEventListener('click', function (event) {
       event.preventDefault();
       debugger;
       const pin = document.getElementById('getpin').value;
       const encryptedData = this.getAttribute('data-crypt');
 
-       decryptData(encryptedData, pin);
+      decryptData(encryptedData, pin);
 
-      
-  });
-</script>
+
+    });
+  </script>
 
 </body>
+
 </html>
