@@ -363,14 +363,14 @@
           // Show the details section
           document.getElementById('unlockblock').classList.add('d-none');
         } else {
-          alert("Invalid PIN or decryption failed.");
+            alert("Invalid PIN. Please make sure the PIN is correct and try again.");
         }
 
         // document.getElementById("decryptedData").value = readableData;
         return parsedData;
       } catch (error) {
         console.error(error);
-        alert("Decryption failed. Please make sure the PIN is correct and try again.");
+        alert("Invalid PIN. Please make sure the PIN is correct and try again.");
       }
     }
 
