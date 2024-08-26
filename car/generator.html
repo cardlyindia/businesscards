@@ -6,20 +6,25 @@
     <title>AES Encryption/Decryption using 5-Digit PIN</title>
 </head>
 <body>
-    18791818791818791818791818791818
 
     <h2>AES Encryption/Decryption using 5-Digit PIN</h2>
 
     <label for="pin">Enter 5-Digit PIN:</label>
-    <input type="text" id="pin" maxlength="5" placeholder="Enter 5-Digit PIN (e.g. 18791)" required>
+    <input type="text" id="pin" maxlength="5" placeholder="Enter 5-Digit PIN (e.g. 18791)" required><br><br>
 
-    <label for="plaintext">Enter Text to Encrypt:</label>
-    <textarea id="plaintext" rows="4" cols="50" placeholder="Enter text here..."></textarea>
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" required><br><br>
+
+    <label for="mobile">Mobile Number:</label>
+    <input type="text" id="mobile" placeholder="Enter your mobile number" required><br><br>
+
+    <label for="whatsapp">WhatsApp Number:</label>
+    <input type="text" id="whatsapp" placeholder="Enter your WhatsApp number" required><br><br>
 
     <button onclick="encryptData()">Encrypt</button>
 
     <h3>Encrypted Data:</h3>
-    <textarea id="encryptedData" rows="4" cols="50" readonly></textarea>
+    <textarea id="encryptedData" rows="4" cols="50" readonly></textarea><br><br>
 
     <button onclick="decryptData()">Decrypt</button>
 
@@ -55,16 +60,21 @@
     
         async function encryptData() {
             const pin = document.getElementById("pin").value;
-            const plaintext = document.getElementById("plaintext").value;
+            const name = document.getElementById("name").value;
+            const mobile = document.getElementById("mobile").value;
+            const whatsapp = document.getElementById("whatsapp").value;
     
-            if (!pin || !plaintext) {
-                alert("Please enter both a 5-digit PIN and text to encrypt.");
+            if (!pin || !name || !mobile || !whatsapp) {
+                alert("Please fill in all fields and enter a 5-digit PIN.");
                 return;
             }
     
+            // Create a JSON string from the form data
+            const jsonData = JSON.stringify({ name: name, mobile: mobile, whatsapp: whatsapp});
+            console.log(jsonData)
             const key = await deriveKeyFromPIN(pin);
             const iv = deriveIVFromPIN(pin);
-            const data = new TextEncoder().encode(plaintext);
+            const data = new TextEncoder().encode(jsonData);
     
             const encrypted = await crypto.subtle.encrypt(
                 { name: "AES-CBC", iv: iv },
@@ -99,8 +109,14 @@
                     encryptedBytes
                 );
     
+                // Decode decrypted data from Uint8Array back to a JSON string
                 const decryptedText = new TextDecoder().decode(decrypted);
-                document.getElementById("decryptedData").value = decryptedText;
+    
+                // Parse JSON and display it in a readable format
+                const parsedData = JSON.parse(decryptedText);
+                const readableData = `Name: ${parsedData.name}\nMobile: ${parsedData.mobile}\nWhatsApp: ${parsedData.whatsapp}`;
+    
+                document.getElementById("decryptedData").value = readableData;
             } catch (error) {
                 alert("Decryption failed. Please make sure the PIN is correct and try again.");
             }
