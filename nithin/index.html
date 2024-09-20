@@ -318,7 +318,7 @@ function downloadVCard() {
   var vCard = createVCard(vCardData);
   var element = $("<a></a>");
   element.attr("href", "data:text/plain;charset=utf-8," + encodeURIComponent(vCard));
-  element.attr("download", "contact.vcf");
+  element.attr("download", "nithin.vcf");
   element.css("display", "none");
   $("body").append(element);
   element[0].click();
