@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap 5 Mega Menu Example</title>
+  <!-- Bootstrap 5 CSS -->
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css'>
+  <!-- Google Fonts -->
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&amp;display=swap'>
+  <!-- Font Awesome CSS -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'>
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Demo CSS -->
+  <link rel="stylesheet" href="css/demo.css">
+
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+    *{
+
+      font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:200;
+  font-style: normal;
+
+    }
+    .gcnav {
+    border-bottom: 1px solid #dedede;
+}
+
+.gchead1
+{
+  background: #FF5B32;
+background: linear-gradient(to right, #FF5B32 0%, #FFE877 30%, #FF325B 60%, #FF7F04 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
+    .menu_head {
+      padding-bottom: 10px;
+      /* border-bottom: 1px solid #dedede; */
+    }
+
+
+
+    .nav-link {
+      color: rgb(255, 255, 255) !important; 
+}
+
+.nav-linka {
+  color: inherit;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase !important;
+}
+
+.nav-linka:hover {
+  background:
+    linear-gradient(
+      to right,
+      rgba(100, 200, 200, 1),
+      rgba(100, 200, 200, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.nav-linka:hover {
+  /* font-weight: bold; */
+  color: #e7ff9d;
+  background-size: 0 3px, 100% 3px;
+  
+}
+
+
+
+.bn39 {
+  background-image: linear-gradient(135deg, #008aff, #86d472);
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: block;
+  height: 20px;
+  font-size: 0.8rem;
+  font-weight: 200;
+  padding: 4px;
+  position: relative;
+  text-decoration: none;
+  width: 7em;
+  z-index: 2;
+}
+
+.bn39:hover {
+  color: #fff;
+}
+
+.bn39 .bn39span {
+  align-items: center;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transition: background 0.5s ease;
+  width: 100%;
+}
+
+.bn39:hover  {
+  background: rgb(231, 231, 231);
+  color: #000;
+}
+
+
+.list-group-item:hover{
+background: #CB60B3;
+background: linear-gradient(to right, #CB60B3 0%, #C146A1 50%, #A80077 51%, #DB36A4 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.dropdown-menu
+{
+  background: #212529;
+  color:#fff;
+}
+
+.text-black
+{
+  color: #000 !important;
+}
+
+
+
+.list-group-item {
+   
+    color: #ffffff;
+   
+    background-color: #000000;
+}
+
+.dropdown-menu 
+{
+  border-radius: 0px !important;
+}
+.text-light
+{
+  color: #8f8f8fc3 !important;
+}
+.preenter
+{
+    color: #f4dbf3 !important;
+    font-size: 15px !important;
+    font-weight: normal;
+}
+.enter
+{
+    text-decoration: none !important;
+    color: #f4dbf3 !important;
+    font-size: 15px !important;
+    font-weight: normal;
+}
+a.enter::after {
+    content: "";
+    display: block;
+    width: 52px;
+    padding-top: 2px;
+    border-bottom: 5px solid #a200ff;
+    font-size: 15px !important;
+    font-weight: normal;
+  }
+  .divider
+  {
+   
+    background: #00C9FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+height: 5px;
+width: 100%;
+  }
+
+  .shader
+  {
+   background:#00000053;padding: 25px; border-radius: 5px;
+
+   background: #fb00ff81;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #00dade71, #fb00ff6f);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #00dade89, #fb00ff79); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  }
+
+  .dynamic-text-shadow {
+  /*  larger font size, more shadow distance  */
+  text-shadow: .1em .1em 0 hsl(200 50% 30%);
+}
+  </style>
+
+<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+  <main class="gcnav">
+    <!-- Start Mega Menu HTML -->
+    <!--  -->
+    <nav class="navbar navbar-expand-lg  bg-dark navbar-dark shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/logo.svg" style="height: 45px;" />
+          <!-- <span class="badge bg-primary">Mega Menu</span> -->
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbar-content">
+          <div class="hamburger-toggle">
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </button> -->
+        <div class="offcanvas offcanvas-end text-bg-dark bg-dark" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
+          <div class="offcanvas-header">
+            <h5 class=  "offcanvas-title" id="offcanvasNavbarDarkLabel">
+              <img src="assets/images/logo.svg" style="height: 45px;" />
+
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body ">
+           <div class="text-light">
+            <h3 class="preenter">Navigate
+
+              <!-- EN: Login -->
+              <a class="enter">never before using the rich geo console tools. Explore our website
+                  <!-- EN: to your Account -->
+
+              </a>
+          </h3>
+
+             
+           </div>
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                <span class="nav-linka">Home</span>  
+                </a>
+              </li>
+              <!-- <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Multilevel</a>
+              <ul class="dropdown-menu shadow">
+                <li><a class="dropdown-item" href="#">Gallery</a></li>
+                <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                <li class="dropstart">
+                  <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">Submenu Left</a>
+                  <ul class="dropdown-menu shadow">
+                    <li><a class="dropdown-item" href=""> Third level 1</a></li>
+                    <li><a class="dropdown-item" href=""> Third level 2</a></li>
+                    <li><a class="dropdown-item" href=""> Third level 3</a></li>
+                    <li><a class="dropdown-item" href=""> Third level 4</a></li>
+                    <li><a class="dropdown-item" href=""> Third level 5</a></li>
+                  </ul>
+                </li>
+                <li class="dropend">
+                  <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside">Submenu Right</a>
+                  <ul class="dropdown-menu shadow">
+                    <li><a class="dropdown-item" href=""> Second level 1</a></li>
+                    <li><a class="dropdown-item" href=""> Second level 2</a></li>
+                    <li><a class="dropdown-item" href=""> Second level 3</a></li>
+                    <li class="dropend">
+                      <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">Let's go deeper!</a>
+                      <ul class="dropdown-menu dropdown-submenu shadow">
+                        <li><a class="dropdown-item" href=""> Third level 1</a></li>
+                        <li><a class="dropdown-item" href=""> Third level 2</a></li>
+                        <li><a class="dropdown-item" href=""> Third level 3</a></li>
+                        <li><a class="dropdown-item" href=""> Third level 4</a></li>
+                        <li><a class="dropdown-item" href=""> Third level 5</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="dropdown-item" href=""> Third level 5</a></li>
+                  </ul>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> -->
+              <li class="nav-item dropdown dropdown-mega position-static">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside">
+                  <span class="nav-linka">GC Products</span>  
+                </a>
+                <div class="dropdown-menu shadow">
+                  <div class="mega-content px-4">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-12 col-sm-4 col-md-3 py-4">
+                          <h5 class="menu_head gchead1">Our Products for the GIS</h5>
+                          <div class="list-group">
+                            <a class="list-group-item" href="#">Accomodations</a>
+                            <a class="list-group-item" href="#">Terms & Conditions</a>
+                            <a class="list-group-item" href="#">Privacy</a>
+                          </div>
+                        </div>
+                       
+  
+  
+                        <div class="col-12 col-sm-12 col-md-3 py-4">
+                          <h5 class="menu_head">Damn, so many</h5>
+                          <div class="list-group">
+                            <a class="list-group-item" href="#">Accomodations</a>
+                            <a class="list-group-item" href="#">Terms & Conditions</a>
+                            <a class="list-group-item" href="#">Privacy</a>
+                          </div>
+                        </div>
+  
+                        <div class="col-12 col-sm-4 col-md-3 py-4">
+                          <h5 class="menu_head">Card</h5>
+                          <div class="card">
+                            <img src="assets/images/dsign.png" class="img-fluid" alt="image">
+                            <div class="card-body">
+                              <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-3 py-4">
+                          <h5 class="menu_head">About Our Products</h5>
+                          <p><b>CodeHim</b> is one of the BEST developer websites that provide web designers and
+                            developers with a simple way to preview and download a variety of free code & scripts.</p>
+                        </div>
+  
+  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+  
+              <li class="nav-item dropdown dropdown-mega position-static">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside">
+                  <span class="nav-linka">GC Services</span>  
+                </a>
+                <div class="dropdown-menu shadow">
+                  <div class="mega-content px-4">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-12 col-sm-4 col-md-3 py-4">
+                          <h5 class="menu_head gchead1">Pages</h5>
+                          <div class="list-group">
+                            <a class="list-group-item" href="#">Accomodations</a>
+                            <a class="list-group-item" href="#">Terms & Conditions</a>
+                            <a class="list-group-item" href="#">Privacy</a>
+                          </div>
+                        </div>
+                       
+  
+  
+                        <div class="col-12 col-sm-12 col-md-3 py-4">
+                          <h5 class="menu_head">Damn, so many</h5>
+                          <div class="list-group">
+                            <a class="list-group-item" href="#">Accomodations</a>
+                            <a class="list-group-item" href="#">Terms & Conditions</a>
+                            <a class="list-group-item" href="#">Privacy</a>
+                          </div>
+                        </div>
+  
+                        <div class="col-12 col-sm-4 col-md-3 py-4">
+                          <h5 class="menu_head">Card</h5>
+                          <div class="card">
+                            <img src="assets/images/dsign.png" class="img-fluid" alt="image">
+                            <div class="card-body">
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-3 py-4">
+                          <h5 class="menu_head">About CodeHim</h5>
+                          <p><b>CodeHim</b> is one of the BEST developer websites that provide web designers and
+                            developers with a simple way to preview and download a variety of free code & scripts.</p>
+                        </div>
+  
+  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+  
+  
+              <li class="nav-item dropdown dropdown-mega position-static">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside">
+                  <span class="nav-linka">GC Sectors</span>  
+                </a>
+                <div class="dropdown-menu shadow">
+                  <div class="mega-content px-4">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-12 col-sm-4 col-md-3 py-4">
+                          <h5 class="menu_head gchead1">Sectors</h5>
+                          <div class="list-group">
+                            <a class="list-group-item" href="#">Accomodations</a>
+                            <a class="list-group-item" href="#">Terms & Conditions</a>
+                            <a class="list-group-item" href="#">Privacy</a>
+                          </div>
+                        </div>
+                       
+  
+  
+                        <div class="col-12 col-sm-12 col-md-3 py-4">
+                          <h5 class="menu_head">Damn, so many</h5>
+                          <div class="list-group">
+                            <a class="list-group-item" href="#">Accomodations</a>
+                            <a class="list-group-item" href="#">Terms & Conditions</a>
+                            <a class="list-group-item" href="#">Privacy</a>
+                          </div>
+                        </div>
+  
+                        <div class="col-12 col-sm-4 col-md-3 py-4">
+                          <h5 class="menu_head">Card</h5>
+                          <div class="card">
+                            <img src="assets/images/dsign.png" class="img-fluid" alt="image">
+                            <div class="card-body">
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-3 py-4">
+                          <h5 class="menu_head">About CodeHim</h5>
+                          <p><b>CodeHim</b> is one of the BEST developer websites that provide web designers and
+                            developers with a simple way to preview and download a variety of free code & scripts.</p>
+                        </div>
+  
+  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+  
+  
+              <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li> -->
+            </ul>
+
+            
+          </div>
+        </div>
+
+
+
+
+        <div class="collapse navbar-collapse" id="navbar-content">
+          <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+              <span class="nav-linka">Home</span>  
+              </a>
+            </li>
+            <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Multilevel</a>
+            <ul class="dropdown-menu shadow">
+              <li><a class="dropdown-item" href="#">Gallery</a></li>
+              <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+              <li class="dropstart">
+                <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">Submenu Left</a>
+                <ul class="dropdown-menu shadow">
+                  <li><a class="dropdown-item" href=""> Third level 1</a></li>
+                  <li><a class="dropdown-item" href=""> Third level 2</a></li>
+                  <li><a class="dropdown-item" href=""> Third level 3</a></li>
+                  <li><a class="dropdown-item" href=""> Third level 4</a></li>
+                  <li><a class="dropdown-item" href=""> Third level 5</a></li>
+                </ul>
+              </li>
+              <li class="dropend">
+                <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside">Submenu Right</a>
+                <ul class="dropdown-menu shadow">
+                  <li><a class="dropdown-item" href=""> Second level 1</a></li>
+                  <li><a class="dropdown-item" href=""> Second level 2</a></li>
+                  <li><a class="dropdown-item" href=""> Second level 3</a></li>
+                  <li class="dropend">
+                    <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">Let's go deeper!</a>
+                    <ul class="dropdown-menu dropdown-submenu shadow">
+                      <li><a class="dropdown-item" href=""> Third level 1</a></li>
+                      <li><a class="dropdown-item" href=""> Third level 2</a></li>
+                      <li><a class="dropdown-item" href=""> Third level 3</a></li>
+                      <li><a class="dropdown-item" href=""> Third level 4</a></li>
+                      <li><a class="dropdown-item" href=""> Third level 5</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href=""> Third level 5</a></li>
+                </ul>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li> -->
+            <li class="nav-item dropdown dropdown-mega position-static">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                data-bs-auto-close="outside">
+                <span class="nav-linka">Products</span>  
+              </a>
+              <div class="dropdown-menu shadow">
+                <div class="mega-content px-4">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-12 col-sm-4 col-md-3 py-4">
+                        <h5 class="menu_head gchead1">Our Products for the GIS</h5>
+                        <div class="list-group">
+                          <a class="list-group-item" href="#">Accomodations</a>
+                          <a class="list-group-item" href="#">Terms & Conditions</a>
+                          <a class="list-group-item" href="#">Privacy</a>
+                        </div>
+                      </div>
+                     
+
+
+                      <div class="col-12 col-sm-12 col-md-3 py-4">
+                        <h5 class="menu_head">Damn, so many</h5>
+                        <div class="list-group">
+                          <a class="list-group-item" href="#">Accomodations</a>
+                          <a class="list-group-item" href="#">Terms & Conditions</a>
+                          <a class="list-group-item" href="#">Privacy</a>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-4 col-md-3 py-4">
+                        <h5 class="menu_head">Card</h5>
+                        <div class="card">
+                          <img src="assets/images/dsign.png" class="img-fluid" alt="image">
+                          <div class="card-body">
+                            <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk
+                              of the card's content.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-4 col-md-3 py-4">
+                        <h5 class="menu_head">About Our Products</h5>
+                        <p><b>CodeHim</b> is one of the BEST developer websites that provide web designers and
+                          developers with a simple way to preview and download a variety of free code & scripts.</p>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown dropdown-mega position-static">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                data-bs-auto-close="outside">
+                <span class="nav-linka">Services</span>  
+              </a>
+              <div class="dropdown-menu shadow">
+                <div class="mega-content px-4">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-12 col-sm-4 col-md-3 py-4">
+                        <h5 class="menu_head gchead1">Pages</h5>
+                        <div class="list-group">
+                          <a class="list-group-item" href="#">Accomodations</a>
+                          <a class="list-group-item" href="#">Terms & Conditions</a>
+                          <a class="list-group-item" href="#">Privacy</a>
+                        </div>
+                      </div>
+                     
+
+
+                      <div class="col-12 col-sm-12 col-md-3 py-4">
+                        <h5 class="menu_head">Damn, so many</h5>
+                        <div class="list-group">
+                          <a class="list-group-item" href="#">Accomodations</a>
+                          <a class="list-group-item" href="#">Terms & Conditions</a>
+                          <a class="list-group-item" href="#">Privacy</a>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-4 col-md-3 py-4">
+                        <h5 class="menu_head">Card</h5>
+                        <div class="card">
+                          <img src="assets/images/dsign.png" class="img-fluid" alt="image">
+                          <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                              of the card's content.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-4 col-md-3 py-4">
+                        <h5 class="menu_head">About CodeHim</h5>
+                        <p><b>CodeHim</b> is one of the BEST developer websites that provide web designers and
+                          developers with a simple way to preview and download a variety of free code & scripts.</p>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+
+            <li class="nav-item dropdown dropdown-mega position-static">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                data-bs-auto-close="outside">
+                <span class="nav-linka">Sectors</span>  
+              </a>
+              <div class="dropdown-menu shadow">
+                <div class="mega-content px-4">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-12 col-sm-4 col-md-3 py-4">
+                        <h5 class="menu_head gchead1">Sectors</h5>
+                        <div class="list-group">
+                          <a class="list-group-item" href="#">Accomodations</a>
+                          <a class="list-group-item" href="#">Terms & Conditions</a>
+                          <a class="list-group-item" href="#">Privacy</a>
+                        </div>
+                      </div>
+                     
+
+
+                      <div class="col-12 col-sm-12 col-md-3 py-4">
+                        <h5 class="menu_head">Damn, so many</h5>
+                        <div class="list-group">
+                          <a class="list-group-item" href="#">Accomodations</a>
+                          <a class="list-group-item" href="#">Terms & Conditions</a>
+                          <a class="list-group-item" href="#">Privacy</a>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-4 col-md-3 py-4">
+                        <h5 class="menu_head">Card</h5>
+                        <div class="card">
+                          <img src="assets/images/dsign.png" class="img-fluid" alt="image">
+                          <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                              of the card's content.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-4 col-md-3 py-4">
+                        <h5 class="menu_head">About CodeHim</h5>
+                        <p><b>CodeHim</b> is one of the BEST developer websites that provide web designers and
+                          developers with a simple way to preview and download a variety of free code & scripts.</p>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+
+            <!-- <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li> -->
+          </ul>
+
+          <div class="d-flex ms-auto">
+
+
+            <a class="bn39" href="/"><span class="bn39span">View Demo</span></a>
+
+            
+          </div>
+          <!-- <form class="d-flex ms-auto">
+            <div class="input-group">
+              <input class="form-control border-0 mr-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-primary border-0" type="submit">Search</button>
+            </div>
+          </form> -->
+        </div>
+      </div>
+    </nav>
+    <!-- END Mega Menu HTML -->
+<div class="divider"></div>
+  </main>
+
+  <section >
+    <div class="swiffy-slider slider-item-show2 slider-item-show2-sm slider-item-reveal slider-item-nogap slider-nav-square slider-nav-touch slider-nav-page slider-nav-autoplay slider-nav-autopause slider-indicators-round slider-indicators-highlight slider-nav-animation slider-nav-animation-appear">
+    <ul class="slider-container">
+        <li class="">
+            <div class="card rounded-0 h-100">
+                <div class="row g-0 h-100">
+                    <div class="col-md-6 col-xl-5 d-flex align-items-center p-2 p-md-3 p-xl-5">
+                        <div class="card-body p-1 p-md-3 p-xl-5">
+                            <p class="lead">Why use this slider</p>
+                            <h2 class="card-title" style="color:#DF1E1E;">Swiffy Slider Benefits</h2>
+                            <p class="card-text mt-3">1Super fast lightweight slider and carousel with amazing touch support and user experience.</p>
+                           
+                           
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-7">
+                        <img src="assets/images/dsign.png" class="card-img d-none d-md-block" loading="lazy" style="height: 100%; object-fit: cover;" alt="...">
+                        <img src="assets/images/dsign.png" class="card-img d-block d-md-none" loading="lazy" style="width: 100%; object-fit: cover;" alt="...">
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="slide-visible">
+            <div class="card rounded-0 h-100">
+                <div class="row g-0 h-100">
+                    <div class="col-md-6 col-xl-7">
+                        <img src="assets/images/nav.jpg" class="card-img d-none d-md-block" loading="lazy" style="height: 100%; object-fit: cover" alt="...">
+                        <img src="assets/images/nav.jpg" class="card-img d-block d-md-none" loading="lazy" style="width: 100%; object-fit: cover" alt="...">
+                  
+                        
+                  
+                      </div>
+                    <div class="col-md-6 col-xl-5 d-flex align-items-center p-2 p-md-3 p-xl-5">
+                        <div class="card-body p-1 p-md-3 p-xl-5">
+                            <p class="lead">Dreaming about cars</p>
+                            <h2 class="card-title">Vintage cars from another era</h2>
+                            <p class="card-text mt-3">First, there’s the design of the car itself..</p>
+                            <p class="card-text"><small class="text-muted">Handcrafted like good code</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="card rounded-0 h-100 text-white">
+                <img src="assets/images/dsign.png" class="card-img h-100" style="max-height: 100%; max-width: 100%; object-fit: cover" alt="...">
+                <div class="card-img-overlay d-flex align-items-start align-items-md-center justify-content-center flex-column">
+                  <div class="shader dynamic-text-shadow">
+                    <h2 class="card-title h1 d-block d-md-inline-block">The Aston Martin DB5</h2>
+                    <p class="card-text lead col-md-12 col-lg-12">The Aston Martin DB5 is a British luxury grand tourer (GT) </p>
+                  </div>
+                </div>
+            </div>
+        </li>
+
+
+
+        <li>
+          <div class="card rounded-0 h-100 text-white">
+              <img src="assets/images/dsign.png" class="card-img h-100" style="max-height: 100%; max-width: 100%; object-fit: cover;" alt="...">
+              <div class="card-img-overlay d-flex align-items-center align-items-md-center justify-content-center flex-column ">
+                <div class="shader dynamic-text-shadow">
+                  <h2 class="card-title h1 d-block d-md-inline-block">The Aston Martin DB5</h2>
+                  <p class="card-text lead col-md-12 col-lg-12">The Aston Martin DB5 is a British luxury grand tourer (GT) </p>
+                </div>
+              </div>
+          </div>
+      </li>
+    </ul>
+
+    <button type="button" class="slider-nav" aria-label="Go left"></button>
+    <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+
+    <div class="slider-indicators">
+        <button class="" aria-label="Go to slide"></button>
+        <button aria-label="Go to slide" class="active"></button>
+        <button aria-label="Go to slide"></button>
+    </div>
+</div>
+  </section>
+
+  <footer class="credit">
+
+    hi
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js'></script>
+  <script>
+    // (c) 2020 Written by Simon Köhler in Panama
+    // github.com/koehlersimon
+    // simon-koehler.com
+
+    // No JavaScript needed for this example anymore!
+
+    document.addEventListener('click', function (e) {
+      // Hamburger menu
+      if (e.target.classList.contains('hamburger-toggle')) {
+        e.target.children[0].classList.toggle('active');
+      }
+    })
+
+  </script>
+
+
+</body>
+
+</html>

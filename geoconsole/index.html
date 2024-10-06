@@ -1,0 +1,1093 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <script src="geo/assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>Navbar Template · Bootstrap v5.3</title>
+
+
+
+    <!-- https://codepen.io/codingyaar/details/OJGRMYw -->
+
+    <link href="geo/assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#712cf9">
+
+
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+        *{
+
+          font-family: "Playfair Display", serif;
+            font-optical-sizing: auto;
+            font-size: 1rem;
+            font-weight:300;
+            font-style: normal;
+            
+          /* font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+    font-style: normal; */
+
+          
+
+        }
+        .secondaryfont {
+          font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;
+
+  /* font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100; */
+}
+
+        .divider
+  {
+   
+    background: #00C9FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+height: 2px;
+width: 100%;
+  }
+
+       
+
+
+        .dropdown-menu a {
+  text-decoration: none;
+  color: #000000;
+}
+.dropdown-menu a .d-flex {
+  transition: all 0.5s;
+}
+.dropdown-menu .col-sm-6:nth-child(1) a:hover .d-flex {
+  background-color: var(--bs-warning-bg-subtle);
+}
+.dropdown-menu .col-sm-6:nth-child(2) a:hover .d-flex {
+  background-color: var(--bs-danger-bg-subtle);
+}
+.dropdown-menu .col-sm-6:nth-child(3) a:hover .d-flex {
+  background-color: var(--bs-success-bg-subtle);
+}
+.dropdown-menu .col-sm-6:nth-child(4) a:hover .d-flex {
+  background-color: var(--bs-secondary-bg-subtle);
+}
+.dropdown-menu .col-sm-6:nth-child(5) a:hover .d-flex {
+  background-color: var(--bs-tertiary-bg);
+}
+.dropdown-menu .col-sm-6:nth-child(6) a:hover .d-flex {
+  background-color: var(--bs-info-bg-subtle);
+}
+@media only screen and (min-width: 992px) {
+  .dropdown-menu {
+    width: 55vw;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+  .dropdown-menu.show {
+    display: flex;
+  }
+}
+         @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.dropdown-menu.show {
+  -webkit-animation: fadeIn 0.3s alternate;
+  /* Safari 4.0 - 8.0 */
+  animation: fadeIn 0.3s alternate;
+}
+
+.nav-item.dropdown.dropdown-mega {
+  position: static;
+}
+.nav-item.dropdown.dropdown-mega .dropdown-menu {
+  width: 90%;
+  top: auto;
+  left: 5%;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0;
+  outline: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-toggler .hamburger-toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  z-index: 11;
+  float: right;
+}
+.navbar-toggler .hamburger-toggle .hamburger {
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(0deg);
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 50%;
+  pointer-events: none;
+}
+.navbar-toggler .hamburger-toggle .hamburger span {
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  background: #333;
+  border-radius: 2px;
+  z-index: 1;
+  transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), all 0.2s ease-in-out;
+  left: 0px;
+}
+.navbar-toggler .hamburger-toggle .hamburger span:first-child {
+  top: 10%;
+  transform-origin: 50% 50%;
+  transform: translate(0% -50%) !important;
+}
+.navbar-toggler .hamburger-toggle .hamburger span:nth-child(2) {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.navbar-toggler .hamburger-toggle .hamburger span:last-child {
+  left: 0px;
+  top: auto;
+  bottom: 10%;
+  transform-origin: 50% 50%;
+}
+.navbar-toggler .hamburger-toggle .hamburger.active span {
+  position: absolute;
+  margin: 0;
+}
+.navbar-toggler .hamburger-toggle .hamburger.active span:first-child {
+  top: 45%;
+  transform: rotate(45deg);
+}
+.navbar-toggler .hamburger-toggle .hamburger.active span:nth-child(2) {
+  left: 50%;
+  width: 0px;
+}
+.navbar-toggler .hamburger-toggle .hamburger.active span:last-child {
+  top: 45%;
+  transform: rotate(-45deg);
+}
+
+.icons {
+  display: inline-flex;
+  margin-left: auto;
+}
+.icons a {
+  transition: all 0.2s ease-in-out;
+  padding: 0.2rem 0.4rem;
+  color: #ccc !important;
+  text-decoration: none;
+}
+.icons a:hover {
+  color: white;
+  text-shadow: 0 0 30px white;
+} 
+
+
+.nav-link:hover {
+  background:
+    linear-gradient(
+      to right,
+      rgba(100, 200, 200, 1),
+      rgba(100, 200, 200, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.nav-link:hover {
+  /* font-weight: bold; */
+  color: #11053c;
+  background-size: 0 3px, 100% 3px;
+  
+}
+
+.gchead2
+{
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Black shadow */
+
+  background: #FF32F1;
+background: linear-gradient(to left, #FF32F1 0%, #05C1FF 50%, #9B1FC8 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+
+
+padding-bottom: 5px;
+
+
+}
+
+
+.bn39 {
+
+     
+  
+  background-image: linear-gradient(135deg, #090909, #191c18);
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: block;
+  height: 35px;
+  font-size: 0.8rem;
+  font-weight: 200;
+  padding:2px 8px 2px 8px;
+  position: relative;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.bn39:hover {
+  color: #fff;
+}
+
+.bn39 .bn39span {
+  align-items: center;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transition: background 0.5s ease;
+  width: 100%;
+
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;
+  font-size: 12px;
+}
+
+.bn39:hover  {
+  background: rgb(231, 231, 231);
+  color: #000;
+}
+
+.card-dark
+{
+  background: #000;
+  background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+  color: #e5fae0;
+}
+
+.preenter_menu
+{
+    color: #ffffff !important;
+    font-size: 20px !important;
+    font-weight: normal;
+}
+.preenter_menu
+{
+    text-decoration: none !important;
+    color: #ffffff !important;
+    font-size: 20px !important;
+    font-weight: normal;
+}
+a.enter_menu
+{
+  color: #6adaff !important;
+  font-size: 20px !important;
+}
+a.enter_menu::after {
+  color: #6adaff !important;
+    content: "";
+    display: block;
+    width: 52px;
+    padding-top: 2px;
+    border-bottom: 5px solid #a200ff;
+    font-size: 20px !important;
+    font-weight: normal;
+  }
+
+
+
+  .preenter_head
+{
+    text-decoration: none !important;
+    color: #000000 !important;
+    font-size: 20px !important;
+    font-weight: normal;
+    text-decoration: none;
+    padding: 0px !important;
+    padding-left: 12px !important;
+}
+a.enter_head
+{
+  color: #0a5b77 !important;
+  font-size: 20px !important;
+  text-decoration: none;
+}
+a.enter_head::after {
+  text-decoration: none;
+  color: #0a5b77 !important;
+    content: "";
+    display: block;
+    width: 100px;
+   
+    border-bottom: 5px solid #a200ff;
+    font-size: 20px !important;
+    font-weight: normal;
+  }
+
+
+  
+
+
+  .gchead1
+{
+  background: #2069A2;
+background: linear-gradient(to right, #2069A2 0%, #12902F 50%, #25816B 51%, #7745DB 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+
+}
+
+
+
+.glow-on-hover {
+  display: inline-block;
+  text-decoration: none;
+  width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 50px;
+  line-height: 50px; /* Centers the text vertically */
+  text-align: center; /* Centers the text horizontally */
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.card-img, .card-img-bottom {
+    border-radius: 0px !important;
+}
+
+.animbg1
+ {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+.gccard
+{
+  border: 0px !important;
+  background: #000000;
+  border-radius: 0px !important;
+}
+
+
+/* CSS */
+.button-80 {
+  background: #fff;
+  backface-visibility: hidden;
+  border-radius: .375rem;
+  border-style: solid;
+  border-width: .125rem;
+  box-sizing: border-box;
+  color: #212121;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,Helvetica,sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 1;
+  padding: .375rem 0.8rem;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transform: translateZ(0) scale(1);
+  transition: transform .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-80:not(:disabled):hover {
+  transform: scale(1.05);
+}
+
+.button-80:not(:disabled):hover:active {
+  transform: scale(1.05) translateY(.125rem);
+}
+
+.button-80:focus {
+  outline: 0 solid transparent;
+}
+
+.button-80:focus:before {
+  content: "";
+  left: calc(-1*.375rem);
+  pointer-events: none;
+  position: absolute;
+  top: calc(-1*.375rem);
+  transition: border-radius;
+  user-select: none;
+}
+
+.button-80:focus:not(:focus-visible) {
+  outline: 0 solid transparent;
+}
+
+.button-80:focus:not(:focus-visible):before {
+  border-width: 0;
+}
+
+.button-80:not(:disabled):active {
+  transform: translateY(.125rem);
+}
+
+@keyframes animbg1 {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gc-list-group
+{
+ 
+  border: 1px solid #f9f9f9 !important;
+}
+.gc-list-group-item
+{
+  border: 1px solid #f9f9f9;
+  background:#f9f9f9 !important ;
+  background-color: #f9f9f9;
+}
+
+.gc-list-group-item:hover
+{
+  color: #888588;
+
+}
+/* ////// */
+
+.sm-card-title
+{
+  font-size: 1.6rem;
+  color: #1c76b7;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  
+.nav-item.dropdown.dropdown-mega .dropdown-menu {
+    width: 100%;
+  
+
+}
+}
+    </style>
+
+<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+
+
+    <!-- Custom styles for this template -->
+    <link href="navbars-offcanvas.css" rel="stylesheet">
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path
+                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path
+                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+            <path
+                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path
+                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+        </symbol>
+    </svg>
+
+
+   <main>
+
+    <div class="divider"></div>
+    <nav class="navbar navbar-expand-lg navbar-light  shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/logo1.svg" style="height: 45px;" />
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+          <div class="hamburger-toggle">
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-content">
+          <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+           
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Features
+              </a>
+              <div class="dropdown-menu px-3 rounded-3 border-0 shadow">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <a href="#">
+                      <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                        <div class="icon px-3 bg-warning-subtle rounded-3 fs-1">
+                          <!-- <i class="bi bi-tv"></i> -->
+                           <svg height="40" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#473687" stroke="#473687"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M702.537143 218.477714c31.085714-10.825143 55.003429-23.113143 69.924571-35.328 10.24-8.338286 13.458286-13.824 13.458286-16.018285s-3.218286-7.68-13.458286-16.091429c-14.921143-12.141714-38.765714-24.429714-69.924571-35.254857C634.368 92.16 540.013714 78.336 438.857143 78.336s-195.510857 13.897143-263.68 37.449143c-31.085714 10.825143-55.003429 23.113143-69.924572 35.328-10.24 8.338286-13.458286 13.750857-13.458285 16.018286 0 2.194286 3.218286 7.68 13.458285 16.091428 14.921143 12.141714 38.765714 24.429714 69.924572 35.254857 68.169143 23.625143 162.523429 37.449143 263.68 37.449143s195.510857-13.897143 263.68-37.449143zM69.485714 464.749714v128.804572c37.961143 40.009143 140.068571 88.722286 264.777143 103.277714 182.857143 21.284571 355.986286-18.651429 473.526857-98.304l0.438857-131.657143C683.008 540.525714 506.733714 571.465143 328.484571 550.619429c-110.372571-12.8-204.361143-46.08-259.072-85.869715z m0-80.457143c38.034286 39.936 140.068571 88.649143 264.777143 103.131429 183.222857 21.357714 356.717714-18.724571 474.258286-98.742857l0.512-145.993143C734.208 286.573714 596.48 315.977143 438.857143 315.977143c-156.964571 0-294.253714-29.257143-369.152-72.777143A132116.333714 132116.333714 0 0 0 69.485714 384.219429z m0.146286 289.865143l0.292571 108.105143-1.097142-7.460571c22.381714 74.020571 165.302857 133.485714 378.148571 133.485714 115.931429 0 206.774857-17.554286 276.626286-52.077714 19.602286-9.728 34.523429-17.92 49.152-28.598857 9.728-7.094857 16.091429-11.410286 26.550857-20.626286 10.825143-9.581714 27.501714-7.241143 37.156571 3.657143 9.581714 10.752 10.825143 28.306286 0 37.961143-11.702857 10.24-17.188571 14.848-28.598857 23.186285-17.042286 12.434286-36.425143 25.380571-58.806857 36.498286-77.092571 38.107429-155.648 60.854857-302.08 60.854857-243.931429 0-405.211429-77.165714-436.077714-179.2l-1.097143-3.657143v-3.803428L9.362286 628.077714a116682.532571 116682.532571 0 0 1 0.365714-455.68 52.662857 52.662857 0 0 1-0.292571-5.266285C9.508571 84.918857 201.728 18.285714 438.857143 18.285714c237.129143 0 429.348571 66.633143 429.348571 148.845715a53.028571 53.028571 0 0 1-0.804571 9.581714 23.405714 23.405714 0 0 1 1.024 7.094857l-1.682286 520.411429c-0.073143 14.482286-13.385143 26.185143-29.769143 26.112-16.384 0-29.622857-11.776-29.549714-26.331429v-27.355429c-125.074286 73.216-301.056 104.082286-478.939429 83.382858-110.226286-12.873143-204.214857-46.08-258.925714-85.869715z m668.525714-290.962285a25.746286 25.746286 0 0 1-25.965714-25.453715c0-14.043429 11.702857-25.380571 26.038857-25.380571 14.336 0 26.038857 11.337143 26.038857 25.380571 0 14.116571-11.702857 25.453714-26.038857 25.453715z m0 209.408a25.746286 25.746286 0 0 1-25.965714-25.453715c0-14.043429 11.702857-25.453714 26.038857-25.453714 14.336 0 26.038857 11.410286 26.038857 25.453714 0 14.043429-11.702857 25.453714-26.038857 25.453715z m0 212.114285a25.746286 25.746286 0 0 1-25.965714-25.526857c0-14.043429 11.702857-25.453714 26.038857-25.453714 14.336 0 26.038857 11.410286 26.038857 25.453714 0 14.043429-11.702857 25.453714-26.038857 25.453714z" fill="#d25151"></path></g></svg>
+
+    </div>
+                        <div class="text ps-3">
+                          <h5>Geospatial Data Management
+                          </h5>
+                          <div class="secondaryfont">
+                            Data Storage , Import, Export, 
+Version Control & Metadata management 
+                            </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="#">
+                      <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                        <div class="icon px-3 bg-danger-subtle rounded-3 fs-1">
+<svg  height="44" class="pb-2" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="layer1"> <path d="M 0 0 L 0 1.3535156 L 2.2851562 5.9238281 L 0 7.0664062 L 0 8.1855469 L 2.7324219 6.8183594 L 5.9882812 13.330078 L 0 16.324219 L 0 17.441406 L 7.3300781 13.777344 L 0.44140625 0 L 0 0 z M 1.5585938 0 L 6.2226562 9.3300781 L 8.1347656 8.3730469 L 8.1132812 8.2382812 C 8.1099813 8.2168872 8.1073687 8.1953911 8.1054688 8.1738281 L 8.0292969 7.3574219 C 8.0276269 7.3418299 8.0263306 7.3261999 8.0253906 7.3105469 L 6.6699219 7.9882812 L 3.9765625 2.6015625 L 9.1777344 0 L 6.9433594 0 L 3.5292969 1.7070312 L 2.6757812 0 L 1.5585938 0 z M 12.097656 0 L 12.425781 0.65820312 L 12.445312 0.65234375 C 12.476772 0.64230525 12.508716 0.63383133 12.541016 0.62695312 L 13.037109 0.5234375 C 13.070669 0.5164925 13.104569 0.511277 13.138672 0.5078125 L 13.453125 0.47460938 L 13.214844 0 L 12.097656 0 z M 20 1.3242188 L 18.238281 2.2050781 L 18.517578 2.4980469 C 18.540988 2.5223019 18.563144 2.5477257 18.583984 2.5742188 L 18.894531 2.9726562 C 18.898531 2.9778263 18.90243 2.9830353 18.90625 2.9882812 L 20 2.4414062 L 20 1.3242188 z M 13.746094 1.4492188 L 13.242188 1.5019531 L 12.746094 1.6054688 L 12.261719 1.7578125 L 11.796875 1.9550781 L 11.355469 2.2011719 L 10.939453 2.4902344 L 10.554688 2.8222656 L 10.205078 3.1894531 L 9.8964844 3.5878906 L 9.6269531 4.0175781 L 9.4042969 4.4726562 L 9.2285156 4.9492188 L 9.1015625 5.4375 L 9.0253906 5.9394531 L 9 6.4453125 L 9.0253906 7.2636719 L 9.1015625 8.0800781 L 9.2304688 8.8886719 L 9.4101562 9.6875 L 9.6386719 10.474609 L 9.9179688 11.246094 L 10.244141 11.996094 L 10.617188 12.724609 L 11.035156 13.429688 L 11.498047 14.107422 L 12.001953 14.753906 L 12.544922 15.367188 L 12.546875 15.367188 L 12.787109 15.583984 L 13.0625 15.757812 L 13.359375 15.886719 L 13.675781 15.966797 L 14 16 L 14.324219 15.966797 L 14.638672 15.886719 L 14.9375 15.757812 L 15.212891 15.583984 L 15.455078 15.367188 L 15.998047 14.753906 L 16.5 14.107422 L 16.964844 13.429688 L 17.380859 12.724609 L 17.753906 11.996094 L 18.080078 11.246094 L 18.359375 10.474609 L 18.589844 9.6875 L 18.767578 8.8886719 L 18.896484 8.0800781 L 18.972656 7.2636719 L 19 6.4453125 L 18.972656 5.9394531 L 18.896484 5.4375 L 18.771484 4.9492188 L 18.59375 4.4726562 L 18.371094 4.0175781 L 18.105469 3.5878906 L 17.794922 3.1894531 L 17.443359 2.8222656 L 17.058594 2.4902344 L 16.644531 2.2011719 L 16.203125 1.9550781 L 15.736328 1.7578125 L 15.251953 1.6054688 L 14.755859 1.5019531 L 14.251953 1.4492188 L 13.746094 1.4492188 z M 14 2.4453125 L 14.447266 2.4707031 L 14.890625 2.5449219 L 15.322266 2.6699219 L 15.734375 2.8417969 L 16.128906 3.0585938 L 16.494141 3.3183594 L 16.828125 3.6171875 L 17.126953 3.9511719 L 17.386719 4.3164062 L 17.603516 4.7089844 L 17.775391 5.125 L 17.900391 5.5546875 L 17.976562 5.9960938 L 18 6.4433594 L 17.976562 7.2011719 L 17.904297 7.953125 L 17.785156 8.6992188 L 17.621094 9.4394531 L 17.408203 10.164062 L 17.152344 10.875 L 16.849609 11.570312 L 16.505859 12.242188 L 16.119141 12.892578 L 15.695312 13.517578 L 15.228516 14.113281 L 14.728516 14.679688 L 14.572266 14.814453 L 14.396484 14.912109 L 14.203125 14.970703 L 14 14.998047 L 13.796875 14.970703 L 13.603516 14.912109 L 13.427734 14.814453 L 13.271484 14.679688 L 12.771484 14.113281 L 12.304688 13.517578 L 11.880859 12.892578 L 11.494141 12.242188 L 11.150391 11.570312 L 10.847656 10.875 L 10.591797 10.164062 L 10.378906 9.4394531 L 10.214844 8.6992188 L 10.095703 7.953125 L 10.023438 7.2011719 L 10 6.4433594 L 10.025391 5.9960938 L 10.099609 5.5546875 L 10.222656 5.125 L 10.394531 4.7089844 L 10.613281 4.3164062 L 10.873047 3.9511719 L 11.171875 3.6171875 L 11.505859 3.3183594 L 11.871094 3.0585938 L 12.263672 2.8417969 L 12.679688 2.6699219 L 13.109375 2.5449219 L 13.550781 2.4707031 L 14 2.4453125 z M 20 3.5585938 L 19.40625 3.8554688 L 19.492188 4.0332031 C 19.506667 4.0624951 19.51971 4.0924789 19.53125 4.1230469 L 19.708984 4.5996094 C 19.721194 4.6328854 19.731624 4.6667874 19.740234 4.7011719 L 19.763672 4.7929688 L 20 4.6757812 L 20 3.5585938 z M 13.917969 4.4433594 L 13.599609 4.4824219 L 13.291016 4.5742188 L 13 4.7089844 L 12.734375 4.8925781 L 12.503906 5.1152344 L 12.310547 5.3730469 L 12.160156 5.6601562 L 12.056641 5.9648438 L 12.005859 6.28125 L 12.005859 6.6054688 L 12.056641 6.921875 L 12.160156 7.2265625 L 12.310547 7.5117188 L 12.503906 7.7695312 L 12.734375 7.9902344 L 13 8.1738281 L 13.291016 8.3125 L 13.599609 8.4023438 L 13.917969 8.4414062 L 14.240234 8.4355469 L 14.556641 8.3691406 L 14.857422 8.2539062 L 15.136719 8.09375 L 15.386719 7.890625 L 15.599609 7.6503906 L 15.771484 7.3769531 L 15.896484 7.0820312 L 15.974609 6.7695312 L 16 6.4472656 L 16 6.4453125 L 15.974609 6.125 L 15.896484 5.8125 L 15.771484 5.515625 L 15.599609 5.2441406 L 15.386719 5.0039062 L 15.136719 4.796875 L 14.857422 4.6367188 L 14.556641 4.5234375 L 14.240234 4.4570312 L 13.917969 4.4433594 z M 14 5.4433594 L 14.220703 5.4707031 L 14.433594 5.5449219 L 14.623047 5.6640625 L 14.783203 5.8222656 L 14.902344 6.0097656 L 14.974609 6.2226562 L 15 6.4453125 L 14.974609 6.6660156 L 14.902344 6.8789062 L 14.783203 7.0683594 L 14.623047 7.2285156 L 14.433594 7.3476562 L 14.220703 7.421875 L 14 7.4472656 L 13.777344 7.421875 L 13.564453 7.3476562 L 13.376953 7.2285156 L 13.21875 7.0683594 L 13.099609 6.8789062 L 13.025391 6.6660156 L 13 6.4453125 L 13.025391 6.2226562 L 13.099609 6.0097656 L 13.21875 5.8222656 L 13.376953 5.6640625 L 13.564453 5.5449219 L 13.777344 5.4707031 L 14 5.4433594 z M 8.3183594 9.3984375 L 6.6699219 10.222656 L 11.558594 20 L 12.675781 20 L 10.351562 15.351562 L 10.960938 15.046875 L 10.708984 14.722656 C 10.696084 14.706126 10.683715 14.689185 10.671875 14.671875 L 10.367188 14.226562 L 9.90625 14.457031 L 8.0117188 10.669922 L 8.5722656 10.390625 L 8.4492188 9.9667969 C 8.4433805 9.9467824 8.4381698 9.9265902 8.4335938 9.90625 L 8.3183594 9.3984375 z M 20 9.4101562 L 19.636719 9.5917969 L 19.566406 9.9042969 C 19.561306 9.9259709 19.555408 9.947468 19.548828 9.96875 L 19.318359 10.755859 C 19.312459 10.775589 19.305938 10.795133 19.298828 10.814453 L 19.271484 10.892578 L 20 10.527344 L 20 9.4101562 z M 17.939453 13.744141 L 17.826172 13.9375 C 17.814482 13.95745 17.802103 13.977004 17.789062 13.996094 L 17.324219 14.673828 C 17.316619 14.684398 17.308801 14.694818 17.300781 14.705078 L 19.949219 20 L 20 20 L 20 17.865234 L 17.939453 13.744141 z M 7.7773438 14.669922 L 0 18.558594 L 0 19.675781 L 7.3300781 16.011719 L 9.3242188 20 L 10.441406 20 L 7.7773438 14.669922 z " style="fill:#488cf9; fill-opacity:1; stroke:none; stroke-width:0px;"></path> </g> </g></svg>
+                        </div>
+                        <div class="text ps-3">
+                          <h5>Mapping & Visualization</h5>
+                          <div  class="secondaryfont">2D & 3D maps, Thematic Mapping
+                            , Layer Management
+                            Real-Time Mapping etc.</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="#">
+                      <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                        <div class="icon px-3 bg-success-subtle rounded-3 fs-1">
+                           <svg  height="40"  viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 12.48V7.32007C20 6.2592 19.5786 5.24178 18.8284 4.49164C18.0783 3.74149 17.0609 3.32007 16 3.32007H6C4.93913 3.32007 3.92178 3.74149 3.17163 4.49164C2.42149 5.24178 2 6.2592 2 7.32007V17.3201C2 18.3809 2.42149 19.3984 3.17163 20.1485C3.92178 20.8986 4.93913 21.3201 6 21.3201H12.53" stroke="#853232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M17.0303 12.4801L2.82031 4.89014" stroke="#853232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M3.58008 20.5101L9.90009 8.68005" stroke="#853232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M18.44 22.2101C20.3399 22.2101 21.88 20.6699 21.88 18.7701C21.88 16.8702 20.3399 15.3301 18.44 15.3301C16.5401 15.3301 15 16.8702 15 18.7701C15 20.6699 16.5401 22.2101 18.44 22.2101Z" stroke="#853232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M23.0009 23.3201L20.8809 21.2001" stroke="#853232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+
+                        </div>
+                        <div class="text ps-3">
+                          <h5>Geospatial Analysis</h5>
+                          <div  class="secondaryfont">
+                            Spatial Queries & Geoprocessing Tools
+Network Analysis
+Terrain & Elevation Analysis
+Geostatistics
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="#">
+                      <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                        <div class="icon px-3 bg-secondary-subtle rounded-3 fs-1">
+                           <svg  class="pb-2" height="40"  fill="#6468d3" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg" stroke="#6468d3" stroke-width="21.119999999999997"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="7.68"></g><g id="SVGRepo_iconCarrier"> <path d="M1706.67 106.667h-320V0h320C1824.49 0 1920 95.513 1920 213.333v320h-106.67v-320c0-58.91-47.75-106.666-106.66-106.666ZM533.333 0v106.667h-320c-58.91 0-106.666 47.756-106.666 106.666v320H0v-320C0 95.513 95.513 0 213.333 0h320ZM0 1386.67h106.667v320c0 58.91 47.756 106.66 106.666 106.66h320V1920h-320C95.513 1920 0 1824.49 0 1706.67v-320ZM1386.67 1920v-106.67h320c58.91 0 106.66-47.75 106.66-106.66v-320H1920v320c0 117.82-95.51 213.33-213.33 213.33h-320ZM1280 960c0 176.73-143.27 320-320 320-176.731 0-320-143.27-320-320 0-176.731 143.269-320 320-320 176.73 0 320 143.269 320 320Zm106.67 0c0 235.64-191.03 426.67-426.67 426.67-235.641 0-426.667-191.03-426.667-426.67 0-235.641 191.026-426.667 426.667-426.667 235.64 0 426.67 191.026 426.67 426.667Z" fill-rule="evenodd"></path> </g></svg>
+                          </div>
+                        <div class="text ps-3">
+                          <h5>Data Capture & Editing</h5>
+                          <div class="secondaryfont">Digitizing Tools
+                            Attribute Editing
+                            Field Data Collection (Offline Sync)
+                            GPS Integration</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="#">
+                      <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                        <div class="icon px-3 bg-body-tertiary rounded-3 fs-1">
+                         <svg  height="40"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5.5 15.5C5.5 14.5572 5.5 14.0858 5.79289 13.7929C6.08579 13.5 6.55719 13.5 7.5 13.5H8.5C9.44281 13.5 9.91421 13.5 10.2071 13.7929C10.5 14.0858 10.5 14.5572 10.5 15.5V16.5C10.5 17.4428 10.5 17.9142 10.2071 18.2071C9.91421 18.5 9.44281 18.5 8.5 18.5C7.08579 18.5 6.37868 18.5 5.93934 18.0607C5.5 17.6213 5.5 16.9142 5.5 15.5Z" stroke="#606b0a" stroke-width="1.5"></path> <path d="M5.5 8.5C5.5 7.08579 5.5 6.37868 5.93934 5.93934C6.37868 5.5 7.08579 5.5 8.5 5.5C9.44281 5.5 9.91421 5.5 10.2071 5.79289C10.5 6.08579 10.5 6.55719 10.5 7.5V8.5C10.5 9.44281 10.5 9.91421 10.2071 10.2071C9.91421 10.5 9.44281 10.5 8.5 10.5H7.5C6.55719 10.5 6.08579 10.5 5.79289 10.2071C5.5 9.91421 5.5 9.44281 5.5 8.5Z" stroke="#606b0a" stroke-width="1.5"></path> <path d="M13.5 15.5C13.5 14.5572 13.5 14.0858 13.7929 13.7929C14.0858 13.5 14.5572 13.5 15.5 13.5H16.5C17.4428 13.5 17.9142 13.5 18.2071 13.7929C18.5 14.0858 18.5 14.5572 18.5 15.5C18.5 16.9142 18.5 17.6213 18.0607 18.0607C17.6213 18.5 16.9142 18.5 15.5 18.5C14.5572 18.5 14.0858 18.5 13.7929 18.2071C13.5 17.9142 13.5 17.4428 13.5 16.5V15.5Z" stroke="#606b0a" stroke-width="1.5"></path> <path d="M13.5 7.5C13.5 6.55719 13.5 6.08579 13.7929 5.79289C14.0858 5.5 14.5572 5.5 15.5 5.5C16.9142 5.5 17.6213 5.5 18.0607 5.93934C18.5 6.37868 18.5 7.08579 18.5 8.5C18.5 9.44281 18.5 9.91421 18.2071 10.2071C17.9142 10.5 17.4428 10.5 16.5 10.5H15.5C14.5572 10.5 14.0858 10.5 13.7929 10.2071C13.5 9.91421 13.5 9.44281 13.5 8.5V7.5Z" stroke="#606b0a" stroke-width="1.5"></path> <path opacity="0.5" d="M22 14C22 17.7712 22 19.6569 20.8284 20.8284C19.6569 22 17.7712 22 14 22" stroke="#606b0a" stroke-width="1.5" stroke-linecap="round"></path> <path opacity="0.5" d="M10 22C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14" stroke="#606b0a" stroke-width="1.5" stroke-linecap="round"></path> <path opacity="0.5" d="M10 2C6.22876 2 4.34315 2 3.17157 3.17157C2 4.34315 2 6.22876 2 10" stroke="#606b0a" stroke-width="1.5" stroke-linecap="round"></path> <path opacity="0.5" d="M14 2C17.7712 2 19.6569 2 20.8284 3.17157C22 4.34315 22 6.22876 22 10" stroke="#606b0a" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+                        </div>
+                        <div class="text ps-3">
+                          <h5>Geocoding & Reverse Geocoding</h5>
+                          <div  class="secondaryfont">Geocoding (Address to Coordinates)
+                            Reverse Geocoding
+                            Batch Processing</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="#">
+                      <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                        <div class="icon px-3 bg-info-subtle rounded-3 fs-1">
+                          <svg height="45"  viewBox="0 0 1024 1024" class="icon pb-2" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M510.5 958.5c247.2 0 447.5-200.4 447.5-447.5S757.7 63.5 510.5 63.5 63 263.8 63 511s200.4 447.5 447.5 447.5z" fill="#ff8800"></path><path d="M510.5 902.6c-216.3 0-391.6-175.3-391.6-391.6S294.2 119.4 510.5 119.4s391.6 175.3 391.6 391.6-175.3 391.6-391.6 391.6z" fill="#FFFFFF"></path><path d="M405.8 558.9h-2c-31 0-43-21.4-27-47.8L524 269.2c33.5-55.1 44.2-50.2 24 11l-45.1 136.1c-9.7 29.4 7.5 52.9 38.4 52.9H628l-0.4 0.4h2c31 0 43 21.4 27 47.8L515.7 749c-36.9 60.7-48.8 55.3-26.4-12.3l41.3-124.5c9.7-29.4-7.5-52.9-38.4-52.9h-86.7l0.3-0.4z" fill="#ff8800"></path></g></svg>
+                        </div>
+                        <div class="text ps-3">
+                          <h5>Performance & Scalability</h5>
+                          <div  class="secondaryfont">Large Dataset Handling
+                            Cloud Integration (AWS, Azure)
+                            Caching & Tiling for High Performance
+                            .</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            
+          
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> -->
+            <li class="nav-item dropdown dropdown-mega position-static ">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Solutions &amp; Resources</a>
+              <div class="dropdown-menu  rounded-3 border-0 shadow">
+                <div class="mega-content px-4">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-12 col-sm-12 col-md-3 py-4">
+                        <h5 class="gchead1">Solutions</h5>
+                        <div class="list-group gc-list-group">
+                          <a class="list-group-item gc-list-group-item" href="#">Smart City Management</a>
+                          <a class="list-group-item gc-list-group-item" href="#">Logistics & Fleet Management</a>
+                          <a class="list-group-item gc-list-group-item" href="#">Cadastral & Land Administration</a>
+                          <a class="list-group-item gc-list-group-item" href="#">Real Estate & Property Management</a>
+
+                          <a class="list-group-item gc-list-group-item" href="#">Indoor Mapping & Navigation</a>
+                          <a class="list-group-item gc-list-group-item" href="#">Asset Location & Tracking</a>
+
+                        </div>
+                      </div>
+                      
+                     
+                      <div class="col-12 col-sm-12 col-md-3 py-4">
+                        <h5 class="gchead1">Resources</h5>
+                        <div class="list-group gc-list-group">
+                          <a class="list-group-item gc-list-group-item" href="#">Documentation</a>
+                          <a class="list-group-item gc-list-group-item" href="#">Case Studies</a>
+                          <a class="list-group-item gc-list-group-item" href="#">Blogs & Article</a>
+                          <a class="list-group-item gc-list-group-item" href="#">Webinars</a>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-6 col-md-3 py-4">
+                       
+                        <div class="card card-dark">
+                          <h5 class="p-4 preenter_menu">Empower 
+                          <!-- <h3 class="preenter">Navigate -->
+
+                            <!-- EN: Login -->
+                            <a class="enter_menu">  <!-- EN: to your Account -->
+                              Your Geospatial Journey
+                            </a>
+                          </h5>
+                    <img src="assets/images/travelling.svg" class="img-fluid" alt="image">
+                    <div class="card-body">
+                      <p class="card-text secondaryfont">
+                        Unlock expert tools and resources designed to help you harness the full potential of your geospatial data, ensuring success at every step.
+                       
+
+                        </p>
+                      </div>
+                  </div>
+                      </div>
+                      <div class="col-12 col-sm-6 col-md-3 py-4">
+                        <h5 class="gchead1">What makes us different?</h5>
+                          <p class="secondaryfont">
+                         
+                            We offer expert-driven resources like detailed documentation, case studies, and webinars, ensuring you have everything needed to maximize your geospatial data and make informed decisions with ease.
+                           
+  
+                          </p>
+                          <a href="#" class="button-80" role="button">Read more
+                            <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.996 511.996" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965 H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099 c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"></path> </g> </g> </g></svg>
+
+                          </a>
+                      </div>
+
+                   
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Support</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+
+            
+          </ul>
+          <div class="d-flex ms-auto">
+              <!-- <div class="input-group">
+                  <input class="form-control border-0 mr-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-primary border-0" type="submit">Search</button>
+              </div> -->
+
+          <a class="bn39" href="/"><span class="bn39span">View Demo</span></a>
+
+
+
+            </div>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container-fluid  px-4 py-5 bg-dark ">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5 col-xxl-10">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="assets/images/im.svg" class="d-block mx-lg-auto img-fluid roundedim" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 gchead2">Unlock the Power of Geospatial Intelligence</h1>
+          <p class="lead text-white">
+            
+            Transform the way you manage, visualize, and analyze geographic data.
+            Our platform offers powerful tools for geospatial data management, real-time mapping, and advanced analysis. From 2D and 3D visualizations to field data collection and asset tracking, we provide seamless solutions to bring your data to life and drive smarter decisions.
+          </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <!-- <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button> -->
+          
+
+               
+        
+<a class="glow-on-hover secondaryfont" type="button">Know about GIS 
+
+  <svg width="15"  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.003 512.003" xml:space="preserve" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#ffffff;" d="M5.205,506.802c6.928,6.928,18.148,6.928,25.077,0L476.534,60.551v240.943 c0,9.801,7.933,17.735,17.735,17.735c9.801,0,17.735-7.933,17.735-17.735V17.739c0-9.801-7.933-17.735-17.735-17.735H210.514 c-9.801,0-17.735,7.933-17.735,17.735s7.933,17.735,17.735,17.735h240.931L5.205,481.725 C-1.735,488.654-1.735,499.874,5.205,506.802z"></path> </g></svg>
+</a>
+
+            
+         
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+
+    <!-- <section style="background: #000;margin-top: 0px;padding-top: 0px;" >
+
+      
+
+      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 gchead2 pt-5 mt-2 ps-5 mb-3" >Geospatial Solutions</h1>
+          
+        
+     
+         <div class="swiffy-slider slider-item-nogap slider-nav-autoplay slider-indicators-round slider-nav-animation" style="--swiffy-slider-nav-light: #000; --swiffy-slider-animation-duration: 4;">
+          <ul class="slider-container">
+          <li class="">
+              <div class="card rounded-0 h-100 gccard">
+                  <div class="row g-0 h-100">
+                      <div class="col-md-6 col-xl-5 d-flex align-items-center p-2 p-md-3 p-xl-5">
+                          <div class="card-body p-1 p-md-3 p-xl-5">
+                              <p class="lead ">Data management</p>
+                              <h2 class="card-title slideh2" >Geospatial Data Management</h2>
+                              
+                          </div>
+                      </div>
+                      <div class="col-md-6 col-xl-7">
+                          <img src="assets/images/travelling.svg" class="card-img d-none d-md-block" loading="lazy" style="height: 100%; object-fit: cover;" alt="...">
+                          <img src="assets/images/travelling.svg" class="card-img d-block d-md-none" loading="lazy" style="width: 100%; object-fit: cover;" alt="...">
+                      </div>
+                  </div>
+              </div>
+          </li>
+         
+     
+
+      
+  
+  
+      </ul>
+  
+      <button type="button" class="slider-nav" aria-label="Go left"></button>
+      <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+  
+      <div class="slider-indicators">
+          <button class="" aria-label="Go to slide"></button>
+          <button aria-label="Go to slide" class="active"></button>
+          <button aria-label="Go to slide"></button>
+      </div>
+  </div>
+    </section> -->
+  
+
+  
+<section>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 gchead2 pt-5 mt-2 ps-2 mb-3" >Our Capabilities</h1>
+        <!-- <p class="ps-2  display-6 text-muted">We offer more than what you want</p>  -->
+   
+         <h5 class="p-4 preenter_head">We offer 
+                          <!-- <h3 class="preenter">Navigate -->
+
+                            <!-- EN: Login -->
+                            <a class="enter_head">  <!-- EN: to your Account -->
+                          more than what you want
+                            </a>
+                          </h5>
+
+
+        <div class="swiffy-slider slider-nav-autoplay slider-item-show2 slider-item-reveal  slider-nav-round slider-nav-visible slider-indicators-outside  slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein">
+          <ul class="slider-container py-4">
+              <li class="">
+                  <div class="card shadow h-100">
+                      <div class="ratio ratio-16x9">
+                          <img src="assets/images/space.jpg" class="card-img-top" loading="lazy" alt="...">
+                      </div>
+                      <div class="card-body p-3 p-xl-5">
+                          <h3 class="card-title h5 sm-card-title">Geospatial Data Management</h3>
+                          <p class="card-text">We support spatial databases and formats like CSV, GeoTIFF, and shapefiles. Our system enables data import/export, version control for tracking changes, and metadata management for enhanced organization and compliance.</p>
+                          
+                          
+                          
+
+                          <div>
+                            
+                            <a href="#" class="button-80" role="button">Read more
+                            <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.996 511.996" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965 H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099 c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"></path> </g> </g> </g></svg>
+
+                          </a>
+
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li class="">
+                  <div class="card shadow h-100">
+                      <div class="ratio ratio-16x9">
+                          <img src="assets/images/analysis.jpg" class="card-img-top" loading="lazy" alt="...">
+                      </div>
+                      <div class="card-body p-3 p-xl-5">
+                          <h3 class="card-title h5 sm-card-title">Geospatial Analysis</h3>
+                          <p class="card-text">We provide spatial queries, geoprocessing tools, network analysis for routes, terrain and elevation analysis, and geostatistics to study spatial patterns and trends.</p>
+                         <a href="#" class="button-80" role="button">Read more
+                            <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.996 511.996" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965 H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099 c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"></path> </g> </g> </g></svg>
+
+                          </a>
+                      </div>
+                  </div>
+              </li>
+              <li class="">
+                  <div class="card shadow h-100">
+                      <div class="ratio ratio-16x9">
+                          <img src="assets/images/survey.jpg" class="card-img-top" loading="lazy" alt="...">
+                      </div>
+                      <div class="card-body p-3 p-xl-5">
+                          <h3 class="card-title h5 sm-card-title">Data Capture & Editing</h3>
+                          <p class="card-text">We offer digitizing tools for creating map features, attribute editing, offline field data collection, and GPS integration for location-based updates and tracking.</p>
+                          <a href="#" class="button-80" role="button">Read more
+                            <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.996 511.996" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965 H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099 c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"></path> </g> </g> </g></svg>
+
+                          </a>
+                      </div>
+                  </div>
+              </li>
+
+
+
+              <li class="">
+                <div class="card shadow h-100">
+                    <div class="ratio ratio-16x9">
+                        <img src="assets/images/visualize.jpg" class="card-img-top" loading="lazy" alt="...">
+                    </div>
+                    <div class="card-body p-3 p-xl-5">
+                        <h3 class="card-title h5 sm-card-title">Mapping & Visualization</h3>
+                        <p class="card-text">We provide spatial queries, geoprocessing tools, network analysis for routes, terrain and elevation analysis, and geostatistics to study spatial patterns and trends.</p>
+                    <a href="#" class="button-80" role="button">Read more
+                            <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.996 511.996" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965 H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099 c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"></path> </g> </g> </g></svg>
+
+                          </a>
+                    </div>
+                </div>
+            </li>
+
+              
+              <li class="slide-visible">
+                  <div class="card shadow h-100">
+                      <div class="ratio ratio-16x9">
+                          <img src="assets/images/code.jpg" class="card-img-top" loading="lazy" alt="...">
+                      </div>
+                      <div class="card-body  p-3 p-xl-5">
+                          <h3 class="card-title h5 sm-card-title">Geocoding & Reverse Geocoding</h3>
+                          <p class="card-text">We convert addresses to geographic coordinates and vice versa, with batch processing for large datasets.</p>
+                         <a href="#" class="button-80" role="button">Read more
+                            <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.996 511.996" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965 H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099 c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"></path> </g> </g> </g></svg>
+
+                          </a>
+                      </div>
+                  </div>
+              </li>
+              
+          </ul>
+      
+          <button type="button" class="slider-nav" aria-label="Go left"></button>
+          <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+      
+          <div class="slider-indicators">
+              <button class="" aria-label="Go to slide"></button>
+              <button aria-label="Go to slide"></button>
+              <button aria-label="Go to slide"></button>
+              <button aria-label="Go to slide" class="active"></button>
+              <button aria-label="Go to slide"></button>
+          </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+  <section class="bg-dark">
+jhgh
+  </section>
+
+   </main>
+    <script src="geo/assets/js/bootstrap.bundle.min.js"
+       ></script>
+
+       <script>
+        // (c) 2020 Written by Simon Köhler in Panama
+     // github.com/koehlersimon
+     // simon-koehler.com
+     
+     // No JavaScript needed for this example anymore!
+     
+    //  document.addEventListener('click',function(e){
+    //    // Hamburger menu
+    //    if(e.target.classList.contains('hamburger-toggle')){
+    //      e.target.children[0].classList.toggle('active');
+    //    }
+    //  })   
+
+   
+      
+     </script>
+</body>
+
+</html>

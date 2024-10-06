@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GeoConsole</title>
+  <!-- Bootstrap 5 CSS -->
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css'>
+  <!-- Font Awesome CSS -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'>
+
+
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+    *{
+
+      font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:200;
+  font-style: normal;
+
+    }
+    .gcnav {
+    border-bottom: 1px solid #dedede;
+}
+
+.gchead1
+{
+  background: #FF5B32;
+background: linear-gradient(to right, #FF5B32 0%, #FFE877 30%, #FF325B 60%, #FF7F04 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+padding-bottom: 5px;
+
+}
+
+.gchead2
+{
+  background: #FF6741;
+background: linear-gradient(to right, #FF6741 0%, #3A776C 59%, #284ACF 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+
+padding-bottom: 5px;
+
+
+}
+
+    .menu_head {
+      padding-bottom: 10px;
+      /* border-bottom: 1px solid #dedede; */
+    }
+
+
+
+    .nav-link {
+      color: rgb(255, 255, 255) !important; 
+}
+
+.nav-linka {
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase !important;
+}
+
+.nav-link {
+    color: rgb(44, 164, 78) !important;
+}
+.nav-linka:hover {
+  background:
+    linear-gradient(
+      to right,
+      rgba(100, 200, 200, 1),
+      rgba(100, 200, 200, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.nav-linka:hover {
+  /* font-weight: bold; */
+  color: #11053c;
+  background-size: 0 3px, 100% 3px;
+  
+}
+
+
+
+.bn39 {
+  background-image: linear-gradient(135deg, #008aff, #86d472);
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: block;
+  height: 35px;
+  font-size: 0.8rem;
+  font-weight: 200;
+  padding: 4px;
+  position: relative;
+  text-decoration: none;
+  width: 7em;
+  z-index: 2;
+}
+
+.bn39:hover {
+  color: #fff;
+}
+
+.bn39 .bn39span {
+  align-items: center;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transition: background 0.5s ease;
+  width: 100%;
+}
+
+.bn39:hover  {
+  background: rgb(231, 231, 231);
+  color: #000;
+}
+
+
+.list-group-item:hover{
+background: #CB60B3;
+background: linear-gradient(to right, #CB60B3 0%, #C146A1 50%, #A80077 51%, #DB36A4 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.dropdown-menu
+{
+  background: #212529;
+  color:#fff;
+}
+
+.text-black
+{
+  color: #000 !important;
+}
+
+
+
+.list-group-item {
+   
+    color: #ffffff;
+   
+    background-color: #000000;
+}
+
+.dropdown-menu 
+{
+  border-radius: 0px !important;
+}
+.text-light
+{
+  color: #8f8f8fc3 !important;
+}
+.preenter
+{
+    color: #5f195d !important;
+    font-size: 15px !important;
+    font-weight: normal;
+}
+.enter
+{
+    text-decoration: none !important;
+    color: #000000 !important;
+    font-size: 15px !important;
+    font-weight: normal;
+}
+a.enter::after {
+    content: "";
+    display: block;
+    width: 52px;
+    padding-top: 2px;
+    border-bottom: 5px solid #a200ff;
+    font-size: 15px !important;
+    font-weight: normal;
+  }
+  .divider
+  {
+   
+    background: #00C9FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+height: 2px;
+width: 100%;
+  }
+
+  .shader
+  {
+   background:#00000053;padding: 25px; border-radius: 5px;
+
+   background: #fb00ff81;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #00dade71, #fb00ff6f);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #00dade89, #fb00ff79); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  }
+
+  .dynamic-text-shadow {
+  /*  larger font size, more shadow distance  */
+  text-shadow: .1em .1em 0 hsl(200 50% 30%);
+}
+
+.navbar-toggler:hover {
+
+border: 1px solid #1351bc;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+outline: none;
+box-shadow: none;
+border: 1px solid #1351bc;
+}
+
+.navbar-toggler {
+   
+    background-color: #dddddd4f;
+    border: 1px solid #a5a5a5;
+}
+
+
+.navbar-toggler-icon {
+ 
+    width: 1.5em;
+    height: 1.3em;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.section0
+{
+  background: #000;
+  color:#fff;
+  background: url(assets/images/im7.jpg);
+}
+
+.roundedim
+{
+  border-radius:10px !important;
+}
+
+.slideh2
+{color:#DF1E1E;font-weight: 700;}
+
+.offcanvas-header .btn-close {
+   
+    border: 1px solid #dedede;
+}
+
+  </style>
+
+<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+  <main class="gcnav">
+    <!-- Start Mega Menu HTML -->
+    <!--  -->
+
+    
+    <nav class="navbar    shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/logo.svg" style="height: 45px;" />
+          <!-- <span class="badge bg-primary">Mega Menu</span> -->
+        </a>
+        <div class="d-flex ms-auto me-2">
+
+
+          <a class="bn39" href="/"><span class="bn39span">View Demo</span></a>
+
+          
+        </div>
+        
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 7L7 7M20 7L11 7" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> <path d="M20 17H17M4 17L13 17" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> <path d="M4 12H7L20 12" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+            
+          </span>
+        </button>
+
+        <!-- <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbar-content">
+          <div class="hamburger-toggle">
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </button> -->
+        
+        <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
+          <div class="offcanvas-header">
+            <h5 class=  "offcanvas-title" id="offcanvasNavbarDarkLabel">
+              <img src="assets/images/logo.svg" style="height: 45px;" />
+
+            </h5>
+            <button type="button" class="btn-close btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                </button>
+          </div>
+          <div class="offcanvas-body ">
+           <div class="text-light">
+            <h3 class="preenter">Navigate
+
+              <!-- EN: Login -->
+              <a class="enter">never before using the rich geo console tools. Explore our website
+                  <!-- EN: to your Account -->
+
+              </a>
+          </h3>
+
+             
+           </div>
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                <span class="nav-linka">Home</span>  
+                </a>
+              </li>
+              <!-- <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Multilevel</a>
+              <ul class="dropdown-menu shadow">
+                <li><a class="dropdown-item" href="#">Gallery</a></li>
+                <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                <li class="dropstart">
+                  <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">Submenu Left</a>
+                  <ul class="dropdown-menu shadow">
+                    <li><a class="dropdown-item" href=""> Third level 1</a></li>
+                    <li><a class="dropdown-item" href=""> Third level 2</a></li>
+                    <li><a class="dropdown-item" href=""> Third level 3</a></li>
+                    <li><a class="dropdown-item" href=""> Third level 4</a></li>
+                    <li><a class="dropdown-item" href=""> Third level 5</a></li>
+                  </ul>
+                </li>
+                <li class="dropend">
+                  <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside">Submenu Right</a>
+                  <ul class="dropdown-menu shadow">
+                    <li><a class="dropdown-item" href=""> Second level 1</a></li>
+                    <li><a class="dropdown-item" href=""> Second level 2</a></li>
+                    <li><a class="dropdown-item" href=""> Second level 3</a></li>
+                    <li class="dropend">
+                      <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">Let's go deeper!</a>
+                      <ul class="dropdown-menu dropdown-submenu shadow">
+                        <li><a class="dropdown-item" href=""> Third level 1</a></li>
+                        <li><a class="dropdown-item" href=""> Third level 2</a></li>
+                        <li><a class="dropdown-item" href=""> Third level 3</a></li>
+                        <li><a class="dropdown-item" href=""> Third level 4</a></li>
+                        <li><a class="dropdown-item" href=""> Third level 5</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="dropdown-item" href=""> Third level 5</a></li>
+                  </ul>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> -->
+              <li class="nav-item dropdown dropdown-mega position-static">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside">
+                  <span class="nav-linka">GC Products</span>  
+                </a>
+                <div class="dropdown-menu shadow">
+                  <div class="mega-content px-4">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 py-4">
+                          <h5 class="menu_head gchead1">Our Products for the GIS</h5>
+                          <div class="list-group">
+                            <a class="list-group-item" href="#">Accomodations</a>
+                            <a class="list-group-item" href="#">Terms & Conditions</a>
+                            <a class="list-group-item" href="#">Privacy</a>
+                          </div>
+                        </div>
+                       
+  
+  
+                        <div class="col-12 col-sm-12 col-md-12 py-4">
+                          <h5 class="menu_head">Damn, so many</h5>
+                          <div class="list-group">
+                            <a class="list-group-item" href="#">Accomodations</a>
+                            <a class="list-group-item" href="#">Terms & Conditions</a>
+                            <a class="list-group-item" href="#">Privacy</a>
+                          </div>
+                        </div>
+  
+                        <div class="col-12 col-sm-12 col-md-12 py-4">
+                          <h5 class="menu_head">Card</h5>
+                          <div class="card">
+                            <img src="assets/images/dsign.png" class="img-fluid" alt="image">
+                            <div class="card-body">
+                              <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 py-4">
+                          <h5 class="menu_head">About Our Products</h5>
+                          <p><b>CodeHim</b> is one of the BEST developer websites that provide web designers and
+                            developers with a simple way to preview and download a variety of free code & scripts.</p>
+                        </div>
+  
+  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+  
+              <li class="nav-item dropdown dropdown-mega position-static">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside">
+                  <span class="nav-linka">GC Services</span>  
+                </a>
+                <div class="dropdown-menu shadow">
+                  <div class="mega-content px-4">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 py-4">
+                          <h5 class="menu_head gchead1">Pages</h5>
+                          <div class="list-group">
+                            <a class="list-group-item" href="#">Accomodations</a>
+                            <a class="list-group-item" href="#">Terms & Conditions</a>
+                            <a class="list-group-item" href="#">Privacy</a>
+                          </div>
+                        </div>
+                       
+  
+  
+                        <div class="col-12 col-sm-12 col-md-12 py-4">
+                          <h5 class="menu_head">Damn, so many</h5>
+                          <div class="list-group">
+                            <a class="list-group-item" href="#">Accomodations</a>
+                            <a class="list-group-item" href="#">Terms & Conditions</a>
+                            <a class="list-group-item" href="#">Privacy</a>
+                          </div>
+                        </div>
+  
+                        <div class="col-12 col-sm-12 col-md-12 py-4">
+                          <h5 class="menu_head">Card</h5>
+                          <div class="card">
+                            <img src="assets/images/dsign.png" class="img-fluid" alt="image">
+                            <div class="card-body">
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 py-4">
+                          <h5 class="menu_head">About CodeHim</h5>
+                          <p><b>CodeHim</b> is one of the BEST developer websites that provide web designers and
+                            developers with a simple way to preview and download a variety of free code & scripts.</p>
+                        </div>
+  
+  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+  
+  
+              <li class="nav-item dropdown dropdown-mega position-static">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside">
+                  <span class="nav-linka">GC Sectors</span>  
+                </a>
+                <div class="dropdown-menu shadow">
+                  <div class="mega-content px-4">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 py-4">
+                          <h5 class="menu_head gchead1">Sectors</h5>
+                          <div class="list-group">
+                            <a class="list-group-item" href="#">Accomodations</a>
+                            <a class="list-group-item" href="#">Terms & Conditions</a>
+                            <a class="list-group-item" href="#">Privacy</a>
+                          </div>
+                        </div>
+                       
+  
+  
+                        <div class="col-12 col-sm-12 col-md-12 py-4">
+                          <h5 class="menu_head">Damn, so many</h5>
+                          <div class="list-group">
+                            <a class="list-group-item" href="#">Accomodations</a>
+                            <a class="list-group-item" href="#">Terms & Conditions</a>
+                            <a class="list-group-item" href="#">Privacy</a>
+                          </div>
+                        </div>
+  
+                        <div class="col-12 col-sm-12 col-md-12 py-4">
+                          <h5 class="menu_head">Card</h5>
+                          <div class="card">
+                            <img src="assets/images/dsign.png" class="img-fluid" alt="image">
+                            <div class="card-body">
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 py-4">
+                          <h5 class="menu_head">About CodeHim</h5>
+                          <p><b>CodeHim</b> is one of the BEST developer websites that provide web designers and
+                            developers with a simple way to preview and download a variety of free code & scripts.</p>
+                        </div>
+  
+  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+  
+  
+              <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li> -->
+            </ul>
+
+            
+          </div>
+        </div>
+
+
+
+
+       
+      </div>
+    </nav>
+    <!-- END Mega Menu HTML -->
+<div class="divider"></div>
+  </main>
+
+
+  <nav class="navbar navbar-expand-xs navbar-dark bg-dark" aria-label="Offcanvas navbar large">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Responsive offcanvas navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Offcanvas</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex mt-3 mt-lg-0" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+
+
+  <div class="container-fluid col-xxl-10 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="assets/images/dsign.png" class="d-block mx-lg-auto img-fluid roundedim" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 gchead2">Unlock the Power of Geospatial Intelligence</h1>
+        <p class="lead">
+          
+          Transform the way you manage, visualize, and analyze geographic data.
+          Our platform offers powerful tools for geospatial data management, real-time mapping, and advanced analysis. From 2D and 3D visualizations to field data collection and asset tracking, we provide seamless solutions to bring your data to life and drive smarter decisions.
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <div class="container-fluid col-xxl-10 ">
+    <div class="row flex-lg-row-reverse align-items-center ">
+      
+      <div class="col-lg-12">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 gchead2">Geospatial <br/>Solutions</h1>
+      
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <section >
+    
+    <div class="swiffy-slider slider-item-show2 slider-item-show2-sm slider-item-reveal slider-item-nogap slider-nav-square slider-nav-touch slider-nav-page slider-nav-autoplay slider-nav-autopause slider-indicators-round slider-indicators-highlight slider-nav-animation slider-nav-animation-appear">
+    <ul class="slider-container">
+        <li class="">
+            <div class="card rounded-0 h-100">
+                <div class="row g-0 h-100">
+                    <div class="col-md-6 col-xl-5 d-flex align-items-center p-2 p-md-3 p-xl-5">
+                        <div class="card-body p-1 p-md-3 p-xl-5">
+                            <p class="lead ">Store & Manage </p>
+                            <h2 class="card-title slideh2" >Manage Spatial Data</h2>
+                            <p class="card-text mt-3">Import, export, and control geospatial data with ease, supporting formats like GeoJSON and shapefiles.</p>
+                           
+                           
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-7">
+                        <img src="assets/images/dsign.png" class="card-img d-none d-md-block" loading="lazy" style="height: 100%; object-fit: cover;" alt="...">
+                        <img src="assets/images/dsign.png" class="card-img d-block d-md-none" loading="lazy" style="width: 100%; object-fit: cover;" alt="...">
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="slide-visible">
+            <div class="card rounded-0 h-100">
+                <div class="row g-0 h-100">
+                    <div class="col-md-6 col-xl-7">
+                        <img src="assets/images/nav.jpg" class="card-img d-none d-md-block" loading="lazy" style="height: 100%; object-fit: cover" alt="...">
+                        <img src="assets/images/nav.jpg" class="card-img d-block d-md-none" loading="lazy" style="width: 100%; object-fit: cover" alt="...">
+                  
+                        
+                  
+                      </div>
+                    <div class="col-md-6 col-xl-5 d-flex align-items-center p-2 p-md-3 p-xl-5">
+                        <div class="card-body p-1 p-md-3 p-xl-5">
+                            <p class="lead">Mapping</p>
+                            <h2 class="card-title slideh2" >2D & 3D Mapping</h2>
+                            <p class="card-text"><small >Visualize your data in 2D or 3D with real-time updates and customizable basemaps.</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+
+
+
+
+
+        <li class="">
+          <div class="card rounded-0 h-100">
+              <div class="row g-0 h-100">
+                  <div class="col-md-6 col-xl-5 d-flex align-items-center p-2 p-md-3 p-xl-5">
+                      <div class="card-body p-1 p-md-3 p-xl-5">
+                          <p class="lead">Store & Manage </p>
+                          <h2 class="card-title" style="color:#DF1E1E;">Manage Spatial Data</h2>
+                          <p class="card-text mt-3">Import, export, and control geospatial data with ease, supporting formats like GeoJSON and shapefiles.</p>
+                         
+                         
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-xl-7">
+                      <img src="assets/images/dsign.png" class="card-img d-none d-md-block" loading="lazy" style="height: 100%; object-fit: cover;" alt="...">
+                      <img src="assets/images/dsign.png" class="card-img d-block d-md-none" loading="lazy" style="width: 100%; object-fit: cover;" alt="...">
+                  </div>
+              </div>
+          </div>
+      </li>
+      <li class="slide-visible">
+          <div class="card rounded-0 h-100">
+              <div class="row g-0 h-100">
+                  <div class="col-md-6 col-xl-7">
+                      <img src="assets/images/im4.png" class="card-img d-none d-md-block" loading="lazy" style="height: 100%; object-fit: cover" alt="...">
+                      <img src="assets/images/im4.png" class="card-img d-block d-md-none" loading="lazy" style="width: 100%; object-fit: cover" alt="...">
+                
+                      
+                
+                    </div>
+                  <div class="col-md-6 col-xl-5 d-flex align-items-center p-2 p-md-3 p-xl-5">
+                      <div class="card-body p-1 p-md-3 p-xl-5">
+                          <p class="lead">Collect</p>
+                          <h2 class="card-title" style="color:#DF1E1E;">Easy Data Collection</h2>
+                          <p class="card-text"><small >Visualize your data in 2D or 3D with real-time updates and customizable basemaps.</small></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </li>
+
+
+
+        <li>
+            <div class="card rounded-0 h-100 text-white">
+                <img src="assets/images/dsign.png" class="card-img h-100" style="max-height: 100%; max-width: 100%; object-fit: cover" alt="...">
+                <div class="card-img-overlay d-flex align-items-start align-items-md-center justify-content-center flex-column">
+                  <div class="shader dynamic-text-shadow">
+                    <h2 class="card-title h1 d-block d-md-inline-block">Advanced Geospatial Analysis</h2>
+                    <p class="card-text lead col-md-12 col-lg-12">Perform spatial queries, network analysis, and terrain evaluations with powerful tools. </p>
+                  </div>
+                </div>
+            </div>
+        </li>
+
+
+
+        <li>
+          <div class="card rounded-0 h-100 text-white">
+              <img src="assets/images/im4.png" class="card-img h-100" style="max-height: 100%; max-width: 100%; object-fit: cover;" alt="...">
+              <div class="card-img-overlay d-flex align-items-center align-items-md-center justify-content-center flex-column ">
+                <div class="shader dynamic-text-shadow">
+                  <h2 class="card-title h1 d-block d-md-inline-block">Easy Data Collection</h2>
+                  <p class="card-text lead col-md-12 col-lg-12">Collect and edit geospatial data on the go with GPS and offline sync support.
+
+                  </p>
+                </div>
+              </div>
+          </div>
+      </li>
+
+
+
+
+      <li>
+        <div class="card rounded-0 h-100 text-white">
+            <img src="assets/images/im6.png" class="card-img h-100" style="max-height: 100%; max-width: 100%; object-fit: cover;" alt="...">
+            <div class="card-img-overlay d-flex align-items-center align-items-md-center justify-content-center flex-column ">
+              <div class="shader dynamic-text-shadow">
+                <h2 class="card-title h1 d-block d-md-inline-block">Real-Time Asset Tracking</h2>
+                <p class="card-text lead col-md-12 col-lg-12">Track and manage assets in real-time to optimize routes and improve efficiency.
+
+
+
+                </p>
+              </div>
+            </div>
+        </div>
+    </li>
+
+
+    </ul>
+
+    <button type="button" class="slider-nav" aria-label="Go left"></button>
+    <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+
+    <div class="slider-indicators">
+        <button class="" aria-label="Go to slide"></button>
+        <button aria-label="Go to slide" class="active"></button>
+        <button aria-label="Go to slide"></button>
+    </div>
+</div>
+  </section>
+
+
+  
+
+
+
+
+  <footer class="credit">
+
+    hi
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
+  <script>
+    // (c) 2020 Written by Simon Köhler in Panama
+    // github.com/koehlersimon
+    // simon-koehler.com
+
+    // No JavaScript needed for this example anymore!
+
+    document.addEventListener('click', function (e) {
+      // Hamburger menu
+      if (e.target.classList.contains('hamburger-toggle')) {
+        e.target.children[0].classList.toggle('active');
+      }
+    })
+
+  </script>
+
+
+</body>
+
+</html>

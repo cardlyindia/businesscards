@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <script src="geo/assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>Navbar Template · Bootstrap v5.3</title>
+
+
+
+    <!-- https://codepen.io/codingyaar/details/OJGRMYw -->
+
+    <link href="geo/assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#712cf9">
+
+
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+        *{
+
+          font-family: "Playfair Display", serif;
+            font-optical-sizing: auto;
+            font-size: 1rem;
+            font-weight:300;
+            font-style: normal;
+            
+          /* font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+    font-style: normal; */
+
+          
+
+        }
+        .secondaryfont {
+          font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;
+
+  /* font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100; */
+}
+
+        .divider
+  {
+   
+    background: #00C9FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+height: 2px;
+width: 100%;
+  }
+
+       
+
+
+        .dropdown-menu a {
+  text-decoration: none;
+  color: #000000;
+}
+.dropdown-menu a .d-flex {
+  transition: all 0.5s;
+}
+.dropdown-menu .col-sm-6:nth-child(1) a:hover .d-flex {
+  background-color: var(--bs-warning-bg-subtle);
+}
+.dropdown-menu .col-sm-6:nth-child(2) a:hover .d-flex {
+  background-color: var(--bs-danger-bg-subtle);
+}
+.dropdown-menu .col-sm-6:nth-child(3) a:hover .d-flex {
+  background-color: var(--bs-success-bg-subtle);
+}
+.dropdown-menu .col-sm-6:nth-child(4) a:hover .d-flex {
+  background-color: var(--bs-secondary-bg-subtle);
+}
+.dropdown-menu .col-sm-6:nth-child(5) a:hover .d-flex {
+  background-color: var(--bs-tertiary-bg);
+}
+.dropdown-menu .col-sm-6:nth-child(6) a:hover .d-flex {
+  background-color: var(--bs-info-bg-subtle);
+}
+@media only screen and (min-width: 992px) {
+  .dropdown-menu {
+    width: 55vw;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+  .dropdown-menu.show {
+    display: flex;
+  }
+}
+         @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.dropdown-menu.show {
+  -webkit-animation: fadeIn 0.3s alternate;
+  /* Safari 4.0 - 8.0 */
+  animation: fadeIn 0.3s alternate;
+}
+
+.nav-item.dropdown.dropdown-mega {
+  position: static;
+}
+.nav-item.dropdown.dropdown-mega .dropdown-menu {
+  width: 90%;
+  top: auto;
+  left: 5%;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0;
+  outline: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-toggler .hamburger-toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  z-index: 11;
+  float: right;
+}
+.navbar-toggler .hamburger-toggle .hamburger {
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(0deg);
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 50%;
+  pointer-events: none;
+}
+.navbar-toggler .hamburger-toggle .hamburger span {
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  background: #333;
+  border-radius: 2px;
+  z-index: 1;
+  transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), all 0.2s ease-in-out;
+  left: 0px;
+}
+.navbar-toggler .hamburger-toggle .hamburger span:first-child {
+  top: 10%;
+  transform-origin: 50% 50%;
+  transform: translate(0% -50%) !important;
+}
+.navbar-toggler .hamburger-toggle .hamburger span:nth-child(2) {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.navbar-toggler .hamburger-toggle .hamburger span:last-child {
+  left: 0px;
+  top: auto;
+  bottom: 10%;
+  transform-origin: 50% 50%;
+}
+.navbar-toggler .hamburger-toggle .hamburger.active span {
+  position: absolute;
+  margin: 0;
+}
+.navbar-toggler .hamburger-toggle .hamburger.active span:first-child {
+  top: 45%;
+  transform: rotate(45deg);
+}
+.navbar-toggler .hamburger-toggle .hamburger.active span:nth-child(2) {
+  left: 50%;
+  width: 0px;
+}
+.navbar-toggler .hamburger-toggle .hamburger.active span:last-child {
+  top: 45%;
+  transform: rotate(-45deg);
+}
+
+.icons {
+  display: inline-flex;
+  margin-left: auto;
+}
+.icons a {
+  transition: all 0.2s ease-in-out;
+  padding: 0.2rem 0.4rem;
+  color: #ccc !important;
+  text-decoration: none;
+}
+.icons a:hover {
+  color: white;
+  text-shadow: 0 0 30px white;
+} 
+
+
+.nav-link:hover {
+  background:
+    linear-gradient(
+      to right,
+      rgba(100, 200, 200, 1),
+      rgba(100, 200, 200, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.nav-link:hover {
+  /* font-weight: bold; */
+  color: #11053c;
+  background-size: 0 3px, 100% 3px;
+  
+}
+
+.gchead2
+{
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Black shadow */
+
+  background: #FF32F1;
+background: linear-gradient(to left, #FF32F1 0%, #05C1FF 50%, #9B1FC8 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+
+
+padding-bottom: 5px;
+
+
+}
+
+
+.bn39 {
+
+     
+  
+  background-image: linear-gradient(135deg, #008aff, #86d472);
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: block;
+  height: 35px;
+  font-size: 0.8rem;
+  font-weight: 200;
+  padding: 4px;
+  position: relative;
+  text-decoration: none;
+  width: 7em;
+  z-index: 2;
+}
+
+.bn39:hover {
+  color: #fff;
+}
+
+.bn39 .bn39span {
+  align-items: center;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transition: background 0.5s ease;
+  width: 100%;
+
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.bn39:hover  {
+  background: rgb(231, 231, 231);
+  color: #000;
+}
+
+.card-dark
+{
+  background: #000;
+  background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+  color: #e5fae0;
+}
+
+.preenter_menu
+{
+    color: #ffffff !important;
+    font-size: 20px !important;
+    font-weight: normal;
+}
+.preenter_menu
+{
+    text-decoration: none !important;
+    color: #ffffff !important;
+    font-size: 20px !important;
+    font-weight: normal;
+}
+a.enter_menu
+{
+  color: #6adaff !important;
+  font-size: 20px !important;
+}
+a.enter_menu::after {
+  color: #6adaff !important;
+    content: "";
+    display: block;
+    width: 52px;
+    padding-top: 2px;
+    border-bottom: 5px solid #a200ff;
+    font-size: 20px !important;
+    font-weight: normal;
+  }
+
+  .gchead1
+{
+  background: #2069A2;
+background: linear-gradient(to right, #2069A2 0%, #12902F 50%, #25816B 51%, #7745DB 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+
+}
+
+
+
+.glow-on-hover {
+  display: inline-block;
+  text-decoration: none;
+  width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 50px;
+  line-height: 50px; /* Centers the text vertically */
+  text-align: center; /* Centers the text horizontally */
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  
+.nav-item.dropdown.dropdown-mega .dropdown-menu {
+    width: 100%;
+  
+
+}
+}
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="navbars-offcanvas.css" rel="stylesheet">
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path
+                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path
+                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+            <path
+                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path
+                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+        </symbol>
+    </svg>
+
+
+   <main>
+
+    <div class="divider"></div>
+    <nav class="navbar navbar-expand-lg navbar-light  shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/logo1.svg" style="height: 45px;" />
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+          <div class="hamburger-toggle">
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-content">
+          <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+           
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categories
+              </a>
+              <div class="dropdown-menu px-3 rounded-3 border-0 shadow">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <a href="#">
+                      <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                        <div class="icon px-3 bg-warning-subtle rounded-3 fs-1">
+                          <!-- <i class="bi bi-tv"></i> -->
+                          <svg height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.5" d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12" stroke="#1C274C" stroke-width="1.5"></path> <path d="M2 14C2 11.1997 2 9.79961 2.54497 8.73005C3.02433 7.78924 3.78924 7.02433 4.73005 6.54497C5.79961 6 7.19974 6 10 6H14C16.8003 6 18.2004 6 19.27 6.54497C20.2108 7.02433 20.9757 7.78924 21.455 8.73005C22 9.79961 22 11.1997 22 14C22 16.8003 22 18.2004 21.455 19.27C20.9757 20.2108 20.2108 20.9757 19.27 21.455C18.2004 22 16.8003 22 14 22H10C7.19974 22 5.79961 22 4.73005 21.455C3.78924 20.9757 3.02433 20.2108 2.54497 19.27C2 18.2004 2 16.8003 2 14Z" stroke="#1C274C" stroke-width="1.5"></path> <path d="M9.5 14.4L10.9286 16L14.5 12" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </div>
+                        <div class="text ps-3">
+                          <h5>Television</h5>
+                          <div class="secondaryfont">Transform the way you manage, visualize, and analyze geographic data.</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="#">
+                      <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                        <div class="icon px-3 bg-danger-subtle rounded-3 fs-1">
+                          <svg height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.5" d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12" stroke="#1C274C" stroke-width="1.5"></path> <path d="M2 14C2 11.1997 2 9.79961 2.54497 8.73005C3.02433 7.78924 3.78924 7.02433 4.73005 6.54497C5.79961 6 7.19974 6 10 6H14C16.8003 6 18.2004 6 19.27 6.54497C20.2108 7.02433 20.9757 7.78924 21.455 8.73005C22 9.79961 22 11.1997 22 14C22 16.8003 22 18.2004 21.455 19.27C20.9757 20.2108 20.2108 20.9757 19.27 21.455C18.2004 22 16.8003 22 14 22H10C7.19974 22 5.79961 22 4.73005 21.455C3.78924 20.9757 3.02433 20.2108 2.54497 19.27C2 18.2004 2 16.8003 2 14Z" stroke="#1C274C" stroke-width="1.5"></path> <path d="M9.5 14.4L10.9286 16L14.5 12" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                     
+                        </div>
+                        <div class="text ps-3">
+                          <h5>Headphones</h5>
+                          <div>Irure incididunt eu irure quis ipsum
+                            occaecat dolor quis.</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="#">
+                      <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                        <div class="icon px-3 bg-success-subtle rounded-3 fs-1">
+                          <svg height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.5" d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12" stroke="#1C274C" stroke-width="1.5"></path> <path d="M2 14C2 11.1997 2 9.79961 2.54497 8.73005C3.02433 7.78924 3.78924 7.02433 4.73005 6.54497C5.79961 6 7.19974 6 10 6H14C16.8003 6 18.2004 6 19.27 6.54497C20.2108 7.02433 20.9757 7.78924 21.455 8.73005C22 9.79961 22 11.1997 22 14C22 16.8003 22 18.2004 21.455 19.27C20.9757 20.2108 20.2108 20.9757 19.27 21.455C18.2004 22 16.8003 22 14 22H10C7.19974 22 5.79961 22 4.73005 21.455C3.78924 20.9757 3.02433 20.2108 2.54497 19.27C2 18.2004 2 16.8003 2 14Z" stroke="#1C274C" stroke-width="1.5"></path> <path d="M9.5 14.4L10.9286 16L14.5 12" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                     
+                        </div>
+                        <div class="text ps-3">
+                          <h5>Smartphone</h5>
+                          <div>Irure incididunt eu irure quis ipsum
+                            occaecat dolor quis.</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="#">
+                      <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                        <div class="icon px-3 bg-secondary-subtle rounded-3 fs-1">
+                          <svg height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.5" d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12" stroke="#1C274C" stroke-width="1.5"></path> <path d="M2 14C2 11.1997 2 9.79961 2.54497 8.73005C3.02433 7.78924 3.78924 7.02433 4.73005 6.54497C5.79961 6 7.19974 6 10 6H14C16.8003 6 18.2004 6 19.27 6.54497C20.2108 7.02433 20.9757 7.78924 21.455 8.73005C22 9.79961 22 11.1997 22 14C22 16.8003 22 18.2004 21.455 19.27C20.9757 20.2108 20.2108 20.9757 19.27 21.455C18.2004 22 16.8003 22 14 22H10C7.19974 22 5.79961 22 4.73005 21.455C3.78924 20.9757 3.02433 20.2108 2.54497 19.27C2 18.2004 2 16.8003 2 14Z" stroke="#1C274C" stroke-width="1.5"></path> <path d="M9.5 14.4L10.9286 16L14.5 12" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                     
+                        </div>
+                        <div class="text ps-3">
+                          <h5>Laptop</h5>
+                          <div>Irure incididunt eu irure quis ipsum
+                            occaecat dolor quis.</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="#">
+                      <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                        <div class="icon px-3 bg-body-tertiary rounded-3 fs-1">
+                          <svg height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.5" d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12" stroke="#1C274C" stroke-width="1.5"></path> <path d="M2 14C2 11.1997 2 9.79961 2.54497 8.73005C3.02433 7.78924 3.78924 7.02433 4.73005 6.54497C5.79961 6 7.19974 6 10 6H14C16.8003 6 18.2004 6 19.27 6.54497C20.2108 7.02433 20.9757 7.78924 21.455 8.73005C22 9.79961 22 11.1997 22 14C22 16.8003 22 18.2004 21.455 19.27C20.9757 20.2108 20.2108 20.9757 19.27 21.455C18.2004 22 16.8003 22 14 22H10C7.19974 22 5.79961 22 4.73005 21.455C3.78924 20.9757 3.02433 20.2108 2.54497 19.27C2 18.2004 2 16.8003 2 14Z" stroke="#1C274C" stroke-width="1.5"></path> <path d="M9.5 14.4L10.9286 16L14.5 12" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                     
+                        </div>
+                        <div class="text ps-3">
+                          <h5>Smartwatch</h5>
+                          <div>Irure incididunt eu irure quis ipsum
+                            occaecat dolor quis.</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="#">
+                      <div class="d-flex align-items-center py-3 px-1 rounded-3">
+                        <div class="icon px-3 bg-info-subtle rounded-3 fs-1">
+                          <svg height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="0.5" d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12" stroke="#1C274C" stroke-width="1.5"></path> <path d="M2 14C2 11.1997 2 9.79961 2.54497 8.73005C3.02433 7.78924 3.78924 7.02433 4.73005 6.54497C5.79961 6 7.19974 6 10 6H14C16.8003 6 18.2004 6 19.27 6.54497C20.2108 7.02433 20.9757 7.78924 21.455 8.73005C22 9.79961 22 11.1997 22 14C22 16.8003 22 18.2004 21.455 19.27C20.9757 20.2108 20.2108 20.9757 19.27 21.455C18.2004 22 16.8003 22 14 22H10C7.19974 22 5.79961 22 4.73005 21.455C3.78924 20.9757 3.02433 20.2108 2.54497 19.27C2 18.2004 2 16.8003 2 14Z" stroke="#1C274C" stroke-width="1.5"></path> <path d="M9.5 14.4L10.9286 16L14.5 12" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                     
+                        </div>
+                        <div class="text ps-3">
+                          <h5>Earbuds</h5>
+                          <div>Irure incididunt eu irure quis ipsum
+                            occaecat dolor quis.</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown dropdown-mega position-static ">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Megamenu</a>
+              <div class="dropdown-menu  rounded-3 border-0 shadow">
+                <div class="mega-content px-4">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-12 col-sm-4 col-md-3 py-4">
+                        <h5 class="gchead1">Pages</h5>
+                        <div class="list-group">
+                          <a class="list-group-item" href="#">Accomodations</a>
+                          <a class="list-group-item" href="#">Terms & Conditions</a>
+                          <a class="list-group-item" href="#">Privacy</a>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-4 col-md-3 py-4">
+                       
+                        <div class="card card-dark">
+                          <h5 class="p-4 preenter_menu">Navigate
+                          <!-- <h3 class="preenter">Navigate -->
+
+                            <!-- EN: Login -->
+                            <a class="enter_menu">never before using the rich geo console tools. Explore our website
+                                <!-- EN: to your Account -->
+              
+                            </a>
+                          </h5>
+                    <img src="assets/images/travelling.svg" class="img-fluid" alt="image">
+                    <div class="card-body">
+                      <p class="card-text secondaryfont">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+                      </div>
+                      <div class="col-12 col-sm-4 col-md-3 py-4">
+                        <h5 class="gchead1">About CodeHim</h5>
+                          <p class="secondaryfont">is one of the BEST developer websites that provide web designers and developers with a simple way to preview and download a variety of free code & scripts.</p>
+                      </div>
+                      <div class="col-12 col-sm-12 col-md-3 py-4">
+                        <h5 class="gchead1">Damn, so many</h5>
+                        <div class="list-group">
+                          <a class="list-group-item" href="#">Accomodations</a>
+                          <a class="list-group-item" href="#">Terms & Conditions</a>
+                          <a class="list-group-item" href="#">Privacy</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <div class="d-flex ms-auto">
+              <!-- <div class="input-group">
+                  <input class="form-control border-0 mr-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-primary border-0" type="submit">Search</button>
+              </div> -->
+
+          <a class="bn39" href="/"><span class="bn39span">Login now</span></a>
+
+
+
+            </div>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container-fluid  px-4 py-5 bg-dark">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5 col-xxl-10">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="assets/images/im.svg" class="d-block mx-lg-auto img-fluid roundedim" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 gchead2">Unlock the Power of Geospatial Intelligence</h1>
+          <p class="lead text-white">
+            
+            Transform the way you manage, visualize, and analyze geographic data.
+            Our platform offers powerful tools for geospatial data management, real-time mapping, and advanced analysis. From 2D and 3D visualizations to field data collection and asset tracking, we provide seamless solutions to bring your data to life and drive smarter decisions.
+          </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <!-- <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button> -->
+          
+
+               
+        
+<a class="glow-on-hover secondaryfont" type="button">Know about GIS 
+
+  <svg width="15"  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.003 512.003" xml:space="preserve" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#ffffff;" d="M5.205,506.802c6.928,6.928,18.148,6.928,25.077,0L476.534,60.551v240.943 c0,9.801,7.933,17.735,17.735,17.735c9.801,0,17.735-7.933,17.735-17.735V17.739c0-9.801-7.933-17.735-17.735-17.735H210.514 c-9.801,0-17.735,7.933-17.735,17.735s7.933,17.735,17.735,17.735h240.931L5.205,481.725 C-1.735,488.654-1.735,499.874,5.205,506.802z"></path> </g></svg>
+</a>
+
+            
+         
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+   </main>
+    <script src="geo/assets/js/bootstrap.bundle.min.js"
+       ></script>
+
+       <script>
+        // (c) 2020 Written by Simon Köhler in Panama
+     // github.com/koehlersimon
+     // simon-koehler.com
+     
+     // No JavaScript needed for this example anymore!
+     
+    //  document.addEventListener('click',function(e){
+    //    // Hamburger menu
+    //    if(e.target.classList.contains('hamburger-toggle')){
+    //      e.target.children[0].classList.toggle('active');
+    //    }
+    //  })   
+
+      
+     </script>
+</body>
+
+</html>
