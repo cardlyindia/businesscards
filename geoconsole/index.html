@@ -586,15 +586,16 @@ background: linear-gradient(to right, #2069A2 0%, #12902F 50%, #25816B 51%, #774
 }
 }
 
-@include color-mode(dark) {
 
-  .dropdown-menu .textcolor
-{
 
-  color: #fff !important;
 
+@media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: dark) {
+  .element {
+    color: var(--bs-primary-text-emphasis);
+    background-color: var(--bs-primary-bg-subtle);
+  }
 }
-  
 }
 
     </style>
@@ -866,7 +867,7 @@ Geostatistics
 
 
     <div class="container-fluid  px-4 py-5 bg-dark ">
-      <div class="row flex-lg-row-reverse align-items-center g-5 py-5 col-xxl-10">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-1 col-xxl-10">
         <div class="col-10 col-sm-8 col-lg-6">
           <img src="assets/images/im.svg" class="d-block mx-lg-auto img-fluid roundedim" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
         </div>
