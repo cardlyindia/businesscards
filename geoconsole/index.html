@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.122.0">
-    <title>Navbar Template · Bootstrap v5.3</title>
+    <title>GeoConsole</title>
 
 
 
@@ -271,7 +271,7 @@ background: linear-gradient(to left, #FF32F1 0%, #05C1FF 50%, #9B1FC8 100%);
 
 
 
-padding-bottom: 3px;
+padding-bottom: 5px;
 
 
 }
@@ -281,7 +281,7 @@ padding-bottom: 3px;
     background: linear-gradient(to left, #32ffd2 0%, #3837df 50%, #ff36e0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding-bottom: 3px;
+    padding-bottom: 5px;
 }
 
 
@@ -374,7 +374,7 @@ a.enter_menu::after {
   color: #6adaff !important;
     content: "";
     display: block;
-    width: 52px;
+    width: 25px;
     padding-top: 2px;
     border-bottom: 5px solid #a200ff;
     font-size: 20px !important;
@@ -391,7 +391,7 @@ a.enter_menu::after {
     font-weight: normal;
     text-decoration: none;
     padding: 0px !important;
-    padding-left: 12px !important;
+    padding-left: 8px !important;
 }
 a.enter_head
 {
@@ -404,9 +404,11 @@ a.enter_head::after {
   color: #0a5b77 !important;
     content: "";
     display: block;
-    width: 80px;
    
-    border-bottom: 5px solid #a200ff;
+    width: 50px;
+    padding-bottom: 3px;
+    border-bottom: 7px solid #a200ff;
+
     font-size: 20px !important;
     font-weight: normal;
   }
@@ -419,7 +421,7 @@ a.enter_head::after {
     font-weight: normal;
     text-decoration: none;
     padding: 0px !important;
-    padding-left: 12px !important;
+    padding-left: 8px !important;
 }
 a.enter_head_b
 {
@@ -432,9 +434,9 @@ a.enter_head_b::after {
   color: #55d5ff !important;
     content: "";
     display: block;
-    width: 80px;
-   
-    border-bottom: 5px solid #a200ff;
+    width: 50px;
+    padding-bottom: 3px;
+    border-bottom: 7px solid #a200ff;
     font-size: 20px !important;
     font-weight: normal;
   }
@@ -665,6 +667,17 @@ background: linear-gradient(to right, #2069A2 0%, #12902F 50%, #25816B 51%, #774
   font-size: 1.6rem;
   color: #1c76b7;
 }
+.footerdivider
+{
+  border-top: 4px solid #4c57ed;
+  background-image: linear-gradient(to top, #01040a, #040c21, #071134, #181045, #310451);
+  color: #fff;
+}
+
+.footerdivider .text-body-secondary
+{
+  color: #fff !important;
+}
 
 .feature1
 {
@@ -891,7 +904,7 @@ a.enter_head_b::after {
 
 
 @media(max-width: 990px){
-  .card{
+  .card_pro{
     margin: 20px;
   }
 } 
@@ -908,6 +921,24 @@ a.enter_head_b::after {
 </head>
 
 <body>
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="bootstrap" viewBox="0 0 118 94">
+      <title>Bootstrap</title>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+    </symbol>
+    <symbol id="facebook" viewBox="0 0 16 16">
+      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+    </symbol>
+    <symbol id="instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+    </symbol>
+    <symbol id="twitter" viewBox="0 0 16 16">
+      <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+    </symbol>
+  </svg>
+
+  
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="check2" viewBox="0 0 16 16">
             <path
@@ -1172,7 +1203,7 @@ Geostatistics
         </div>
         <div class="col-lg-6">
           <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 gchead2">Unlock the Power of Geospatial Intelligence</h1>
-          <p class="lead text-white">
+          <p class="lead text-white secondaryfont">
             
             Transform the way you manage, visualize, and analyze geographic data.
             Our platform offers powerful tools for geospatial data management, real-time mapping, and advanced analysis. From 2D and 3D visualizations to field data collection and asset tracking, we provide seamless solutions to bring your data to life and drive smarter decisions.
@@ -1250,15 +1281,15 @@ Geostatistics
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 gchead4 pt-5 mt-2 ps-2 mb-3" >State of the art</h1>
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 gchead4 pt-5 mt-2 ps-2 mb-3" >Unleashing Potential</h1>
         <!-- <p class="ps-2  display-6 text-muted">We offer more than what you want</p>  -->
    
-         <h5 class="p-4 preenter_head">Capabilitues
+         <h5 class="p-4 preenter_head">Capabilities 
                           <!-- <h3 class="preenter">Navigate -->
 
                             <!-- EN: Login -->
                             <a class="enter_head">  <!-- EN: to your Account -->
-                          beyond your expectation
+                              That Go Further
                             </a>
                           </h5>
 
@@ -1272,7 +1303,7 @@ Geostatistics
                       </div>
                       <div class="card-body p-3 p-xl-5">
                           <h3 class="card-title h5 sm-card-title">Geospatial Data Management</h3>
-                          <p class="card-text">We support spatial databases and formats like CSV, GeoTIFF, and shapefiles. Our system enables data import/export, version control for tracking changes, and metadata management for enhanced organization and compliance.</p>
+                          <p class="card-text secondaryfont">We support spatial databases and formats like CSV, GeoTIFF, and shapefiles. Our system enables data import/export, version control for tracking changes, and metadata management for enhanced organization and compliance.</p>
                           
                           
                           
@@ -1295,7 +1326,7 @@ Geostatistics
                       </div>
                       <div class="card-body p-3 p-xl-5">
                           <h3 class="card-title h5 sm-card-title">Geospatial Analysis</h3>
-                          <p class="card-text">We provide spatial queries, geoprocessing tools, network analysis for routes, terrain and elevation analysis, and geostatistics to study spatial patterns and trends.</p>
+                          <p class="card-text secondaryfont">We provide spatial queries, geoprocessing tools, network analysis for routes, terrain and elevation analysis, and geostatistics to study spatial patterns and trends.</p>
                          <a href="#" class="button-80" role="button">Read more
                             <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.996 511.996" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965 H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099 c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"></path> </g> </g> </g></svg>
 
@@ -1310,7 +1341,7 @@ Geostatistics
                       </div>
                       <div class="card-body p-3 p-xl-5">
                           <h3 class="card-title h5 sm-card-title">Data Capture & Editing</h3>
-                          <p class="card-text">We offer digitizing tools for creating map features, attribute editing, offline field data collection, and GPS integration for location-based updates and tracking.</p>
+                          <p class="card-text secondaryfont">We offer digitizing tools for creating map features, attribute editing, offline field data collection, and GPS integration for location-based updates and tracking.</p>
                           <a href="#" class="button-80" role="button">Read more
                             <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.996 511.996" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965 H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099 c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"></path> </g> </g> </g></svg>
 
@@ -1328,7 +1359,7 @@ Geostatistics
                     </div>
                     <div class="card-body p-3 p-xl-5">
                         <h3 class="card-title h5 sm-card-title">Mapping & Visualization</h3>
-                        <p class="card-text">We provide spatial queries, geoprocessing tools, network analysis for routes, terrain and elevation analysis, and geostatistics to study spatial patterns and trends.</p>
+                        <p class="card-text secondaryfont">We provide spatial queries, geoprocessing tools, network analysis for routes, terrain and elevation analysis, and geostatistics to study spatial patterns and trends.</p>
                     <a href="#" class="button-80" role="button">Read more
                             <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.996 511.996" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965 H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099 c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"></path> </g> </g> </g></svg>
 
@@ -1345,7 +1376,7 @@ Geostatistics
                       </div>
                       <div class="card-body  p-3 p-xl-5">
                           <h3 class="card-title h5 sm-card-title">Geocoding & Reverse Geocoding</h3>
-                          <p class="card-text">We convert addresses to geographic coordinates and vice versa, with batch processing for large datasets.</p>
+                          <p class="card-text secondaryfont">We convert addresses to geographic coordinates and vice versa, with batch processing for large datasets.</p>
                          <a href="#" class="button-80" role="button">Read more
                             <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.996 511.996" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965 H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099 c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"></path> </g> </g> </g></svg>
 
@@ -1482,7 +1513,7 @@ Geostatistics
     <div class="col-md-4 pt-2 pb-5">
       <div class="h-100 p-0 bg-body-tertiary-no text-white border-0 rounded-3">
         <h2>Optimized Performance, Scalability, and Customization</h2>
-        <p>Handle massive geospatial datasets efficiently while utilizing cloud infrastructure for scalable storage and processing. Ensure smooth map rendering with caching and tiling, and offer extensive customization through custom tools and scripting support for automation and advanced workflows.</p>
+        <p class="secondaryfont">Handle massive geospatial datasets efficiently while utilizing cloud infrastructure for scalable storage and processing. Ensure smooth map rendering with caching and tiling, and offer extensive customization through custom tools and scripting support for automation and advanced workflows.</p>
         <a class="btn btn-outline-secondary"  href="#">Read more</a>
       </div>
     </div>
@@ -1511,32 +1542,39 @@ Geostatistics
 
 
 
-                            <div class="container">
-<div class="row">
-
-  <div class="col">
-    <h1 class="display-5 fw-bold text-body-emphasis lh-1  gchead4 pt-5 mt-2  " >Takeaways from us!</h1>
+<div class="container">
+<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+  <div class="col-10 col-sm-8 col-lg-6">
+    <img src="assets/images/asset.svg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+  </div>
+  <div class="col-lg-6">
+    <h1 class="display-5 fw-bold text-body-emphasis lh-1  gchead4 pt-5 mt-2  " >Navigate, Manage, Succeed</h1>
    
-     <h5 class=" preenter_head_c ">Our
+     <h5 class=" preenter_head_c ">Advanced
                       <!-- <h3 class="preenter">Navigate -->
 
                         <!-- EN: Login -->
                         <a class="enter_head_c">  <!-- EN: to your Account -->
-                      geospatial solutions
+                           Geospatial Solutions
                         </a>
                       </h5>
+    <!-- <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned hero with image</h1> -->
+    <p class="lead secondaryfont">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+   
   </div>
 </div>
-                              <div class="row">
+
+
+<!-- <div class="row">
                                 
 
                                 <div class="col-md-12  align-items-start ">
-                                  <!-- <h2 class="fw-bold text-body-emphasis">Geospatial Solutions </h2> -->
+                                 
             <p class="text-body-secondary secondaryfont h5">A comprehensive suite of geospatial platforms tailored for diverse industries, including smart city management, logistics, real estate, land administration, and asset tracking. These solutions enable real-time monitoring and management of urban infrastructure, optimize delivery routes and vehicle tracking, assist in property analysis and land administration, provide indoor navigation for large spaces, and track distributed assets using GPS and GIS technology for improved decision-making and operational efficiency.</p>
            
                                 </div>
 
-                              </div>
+                              </div> -->
 
                               <div class="row ">
                               
@@ -1549,7 +1587,7 @@ Geostatistics
                                     <div class="col-md-4">
                                       <div class="card card_pro card-1">
                                         <h3>Smart City Management Platform</h3>
-                                        <p>A platform to monitor and manage urban infrastructure (traffic, waste, energy, and public safety) in real time using geospatial data</p>
+                                        <p class="secondaryfont">A platform to monitor and manage urban infrastructure (traffic, waste, energy, and public safety) in real time using geospatial data</p>
                                       </div>
                                     </div>
                                     <div class="col-md-4">
@@ -1557,13 +1595,13 @@ Geostatistics
 
                                        
                                         <h3>Logistics and Fleet Management</h3>
-                                        <p>A geospatial tool designed for logistics, transportation, and e-commerce businesses to optimize delivery routes, track vehicles in real time, and enhance asset utilization.</p>
+                                        <p class="secondaryfont">A geospatial tool designed for logistics, transportation, and e-commerce businesses to optimize delivery routes, track vehicles in real time, and enhance asset utilization.</p>
                                       </div>
                                     </div>
                                     <div class="col-md-4">
                                       <div class="card card_pro card-3">
                                         <h3>Cadastral and Land Administration </h3>
-                                        <p>A GIS-based system for land parcel mapping, ownership tracking, and boundary resolution..</p>
+                                        <p class="secondaryfont">A GIS-based system for land parcel mapping, ownership tracking, and boundary resolution..</p>
                                       </div>
                                     </div>
                                   <!-- </div>
@@ -1577,21 +1615,26 @@ Geostatistics
                                   <div class="col-md-4">
                                     <div class="card card_pro card-4">
                                       <h3>Real Estate and Property Management </h3>
-                                      <p>A GIS platform for property analysis, market trends, and asset management to support informed decisions.</p>
+                                      <p class="secondaryfont">A GIS platform for property analysis, market trends, and asset management to support informed decisions.</p>
                                     </div>
                                   </div>
                                   <div class="col-md-4">
                                     <div class="card card_pro card-5">
                                       <h3>Asset Location  Tracking</h3>
-                                      <p>Tabs, buttons, inputs, lists, cards, and more! A comprehensive library
-                                        of mobile UI components, ready to go.</p>
+                                      <p class="secondaryfont">GPS and GIS tools track real-time asset locations (e.g., vehicles, equipment) to optimize usage, monitor movement, and manage infrastructure like utility poles and pipelines.</p>
                                     </div>
                                   </div>
                                   <div class="col-md-4">
                                     <div class="card card_pro card-6">
                                       <h3>Indoor Mapping and Navigation</h3>
-                                      <p>Learn how to easily customize and modify your app’s design to fit your
-                                        brand across all mobile platform styles.</p>
+                                      <p class="secondaryfont">A GIS tool for indoor mapping and navigation to help users navigate complex spaces.
+
+
+
+
+
+
+                                      </p>
                                     </div>
                                   </div>
                                 <!-- </div>
@@ -1606,7 +1649,7 @@ Geostatistics
                                 <div class="bggradgreen p-3 mt-3">
                                 <h5 class="secondaryfont">
                                 Experience our cutting-edge geospatial platforms in action—tailored for smart cities, logistics, real estate, and more. Click here for a demo and product showcase!
-                              </h5>  <a href="#" class="btn btn-outline-warning btn-sm">Read more</a>
+                              </h5>  <a href="#" class="btn btn-outline-warning btn-sm">View demo</a>
                             </div>
                               </div>
 
@@ -1629,6 +1672,66 @@ Geostatistics
   </section>
 
    </main>
+<section class="footerdivider">
+   <div class="container">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Get to Know</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About us</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Solutions</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Why We</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Resources</h5>
+          <ul class="nav flex-column">
+           
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Demos</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+          </ul>
+        </div>
+  
+        <!-- <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div> -->
+  
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form>
+            <h5>Subscribe to our newsletter</h5>
+            <p>Monthly digest of what's new and exciting from us.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+              <button class="btn btn-primary" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>© 2024 Geoconsole™. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</section>
     <script src="geo/assets/js/bootstrap.bundle.min.js"
        ></script>
 
