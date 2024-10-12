@@ -788,6 +788,34 @@ background: linear-gradient(to right, #2069A2 0%, #12902F 50%, #25816B 51%, #774
  
 }
 
+.card_pro{
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  /* padding: 14px 10px 18px 36px; */
+  padding: 25px;
+    padding-right: 50px;
+  cursor: pointer;
+  /* min-height: 250px !important; */
+}
+
+.card_pro:hover{
+     transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card_pro h3{
+  font-weight: 600;
+  color: #132377;
+}
+
+.card_pro img{
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  max-height: 120px;
+}
 
 @media only screen and (max-width: 600px) {
   
@@ -870,34 +898,6 @@ a.enter_head_b::after {
 
 
 
-.card_pro{
-    border-radius: 4px;
-    background: #fff;
-    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
-      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
-  /* padding: 14px 10px 18px 36px; */
-  padding: 25px;
-    padding-right: 50px;
-  cursor: pointer;
-  /* min-height: 250px !important; */
-}
-
-.card_pro:hover{
-     transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
-}
-
-.card_pro h3{
-  font-weight: 600;
-  color: #132377;
-}
-
-.card_pro img{
-  position: absolute;
-  top: 20px;
-  right: 15px;
-  max-height: 120px;
-}
 
 .card-1{
   background-image: url(assets/images/theming-card.png);
