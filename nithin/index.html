@@ -129,7 +129,7 @@
                   class="list-unstyled d-flex align-items-center justify-content-center justify-content-lg-end my-1 mx-4 pe-xxl-4 gap-3">
                   <li>
                     <a class="btn btn-primary d-flex align-items-center justify-content-center" id="downloadvcard"
-                      href="#">
+                      href="nithin.vcf">
                       <i class="ti ti-download me-2"></i> Save Contact
                     </a>
                   </li>
@@ -233,99 +233,8 @@
         console.error('Error sharing:', error);
       }
     });
-    $(document).on("click", "#downloadvcard", downloadVCard);
+   
   });
-
-
-
-
-
-    var vCardData = {
-  "firstName": "Nithin Jaganath",
-  "lastName": "Narayanan",
-  "email": "nithjag@gmail.com",
-  "email": "nithin@cityclinickwt.com",
-  "phone": "+96565570376",
-  "addressType": "office",
-  "socialMedia": {
-    "whatsapp": "+96565570376",
-    "instagram": "https://www.instagram.com/nithjag",
-    "facebook": "https://www.facebook.com/nithjag?mibextid=LQQJ4d",
-    "linkedin": "https://www.linkedin.com/in/nithin-jaganath-narayanan-0350816"
-  },
-  "website": "https://www.cityclinickwt.com/",
-  "jobTitle": "Quality Controller & Product Analyst ",
-  "organization": "City Clinic"
-};
-
-// Function to create the vCard string
-function createVCard(vCardData) {
-  var vCard = "BEGIN:VCARD\n";
-  vCard += "VERSION:3.0\n";
-  vCard += "N:" + (vCardData.lastName || "") + ";" + (vCardData.firstName || "") + ";;;\n";
-  vCard += "FN:" + (vCardData.firstName || "") + " " + (vCardData.lastName || "") + "\n";
-  vCard += "EMAIL:" + (vCardData.email || "") + "\n";
-  vCard += "TEL:" + (vCardData.phone || "") + "\n";
-
-  if (vCardData.address) {
-    var addressType = vCardData.addressType === "office" ? "WORK" : "HOME";
-    vCard += "ADR;TYPE=" + addressType + ":;;" + (vCardData.address.street || "") + ";" + (vCardData.address.city || "") + ";" + (vCardData.address.state || "") + ";" + (vCardData.address.postalCode || "") + ";" + (vCardData.address.country || "") + "\n";
-  }
-
-  if (vCardData.socialMedia) {
-    if (vCardData.socialMedia.whatsapp) {
-      vCard += "X-SOCIALPROFILE;TYPE=whatsapp:" + vCardData.socialMedia.whatsapp + "\n";
-    }
-
-    if (vCardData.socialMedia.instagram) {
-      vCard += "X-SOCIALPROFILE;TYPE=instagram:" + vCardData.socialMedia.instagram + "\n";
-    }
-
-    if (vCardData.socialMedia.twitter) {
-      vCard += "X-SOCIALPROFILE;TYPE=twitter:" + vCardData.socialMedia.twitter + "\n";
-    }
-
-    if (vCardData.socialMedia.facebook) {
-      vCard += "X-SOCIALPROFILE;TYPE=facebook:" + vCardData.socialMedia.facebook + "\n";
-    }
-
-    if (vCardData.socialMedia.linkedin) {
-      vCard += "X-SOCIALPROFILE;TYPE=linkedin:" + vCardData.socialMedia.linkedin + "\n";
-    }
-
-    if (vCardData.socialMedia.youtube) {
-      vCard += "X-SOCIALPROFILE;TYPE=youtube:" + vCardData.socialMedia.youtube + "\n";
-    }
-  }
-
-  if (vCardData.website) {
-    vCard += "URL:" + vCardData.website + "\n";
-  }
-
-  if (vCardData.jobTitle) {
-    vCard += "TITLE:" + vCardData.jobTitle + "\n";
-  }
-
-  if (vCardData.organization) {
-    vCard += "ORG:" + vCardData.organization + "\n";
-  }
-
-  vCard += "END:VCARD";
-  return vCard;
-}
-
-// Function to download the vCard file
-function downloadVCard() {
-  var vCard = createVCard(vCardData);
-  var element = $("<a></a>");
-  element.attr("href", "data:text/plain;charset=utf-8," + encodeURIComponent(vCard));
-  element.attr("download", "nithin.vcf");
-  element.css("display", "none");
-  $("body").append(element);
-  element[0].click();
-  element.remove();
-}
-
   </script>
 
 
