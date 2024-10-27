@@ -266,10 +266,10 @@ background: linear-gradient(to left, #FF32F1 0%, #05C1FF 50%, #9B1FC8 100%);
 
   /*text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   */
-    background: #f6e0f5;
+    background: #ffffff;
     background: linear-gradient(to left, #2e2e2e 0%, #2e2e2e 50%, #2e2e2e 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /* -webkit-text-fill-color: transparent; */
     padding-bottom: 5px;
     text-transform: uppercase;
 
@@ -839,105 +839,7 @@ background: linear-gradient(to right, #2069A2 0%, #12902F 50%, #25816B 51%, #774
 
 
 
-  @media (prefers-color-scheme: dark) {
-
-
-    .gc-list-group
-{
  
-  border: 1px solid #000000 !important;
-}
-.gc-list-group-item
-{
-  border: 1px solid #000000;
-  background:#000000 !important ;
-  background-color: #000000;
-  color: #fff !important;
-}
-
-
-
-
-    .dropdown-menu
-    {
-      background: #4a4a4a;
-    }
-
-    .preenter_head_c
-{
-   
-    color: #ffffff !important;
-    
-}
-a.enter_head_c
-{
-  color: #bbb0ff !important;
- 
-}
-
-    .navbar-toggler .hamburger-toggle .hamburger span {
-  
-    background: #fff;
-    }
-
-
-  .textcolor {
-    color:#fff !important;
-  }
-
-
-  .preenter_head
-{
-    color: #ffffff !important;
-}
-a.enter_head
-{
-  color: #ffffff !important;
-}
-a.enter_head::after {
- 
-  color: #ffffff !important;
-   
-  }
-
-
-
-
-  .preenter_head_b
-{
-    color: #ffffff !important;
-}
-a.enter_head_b
-{
-  color: #ffffff !important;
-}
-a.enter_head_b::after {
- 
-  color: #ffffff !important;
-   
-  }
-
-
-
-  .card_pro {
-   
-    background: #151515;
-    color: #fff;
-  }
-
-  .card_pro h3 {
-   
-  
-   color: #fff6a3;
- }
-
-
- .nav-link:hover {
-  color: #ffffff;
-  
-}
-
-}
 
 
 
@@ -1006,12 +908,12 @@ a.enter_head_b::after {
 
 .description {
   color: #fff;
-  padding: 0 50px;
+  padding: 0 0px;
 }
 
 .description h1 {
   
-  font-size: clamp(3rem, 5vw, 4rem);
+  /* font-size: clamp(3rem, 5vw, 4rem); */
   line-height: 1.1;
   margin-bottom: 30px;
 }
@@ -1369,3 +1271,133 @@ a.enter_head_b::after {
   background-image: url('../images/products/p6.png');
 }
 
+
+
+@media (prefers-color-scheme: dark) {
+
+
+  .gc-list-group
+{
+
+border: 1px solid #000000 !important;
+}
+.gc-list-group-item
+{
+border: 1px solid #000000;
+background:#000000 !important ;
+background-color: #000000;
+color: #fff !important;
+}
+
+
+
+
+  .dropdown-menu
+  {
+    background: #4a4a4a;
+  }
+
+  .preenter_head_c
+{
+ 
+  color: #ffffff !important;
+  
+}
+a.enter_head_c
+{
+color: #bbb0ff !important;
+
+}
+
+  .navbar-toggler .hamburger-toggle .hamburger span {
+
+  background: #fff;
+  }
+
+
+.textcolor {
+  color:#fff !important;
+}
+
+
+.preenter_head
+{
+  color: #ffffff !important;
+}
+a.enter_head
+{
+color: #ffffff !important;
+}
+a.enter_head::after {
+
+color: #ffffff !important;
+ 
+}
+
+
+
+
+.preenter_head_b
+{
+  color: #ffffff !important;
+}
+a.enter_head_b
+{
+color: #ffffff !important;
+}
+a.enter_head_b::after {
+
+color: #ffffff !important;
+ 
+}
+
+
+
+.card_pro {
+ 
+  background: #151515;
+  color: #fff;
+}
+
+.card_pro h3 {
+ 
+
+ color: #fff6a3;
+}
+
+
+.nav-link:hover {
+color: #ffffff;
+
+}
+
+
+.box1
+{
+background: #000;
+color: #fff;
+}
+
+.drop-cap-geo
+{
+color: #fff;
+}
+.whitebg
+{
+ background: #000; 
+
+}
+.gchead4
+{
+  color: #fff;
+}
+
+
+.footerdivider
+{
+  border-top: 1px solid #202020;
+  background-image: linear-gradient(to top, #000, #000, #000, #000, #000);
+  color: #fff;
+}
+
+}

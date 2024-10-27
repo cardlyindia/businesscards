@@ -47,7 +47,7 @@
   <link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
   <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
   <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
 
   <link href="assets/owl/dist/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/owl/dist/assets/owl.theme.default.min.css" rel="stylesheet">
@@ -527,11 +527,11 @@
           </div>
           <div class="col-md-6">
             <div class="description">
-              <h1 class="title" data-sr-id="0"  data-aos="fade-left"
+              <h1 class="title" data-sr-id="0"  
                 style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 0.6s ease-in 0.3s, transform 0.6s ease-in 0.3s;">
                 <span class="gradient-text">Unlock the Power of </span>Geospatial Intelligence
               </h1>
-              <p class="paragraph" data-sr-id="2"  data-aos="fade-left"
+              <p class="paragraph lead" data-sr-id="2"  
                 style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 0.6s ease-in 0.8s, transform 0.6s ease-in 0.8s;">
                 Transform the way you manage, visualize, and analyze geographic data. Our platform offers powerful tools
                 for geospatial data management, real-time mapping, and advanced analysis. From 2D and 3D visualizations
@@ -959,7 +959,7 @@
 
                 <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
                   <div class="feature col" data-aos="fade-left" >
-                    <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center .bg-gradient-0 fs-2 mb-3">
                       <svg class="bi" width="1em" height="1em"><use xlink:href="#map"></use></svg>
                     </div>
                     <h3 class="fs-2 text-body-emphasis">Private Sector and Enterprises
@@ -972,7 +972,7 @@
                     
                   </div>
                   <div class="feature col" data-aos="fade-left" >
-                    <div class="feature-icon d-inline-flex align-items-center justify-content-center  bg-gradient fs-2 mb-3">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center  .bg-gradient-0 fs-2 mb-3">
                       <svg class="bi" width="1em" height="1em"><use xlink:href="#map"></use></svg>
                     </div>
                     <h3 class="fs-2 text-body-emphasis">Public Sector and Government
@@ -983,7 +983,7 @@
                     
                   </div>
                   <div class="feature col" data-aos="fade-left" >
-                    <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center .bg-gradient-0 fs-2 mb-3">
                       <svg class="bi" width="1em" height="1em"><use xlink:href="#map"></use></svg>
                     </div>
                     <h3 class="fs-2 text-body-emphasis">Research and Specialized Services</h3>
@@ -1001,7 +1001,7 @@
                 </section>
 
 
-          <section class="whitebg" data-aos="fade-up" >
+          <section class="whitebg" >
 
 <div class="container">
 
@@ -1010,7 +1010,7 @@
     <div class="cols">
       <div class="row">
 
-        <div class="col  ">
+        <div class="col "  data-aos="fade-up">
           <div class="bggradgreen p-3 mt-1 mb-3">
           <h5 class="secondaryfont">
           Experience our cutting-edge geospatial platforms in action—tailored for smart cities, logistics, real estate, and more. Click here for a demo and product showcase!
@@ -1028,8 +1028,8 @@
 
 
 
-          <section class="footerdivider " data-aos="fade-up" >
-            <div class="container ">
+          <section class="footerdivider "  >
+            <div class="container " data-aos="fade-up">
              <footer class="py-5 ">
                <div class="row mt-3">
                  <div class="col-6 col-md-2 mb-3">
@@ -1096,32 +1096,30 @@
 
 
 
-<!-- Bootstrap Cookie Policy Popup -->
-<div id="cookieConsent" class="position-fixed bottom-0 start-0 w-100 p-3" style="z-index: 1050; display: none;">
-  <div class="toast show w-100 align-items-center text-bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="d-flex justify-content-between">
-      <div class="toast-body">
-        We use cookies for website functionality and analytics. By using our site, you accept our cookie policy.
-      </div>
-      <div class="d-flex align-items-center p-2">
-        <button type="button" class="btn btn-primary btn-sm" onclick="acceptCookies()">Accept Cookies</button>
-      </div>
-    </div>
-  </div>
-</div>
+         <div id="cookieConsent" class=" alert alert-dark alert-dismissible fade show position-fixed bottom-0 start-0 m-5  m-0" role="alert" style="z-index: 1050; display: none;">
+          <div class="container ">
+            <span>
+              We use cookies for website functionality and analytics. By using our site, you accept our cookie policy.
+              <br/>
+              <button type="button" class="btn btn-primary btn-sm  mt-1" onclick="acceptCookies()">Accept Cookies</button>
+            </span>
+           
+          </div>
+        </div>
+        
 
         
 
     
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script src="assets/owl/dist/owl.carousel.min.js"></script>
     <script>
 
-// Function to check cookie consent status
+
 function checkCookieConsent() {
     return localStorage.getItem('cookieAccepted') === 'true';
   }
@@ -1139,15 +1137,13 @@ function checkCookieConsent() {
     document.getElementById('cookieConsent').style.display = 'none';
   }
 
-  // Show the cookie consent popup on page load
+  // Show the cookie consent alert on page load
   window.onload = function() {
     showCookieConsent();
   };
 
 
-
-
-      AOS.init();
+      // AOS.init();
 
      
       $(".custom-carousel").owlCarousel({
