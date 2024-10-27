@@ -2,1052 +2,118 @@
 <html lang="en" data-bs-theme="auto">
 
 <head>
-    <script src="geo/assets/js/color-modes.js"></script>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <!-- <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors"> -->
-    <meta name="generator" content="Hugo 0.122.0">
-    <title>GEOCONSOLE -  The GeoSpatial Intelligent Solutions</title>
-
-
-
-    <!-- https://codepen.io/codingyaar/details/OJGRMYw -->
-
-    <link href="geo/assets/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    
-
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
-    <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
-    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <meta name="theme-color" content="#712cf9">
-
-
-    <style>
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-        *{
-
-          font-family: "Playfair Display", serif;
-            font-optical-sizing: auto;
-            font-size: 1rem;
-            font-weight:300;
-            font-style: normal;
-            
-          /* font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-    font-style: normal; */
-
-          
-
-        }
-        .secondaryfont {
-
-          font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-
-          /* font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight:400;
-  font-style: normal; */
-
-  /* font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight:300;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100; */
-}
-
-        .divider
-  {
-   
-    background: #00C9FF;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-height: 2px;
-width: 100%;
-  }
-
-       
-
-
-        .dropdown-menu a {
-  text-decoration: none;
-  color: #000000;
-}
-.dropdown-menu a .d-flex {
-  transition: all 0.5s;
-}
-.dropdown-menu .col:nth-child(1) a:hover .d-flex {
-  background-color: var(--bs-warning-bg-subtle);
-}
-.dropdown-menu .col:nth-child(2) a:hover .d-flex {
-  background-color: var(--bs-danger-bg-subtle);
-}
-.dropdown-menu .col:nth-child(3) a:hover .d-flex {
-  background-color: var(--bs-success-bg-subtle);
-}
-.dropdown-menu .col:nth-child(4) a:hover .d-flex {
-  background-color: var(--bs-secondary-bg-subtle);
-}
-.dropdown-menu .col:nth-child(5) a:hover .d-flex {
-  background-color: var(--bs-tertiary-bg);
-}
-.dropdown-menu .col:nth-child(6) a:hover .d-flex {
-  background-color: var(--bs-info-bg-subtle);
-}
-@media only screen and (min-width: 992px) {
-  .dropdown-menu {
-    width: 55vw;
-  }
-  .dropdown:hover .dropdown-menu {
-    display: flex;
-  }
-  .dropdown-menu.show {
-    display: flex;
-  }
-}
-         @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.dropdown-menu.show {
-  -webkit-animation: fadeIn 0.3s alternate;
-  /* Safari 4.0 - 8.0 */
-  animation: fadeIn 0.3s alternate;
-}
-
-.nav-item.dropdown.dropdown-mega {
-  position: static;
-}
-.nav-item.dropdown.dropdown-mega .dropdown-menu {
-  width: 90%;
-  top: auto;
-  left: 5%;
-}
-
-.navbar-toggler {
-  border: none;
-  padding: 0;
-  outline: none;
-}
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-.navbar-toggler .hamburger-toggle {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  z-index: 11;
-  float: right;
-}
-.navbar-toggler .hamburger-toggle .hamburger {
-  position: absolute;
-  transform: translate(-50%, -50%) rotate(0deg);
-  left: 50%;
-  top: 50%;
-  width: 50%;
-  height: 50%;
-  pointer-events: none;
-}
-.navbar-toggler .hamburger-toggle .hamburger span {
-  width: 100%;
-  height: 4px;
-  position: absolute;
-  background: #333;
-  border-radius: 2px;
-  z-index: 1;
-  transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), all 0.2s ease-in-out;
-  left: 0px;
-}
-.navbar-toggler .hamburger-toggle .hamburger span:first-child {
-  top: 10%;
-  transform-origin: 50% 50%;
-  transform: translate(0% -50%) !important;
-}
-.navbar-toggler .hamburger-toggle .hamburger span:nth-child(2) {
-  top: 50%;
-  transform: translate(0, -50%);
-}
-.navbar-toggler .hamburger-toggle .hamburger span:last-child {
-  left: 0px;
-  top: auto;
-  bottom: 10%;
-  transform-origin: 50% 50%;
-}
-.navbar-toggler .hamburger-toggle .hamburger.active span {
-  position: absolute;
-  margin: 0;
-}
-.navbar-toggler .hamburger-toggle .hamburger.active span:first-child {
-  top: 45%;
-  transform: rotate(45deg);
-}
-.navbar-toggler .hamburger-toggle .hamburger.active span:nth-child(2) {
-  left: 50%;
-  width: 0px;
-}
-.navbar-toggler .hamburger-toggle .hamburger.active span:last-child {
-  top: 45%;
-  transform: rotate(-45deg);
-}
-
-.icons {
-  display: inline-flex;
-  margin-left: auto;
-}
-.icons a {
-  transition: all 0.2s ease-in-out;
-  padding: 0.2rem 0.4rem;
-  color: #ccc !important;
-  text-decoration: none;
-}
-.icons a:hover {
-  color: white;
-  text-shadow: 0 0 30px white;
-} 
-
-
-.nav-link:hover {
-  background:
-    linear-gradient(
-      to right,
-      rgba(100, 200, 200, 1),
-      rgba(100, 200, 200, 1)
-    ),
-    linear-gradient(
-      to right,
-      rgba(255, 0, 0, 1),
-      rgba(255, 0, 180, 1),
-      rgba(0, 100, 200, 1)
-  );
-  background-size: 100% 3px, 0 3px;
-  background-position: 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 400ms;
-}
-
-.nav-link:hover {
-  /* font-weight: bold; */
-  color: #fdfdfd;
-  background-size: 0 3px, 100% 3px;
+  <script src="assets/js/color-modes.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   
-}
+  <!-- Primary Meta Tags -->
+<meta name="title" content="Unlock the Power of Geospatial Intelligence with GeoConsole - Manage, Visualize, and Analyze Geographic Data">
+<meta name="description" content="Transform your geospatial data management with GeoConsole. Experience real-time mapping, advanced analysis, 2D/3D visualizations, field data collection, and asset tracking for smarter decision-making.">
 
-.gchead2
-{
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Black shadow */
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://geoconsole.in/">
+<meta property="og:title" content="Unlock the Power of Geospatial Intelligence with GeoConsole - Manage, Visualize, and Analyze Geographic Data">
+<meta property="og:description" content="GeoConsole empowers you with tools for geospatial data management, real-time mapping, 2D/3D visualizations, and asset tracking. Bring your data to life for smarter decisions.">
+<meta property="og:image" content="https://geoconsole.in/images/logo.png">
 
-  background: #FF32F1;
-background: linear-gradient(to left, #FF32F1 0%, #05C1FF 50%, #9B1FC8 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://geoconsole.in/">
+<meta property="twitter:title" content="Unlock the Power of Geospatial Intelligence with GeoConsole - Manage, Visualize, and Analyze Geographic Data">
+<meta property="twitter:description" content="Transform geospatial data management with GeoConsole's tools for real-time mapping, advanced analysis, and visualizations. Drive smarter decisions.">
+<meta property="twitter:image" content="https://geoconsole.in/images/logo.png">
 
-
-
-padding-bottom: 5px;
-
-
-}
-.gchead4 {
-
-  /*text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-  */
-    background: #f6e0f5;
-    background: linear-gradient(to left, #32ffd2 0%, #3837df 50%, #ff36e0 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding-bottom: 5px;
-}
-
-
-
-
-.gchead3
-{
- 
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-    background: #f6e0f5;
-    background: linear-gradient(to left, #32ffd2 0%, #d07d20 50%, #fcff45 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding-bottom: 3px;
-
-
-}
-
-
-
-.bn39 {
-
-     
-  
-  background-image: linear-gradient(135deg, #090909, #191c18);
-  border-radius: 5px;
-  box-sizing: border-box;
-  color: #ffffff;
-  display: block;
-  height: 35px;
-  font-size: 0.8rem;
-  font-weight: 200;
-  padding:2px 8px 2px 8px;
-  position: relative;
-  text-decoration: none;
-  z-index: 2;
-}
-
-.bn39:hover {
-  color: #fff;
-}
-
-.bn39 .bn39span {
-  align-items: center;
-  border-radius: 6px;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  transition: background 0.5s ease;
-  width: 100%;
-
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight:400;
-  font-style: normal;
-  font-size: 12px;
-}
-
-.bn39:hover  {
-  background: rgb(231, 231, 231);
-  color: #000;
-}
-
-.card-dark
-{
-  background: #000;
-  background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
-  color: #e5fae0;
-}
-
-.preenter_menu
-{
-    color: #ffffff !important;
-    font-size: 20px !important;
-    font-weight: normal;
-}
-.preenter_menu
-{
-    text-decoration: none !important;
-    color: #ffffff !important;
-    font-size: 20px !important;
-    font-weight: normal;
-}
-a.enter_menu
-{
-  color: #6adaff !important;
-  font-size: 20px !important;
-}
-a.enter_menu::after {
-  color: #6adaff !important;
-    content: "";
-    display: block;
-    width: 25px;
-    padding-top: 2px;
-    border-bottom: 5px solid #a200ff;
-    font-size: 20px !important;
-    font-weight: normal;
-  }
-
-
-
-  .preenter_head
-{
-    text-decoration: none !important;
-    color: #000000 !important;
-    font-size: 25px !important;
-    font-weight: normal;
-    text-decoration: none;
-    padding: 0px !important;
-    /* padding-left: 8px !important; */
-}
-a.enter_head
-{
-  color: #0a5b77 !important;
-  font-size: 25px !important;
-  text-decoration: none;
-}
-a.enter_head::after {
-  text-decoration: none;
-  color: #0a5b77 !important;
-    content: "";
-    display: block;
-   
-    width: 50px;
-    padding-bottom: 3px;
-    border-bottom: 7px solid #a200ff;
-
-    font-size: 20px !important;
-    font-weight: normal;
-  }
-
-  .preenter_head_b
-{
-    text-decoration: none !important;
-    color: #ffffff !important;
-    font-size: 25px !important;
-    font-weight: normal;
-    text-decoration: none;
-    padding: 0px !important;
-    /* padding-left: 8px !important; */
-}
-a.enter_head_b
-{
-  color: #55d5ff !important;
-  font-size: 25px !important;
-  text-decoration: none;
-}
-a.enter_head_b::after {
-  text-decoration: none;
-  color: #55d5ff !important;
-    content: "";
-    display: block;
-    width: 50px;
-    padding-bottom: 3px;
-    border-bottom: 7px solid #a200ff;
-    font-size: 20px !important;
-    font-weight: normal;
-  }
-
-
-
-  .preenter_head_c
-{
-    text-decoration: none !important;
-    color: #000000 !important;
-    font-size: 25px !important;
-    font-weight: normal;
-    text-decoration: none;
-    padding: 0px !important;
-    padding-left: 0px !important;
-}
-a.enter_head_c
-{
-  color: #170e4f !important;
-  font-size: 25px !important;
-  text-decoration: none;
-}
+<!-- Additional SEO Tags -->
+<meta name="keywords" content="GeoConsole, geospatial intelligence, geographic data management, real-time mapping, 2D visualization, 3D visualization, field data collection, asset tracking, geospatial analysis, GIS, spatial data solutions">
+<meta name="robots" content="index, follow">
+<meta name="author" content="GeoConsole">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#712cf9">
 
 
 
 
 
-a.enter_head_c::after {
-  text-decoration: none;
-  color: #55d5ff !important;
-    content: "";
-    display: block;
-    width: 80px;
-   
-    border-bottom: 5px solid #a200ff;
-    font-size: 0px !important;
-    font-weight: normal;
-  }
+  <title>Geoconsole - The GeoSpatial Intelligent Solutions</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
 
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+  <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+  <link href="assets/owl/dist/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/owl/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
   
 
 
-  .gchead1
-{
-  background: #2069A2;
-background: linear-gradient(to right, #2069A2 0%, #12902F 50%, #25816B 51%, #7745DB 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
 
-
-}
-
-
-
-.glow-on-hover {
-  display: inline-block;
-  text-decoration: none;
-  width: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  height: 50px;
-  line-height: 50px; /* Centers the text vertically */
-  text-align: center; /* Centers the text horizontally */
-  border: none;
-  outline: none;
-  color: #fff;
-  background: #111;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
-  font-size: 16px;
-}
-
-.glow-on-hover:before {
-  content: '';
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing 20s linear infinite;
-  opacity: 0;
-  transition: opacity .3s ease-in-out;
-  border-radius: 10px;
-}
-
-.glow-on-hover:hover:before {
-  opacity: 1;
-}
-
-.glow-on-hover:after {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #111;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-}
-
-.glow-on-hover:active {
-  color: #000;
-}
-
-@keyframes glowing {
-  0% { background-position: 0 0; }
-  50% { background-position: 400% 0; }
-  100% { background-position: 0 0; }
-}
-
-.card-img, .card-img-bottom {
-    border-radius: 0px !important;
-}
-
-.animbg1
- {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-}
-
-.gccard
-{
-  border: 0px !important;
-  background: #000000;
-  border-radius: 0px !important;
-}
-
-.h120
-{
-  height: 120px;
-}
-
-/* CSS */
-.button-80 {
-  background: #fff;
-  backface-visibility: hidden;
-  border-radius: .375rem;
-  border-style: solid;
-  border-width: .125rem;
-  box-sizing: border-box;
-  color: #212121;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Circular,Helvetica,sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: -.01em;
-  line-height: 1;
-  padding: .375rem 0.8rem;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-  transform: translateZ(0) scale(1);
-  transition: transform .2s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-80:not(:disabled):hover {
-  transform: scale(1.05);
-}
-
-.button-80:not(:disabled):hover:active {
-  transform: scale(1.05) translateY(.125rem);
-}
-
-.button-80:focus {
-  outline: 0 solid transparent;
-}
-
-.button-80:focus:before {
-  content: "";
-  left: calc(-1*.375rem);
-  pointer-events: none;
-  position: absolute;
-  top: calc(-1*.375rem);
-  transition: border-radius;
-  user-select: none;
-}
-
-.button-80:focus:not(:focus-visible) {
-  outline: 0 solid transparent;
-}
-
-.button-80:focus:not(:focus-visible):before {
-  border-width: 0;
-}
-
-.button-80:not(:disabled):active {
-  transform: translateY(.125rem);
-}
-
-@keyframes animbg1 {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.gc-list-group
-{
- 
-  border: 1px solid #f9f9f9 !important;
-}
-.gc-list-group-item
-{
-  border: 1px solid #f9f9f9;
-  background:#f9f9f9 !important ;
-  background-color: #f9f9f9;
-}
-
-.gc-list-group-item:hover
-{
-  color: #888588;
-
-}
-/* ////// */
-
-.sm-card-title
-{
-  font-size: 1.6rem;
-  color: #1c76b7;
-}
-.footerdivider
-{
-  border-top: 1px solid #e32bd4;
-  background-image: linear-gradient(to top, #01040a, #040c21, #071134, #181045, #310451);
-  color: #fff;
-}
-
-.footerdivider .text-body-secondary
-{
-  color: #fff !important;
-}
-
-.feature1
-{
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient001 15s ease infinite;
-	height: 100vh;
-}
-
-
-@keyframes gradient001 {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-.feature2
-{
-
-
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-          background: linear-gradient(-45deg, #46A85B, #3F4689, #ab23d5, #6b7b06);
-	background-size: 400% 400%;
-	animation: gradient001 15s ease infinite;
-	height: 100vh;
-  
-
-          
-}
-
-.sol_title
-{
-  color: #113d88 !important;
-}
-
-.animbg2 {
-    background: linear-gradient(270deg, #1098c1, #312466, #d7ac64);
-    background-size: 600% 600%;
-
-    -webkit-animation: bganim 30s ease infinite;
-    -moz-animation: bganim 30s ease infinite;
-    -o-animation: bganim 30s ease infinite;
-    animation: bganim 30s ease infinite;
-}
-
-.animbg3 {
-  background: linear-gradient(149deg,#afbba4,#1d1c92,#61038b,#3c7628,#2c1786);
-  background-size: 300% 300%;
-  animation: gradient-animation 25s ease infinite;
-}
-
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@-webkit-keyframes bganim {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-moz-keyframes bganim {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-o-keyframes bganim {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes bganim {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-
-
-.bggradgreen
-{
-  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
-  color: #fff !important;
-  border-radius: 10px !important;
-  padding: 20px;
-}
-
-.colsol
-{
-  border:1px solid #dedede;
-  border-radius: 10px !important;
- 
-}
-
-.card_pro{
-    border-radius: 4px;
-    background: #fff;
-    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
-      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
-  /* padding: 14px 10px 18px 36px; */
-  padding: 25px;
-    padding-right: 50px;
-  cursor: pointer;
-  /* min-height: 250px !important; */
-}
-
-.card_pro:hover{
-     transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
-}
-
-.card_pro h3{
-  font-weight: 600;
-  color: #132377;
-}
-
-.card_pro img{
-  position: absolute;
-  top: 20px;
-  right: 15px;
-  max-height: 120px;
-}
-
-@media only screen and (max-width: 600px) {
-  
-.nav-item.dropdown.dropdown-mega .dropdown-menu {
-    width: 100%;
-  
-
-}
-
-.card_pro{
-    margin-bottom: 20px;
-  }
-
-}
-
-
-
-
-
-  @media (prefers-color-scheme: dark) {
-
-
-    .gc-list-group
-{
- 
-  border: 1px solid #000000 !important;
-}
-.gc-list-group-item
-{
-  border: 1px solid #000000;
-  background:#000000 !important ;
-  background-color: #000000;
-  color: #fff !important;
-}
-
-
-
-
-    .dropdown-menu
-    {
-      background: #4a4a4a;
-    }
-
-    .preenter_head_c
-{
-   
-    color: #ffffff !important;
-    
-}
-a.enter_head_c
-{
-  color: #bbb0ff !important;
- 
-}
-
-    .navbar-toggler .hamburger-toggle .hamburger span {
-  
-    background: #fff;
-    }
-
-
-  .textcolor {
-    color:#fff !important;
-  }
-
-
-  .preenter_head
-{
-    color: #ffffff !important;
-}
-a.enter_head
-{
-  color: #ffffff !important;
-}
-a.enter_head::after {
- 
-  color: #ffffff !important;
-   
-  }
-
-
-
-
-  .preenter_head_b
-{
-    color: #ffffff !important;
-}
-a.enter_head_b
-{
-  color: #ffffff !important;
-}
-a.enter_head_b::after {
- 
-  color: #ffffff !important;
-   
-  }
-
-
-
-  .card_pro {
-   
-    background: #151515;
-    color: #fff;
-  }
-
-  .card_pro h3 {
-   
-  
-   color: #fff6a3;
- }
-
-
- .nav-link:hover {
-  color: #ffffff;
-  
-}
-
-}
-
-
-
-
-.card-1{
-  background-image: url(assets/images/theming-card.png);
-      background-repeat: no-repeat;
-    background-position: right;
-    background-size: 80px;
-}
-
-.card-2{
-  background-image: url(assets/images/theming-card.png);
-      background-repeat: no-repeat;
-    background-position: right;
-    background-size: 80px;
-}
-
-.card-3{
-  background-image: url(assets/images/theming-card.png);
-      background-repeat: no-repeat;
-    background-position: right;
-    background-size: 80px;
-}
-
-.card-4{
-  background-image: url(assets/images/theming-card.png);
-      background-repeat: no-repeat;
-    background-position: right;
-    background-size: 80px;
-}
-
-.card-5{
-  background-image: url(assets/images/theming-card.png);
-      background-repeat: no-repeat;
-    background-position: right;
-    background-size: 80px;
-}
-
-.card-6{
-  background-image: url(assets/images/theming-card.png);
-      background-repeat: no-repeat;
-    background-position: right;
-    background-size: 80px;
-}
-
-
-/* @media(max-width: 990px){
-  .card_pro{
-    margin: 20px;
-  }
-}  */
-
-
-    </style>
-
-<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/slider-item-show4.min.js" crossorigin="anonymous" defer></script>
-<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
-
-
-    <!-- Custom styles for this template -->
-    <link href="navbars-offcanvas.css" rel="stylesheet">
 </head>
 
 <body>
 
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-    <symbol id="bootstrap" viewBox="0 0 118 94">
+    <symbol id="bootstrsap" viewBox="0 0 118 94">
       <title>Bootstrap</title>
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z">
+      </path>
     </symbol>
     <symbol id="facebook" viewBox="0 0 16 16">
-      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+      <path  stroke="#ffffff"
+        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
     </symbol>
     <symbol id="instagram" viewBox="0 0 16 16">
-        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+      <path  stroke="#ffffff"
+        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
     </symbol>
     <symbol id="twitter" viewBox="0 0 16 16">
-      <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+      <path  stroke="#ffffff"
+        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+    </symbol>
+
+    <symbol id="bootstrap" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#000000" stroke-width="2"></path> <path d="M13.9137 15.1001L15.32 11.1939C15.8932 9.60167 14.353 8.06149 12.7608 8.6347L8.85455 10.0409C7.1758 10.6453 7.39162 13.085 9.15038 13.3853C9.87655 13.5093 10.4454 14.0781 10.5694 14.8043C10.8696 16.5631 13.3094 16.7789 13.9137 15.1001Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></symbol>
+
+
+
+    <symbol id="map" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M5.25 7.70031C5.25 4.10215 8.30876 1.25 12 1.25C15.608 1.25 18.6116 3.97488 18.7454 7.45788L19.2231 7.61714C19.6863 7.77148 20.0922 7.90676 20.4142 8.05657C20.7623 8.21853 21.0814 8.42714 21.3253 8.76554C21.5692 9.10394 21.6662 9.47259 21.7098 9.85407C21.7501 10.207 21.75 10.6348 21.75 11.123V16.8712C21.75 17.4806 21.7501 18.0005 21.7028 18.4176C21.653 18.8563 21.5418 19.2875 21.2404 19.6553C21.0674 19.8665 20.8573 20.0445 20.6205 20.1805C20.2081 20.4173 19.7645 20.4561 19.3236 20.433C18.9044 20.4111 18.3915 20.3256 17.7904 20.2254L17.7488 20.2185C16.456 20.003 15.9351 19.9216 15.4274 19.9641C15.2417 19.9796 15.0571 20.0074 14.875 20.0471C14.3774 20.1558 13.8988 20.3891 12.716 20.9805C12.6749 21.0011 12.6342 21.0214 12.594 21.0415C11.2114 21.7331 10.3595 22.1592 9.44031 22.2923C9.16384 22.3323 8.88482 22.3522 8.60546 22.3516C7.67668 22.3499 6.77995 22.0508 5.32536 21.5657C5.28328 21.5517 5.24074 21.5375 5.19772 21.5231L4.81415 21.3953L4.77684 21.3828C4.31373 21.2285 3.90783 21.0932 3.5858 20.9434C3.23766 20.7815 2.91861 20.5729 2.67471 20.2345C2.4308 19.8961 2.33379 19.5274 2.29024 19.1459C2.24995 18.793 2.24997 18.3652 2.25 17.877L2.25 12.8572C2.24997 12.0711 2.24994 11.4085 2.31729 10.8895C2.38759 10.3478 2.54652 9.81811 2.98262 9.4198C3.11082 9.30271 3.25213 9.20085 3.40375 9.11626C3.91953 8.8285 4.47226 8.84521 5.00841 8.94983C5.11717 8.97105 5.23109 8.99718 5.35019 9.02754C5.28411 8.5817 5.25 8.13723 5.25 7.70031ZM5.74869 10.7093C5.32072 10.5713 4.99224 10.475 4.72113 10.4221C4.32599 10.345 4.19646 10.3917 4.13459 10.4262C4.08405 10.4544 4.03694 10.4883 3.99421 10.5274C3.9419 10.5751 3.85663 10.6833 3.80482 11.0825C3.75151 11.4933 3.75 12.0575 3.75 12.908V17.8377C3.75 18.3768 3.75114 18.7181 3.78055 18.9758C3.80779 19.2143 3.85234 19.303 3.89157 19.3574C3.9308 19.4118 4.00083 19.4821 4.21849 19.5834C4.45364 19.6928 4.77709 19.8018 5.28849 19.9723L5.67205 20.1001C7.29563 20.6413 7.95089 20.8504 8.6083 20.8516C8.81478 20.852 9.02101 20.8374 9.22537 20.8078C9.87582 20.7136 10.5009 20.411 12.0452 19.6389C12.0765 19.6232 12.1074 19.6078 12.138 19.5925C13.1987 19.062 13.852 18.7352 14.555 18.5817C14.8014 18.5279 15.051 18.4903 15.3023 18.4693C16.0193 18.4093 16.7344 18.5286 17.8945 18.7221C17.9278 18.7276 17.9614 18.7332 17.9954 18.7389C18.6497 18.8479 19.0779 18.9181 19.4019 18.9351C19.7138 18.9514 19.821 18.9098 19.8735 18.8797C19.9524 18.8344 20.0225 18.775 20.0801 18.7046C20.1185 18.6578 20.1771 18.5589 20.2123 18.2486C20.2489 17.9262 20.25 17.4923 20.25 16.829V11.1623C20.25 10.6232 20.2489 10.2819 20.2195 10.0242C20.1922 9.7857 20.1477 9.69704 20.1084 9.64261C20.0692 9.58818 19.9992 9.51787 19.7815 9.41661C19.5464 9.30722 19.2229 9.19821 18.7115 9.02774L18.6527 9.00813C18.4625 10.3095 17.9996 11.6233 17.3173 12.7959C16.4048 14.364 15.0697 15.7299 13.3971 16.4595C12.5094 16.8468 11.4906 16.8468 10.6029 16.4595C8.93027 15.7299 7.59519 14.364 6.68273 12.7959C6.29871 12.136 5.9842 11.4313 5.74869 10.7093ZM12 2.75C9.06383 2.75 6.75 5.00208 6.75 7.70031C6.75 9.11775 7.18744 10.6808 7.97922 12.0415C8.77121 13.4026 9.88753 14.5109 11.2027 15.0847C11.708 15.3051 12.292 15.3051 12.7973 15.0847C14.1125 14.5109 15.2288 13.4026 16.0208 12.0415C16.8126 10.6808 17.25 9.11775 17.25 7.70031C17.25 5.00208 14.9362 2.75 12 2.75ZM12 6.75C11.3096 6.75 10.75 7.30964 10.75 8C10.75 8.69036 11.3096 9.25 12 9.25C12.6904 9.25 13.25 8.69036 13.25 8C13.25 7.30964 12.6904 6.75 12 6.75ZM9.25 8C9.25 6.48122 10.4812 5.25 12 5.25C13.5188 5.25 14.75 6.48122 14.75 8C14.75 9.51878 13.5188 10.75 12 10.75C10.4812 10.75 9.25 9.51878 9.25 8Z" fill="#1C274C"></path> </g></symbol>
+
+
+
+
+  </svg>
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path
+        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path
+        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+      <path
+        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path
+        d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
     </symbol>
   </svg>
 
-  
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-        <symbol id="check2" viewBox="0 0 16 16">
-            <path
-                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
-        </symbol>
-        <symbol id="circle-half" viewBox="0 0 16 16">
-            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
-        </symbol>
-        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-            <path
-                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
-            <path
-                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
-        </symbol>
-        <symbol id="sun-fill" viewBox="0 0 16 16">
-            <path
-                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-        </symbol>
-    </svg>
 
-
-   <main>
+  <main>
 
     <div class="divider"></div>
 
@@ -1056,25 +122,29 @@ a.enter_head_b::after {
         <a class="navbar-brand" href="#">
           <img src="assets/images/logo1.svg" style="height: 45px;" />
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+          aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
+          aria-labelledby="offcanvasNavbar2Label">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Navigate </h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
-            
-            <ul class="navbar-nav mr-auto mb-2 mb-lg-0  justify-content-end ">
+
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0  justify-content-end mt-2">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
-             
-              
+
+
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                   Features
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Features
                 </a>
                 <div class="dropdown-menu px-3 rounded-3 border-0 shadow">
                   <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1  ">
@@ -1083,16 +153,25 @@ a.enter_head_b::after {
                         <div class="d-flex align-items-center py-3 px-1 rounded-3">
                           <div class="icon px-3 bg-warning-subtle rounded-3 fs-1">
                             <!-- <i class="bi bi-tv"></i> -->
-                             <svg height="40" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#473687" stroke="#473687"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M702.537143 218.477714c31.085714-10.825143 55.003429-23.113143 69.924571-35.328 10.24-8.338286 13.458286-13.824 13.458286-16.018285s-3.218286-7.68-13.458286-16.091429c-14.921143-12.141714-38.765714-24.429714-69.924571-35.254857C634.368 92.16 540.013714 78.336 438.857143 78.336s-195.510857 13.897143-263.68 37.449143c-31.085714 10.825143-55.003429 23.113143-69.924572 35.328-10.24 8.338286-13.458286 13.750857-13.458285 16.018286 0 2.194286 3.218286 7.68 13.458285 16.091428 14.921143 12.141714 38.765714 24.429714 69.924572 35.254857 68.169143 23.625143 162.523429 37.449143 263.68 37.449143s195.510857-13.897143 263.68-37.449143zM69.485714 464.749714v128.804572c37.961143 40.009143 140.068571 88.722286 264.777143 103.277714 182.857143 21.284571 355.986286-18.651429 473.526857-98.304l0.438857-131.657143C683.008 540.525714 506.733714 571.465143 328.484571 550.619429c-110.372571-12.8-204.361143-46.08-259.072-85.869715z m0-80.457143c38.034286 39.936 140.068571 88.649143 264.777143 103.131429 183.222857 21.357714 356.717714-18.724571 474.258286-98.742857l0.512-145.993143C734.208 286.573714 596.48 315.977143 438.857143 315.977143c-156.964571 0-294.253714-29.257143-369.152-72.777143A132116.333714 132116.333714 0 0 0 69.485714 384.219429z m0.146286 289.865143l0.292571 108.105143-1.097142-7.460571c22.381714 74.020571 165.302857 133.485714 378.148571 133.485714 115.931429 0 206.774857-17.554286 276.626286-52.077714 19.602286-9.728 34.523429-17.92 49.152-28.598857 9.728-7.094857 16.091429-11.410286 26.550857-20.626286 10.825143-9.581714 27.501714-7.241143 37.156571 3.657143 9.581714 10.752 10.825143 28.306286 0 37.961143-11.702857 10.24-17.188571 14.848-28.598857 23.186285-17.042286 12.434286-36.425143 25.380571-58.806857 36.498286-77.092571 38.107429-155.648 60.854857-302.08 60.854857-243.931429 0-405.211429-77.165714-436.077714-179.2l-1.097143-3.657143v-3.803428L9.362286 628.077714a116682.532571 116682.532571 0 0 1 0.365714-455.68 52.662857 52.662857 0 0 1-0.292571-5.266285C9.508571 84.918857 201.728 18.285714 438.857143 18.285714c237.129143 0 429.348571 66.633143 429.348571 148.845715a53.028571 53.028571 0 0 1-0.804571 9.581714 23.405714 23.405714 0 0 1 1.024 7.094857l-1.682286 520.411429c-0.073143 14.482286-13.385143 26.185143-29.769143 26.112-16.384 0-29.622857-11.776-29.549714-26.331429v-27.355429c-125.074286 73.216-301.056 104.082286-478.939429 83.382858-110.226286-12.873143-204.214857-46.08-258.925714-85.869715z m668.525714-290.962285a25.746286 25.746286 0 0 1-25.965714-25.453715c0-14.043429 11.702857-25.380571 26.038857-25.380571 14.336 0 26.038857 11.337143 26.038857 25.380571 0 14.116571-11.702857 25.453714-26.038857 25.453715z m0 209.408a25.746286 25.746286 0 0 1-25.965714-25.453715c0-14.043429 11.702857-25.453714 26.038857-25.453714 14.336 0 26.038857 11.410286 26.038857 25.453714 0 14.043429-11.702857 25.453714-26.038857 25.453715z m0 212.114285a25.746286 25.746286 0 0 1-25.965714-25.526857c0-14.043429 11.702857-25.453714 26.038857-25.453714 14.336 0 26.038857 11.410286 26.038857 25.453714 0 14.043429-11.702857 25.453714-26.038857 25.453714z" fill="#d25151"></path></g></svg>
-  
-      </div>
+                            <svg height="40" viewBox="0 0 1024 1024" class="icon" version="1.1"
+                              xmlns="http://www.w3.org/2000/svg" fill="#473687" stroke="#473687">
+                              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                              <g id="SVGRepo_iconCarrier">
+                                <path
+                                  d="M702.537143 218.477714c31.085714-10.825143 55.003429-23.113143 69.924571-35.328 10.24-8.338286 13.458286-13.824 13.458286-16.018285s-3.218286-7.68-13.458286-16.091429c-14.921143-12.141714-38.765714-24.429714-69.924571-35.254857C634.368 92.16 540.013714 78.336 438.857143 78.336s-195.510857 13.897143-263.68 37.449143c-31.085714 10.825143-55.003429 23.113143-69.924572 35.328-10.24 8.338286-13.458286 13.750857-13.458285 16.018286 0 2.194286 3.218286 7.68 13.458285 16.091428 14.921143 12.141714 38.765714 24.429714 69.924572 35.254857 68.169143 23.625143 162.523429 37.449143 263.68 37.449143s195.510857-13.897143 263.68-37.449143zM69.485714 464.749714v128.804572c37.961143 40.009143 140.068571 88.722286 264.777143 103.277714 182.857143 21.284571 355.986286-18.651429 473.526857-98.304l0.438857-131.657143C683.008 540.525714 506.733714 571.465143 328.484571 550.619429c-110.372571-12.8-204.361143-46.08-259.072-85.869715z m0-80.457143c38.034286 39.936 140.068571 88.649143 264.777143 103.131429 183.222857 21.357714 356.717714-18.724571 474.258286-98.742857l0.512-145.993143C734.208 286.573714 596.48 315.977143 438.857143 315.977143c-156.964571 0-294.253714-29.257143-369.152-72.777143A132116.333714 132116.333714 0 0 0 69.485714 384.219429z m0.146286 289.865143l0.292571 108.105143-1.097142-7.460571c22.381714 74.020571 165.302857 133.485714 378.148571 133.485714 115.931429 0 206.774857-17.554286 276.626286-52.077714 19.602286-9.728 34.523429-17.92 49.152-28.598857 9.728-7.094857 16.091429-11.410286 26.550857-20.626286 10.825143-9.581714 27.501714-7.241143 37.156571 3.657143 9.581714 10.752 10.825143 28.306286 0 37.961143-11.702857 10.24-17.188571 14.848-28.598857 23.186285-17.042286 12.434286-36.425143 25.380571-58.806857 36.498286-77.092571 38.107429-155.648 60.854857-302.08 60.854857-243.931429 0-405.211429-77.165714-436.077714-179.2l-1.097143-3.657143v-3.803428L9.362286 628.077714a116682.532571 116682.532571 0 0 1 0.365714-455.68 52.662857 52.662857 0 0 1-0.292571-5.266285C9.508571 84.918857 201.728 18.285714 438.857143 18.285714c237.129143 0 429.348571 66.633143 429.348571 148.845715a53.028571 53.028571 0 0 1-0.804571 9.581714 23.405714 23.405714 0 0 1 1.024 7.094857l-1.682286 520.411429c-0.073143 14.482286-13.385143 26.185143-29.769143 26.112-16.384 0-29.622857-11.776-29.549714-26.331429v-27.355429c-125.074286 73.216-301.056 104.082286-478.939429 83.382858-110.226286-12.873143-204.214857-46.08-258.925714-85.869715z m668.525714-290.962285a25.746286 25.746286 0 0 1-25.965714-25.453715c0-14.043429 11.702857-25.380571 26.038857-25.380571 14.336 0 26.038857 11.337143 26.038857 25.380571 0 14.116571-11.702857 25.453714-26.038857 25.453715z m0 209.408a25.746286 25.746286 0 0 1-25.965714-25.453715c0-14.043429 11.702857-25.453714 26.038857-25.453714 14.336 0 26.038857 11.410286 26.038857 25.453714 0 14.043429-11.702857 25.453714-26.038857 25.453715z m0 212.114285a25.746286 25.746286 0 0 1-25.965714-25.526857c0-14.043429 11.702857-25.453714 26.038857-25.453714 14.336 0 26.038857 11.410286 26.038857 25.453714 0 14.043429-11.702857 25.453714-26.038857 25.453714z"
+                                  fill="#d25151"></path>
+                              </g>
+                            </svg>
+
+                          </div>
                           <div class="text ps-3">
                             <h5 class="textcolor">Geospatial Data Management
                             </h5>
                             <div class="secondaryfont textcolor">
-                              Data Storage , Import, Export, 
-  Version Control & Metadata management 
-                              </div>
+                              Data Storage , Import, Export,
+                              Version Control & Metadata management
+                            </div>
                           </div>
                         </div>
                       </a>
@@ -1101,11 +180,22 @@ a.enter_head_b::after {
                       <a href="#">
                         <div class="d-flex align-items-center py-3 px-1 rounded-3">
                           <div class="icon px-3 bg-danger-subtle rounded-3 fs-1">
-  <svg  height="44" class="pb-2" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="layer1"> <path d="M 0 0 L 0 1.3535156 L 2.2851562 5.9238281 L 0 7.0664062 L 0 8.1855469 L 2.7324219 6.8183594 L 5.9882812 13.330078 L 0 16.324219 L 0 17.441406 L 7.3300781 13.777344 L 0.44140625 0 L 0 0 z M 1.5585938 0 L 6.2226562 9.3300781 L 8.1347656 8.3730469 L 8.1132812 8.2382812 C 8.1099813 8.2168872 8.1073687 8.1953911 8.1054688 8.1738281 L 8.0292969 7.3574219 C 8.0276269 7.3418299 8.0263306 7.3261999 8.0253906 7.3105469 L 6.6699219 7.9882812 L 3.9765625 2.6015625 L 9.1777344 0 L 6.9433594 0 L 3.5292969 1.7070312 L 2.6757812 0 L 1.5585938 0 z M 12.097656 0 L 12.425781 0.65820312 L 12.445312 0.65234375 C 12.476772 0.64230525 12.508716 0.63383133 12.541016 0.62695312 L 13.037109 0.5234375 C 13.070669 0.5164925 13.104569 0.511277 13.138672 0.5078125 L 13.453125 0.47460938 L 13.214844 0 L 12.097656 0 z M 20 1.3242188 L 18.238281 2.2050781 L 18.517578 2.4980469 C 18.540988 2.5223019 18.563144 2.5477257 18.583984 2.5742188 L 18.894531 2.9726562 C 18.898531 2.9778263 18.90243 2.9830353 18.90625 2.9882812 L 20 2.4414062 L 20 1.3242188 z M 13.746094 1.4492188 L 13.242188 1.5019531 L 12.746094 1.6054688 L 12.261719 1.7578125 L 11.796875 1.9550781 L 11.355469 2.2011719 L 10.939453 2.4902344 L 10.554688 2.8222656 L 10.205078 3.1894531 L 9.8964844 3.5878906 L 9.6269531 4.0175781 L 9.4042969 4.4726562 L 9.2285156 4.9492188 L 9.1015625 5.4375 L 9.0253906 5.9394531 L 9 6.4453125 L 9.0253906 7.2636719 L 9.1015625 8.0800781 L 9.2304688 8.8886719 L 9.4101562 9.6875 L 9.6386719 10.474609 L 9.9179688 11.246094 L 10.244141 11.996094 L 10.617188 12.724609 L 11.035156 13.429688 L 11.498047 14.107422 L 12.001953 14.753906 L 12.544922 15.367188 L 12.546875 15.367188 L 12.787109 15.583984 L 13.0625 15.757812 L 13.359375 15.886719 L 13.675781 15.966797 L 14 16 L 14.324219 15.966797 L 14.638672 15.886719 L 14.9375 15.757812 L 15.212891 15.583984 L 15.455078 15.367188 L 15.998047 14.753906 L 16.5 14.107422 L 16.964844 13.429688 L 17.380859 12.724609 L 17.753906 11.996094 L 18.080078 11.246094 L 18.359375 10.474609 L 18.589844 9.6875 L 18.767578 8.8886719 L 18.896484 8.0800781 L 18.972656 7.2636719 L 19 6.4453125 L 18.972656 5.9394531 L 18.896484 5.4375 L 18.771484 4.9492188 L 18.59375 4.4726562 L 18.371094 4.0175781 L 18.105469 3.5878906 L 17.794922 3.1894531 L 17.443359 2.8222656 L 17.058594 2.4902344 L 16.644531 2.2011719 L 16.203125 1.9550781 L 15.736328 1.7578125 L 15.251953 1.6054688 L 14.755859 1.5019531 L 14.251953 1.4492188 L 13.746094 1.4492188 z M 14 2.4453125 L 14.447266 2.4707031 L 14.890625 2.5449219 L 15.322266 2.6699219 L 15.734375 2.8417969 L 16.128906 3.0585938 L 16.494141 3.3183594 L 16.828125 3.6171875 L 17.126953 3.9511719 L 17.386719 4.3164062 L 17.603516 4.7089844 L 17.775391 5.125 L 17.900391 5.5546875 L 17.976562 5.9960938 L 18 6.4433594 L 17.976562 7.2011719 L 17.904297 7.953125 L 17.785156 8.6992188 L 17.621094 9.4394531 L 17.408203 10.164062 L 17.152344 10.875 L 16.849609 11.570312 L 16.505859 12.242188 L 16.119141 12.892578 L 15.695312 13.517578 L 15.228516 14.113281 L 14.728516 14.679688 L 14.572266 14.814453 L 14.396484 14.912109 L 14.203125 14.970703 L 14 14.998047 L 13.796875 14.970703 L 13.603516 14.912109 L 13.427734 14.814453 L 13.271484 14.679688 L 12.771484 14.113281 L 12.304688 13.517578 L 11.880859 12.892578 L 11.494141 12.242188 L 11.150391 11.570312 L 10.847656 10.875 L 10.591797 10.164062 L 10.378906 9.4394531 L 10.214844 8.6992188 L 10.095703 7.953125 L 10.023438 7.2011719 L 10 6.4433594 L 10.025391 5.9960938 L 10.099609 5.5546875 L 10.222656 5.125 L 10.394531 4.7089844 L 10.613281 4.3164062 L 10.873047 3.9511719 L 11.171875 3.6171875 L 11.505859 3.3183594 L 11.871094 3.0585938 L 12.263672 2.8417969 L 12.679688 2.6699219 L 13.109375 2.5449219 L 13.550781 2.4707031 L 14 2.4453125 z M 20 3.5585938 L 19.40625 3.8554688 L 19.492188 4.0332031 C 19.506667 4.0624951 19.51971 4.0924789 19.53125 4.1230469 L 19.708984 4.5996094 C 19.721194 4.6328854 19.731624 4.6667874 19.740234 4.7011719 L 19.763672 4.7929688 L 20 4.6757812 L 20 3.5585938 z M 13.917969 4.4433594 L 13.599609 4.4824219 L 13.291016 4.5742188 L 13 4.7089844 L 12.734375 4.8925781 L 12.503906 5.1152344 L 12.310547 5.3730469 L 12.160156 5.6601562 L 12.056641 5.9648438 L 12.005859 6.28125 L 12.005859 6.6054688 L 12.056641 6.921875 L 12.160156 7.2265625 L 12.310547 7.5117188 L 12.503906 7.7695312 L 12.734375 7.9902344 L 13 8.1738281 L 13.291016 8.3125 L 13.599609 8.4023438 L 13.917969 8.4414062 L 14.240234 8.4355469 L 14.556641 8.3691406 L 14.857422 8.2539062 L 15.136719 8.09375 L 15.386719 7.890625 L 15.599609 7.6503906 L 15.771484 7.3769531 L 15.896484 7.0820312 L 15.974609 6.7695312 L 16 6.4472656 L 16 6.4453125 L 15.974609 6.125 L 15.896484 5.8125 L 15.771484 5.515625 L 15.599609 5.2441406 L 15.386719 5.0039062 L 15.136719 4.796875 L 14.857422 4.6367188 L 14.556641 4.5234375 L 14.240234 4.4570312 L 13.917969 4.4433594 z M 14 5.4433594 L 14.220703 5.4707031 L 14.433594 5.5449219 L 14.623047 5.6640625 L 14.783203 5.8222656 L 14.902344 6.0097656 L 14.974609 6.2226562 L 15 6.4453125 L 14.974609 6.6660156 L 14.902344 6.8789062 L 14.783203 7.0683594 L 14.623047 7.2285156 L 14.433594 7.3476562 L 14.220703 7.421875 L 14 7.4472656 L 13.777344 7.421875 L 13.564453 7.3476562 L 13.376953 7.2285156 L 13.21875 7.0683594 L 13.099609 6.8789062 L 13.025391 6.6660156 L 13 6.4453125 L 13.025391 6.2226562 L 13.099609 6.0097656 L 13.21875 5.8222656 L 13.376953 5.6640625 L 13.564453 5.5449219 L 13.777344 5.4707031 L 14 5.4433594 z M 8.3183594 9.3984375 L 6.6699219 10.222656 L 11.558594 20 L 12.675781 20 L 10.351562 15.351562 L 10.960938 15.046875 L 10.708984 14.722656 C 10.696084 14.706126 10.683715 14.689185 10.671875 14.671875 L 10.367188 14.226562 L 9.90625 14.457031 L 8.0117188 10.669922 L 8.5722656 10.390625 L 8.4492188 9.9667969 C 8.4433805 9.9467824 8.4381698 9.9265902 8.4335938 9.90625 L 8.3183594 9.3984375 z M 20 9.4101562 L 19.636719 9.5917969 L 19.566406 9.9042969 C 19.561306 9.9259709 19.555408 9.947468 19.548828 9.96875 L 19.318359 10.755859 C 19.312459 10.775589 19.305938 10.795133 19.298828 10.814453 L 19.271484 10.892578 L 20 10.527344 L 20 9.4101562 z M 17.939453 13.744141 L 17.826172 13.9375 C 17.814482 13.95745 17.802103 13.977004 17.789062 13.996094 L 17.324219 14.673828 C 17.316619 14.684398 17.308801 14.694818 17.300781 14.705078 L 19.949219 20 L 20 20 L 20 17.865234 L 17.939453 13.744141 z M 7.7773438 14.669922 L 0 18.558594 L 0 19.675781 L 7.3300781 16.011719 L 9.3242188 20 L 10.441406 20 L 7.7773438 14.669922 z " style="fill:#488cf9; fill-opacity:1; stroke:none; stroke-width:0px;"></path> </g> </g></svg>
+                            <svg height="44" class="pb-2" viewBox="0 0 20 20" version="1.1"
+                              xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                              <g id="SVGRepo_iconCarrier">
+                                <g id="layer1">
+                                  <path
+                                    d="M 0 0 L 0 1.3535156 L 2.2851562 5.9238281 L 0 7.0664062 L 0 8.1855469 L 2.7324219 6.8183594 L 5.9882812 13.330078 L 0 16.324219 L 0 17.441406 L 7.3300781 13.777344 L 0.44140625 0 L 0 0 z M 1.5585938 0 L 6.2226562 9.3300781 L 8.1347656 8.3730469 L 8.1132812 8.2382812 C 8.1099813 8.2168872 8.1073687 8.1953911 8.1054688 8.1738281 L 8.0292969 7.3574219 C 8.0276269 7.3418299 8.0263306 7.3261999 8.0253906 7.3105469 L 6.6699219 7.9882812 L 3.9765625 2.6015625 L 9.1777344 0 L 6.9433594 0 L 3.5292969 1.7070312 L 2.6757812 0 L 1.5585938 0 z M 12.097656 0 L 12.425781 0.65820312 L 12.445312 0.65234375 C 12.476772 0.64230525 12.508716 0.63383133 12.541016 0.62695312 L 13.037109 0.5234375 C 13.070669 0.5164925 13.104569 0.511277 13.138672 0.5078125 L 13.453125 0.47460938 L 13.214844 0 L 12.097656 0 z M 20 1.3242188 L 18.238281 2.2050781 L 18.517578 2.4980469 C 18.540988 2.5223019 18.563144 2.5477257 18.583984 2.5742188 L 18.894531 2.9726562 C 18.898531 2.9778263 18.90243 2.9830353 18.90625 2.9882812 L 20 2.4414062 L 20 1.3242188 z M 13.746094 1.4492188 L 13.242188 1.5019531 L 12.746094 1.6054688 L 12.261719 1.7578125 L 11.796875 1.9550781 L 11.355469 2.2011719 L 10.939453 2.4902344 L 10.554688 2.8222656 L 10.205078 3.1894531 L 9.8964844 3.5878906 L 9.6269531 4.0175781 L 9.4042969 4.4726562 L 9.2285156 4.9492188 L 9.1015625 5.4375 L 9.0253906 5.9394531 L 9 6.4453125 L 9.0253906 7.2636719 L 9.1015625 8.0800781 L 9.2304688 8.8886719 L 9.4101562 9.6875 L 9.6386719 10.474609 L 9.9179688 11.246094 L 10.244141 11.996094 L 10.617188 12.724609 L 11.035156 13.429688 L 11.498047 14.107422 L 12.001953 14.753906 L 12.544922 15.367188 L 12.546875 15.367188 L 12.787109 15.583984 L 13.0625 15.757812 L 13.359375 15.886719 L 13.675781 15.966797 L 14 16 L 14.324219 15.966797 L 14.638672 15.886719 L 14.9375 15.757812 L 15.212891 15.583984 L 15.455078 15.367188 L 15.998047 14.753906 L 16.5 14.107422 L 16.964844 13.429688 L 17.380859 12.724609 L 17.753906 11.996094 L 18.080078 11.246094 L 18.359375 10.474609 L 18.589844 9.6875 L 18.767578 8.8886719 L 18.896484 8.0800781 L 18.972656 7.2636719 L 19 6.4453125 L 18.972656 5.9394531 L 18.896484 5.4375 L 18.771484 4.9492188 L 18.59375 4.4726562 L 18.371094 4.0175781 L 18.105469 3.5878906 L 17.794922 3.1894531 L 17.443359 2.8222656 L 17.058594 2.4902344 L 16.644531 2.2011719 L 16.203125 1.9550781 L 15.736328 1.7578125 L 15.251953 1.6054688 L 14.755859 1.5019531 L 14.251953 1.4492188 L 13.746094 1.4492188 z M 14 2.4453125 L 14.447266 2.4707031 L 14.890625 2.5449219 L 15.322266 2.6699219 L 15.734375 2.8417969 L 16.128906 3.0585938 L 16.494141 3.3183594 L 16.828125 3.6171875 L 17.126953 3.9511719 L 17.386719 4.3164062 L 17.603516 4.7089844 L 17.775391 5.125 L 17.900391 5.5546875 L 17.976562 5.9960938 L 18 6.4433594 L 17.976562 7.2011719 L 17.904297 7.953125 L 17.785156 8.6992188 L 17.621094 9.4394531 L 17.408203 10.164062 L 17.152344 10.875 L 16.849609 11.570312 L 16.505859 12.242188 L 16.119141 12.892578 L 15.695312 13.517578 L 15.228516 14.113281 L 14.728516 14.679688 L 14.572266 14.814453 L 14.396484 14.912109 L 14.203125 14.970703 L 14 14.998047 L 13.796875 14.970703 L 13.603516 14.912109 L 13.427734 14.814453 L 13.271484 14.679688 L 12.771484 14.113281 L 12.304688 13.517578 L 11.880859 12.892578 L 11.494141 12.242188 L 11.150391 11.570312 L 10.847656 10.875 L 10.591797 10.164062 L 10.378906 9.4394531 L 10.214844 8.6992188 L 10.095703 7.953125 L 10.023438 7.2011719 L 10 6.4433594 L 10.025391 5.9960938 L 10.099609 5.5546875 L 10.222656 5.125 L 10.394531 4.7089844 L 10.613281 4.3164062 L 10.873047 3.9511719 L 11.171875 3.6171875 L 11.505859 3.3183594 L 11.871094 3.0585938 L 12.263672 2.8417969 L 12.679688 2.6699219 L 13.109375 2.5449219 L 13.550781 2.4707031 L 14 2.4453125 z M 20 3.5585938 L 19.40625 3.8554688 L 19.492188 4.0332031 C 19.506667 4.0624951 19.51971 4.0924789 19.53125 4.1230469 L 19.708984 4.5996094 C 19.721194 4.6328854 19.731624 4.6667874 19.740234 4.7011719 L 19.763672 4.7929688 L 20 4.6757812 L 20 3.5585938 z M 13.917969 4.4433594 L 13.599609 4.4824219 L 13.291016 4.5742188 L 13 4.7089844 L 12.734375 4.8925781 L 12.503906 5.1152344 L 12.310547 5.3730469 L 12.160156 5.6601562 L 12.056641 5.9648438 L 12.005859 6.28125 L 12.005859 6.6054688 L 12.056641 6.921875 L 12.160156 7.2265625 L 12.310547 7.5117188 L 12.503906 7.7695312 L 12.734375 7.9902344 L 13 8.1738281 L 13.291016 8.3125 L 13.599609 8.4023438 L 13.917969 8.4414062 L 14.240234 8.4355469 L 14.556641 8.3691406 L 14.857422 8.2539062 L 15.136719 8.09375 L 15.386719 7.890625 L 15.599609 7.6503906 L 15.771484 7.3769531 L 15.896484 7.0820312 L 15.974609 6.7695312 L 16 6.4472656 L 16 6.4453125 L 15.974609 6.125 L 15.896484 5.8125 L 15.771484 5.515625 L 15.599609 5.2441406 L 15.386719 5.0039062 L 15.136719 4.796875 L 14.857422 4.6367188 L 14.556641 4.5234375 L 14.240234 4.4570312 L 13.917969 4.4433594 z M 14 5.4433594 L 14.220703 5.4707031 L 14.433594 5.5449219 L 14.623047 5.6640625 L 14.783203 5.8222656 L 14.902344 6.0097656 L 14.974609 6.2226562 L 15 6.4453125 L 14.974609 6.6660156 L 14.902344 6.8789062 L 14.783203 7.0683594 L 14.623047 7.2285156 L 14.433594 7.3476562 L 14.220703 7.421875 L 14 7.4472656 L 13.777344 7.421875 L 13.564453 7.3476562 L 13.376953 7.2285156 L 13.21875 7.0683594 L 13.099609 6.8789062 L 13.025391 6.6660156 L 13 6.4453125 L 13.025391 6.2226562 L 13.099609 6.0097656 L 13.21875 5.8222656 L 13.376953 5.6640625 L 13.564453 5.5449219 L 13.777344 5.4707031 L 14 5.4433594 z M 8.3183594 9.3984375 L 6.6699219 10.222656 L 11.558594 20 L 12.675781 20 L 10.351562 15.351562 L 10.960938 15.046875 L 10.708984 14.722656 C 10.696084 14.706126 10.683715 14.689185 10.671875 14.671875 L 10.367188 14.226562 L 9.90625 14.457031 L 8.0117188 10.669922 L 8.5722656 10.390625 L 8.4492188 9.9667969 C 8.4433805 9.9467824 8.4381698 9.9265902 8.4335938 9.90625 L 8.3183594 9.3984375 z M 20 9.4101562 L 19.636719 9.5917969 L 19.566406 9.9042969 C 19.561306 9.9259709 19.555408 9.947468 19.548828 9.96875 L 19.318359 10.755859 C 19.312459 10.775589 19.305938 10.795133 19.298828 10.814453 L 19.271484 10.892578 L 20 10.527344 L 20 9.4101562 z M 17.939453 13.744141 L 17.826172 13.9375 C 17.814482 13.95745 17.802103 13.977004 17.789062 13.996094 L 17.324219 14.673828 C 17.316619 14.684398 17.308801 14.694818 17.300781 14.705078 L 19.949219 20 L 20 20 L 20 17.865234 L 17.939453 13.744141 z M 7.7773438 14.669922 L 0 18.558594 L 0 19.675781 L 7.3300781 16.011719 L 9.3242188 20 L 10.441406 20 L 7.7773438 14.669922 z "
+                                    style="fill:#488cf9; fill-opacity:1; stroke:none; stroke-width:0px;"></path>
+                                </g>
+                              </g>
+                            </svg>
                           </div>
                           <div class="text ps-3">
                             <h5 class="textcolor">Mapping & Visualization</h5>
-                            <div  class="secondaryfont textcolor">2D & 3D maps, Thematic Mapping
+                            <div class="secondaryfont textcolor">2D & 3D maps, Thematic Mapping
                               , Layer Management
                               Real-Time Mapping etc.</div>
                           </div>
@@ -1116,16 +206,35 @@ a.enter_head_b::after {
                       <a href="#">
                         <div class="d-flex align-items-center py-3 px-1 rounded-3">
                           <div class="icon px-3 bg-success-subtle rounded-3 fs-1">
-                             <svg  height="40"  viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 12.48V7.32007C20 6.2592 19.5786 5.24178 18.8284 4.49164C18.0783 3.74149 17.0609 3.32007 16 3.32007H6C4.93913 3.32007 3.92178 3.74149 3.17163 4.49164C2.42149 5.24178 2 6.2592 2 7.32007V17.3201C2 18.3809 2.42149 19.3984 3.17163 20.1485C3.92178 20.8986 4.93913 21.3201 6 21.3201H12.53" stroke="#853232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M17.0303 12.4801L2.82031 4.89014" stroke="#853232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M3.58008 20.5101L9.90009 8.68005" stroke="#853232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M18.44 22.2101C20.3399 22.2101 21.88 20.6699 21.88 18.7701C21.88 16.8702 20.3399 15.3301 18.44 15.3301C16.5401 15.3301 15 16.8702 15 18.7701C15 20.6699 16.5401 22.2101 18.44 22.2101Z" stroke="#853232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M23.0009 23.3201L20.8809 21.2001" stroke="#853232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-  
+                            <svg height="40" viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                              <g id="SVGRepo_iconCarrier">
+                                <path
+                                  d="M20 12.48V7.32007C20 6.2592 19.5786 5.24178 18.8284 4.49164C18.0783 3.74149 17.0609 3.32007 16 3.32007H6C4.93913 3.32007 3.92178 3.74149 3.17163 4.49164C2.42149 5.24178 2 6.2592 2 7.32007V17.3201C2 18.3809 2.42149 19.3984 3.17163 20.1485C3.92178 20.8986 4.93913 21.3201 6 21.3201H12.53"
+                                  stroke="#853232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path d="M17.0303 12.4801L2.82031 4.89014" stroke="#853232" stroke-width="1.5"
+                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M3.58008 20.5101L9.90009 8.68005" stroke="#853232" stroke-width="1.5"
+                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path
+                                  d="M18.44 22.2101C20.3399 22.2101 21.88 20.6699 21.88 18.7701C21.88 16.8702 20.3399 15.3301 18.44 15.3301C16.5401 15.3301 15 16.8702 15 18.7701C15 20.6699 16.5401 22.2101 18.44 22.2101Z"
+                                  stroke="#853232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path d="M23.0009 23.3201L20.8809 21.2001" stroke="#853232" stroke-width="1.5"
+                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                              </g>
+                            </svg>
+
                           </div>
                           <div class="text ps-3">
                             <h5 class="textcolor">Geospatial Analysis</h5>
-                            <div  class="secondaryfont textcolor">
+                            <div class="secondaryfont textcolor">
                               Spatial Queries & Geoprocessing Tools
-  Network Analysis
-  Terrain & Elevation Analysis
-  Geostatistics
+                              Network Analysis
+                              Terrain & Elevation Analysis
+                              Geostatistics
                             </div>
                           </div>
                         </div>
@@ -1135,8 +244,18 @@ a.enter_head_b::after {
                       <a href="#">
                         <div class="d-flex align-items-center py-3 px-1 rounded-3">
                           <div class="icon px-3 bg-secondary-subtle rounded-3 fs-1">
-                             <svg  class="pb-2" height="40"  fill="#6468d3" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg" stroke="#6468d3" stroke-width="21.119999999999997"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="7.68"></g><g id="SVGRepo_iconCarrier"> <path d="M1706.67 106.667h-320V0h320C1824.49 0 1920 95.513 1920 213.333v320h-106.67v-320c0-58.91-47.75-106.666-106.66-106.666ZM533.333 0v106.667h-320c-58.91 0-106.666 47.756-106.666 106.666v320H0v-320C0 95.513 95.513 0 213.333 0h320ZM0 1386.67h106.667v320c0 58.91 47.756 106.66 106.666 106.66h320V1920h-320C95.513 1920 0 1824.49 0 1706.67v-320ZM1386.67 1920v-106.67h320c58.91 0 106.66-47.75 106.66-106.66v-320H1920v320c0 117.82-95.51 213.33-213.33 213.33h-320ZM1280 960c0 176.73-143.27 320-320 320-176.731 0-320-143.27-320-320 0-176.731 143.269-320 320-320 176.73 0 320 143.269 320 320Zm106.67 0c0 235.64-191.03 426.67-426.67 426.67-235.641 0-426.667-191.03-426.667-426.67 0-235.641 191.026-426.667 426.667-426.667 235.64 0 426.67 191.026 426.67 426.667Z" fill-rule="evenodd"></path> </g></svg>
-                            </div>
+                            <svg class="pb-2" height="40" fill="#6468d3" viewBox="0 0 1920 1920"
+                              xmlns="http://www.w3.org/2000/svg" stroke="#6468d3" stroke-width="21.119999999999997">
+                              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
+                                stroke="#CCCCCC" stroke-width="7.68"></g>
+                              <g id="SVGRepo_iconCarrier">
+                                <path
+                                  d="M1706.67 106.667h-320V0h320C1824.49 0 1920 95.513 1920 213.333v320h-106.67v-320c0-58.91-47.75-106.666-106.66-106.666ZM533.333 0v106.667h-320c-58.91 0-106.666 47.756-106.666 106.666v320H0v-320C0 95.513 95.513 0 213.333 0h320ZM0 1386.67h106.667v320c0 58.91 47.756 106.66 106.666 106.66h320V1920h-320C95.513 1920 0 1824.49 0 1706.67v-320ZM1386.67 1920v-106.67h320c58.91 0 106.66-47.75 106.66-106.66v-320H1920v320c0 117.82-95.51 213.33-213.33 213.33h-320ZM1280 960c0 176.73-143.27 320-320 320-176.731 0-320-143.27-320-320 0-176.731 143.269-320 320-320 176.73 0 320 143.269 320 320Zm106.67 0c0 235.64-191.03 426.67-426.67 426.67-235.641 0-426.667-191.03-426.667-426.67 0-235.641 191.026-426.667 426.667-426.667 235.64 0 426.67 191.026 426.67 426.667Z"
+                                  fill-rule="evenodd"></path>
+                              </g>
+                            </svg>
+                          </div>
                           <div class="text ps-3">
                             <h5 class="textcolor">Data Capture & Editing</h5>
                             <div class="secondaryfont textcolor">Digitizing Tools
@@ -1151,11 +270,40 @@ a.enter_head_b::after {
                       <a href="#">
                         <div class="d-flex align-items-center py-3 px-1 rounded-3">
                           <div class="icon px-3 bg-body-tertiary rounded-3 fs-1">
-                           <svg  height="40"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5.5 15.5C5.5 14.5572 5.5 14.0858 5.79289 13.7929C6.08579 13.5 6.55719 13.5 7.5 13.5H8.5C9.44281 13.5 9.91421 13.5 10.2071 13.7929C10.5 14.0858 10.5 14.5572 10.5 15.5V16.5C10.5 17.4428 10.5 17.9142 10.2071 18.2071C9.91421 18.5 9.44281 18.5 8.5 18.5C7.08579 18.5 6.37868 18.5 5.93934 18.0607C5.5 17.6213 5.5 16.9142 5.5 15.5Z" stroke="#606b0a" stroke-width="1.5"></path> <path d="M5.5 8.5C5.5 7.08579 5.5 6.37868 5.93934 5.93934C6.37868 5.5 7.08579 5.5 8.5 5.5C9.44281 5.5 9.91421 5.5 10.2071 5.79289C10.5 6.08579 10.5 6.55719 10.5 7.5V8.5C10.5 9.44281 10.5 9.91421 10.2071 10.2071C9.91421 10.5 9.44281 10.5 8.5 10.5H7.5C6.55719 10.5 6.08579 10.5 5.79289 10.2071C5.5 9.91421 5.5 9.44281 5.5 8.5Z" stroke="#606b0a" stroke-width="1.5"></path> <path d="M13.5 15.5C13.5 14.5572 13.5 14.0858 13.7929 13.7929C14.0858 13.5 14.5572 13.5 15.5 13.5H16.5C17.4428 13.5 17.9142 13.5 18.2071 13.7929C18.5 14.0858 18.5 14.5572 18.5 15.5C18.5 16.9142 18.5 17.6213 18.0607 18.0607C17.6213 18.5 16.9142 18.5 15.5 18.5C14.5572 18.5 14.0858 18.5 13.7929 18.2071C13.5 17.9142 13.5 17.4428 13.5 16.5V15.5Z" stroke="#606b0a" stroke-width="1.5"></path> <path d="M13.5 7.5C13.5 6.55719 13.5 6.08579 13.7929 5.79289C14.0858 5.5 14.5572 5.5 15.5 5.5C16.9142 5.5 17.6213 5.5 18.0607 5.93934C18.5 6.37868 18.5 7.08579 18.5 8.5C18.5 9.44281 18.5 9.91421 18.2071 10.2071C17.9142 10.5 17.4428 10.5 16.5 10.5H15.5C14.5572 10.5 14.0858 10.5 13.7929 10.2071C13.5 9.91421 13.5 9.44281 13.5 8.5V7.5Z" stroke="#606b0a" stroke-width="1.5"></path> <path opacity="0.5" d="M22 14C22 17.7712 22 19.6569 20.8284 20.8284C19.6569 22 17.7712 22 14 22" stroke="#606b0a" stroke-width="1.5" stroke-linecap="round"></path> <path opacity="0.5" d="M10 22C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14" stroke="#606b0a" stroke-width="1.5" stroke-linecap="round"></path> <path opacity="0.5" d="M10 2C6.22876 2 4.34315 2 3.17157 3.17157C2 4.34315 2 6.22876 2 10" stroke="#606b0a" stroke-width="1.5" stroke-linecap="round"></path> <path opacity="0.5" d="M14 2C17.7712 2 19.6569 2 20.8284 3.17157C22 4.34315 22 6.22876 22 10" stroke="#606b0a" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+                            <svg height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                              <g id="SVGRepo_iconCarrier">
+                                <path
+                                  d="M5.5 15.5C5.5 14.5572 5.5 14.0858 5.79289 13.7929C6.08579 13.5 6.55719 13.5 7.5 13.5H8.5C9.44281 13.5 9.91421 13.5 10.2071 13.7929C10.5 14.0858 10.5 14.5572 10.5 15.5V16.5C10.5 17.4428 10.5 17.9142 10.2071 18.2071C9.91421 18.5 9.44281 18.5 8.5 18.5C7.08579 18.5 6.37868 18.5 5.93934 18.0607C5.5 17.6213 5.5 16.9142 5.5 15.5Z"
+                                  stroke="#606b0a" stroke-width="1.5"></path>
+                                <path
+                                  d="M5.5 8.5C5.5 7.08579 5.5 6.37868 5.93934 5.93934C6.37868 5.5 7.08579 5.5 8.5 5.5C9.44281 5.5 9.91421 5.5 10.2071 5.79289C10.5 6.08579 10.5 6.55719 10.5 7.5V8.5C10.5 9.44281 10.5 9.91421 10.2071 10.2071C9.91421 10.5 9.44281 10.5 8.5 10.5H7.5C6.55719 10.5 6.08579 10.5 5.79289 10.2071C5.5 9.91421 5.5 9.44281 5.5 8.5Z"
+                                  stroke="#606b0a" stroke-width="1.5"></path>
+                                <path
+                                  d="M13.5 15.5C13.5 14.5572 13.5 14.0858 13.7929 13.7929C14.0858 13.5 14.5572 13.5 15.5 13.5H16.5C17.4428 13.5 17.9142 13.5 18.2071 13.7929C18.5 14.0858 18.5 14.5572 18.5 15.5C18.5 16.9142 18.5 17.6213 18.0607 18.0607C17.6213 18.5 16.9142 18.5 15.5 18.5C14.5572 18.5 14.0858 18.5 13.7929 18.2071C13.5 17.9142 13.5 17.4428 13.5 16.5V15.5Z"
+                                  stroke="#606b0a" stroke-width="1.5"></path>
+                                <path
+                                  d="M13.5 7.5C13.5 6.55719 13.5 6.08579 13.7929 5.79289C14.0858 5.5 14.5572 5.5 15.5 5.5C16.9142 5.5 17.6213 5.5 18.0607 5.93934C18.5 6.37868 18.5 7.08579 18.5 8.5C18.5 9.44281 18.5 9.91421 18.2071 10.2071C17.9142 10.5 17.4428 10.5 16.5 10.5H15.5C14.5572 10.5 14.0858 10.5 13.7929 10.2071C13.5 9.91421 13.5 9.44281 13.5 8.5V7.5Z"
+                                  stroke="#606b0a" stroke-width="1.5"></path>
+                                <path opacity="0.5"
+                                  d="M22 14C22 17.7712 22 19.6569 20.8284 20.8284C19.6569 22 17.7712 22 14 22"
+                                  stroke="#606b0a" stroke-width="1.5" stroke-linecap="round"></path>
+                                <path opacity="0.5"
+                                  d="M10 22C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14"
+                                  stroke="#606b0a" stroke-width="1.5" stroke-linecap="round"></path>
+                                <path opacity="0.5"
+                                  d="M10 2C6.22876 2 4.34315 2 3.17157 3.17157C2 4.34315 2 6.22876 2 10"
+                                  stroke="#606b0a" stroke-width="1.5" stroke-linecap="round"></path>
+                                <path opacity="0.5"
+                                  d="M14 2C17.7712 2 19.6569 2 20.8284 3.17157C22 4.34315 22 6.22876 22 10"
+                                  stroke="#606b0a" stroke-width="1.5" stroke-linecap="round"></path>
+                              </g>
+                            </svg>
                           </div>
                           <div class="text ps-3">
                             <h5 class="textcolor">Geocoding & Reverse Geocoding</h5>
-                            <div  class="secondaryfont textcolor">Geocoding (Address to Coordinates)
+                            <div class="secondaryfont textcolor">Geocoding (Address to Coordinates)
                               Reverse Geocoding
                               Batch Processing</div>
                           </div>
@@ -1166,11 +314,26 @@ a.enter_head_b::after {
                       <a href="#">
                         <div class="d-flex align-items-center py-3 px-1 rounded-3">
                           <div class="icon px-3 bg-info-subtle rounded-3 fs-1">
-                            <svg height="45"  viewBox="0 0 1024 1024" class="icon pb-2" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M510.5 958.5c247.2 0 447.5-200.4 447.5-447.5S757.7 63.5 510.5 63.5 63 263.8 63 511s200.4 447.5 447.5 447.5z" fill="#ff8800"></path><path d="M510.5 902.6c-216.3 0-391.6-175.3-391.6-391.6S294.2 119.4 510.5 119.4s391.6 175.3 391.6 391.6-175.3 391.6-391.6 391.6z" fill="#FFFFFF"></path><path d="M405.8 558.9h-2c-31 0-43-21.4-27-47.8L524 269.2c33.5-55.1 44.2-50.2 24 11l-45.1 136.1c-9.7 29.4 7.5 52.9 38.4 52.9H628l-0.4 0.4h2c31 0 43 21.4 27 47.8L515.7 749c-36.9 60.7-48.8 55.3-26.4-12.3l41.3-124.5c9.7-29.4-7.5-52.9-38.4-52.9h-86.7l0.3-0.4z" fill="#ff8800"></path></g></svg>
+                            <svg height="45" viewBox="0 0 1024 1024" class="icon pb-2" version="1.1"
+                              xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                              <g id="SVGRepo_iconCarrier">
+                                <path
+                                  d="M510.5 958.5c247.2 0 447.5-200.4 447.5-447.5S757.7 63.5 510.5 63.5 63 263.8 63 511s200.4 447.5 447.5 447.5z"
+                                  fill="#ff8800"></path>
+                                <path
+                                  d="M510.5 902.6c-216.3 0-391.6-175.3-391.6-391.6S294.2 119.4 510.5 119.4s391.6 175.3 391.6 391.6-175.3 391.6-391.6 391.6z"
+                                  fill="#FFFFFF"></path>
+                                <path
+                                  d="M405.8 558.9h-2c-31 0-43-21.4-27-47.8L524 269.2c33.5-55.1 44.2-50.2 24 11l-45.1 136.1c-9.7 29.4 7.5 52.9 38.4 52.9H628l-0.4 0.4h2c31 0 43 21.4 27 47.8L515.7 749c-36.9 60.7-48.8 55.3-26.4-12.3l41.3-124.5c9.7-29.4-7.5-52.9-38.4-52.9h-86.7l0.3-0.4z"
+                                  fill="#ff8800"></path>
+                              </g>
+                            </svg>
                           </div>
                           <div class="text ps-3">
                             <h5 class="textcolor">Performance & Scalability</h5>
-                            <div  class="secondaryfont textcolor">Large Dataset Handling
+                            <div class="secondaryfont textcolor">Large Dataset Handling
                               Cloud Integration (AWS, Azure)
                               Caching & Tiling for High Performance
                               .</div>
@@ -1181,13 +344,14 @@ a.enter_head_b::after {
                   </div>
                 </div>
               </li>
-              
-            
+
+
               <!-- <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
               </li> -->
               <li class="nav-item dropdown dropdown-mega position-static ">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Solutions &amp; Resources</a>
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside">Solutions &amp; Resources</a>
                 <div class="dropdown-menu  rounded-3 border-0 shadow">
                   <div class="mega-content px-4">
                     <div class="container">
@@ -1199,14 +363,14 @@ a.enter_head_b::after {
                             <a class="list-group-item gc-list-group-item" href="#">Logistics & Fleet Management</a>
                             <a class="list-group-item gc-list-group-item" href="#">Cadastral & Land Administration</a>
                             <a class="list-group-item gc-list-group-item" href="#">Real Estate & Property Management</a>
-  
+
                             <a class="list-group-item gc-list-group-item" href="#">Indoor Mapping & Navigation</a>
                             <a class="list-group-item gc-list-group-item" href="#">Asset Location & Tracking</a>
-  
+
                           </div>
                         </div>
-                        
-                       
+
+
                         <div class="col py-4">
                           <h5 class="gchead1">Resources</h5>
                           <div class="list-group gc-list-group">
@@ -1218,74 +382,104 @@ a.enter_head_b::after {
                         </div>
 
                         <div class="col   py-4">
-                         
+
                           <div class="card card-dark">
-                            <h5 class="p-4 preenter_menu">Empower 
-                            <!-- <h3 class="preenter">Navigate -->
-  
+                            <h5 class="p-4 preenter_menu">Empower
+                              <!-- <h3 class="preenter">Navigate -->
+
                               <!-- EN: Login -->
-                              <a class="enter_menu">  <!-- EN: to your Account -->
+                              <a class="enter_menu"> <!-- EN: to your Account -->
                                 Your Geospatial Journey
                               </a>
                             </h5>
-                      <img src="assets/images/travelling.svg" class="img-fluid h120"  alt="image">
-                      <div class="card-body">
-                        <p class="card-text secondaryfont">
-                          Unlock expert tools and resources designed to help you harness the full potential of your geospatial data, ensuring success at every step.
-                         
-  
-                          </p>
-                        </div>
-                    </div>
+                            <img src="assets/images/travelling.svg" class="img-fluid h120" alt="image">
+                            <div class="card-body">
+                              <p class="card-text secondaryfont" >
+                                Unlock expert tools and resources designed to help you harness the full potential of
+                                your geospatial data, ensuring success at every step.
+
+
+                              </p>
+                            </div>
+                          </div>
                         </div>
 
-                        </div>
-                        <div class="row  ">
-                      
+                      </div>
+                      <div class="row  ">
+
                         <div class="col-md-12  py-4">
                           <h5 class="gchead1">What makes us different?</h5>
-                            <p class="secondaryfont">
-                           
-                              We offer expert-driven resources like detailed documentation, case studies, and webinars, ensuring you have everything needed to maximize your geospatial data and make informed decisions with ease.
-                             
-    
-                            </p>
-                            <a href="#" class="button-80" role="button">Read more
-                              <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.996 511.996" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965 H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099 c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"></path> </g> </g> </g></svg>
-  
-                            </a>
+                          <p class="secondaryfont">
+
+                            We offer expert-driven resources like detailed documentation, case studies, and webinars,
+                            ensuring you have everything needed to maximize your geospatial data and make informed
+                            decisions with ease.
+
+
+                          </p>
+                          <a href="#" class="button-80" role="button">Read more
+                            <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1"
+                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                              viewBox="0 0 511.996 511.996" xml:space="preserve">
+                              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                              <g id="SVGRepo_iconCarrier">
+                                <g>
+                                  <g>
+                                    <path
+                                      d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965 H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099 c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z">
+                                    </path>
+                                  </g>
+                                </g>
+                              </g>
+                            </svg>
+
+                          </a>
                         </div>
-  
-                     
-  
+
+
+
                       </div>
                     </div>
                   </div>
                 </div>
               </li>
-  
+
               <li class="nav-item">
                 <a class="nav-link" href="#">Support</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Contact</a>
               </li>
-  
-              
+
+
             </ul>
-            
+
             <div class="d-flex ms-auto">
               <!-- <div class="input-group">
                   <input class="form-control border-0 mr-2" type="search" placeholder="Search" aria-label="Search">
                   <button class="btn btn-primary border-0" type="submit">Search</button>
               </div> -->
 
-          <a class="bn39" href="/"><span class="bn39span">
+              <!-- <a class="bn39" href="/"><span class="bn39span">
             
             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#fff" stroke-width="2"></path> <path d="M13.9137 15.1001L15.32 11.1939C15.8932 9.60167 14.353 8.06149 12.7608 8.6347L8.85455 10.0409C7.1758 10.6453 7.39162 13.085 9.15038 13.3853C9.87655 13.5093 10.4454 14.0781 10.5694 14.8043C10.8696 16.5631 13.3094 16.7789 13.9137 15.1001Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-            View Demo</span></a>
+            View Demo</span></a> -->
 
+              <a class="glow-on-hover secondaryfont" type="button">View Demo
 
+                <svg width="15" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.003 512.003" xml:space="preserve"
+                  fill="#ffffff" stroke="#ffffff">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path style="fill:#ffffff;"
+                      d="M5.205,506.802c6.928,6.928,18.148,6.928,25.077,0L476.534,60.551v240.943 c0,9.801,7.933,17.735,17.735,17.735c9.801,0,17.735-7.933,17.735-17.735V17.739c0-9.801-7.933-17.735-17.735-17.735H210.514 c-9.801,0-17.735,7.933-17.735,17.735s7.933,17.735,17.735,17.735h240.931L5.205,481.725 C-1.735,488.654-1.735,499.874,5.205,506.802z">
+                    </path>
+                  </g>
+                </svg>
+              </a>
 
             </div>
 
@@ -1321,807 +515,674 @@ a.enter_head_b::after {
       </div>
     </nav>
 
-    <nav class="navbar navbar-expand-lg navbar-light  shadow d-none">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="assets/images/logo1.svg" style="height: 45px;" />
-        </a>
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
-          <div class="hamburger-toggle">
-            <div class="hamburger">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar-content">
-          <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-           
-            
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                 Features
-              </a>
-              <div class="dropdown-menu px-3 rounded-3 border-0 shadow">
-                <div class="row">
-                  <div class="col-sm-6 ">
-                    <a href="#">
-                      <div class="d-flex align-items-center py-3 px-1 rounded-3">
-                        <div class="icon px-3 bg-warning-subtle rounded-3 fs-1">
-                          <!-- <i class="bi bi-tv"></i> -->
-                           <svg height="40" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#473687" stroke="#473687"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M702.537143 218.477714c31.085714-10.825143 55.003429-23.113143 69.924571-35.328 10.24-8.338286 13.458286-13.824 13.458286-16.018285s-3.218286-7.68-13.458286-16.091429c-14.921143-12.141714-38.765714-24.429714-69.924571-35.254857C634.368 92.16 540.013714 78.336 438.857143 78.336s-195.510857 13.897143-263.68 37.449143c-31.085714 10.825143-55.003429 23.113143-69.924572 35.328-10.24 8.338286-13.458286 13.750857-13.458285 16.018286 0 2.194286 3.218286 7.68 13.458285 16.091428 14.921143 12.141714 38.765714 24.429714 69.924572 35.254857 68.169143 23.625143 162.523429 37.449143 263.68 37.449143s195.510857-13.897143 263.68-37.449143zM69.485714 464.749714v128.804572c37.961143 40.009143 140.068571 88.722286 264.777143 103.277714 182.857143 21.284571 355.986286-18.651429 473.526857-98.304l0.438857-131.657143C683.008 540.525714 506.733714 571.465143 328.484571 550.619429c-110.372571-12.8-204.361143-46.08-259.072-85.869715z m0-80.457143c38.034286 39.936 140.068571 88.649143 264.777143 103.131429 183.222857 21.357714 356.717714-18.724571 474.258286-98.742857l0.512-145.993143C734.208 286.573714 596.48 315.977143 438.857143 315.977143c-156.964571 0-294.253714-29.257143-369.152-72.777143A132116.333714 132116.333714 0 0 0 69.485714 384.219429z m0.146286 289.865143l0.292571 108.105143-1.097142-7.460571c22.381714 74.020571 165.302857 133.485714 378.148571 133.485714 115.931429 0 206.774857-17.554286 276.626286-52.077714 19.602286-9.728 34.523429-17.92 49.152-28.598857 9.728-7.094857 16.091429-11.410286 26.550857-20.626286 10.825143-9.581714 27.501714-7.241143 37.156571 3.657143 9.581714 10.752 10.825143 28.306286 0 37.961143-11.702857 10.24-17.188571 14.848-28.598857 23.186285-17.042286 12.434286-36.425143 25.380571-58.806857 36.498286-77.092571 38.107429-155.648 60.854857-302.08 60.854857-243.931429 0-405.211429-77.165714-436.077714-179.2l-1.097143-3.657143v-3.803428L9.362286 628.077714a116682.532571 116682.532571 0 0 1 0.365714-455.68 52.662857 52.662857 0 0 1-0.292571-5.266285C9.508571 84.918857 201.728 18.285714 438.857143 18.285714c237.129143 0 429.348571 66.633143 429.348571 148.845715a53.028571 53.028571 0 0 1-0.804571 9.581714 23.405714 23.405714 0 0 1 1.024 7.094857l-1.682286 520.411429c-0.073143 14.482286-13.385143 26.185143-29.769143 26.112-16.384 0-29.622857-11.776-29.549714-26.331429v-27.355429c-125.074286 73.216-301.056 104.082286-478.939429 83.382858-110.226286-12.873143-204.214857-46.08-258.925714-85.869715z m668.525714-290.962285a25.746286 25.746286 0 0 1-25.965714-25.453715c0-14.043429 11.702857-25.380571 26.038857-25.380571 14.336 0 26.038857 11.337143 26.038857 25.380571 0 14.116571-11.702857 25.453714-26.038857 25.453715z m0 209.408a25.746286 25.746286 0 0 1-25.965714-25.453715c0-14.043429 11.702857-25.453714 26.038857-25.453714 14.336 0 26.038857 11.410286 26.038857 25.453714 0 14.043429-11.702857 25.453714-26.038857 25.453715z m0 212.114285a25.746286 25.746286 0 0 1-25.965714-25.526857c0-14.043429 11.702857-25.453714 26.038857-25.453714 14.336 0 26.038857 11.410286 26.038857 25.453714 0 14.043429-11.702857 25.453714-26.038857 25.453714z" fill="#d25151"></path></g></svg>
-
-    </div>
-                        <div class="text ps-3">
-                          <h5 class="textcolor">Geospatial Data Management
-                          </h5>
-                          <div class="secondaryfont textcolor">
-                            Data Storage , Import, Export, 
-Version Control & Metadata management 
-                            </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="col-sm-6">
-                    <a href="#">
-                      <div class="d-flex align-items-center py-3 px-1 rounded-3">
-                        <div class="icon px-3 bg-danger-subtle rounded-3 fs-1">
-<svg  height="44" class="pb-2" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="layer1"> <path d="M 0 0 L 0 1.3535156 L 2.2851562 5.9238281 L 0 7.0664062 L 0 8.1855469 L 2.7324219 6.8183594 L 5.9882812 13.330078 L 0 16.324219 L 0 17.441406 L 7.3300781 13.777344 L 0.44140625 0 L 0 0 z M 1.5585938 0 L 6.2226562 9.3300781 L 8.1347656 8.3730469 L 8.1132812 8.2382812 C 8.1099813 8.2168872 8.1073687 8.1953911 8.1054688 8.1738281 L 8.0292969 7.3574219 C 8.0276269 7.3418299 8.0263306 7.3261999 8.0253906 7.3105469 L 6.6699219 7.9882812 L 3.9765625 2.6015625 L 9.1777344 0 L 6.9433594 0 L 3.5292969 1.7070312 L 2.6757812 0 L 1.5585938 0 z M 12.097656 0 L 12.425781 0.65820312 L 12.445312 0.65234375 C 12.476772 0.64230525 12.508716 0.63383133 12.541016 0.62695312 L 13.037109 0.5234375 C 13.070669 0.5164925 13.104569 0.511277 13.138672 0.5078125 L 13.453125 0.47460938 L 13.214844 0 L 12.097656 0 z M 20 1.3242188 L 18.238281 2.2050781 L 18.517578 2.4980469 C 18.540988 2.5223019 18.563144 2.5477257 18.583984 2.5742188 L 18.894531 2.9726562 C 18.898531 2.9778263 18.90243 2.9830353 18.90625 2.9882812 L 20 2.4414062 L 20 1.3242188 z M 13.746094 1.4492188 L 13.242188 1.5019531 L 12.746094 1.6054688 L 12.261719 1.7578125 L 11.796875 1.9550781 L 11.355469 2.2011719 L 10.939453 2.4902344 L 10.554688 2.8222656 L 10.205078 3.1894531 L 9.8964844 3.5878906 L 9.6269531 4.0175781 L 9.4042969 4.4726562 L 9.2285156 4.9492188 L 9.1015625 5.4375 L 9.0253906 5.9394531 L 9 6.4453125 L 9.0253906 7.2636719 L 9.1015625 8.0800781 L 9.2304688 8.8886719 L 9.4101562 9.6875 L 9.6386719 10.474609 L 9.9179688 11.246094 L 10.244141 11.996094 L 10.617188 12.724609 L 11.035156 13.429688 L 11.498047 14.107422 L 12.001953 14.753906 L 12.544922 15.367188 L 12.546875 15.367188 L 12.787109 15.583984 L 13.0625 15.757812 L 13.359375 15.886719 L 13.675781 15.966797 L 14 16 L 14.324219 15.966797 L 14.638672 15.886719 L 14.9375 15.757812 L 15.212891 15.583984 L 15.455078 15.367188 L 15.998047 14.753906 L 16.5 14.107422 L 16.964844 13.429688 L 17.380859 12.724609 L 17.753906 11.996094 L 18.080078 11.246094 L 18.359375 10.474609 L 18.589844 9.6875 L 18.767578 8.8886719 L 18.896484 8.0800781 L 18.972656 7.2636719 L 19 6.4453125 L 18.972656 5.9394531 L 18.896484 5.4375 L 18.771484 4.9492188 L 18.59375 4.4726562 L 18.371094 4.0175781 L 18.105469 3.5878906 L 17.794922 3.1894531 L 17.443359 2.8222656 L 17.058594 2.4902344 L 16.644531 2.2011719 L 16.203125 1.9550781 L 15.736328 1.7578125 L 15.251953 1.6054688 L 14.755859 1.5019531 L 14.251953 1.4492188 L 13.746094 1.4492188 z M 14 2.4453125 L 14.447266 2.4707031 L 14.890625 2.5449219 L 15.322266 2.6699219 L 15.734375 2.8417969 L 16.128906 3.0585938 L 16.494141 3.3183594 L 16.828125 3.6171875 L 17.126953 3.9511719 L 17.386719 4.3164062 L 17.603516 4.7089844 L 17.775391 5.125 L 17.900391 5.5546875 L 17.976562 5.9960938 L 18 6.4433594 L 17.976562 7.2011719 L 17.904297 7.953125 L 17.785156 8.6992188 L 17.621094 9.4394531 L 17.408203 10.164062 L 17.152344 10.875 L 16.849609 11.570312 L 16.505859 12.242188 L 16.119141 12.892578 L 15.695312 13.517578 L 15.228516 14.113281 L 14.728516 14.679688 L 14.572266 14.814453 L 14.396484 14.912109 L 14.203125 14.970703 L 14 14.998047 L 13.796875 14.970703 L 13.603516 14.912109 L 13.427734 14.814453 L 13.271484 14.679688 L 12.771484 14.113281 L 12.304688 13.517578 L 11.880859 12.892578 L 11.494141 12.242188 L 11.150391 11.570312 L 10.847656 10.875 L 10.591797 10.164062 L 10.378906 9.4394531 L 10.214844 8.6992188 L 10.095703 7.953125 L 10.023438 7.2011719 L 10 6.4433594 L 10.025391 5.9960938 L 10.099609 5.5546875 L 10.222656 5.125 L 10.394531 4.7089844 L 10.613281 4.3164062 L 10.873047 3.9511719 L 11.171875 3.6171875 L 11.505859 3.3183594 L 11.871094 3.0585938 L 12.263672 2.8417969 L 12.679688 2.6699219 L 13.109375 2.5449219 L 13.550781 2.4707031 L 14 2.4453125 z M 20 3.5585938 L 19.40625 3.8554688 L 19.492188 4.0332031 C 19.506667 4.0624951 19.51971 4.0924789 19.53125 4.1230469 L 19.708984 4.5996094 C 19.721194 4.6328854 19.731624 4.6667874 19.740234 4.7011719 L 19.763672 4.7929688 L 20 4.6757812 L 20 3.5585938 z M 13.917969 4.4433594 L 13.599609 4.4824219 L 13.291016 4.5742188 L 13 4.7089844 L 12.734375 4.8925781 L 12.503906 5.1152344 L 12.310547 5.3730469 L 12.160156 5.6601562 L 12.056641 5.9648438 L 12.005859 6.28125 L 12.005859 6.6054688 L 12.056641 6.921875 L 12.160156 7.2265625 L 12.310547 7.5117188 L 12.503906 7.7695312 L 12.734375 7.9902344 L 13 8.1738281 L 13.291016 8.3125 L 13.599609 8.4023438 L 13.917969 8.4414062 L 14.240234 8.4355469 L 14.556641 8.3691406 L 14.857422 8.2539062 L 15.136719 8.09375 L 15.386719 7.890625 L 15.599609 7.6503906 L 15.771484 7.3769531 L 15.896484 7.0820312 L 15.974609 6.7695312 L 16 6.4472656 L 16 6.4453125 L 15.974609 6.125 L 15.896484 5.8125 L 15.771484 5.515625 L 15.599609 5.2441406 L 15.386719 5.0039062 L 15.136719 4.796875 L 14.857422 4.6367188 L 14.556641 4.5234375 L 14.240234 4.4570312 L 13.917969 4.4433594 z M 14 5.4433594 L 14.220703 5.4707031 L 14.433594 5.5449219 L 14.623047 5.6640625 L 14.783203 5.8222656 L 14.902344 6.0097656 L 14.974609 6.2226562 L 15 6.4453125 L 14.974609 6.6660156 L 14.902344 6.8789062 L 14.783203 7.0683594 L 14.623047 7.2285156 L 14.433594 7.3476562 L 14.220703 7.421875 L 14 7.4472656 L 13.777344 7.421875 L 13.564453 7.3476562 L 13.376953 7.2285156 L 13.21875 7.0683594 L 13.099609 6.8789062 L 13.025391 6.6660156 L 13 6.4453125 L 13.025391 6.2226562 L 13.099609 6.0097656 L 13.21875 5.8222656 L 13.376953 5.6640625 L 13.564453 5.5449219 L 13.777344 5.4707031 L 14 5.4433594 z M 8.3183594 9.3984375 L 6.6699219 10.222656 L 11.558594 20 L 12.675781 20 L 10.351562 15.351562 L 10.960938 15.046875 L 10.708984 14.722656 C 10.696084 14.706126 10.683715 14.689185 10.671875 14.671875 L 10.367188 14.226562 L 9.90625 14.457031 L 8.0117188 10.669922 L 8.5722656 10.390625 L 8.4492188 9.9667969 C 8.4433805 9.9467824 8.4381698 9.9265902 8.4335938 9.90625 L 8.3183594 9.3984375 z M 20 9.4101562 L 19.636719 9.5917969 L 19.566406 9.9042969 C 19.561306 9.9259709 19.555408 9.947468 19.548828 9.96875 L 19.318359 10.755859 C 19.312459 10.775589 19.305938 10.795133 19.298828 10.814453 L 19.271484 10.892578 L 20 10.527344 L 20 9.4101562 z M 17.939453 13.744141 L 17.826172 13.9375 C 17.814482 13.95745 17.802103 13.977004 17.789062 13.996094 L 17.324219 14.673828 C 17.316619 14.684398 17.308801 14.694818 17.300781 14.705078 L 19.949219 20 L 20 20 L 20 17.865234 L 17.939453 13.744141 z M 7.7773438 14.669922 L 0 18.558594 L 0 19.675781 L 7.3300781 16.011719 L 9.3242188 20 L 10.441406 20 L 7.7773438 14.669922 z " style="fill:#488cf9; fill-opacity:1; stroke:none; stroke-width:0px;"></path> </g> </g></svg>
-                        </div>
-                        <div class="text ps-3">
-                          <h5 class="textcolor">Mapping & Visualization</h5>
-                          <div  class="secondaryfont textcolor">2D & 3D maps, Thematic Mapping
-                            , Layer Management
-                            Real-Time Mapping etc.</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="col-sm-6">
-                    <a href="#">
-                      <div class="d-flex align-items-center py-3 px-1 rounded-3">
-                        <div class="icon px-3 bg-success-subtle rounded-3 fs-1">
-                           <svg  height="40"  viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 12.48V7.32007C20 6.2592 19.5786 5.24178 18.8284 4.49164C18.0783 3.74149 17.0609 3.32007 16 3.32007H6C4.93913 3.32007 3.92178 3.74149 3.17163 4.49164C2.42149 5.24178 2 6.2592 2 7.32007V17.3201C2 18.3809 2.42149 19.3984 3.17163 20.1485C3.92178 20.8986 4.93913 21.3201 6 21.3201H12.53" stroke="#853232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M17.0303 12.4801L2.82031 4.89014" stroke="#853232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M3.58008 20.5101L9.90009 8.68005" stroke="#853232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M18.44 22.2101C20.3399 22.2101 21.88 20.6699 21.88 18.7701C21.88 16.8702 20.3399 15.3301 18.44 15.3301C16.5401 15.3301 15 16.8702 15 18.7701C15 20.6699 16.5401 22.2101 18.44 22.2101Z" stroke="#853232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M23.0009 23.3201L20.8809 21.2001" stroke="#853232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-
-                        </div>
-                        <div class="text ps-3">
-                          <h5 class="textcolor">Geospatial Analysis</h5>
-                          <div  class="secondaryfont textcolor">
-                            Spatial Queries & Geoprocessing Tools
-Network Analysis
-Terrain & Elevation Analysis
-Geostatistics
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="col-sm-6">
-                    <a href="#">
-                      <div class="d-flex align-items-center py-3 px-1 rounded-3">
-                        <div class="icon px-3 bg-secondary-subtle rounded-3 fs-1">
-                           <svg  class="pb-2" height="40"  fill="#6468d3" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg" stroke="#6468d3" stroke-width="21.119999999999997"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="7.68"></g><g id="SVGRepo_iconCarrier"> <path d="M1706.67 106.667h-320V0h320C1824.49 0 1920 95.513 1920 213.333v320h-106.67v-320c0-58.91-47.75-106.666-106.66-106.666ZM533.333 0v106.667h-320c-58.91 0-106.666 47.756-106.666 106.666v320H0v-320C0 95.513 95.513 0 213.333 0h320ZM0 1386.67h106.667v320c0 58.91 47.756 106.66 106.666 106.66h320V1920h-320C95.513 1920 0 1824.49 0 1706.67v-320ZM1386.67 1920v-106.67h320c58.91 0 106.66-47.75 106.66-106.66v-320H1920v320c0 117.82-95.51 213.33-213.33 213.33h-320ZM1280 960c0 176.73-143.27 320-320 320-176.731 0-320-143.27-320-320 0-176.731 143.269-320 320-320 176.73 0 320 143.269 320 320Zm106.67 0c0 235.64-191.03 426.67-426.67 426.67-235.641 0-426.667-191.03-426.667-426.67 0-235.641 191.026-426.667 426.667-426.667 235.64 0 426.67 191.026 426.67 426.667Z" fill-rule="evenodd"></path> </g></svg>
-                          </div>
-                        <div class="text ps-3">
-                          <h5 class="textcolor">Data Capture & Editing</h5>
-                          <div class="secondaryfont textcolor">Digitizing Tools
-                            Attribute Editing
-                            Field Data Collection (Offline Sync)
-                            GPS Integration</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="col-sm-6">
-                    <a href="#">
-                      <div class="d-flex align-items-center py-3 px-1 rounded-3">
-                        <div class="icon px-3 bg-body-tertiary rounded-3 fs-1">
-                         <svg  height="40"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5.5 15.5C5.5 14.5572 5.5 14.0858 5.79289 13.7929C6.08579 13.5 6.55719 13.5 7.5 13.5H8.5C9.44281 13.5 9.91421 13.5 10.2071 13.7929C10.5 14.0858 10.5 14.5572 10.5 15.5V16.5C10.5 17.4428 10.5 17.9142 10.2071 18.2071C9.91421 18.5 9.44281 18.5 8.5 18.5C7.08579 18.5 6.37868 18.5 5.93934 18.0607C5.5 17.6213 5.5 16.9142 5.5 15.5Z" stroke="#606b0a" stroke-width="1.5"></path> <path d="M5.5 8.5C5.5 7.08579 5.5 6.37868 5.93934 5.93934C6.37868 5.5 7.08579 5.5 8.5 5.5C9.44281 5.5 9.91421 5.5 10.2071 5.79289C10.5 6.08579 10.5 6.55719 10.5 7.5V8.5C10.5 9.44281 10.5 9.91421 10.2071 10.2071C9.91421 10.5 9.44281 10.5 8.5 10.5H7.5C6.55719 10.5 6.08579 10.5 5.79289 10.2071C5.5 9.91421 5.5 9.44281 5.5 8.5Z" stroke="#606b0a" stroke-width="1.5"></path> <path d="M13.5 15.5C13.5 14.5572 13.5 14.0858 13.7929 13.7929C14.0858 13.5 14.5572 13.5 15.5 13.5H16.5C17.4428 13.5 17.9142 13.5 18.2071 13.7929C18.5 14.0858 18.5 14.5572 18.5 15.5C18.5 16.9142 18.5 17.6213 18.0607 18.0607C17.6213 18.5 16.9142 18.5 15.5 18.5C14.5572 18.5 14.0858 18.5 13.7929 18.2071C13.5 17.9142 13.5 17.4428 13.5 16.5V15.5Z" stroke="#606b0a" stroke-width="1.5"></path> <path d="M13.5 7.5C13.5 6.55719 13.5 6.08579 13.7929 5.79289C14.0858 5.5 14.5572 5.5 15.5 5.5C16.9142 5.5 17.6213 5.5 18.0607 5.93934C18.5 6.37868 18.5 7.08579 18.5 8.5C18.5 9.44281 18.5 9.91421 18.2071 10.2071C17.9142 10.5 17.4428 10.5 16.5 10.5H15.5C14.5572 10.5 14.0858 10.5 13.7929 10.2071C13.5 9.91421 13.5 9.44281 13.5 8.5V7.5Z" stroke="#606b0a" stroke-width="1.5"></path> <path opacity="0.5" d="M22 14C22 17.7712 22 19.6569 20.8284 20.8284C19.6569 22 17.7712 22 14 22" stroke="#606b0a" stroke-width="1.5" stroke-linecap="round"></path> <path opacity="0.5" d="M10 22C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14" stroke="#606b0a" stroke-width="1.5" stroke-linecap="round"></path> <path opacity="0.5" d="M10 2C6.22876 2 4.34315 2 3.17157 3.17157C2 4.34315 2 6.22876 2 10" stroke="#606b0a" stroke-width="1.5" stroke-linecap="round"></path> <path opacity="0.5" d="M14 2C17.7712 2 19.6569 2 20.8284 3.17157C22 4.34315 22 6.22876 22 10" stroke="#606b0a" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
-                        </div>
-                        <div class="text ps-3">
-                          <h5 class="textcolor">Geocoding & Reverse Geocoding</h5>
-                          <div  class="secondaryfont textcolor">Geocoding (Address to Coordinates)
-                            Reverse Geocoding
-                            Batch Processing</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="col-sm-6">
-                    <a href="#">
-                      <div class="d-flex align-items-center py-3 px-1 rounded-3">
-                        <div class="icon px-3 bg-info-subtle rounded-3 fs-1">
-                          <svg height="45"  viewBox="0 0 1024 1024" class="icon pb-2" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M510.5 958.5c247.2 0 447.5-200.4 447.5-447.5S757.7 63.5 510.5 63.5 63 263.8 63 511s200.4 447.5 447.5 447.5z" fill="#ff8800"></path><path d="M510.5 902.6c-216.3 0-391.6-175.3-391.6-391.6S294.2 119.4 510.5 119.4s391.6 175.3 391.6 391.6-175.3 391.6-391.6 391.6z" fill="#FFFFFF"></path><path d="M405.8 558.9h-2c-31 0-43-21.4-27-47.8L524 269.2c33.5-55.1 44.2-50.2 24 11l-45.1 136.1c-9.7 29.4 7.5 52.9 38.4 52.9H628l-0.4 0.4h2c31 0 43 21.4 27 47.8L515.7 749c-36.9 60.7-48.8 55.3-26.4-12.3l41.3-124.5c9.7-29.4-7.5-52.9-38.4-52.9h-86.7l0.3-0.4z" fill="#ff8800"></path></g></svg>
-                        </div>
-                        <div class="text ps-3">
-                          <h5 class="textcolor">Performance & Scalability</h5>
-                          <div  class="secondaryfont textcolor">Large Dataset Handling
-                            Cloud Integration (AWS, Azure)
-                            Caching & Tiling for High Performance
-                            .</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            
-          
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li> -->
-            <li class="nav-item dropdown dropdown-mega position-static ">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Solutions &amp; Resources</a>
-              <div class="dropdown-menu  rounded-3 border-0 shadow">
-                <div class="mega-content px-4">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-12 col-sm-12 col-md-3 py-4">
-                        <h5 class="gchead1">Solutions</h5>
-                        <div class="list-group gc-list-group">
-                          <a class="list-group-item gc-list-group-item" href="#">Smart City Management</a>
-                          <a class="list-group-item gc-list-group-item" href="#">Logistics & Fleet Management</a>
-                          <a class="list-group-item gc-list-group-item" href="#">Cadastral & Land Administration</a>
-                          <a class="list-group-item gc-list-group-item" href="#">Real Estate & Property Management</a>
-
-                          <a class="list-group-item gc-list-group-item" href="#">Indoor Mapping & Navigation</a>
-                          <a class="list-group-item gc-list-group-item" href="#">Asset Location & Tracking</a>
-
-                        </div>
-                      </div>
-                      
-                     
-                      <div class="col-12 col-sm-12 col-md-3 py-4">
-                        <h5 class="gchead1">Resources</h5>
-                        <div class="list-group gc-list-group">
-                          <a class="list-group-item gc-list-group-item" href="#">Documentation</a>
-                          <a class="list-group-item gc-list-group-item" href="#">Case Studies</a>
-                          <a class="list-group-item gc-list-group-item" href="#">Blogs & Article</a>
-                          <a class="list-group-item gc-list-group-item" href="#">Webinars</a>
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-6 col-md-3 py-4">
-                       
-                        <div class="card card-dark">
-                          <h5 class="p-4 preenter_menu">Empower 
-                          <!-- <h3 class="preenter">Navigate -->
-
-                            <!-- EN: Login -->
-                            <a class="enter_menu">  <!-- EN: to your Account -->
-                              Your Geospatial Journey
-                            </a>
-                          </h5>
-                    <img src="assets/images/travelling.svg" class="img-fluid" alt="image">
-                    <div class="card-body">
-                      <p class="card-text secondaryfont">
-                        Unlock expert tools and resources designed to help you harness the full potential of your geospatial data, ensuring success at every step.
-                       
-
-                        </p>
-                      </div>
-                  </div>
-                      </div>
-                      <div class="col-12 col-sm-6 col-md-3 py-4">
-                        <h5 class="gchead1">What makes us different?</h5>
-                          <p class="secondaryfont">
-                         
-                            We offer expert-driven resources like detailed documentation, case studies, and webinars, ensuring you have everything needed to maximize your geospatial data and make informed decisions with ease.
-                           
-  
-                          </p>
-                          <a href="#" class="button-80" role="button">Read more
-                            <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.996 511.996" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965 H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099 c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"></path> </g> </g> </g></svg>
-
-                          </a>
-                      </div>
-
-                   
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">Support</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-
-            
-          </ul>
-          <div class="d-flex ms-auto">
-              <!-- <div class="input-group">
-                  <input class="form-control border-0 mr-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-primary border-0" type="submit">Search</button>
-              </div> -->
-
-          <a class="bn39" href="/"><span class="bn39span">
-            
-            <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#fff" stroke-width="2"></path> <path d="M13.9137 15.1001L15.32 11.1939C15.8932 9.60167 14.353 8.06149 12.7608 8.6347L8.85455 10.0409C7.1758 10.6453 7.39162 13.085 9.15038 13.3853C9.87655 13.5093 10.4454 14.0781 10.5694 14.8043C10.8696 16.5631 13.3094 16.7789 13.9137 15.1001Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-            View Demo</span></a>
-
-
-
-            </div>
-        </div>
-      </div>
-    </nav>
-
-
-    <div class="container-fluid  px-4 py-5 bg-dark ">
-      <div class="container">
-      <div class="row flex-lg-row-reverse align-items-center g-5 py-1 col-xxl-10">
-        <div class="col-10 col-sm-8 col-lg-6">
-          <img src="assets/images/im.svg" class="d-block mx-lg-auto img-fluid roundedim" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-        </div>
-        <div class="col-lg-6 ">
-          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 gchead2">Unlock the Power of Geospatial Intelligence</h1>
-          <p class="lead text-white secondaryfont">
-            
-            Transform the way you manage, visualize, and analyze geographic data.
-            Our platform offers powerful tools for geospatial data management, real-time mapping, and advanced analysis. From 2D and 3D visualizations to field data collection and asset tracking, we provide seamless solutions to bring your data to life and drive smarter decisions.
-          </p>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <!-- <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button> -->
-          
-
-               
-        
-<a class="glow-on-hover secondaryfont" type="button">Know about GIS 
-
-  <svg width="15"  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.003 512.003" xml:space="preserve" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#ffffff;" d="M5.205,506.802c6.928,6.928,18.148,6.928,25.077,0L476.534,60.551v240.943 c0,9.801,7.933,17.735,17.735,17.735c9.801,0,17.735-7.933,17.735-17.735V17.739c0-9.801-7.933-17.735-17.735-17.735H210.514 c-9.801,0-17.735,7.933-17.735,17.735s7.933,17.735,17.735,17.735h240.931L5.205,481.725 C-1.735,488.654-1.735,499.874,5.205,506.802z"></path> </g></svg>
-</a>
-
-            
-         
-          </div>
-        </div>
-      </div>
-
-    </div>
-    </div>
-  
-
-
-    <!-- <section style="background: #000;margin-top: 0px;padding-top: 0px;" >
-
-      
-
-      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 gchead2 pt-5 mt-2 ps-5 mb-3" >Geospatial Solutions</h1>
-          
-        
-     
-         <div class="swiffy-slider slider-item-nogap slider-nav-autoplay slider-indicators-round slider-nav-animation" style="--swiffy-slider-nav-light: #000; --swiffy-slider-animation-duration: 4;">
-          <ul class="slider-container">
-          <li class="">
-              <div class="card rounded-0 h-100 gccard">
-                  <div class="row g-0 h-100">
-                      <div class="col-md-6 col-xl-5 d-flex align-items-center p-2 p-md-3 p-xl-5">
-                          <div class="card-body p-1 p-md-3 p-xl-5">
-                              <p class="lead ">Data management</p>
-                              <h2 class="card-title slideh2" >Geospatial Data Management</h2>
-                              
-                          </div>
-                      </div>
-                      <div class="col-md-6 col-xl-7">
-                          <img src="assets/images/travelling.svg" class="card-img d-none d-md-block" loading="lazy" style="height: 100%; object-fit: cover;" alt="...">
-                          <img src="assets/images/travelling.svg" class="card-img d-block d-md-none" loading="lazy" style="width: 100%; object-fit: cover;" alt="...">
-                      </div>
-                  </div>
-              </div>
-          </li>
-         
-     
-
-      
-  
-  
-      </ul>
-  
-      <button type="button" class="slider-nav" aria-label="Go left"></button>
-      <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
-  
-      <div class="slider-indicators">
-          <button class="" aria-label="Go to slide"></button>
-          <button aria-label="Go to slide" class="active"></button>
-          <button aria-label="Go to slide"></button>
-      </div>
-  </div>
-    </section> -->
-  
-
-  
-<section>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 gchead4 pt-5 mt-2 mb-3" >Unleashing Potential</h1>
-        <!-- <p class="ps-2  display-6 text-muted">We offer more than what you want</p>  -->
-   
-         <h5 class="p-4 preenter_head">Capabilities 
-                          <!-- <h3 class="preenter">Navigate -->
-
-                            <!-- EN: Login -->
-                            <a class="enter_head">  <!-- EN: to your Account -->
-                              That Go Further
-                            </a>
-                          </h5>
-
-
-        <div class="swiffy-slider slider-nav-autoplay slider-item-show3 slider-item-reveal  slider-nav-round slider-nav-visible slider-indicators-outside  slider-indicators-round slider-indicators-dark slider-nav-animation ">
-          <ul class="slider-container py-4">
-              <li class="">
-                  <div class="card  h-100">
-                      <div class="ratio ratio-16x9">
-                          <img src="assets/images/space.jpg" class="card-img-top" loading="lazy" alt="...">
-                      </div>
-                      <div class="card-body p-3 p-xl-5">
-                          <h3 class="card-title h5 sm-card-title">Geospatial Data Management</h3>
-                          <p class="card-text secondaryfont">We support spatial databases and formats like CSV, GeoTIFF, and shapefiles. Our system enables data import/export, version control for tracking changes, and metadata management for enhanced organization and compliance.</p>
-                          
-                          
-                          
-
-                          <div>
-                            
-                            <a href="#" class="button-80" role="button">Read more
-                            <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.996 511.996" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965 H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099 c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"></path> </g> </g> </g></svg>
-
-                          </a>
-
-                          </div>
-                      </div>
-                  </div>
-              </li>
-              <li class="">
-                  <div class="card  h-100">
-                      <div class="ratio ratio-16x9">
-                          <img src="assets/images/analysis.jpg" class="card-img-top" loading="lazy" alt="...">
-                      </div>
-                      <div class="card-body p-3 p-xl-5">
-                          <h3 class="card-title h5 sm-card-title">Geospatial Analysis</h3>
-                          <p class="card-text secondaryfont">We provide spatial queries, geoprocessing tools, network analysis for routes, terrain and elevation analysis, and geostatistics to study spatial patterns and trends.</p>
-                         <a href="#" class="button-80" role="button">Read more
-                            <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.996 511.996" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965 H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099 c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"></path> </g> </g> </g></svg>
-
-                          </a>
-                      </div>
-                  </div>
-              </li>
-              <li class="">
-                  <div class="card  h-100">
-                      <div class="ratio ratio-16x9">
-                          <img src="assets/images/survey.jpg" class="card-img-top" loading="lazy" alt="...">
-                      </div>
-                      <div class="card-body p-3 p-xl-5">
-                          <h3 class="card-title h5 sm-card-title">Data Capture & Editing</h3>
-                          <p class="card-text secondaryfont">We offer digitizing tools for creating map features, attribute editing, offline field data collection, and GPS integration for location-based updates and tracking.</p>
-                          <a href="#" class="button-80" role="button">Read more
-                            <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.996 511.996" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965 H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099 c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"></path> </g> </g> </g></svg>
-
-                          </a>
-                      </div>
-                  </div>
-              </li>
-
-
-
-              <li class="">
-                <div class="card  h-100">
-                    <div class="ratio ratio-16x9">
-                        <img src="assets/images/visualize.jpg" class="card-img-top" loading="lazy" alt="...">
-                    </div>
-                    <div class="card-body p-3 p-xl-5">
-                        <h3 class="card-title h5 sm-card-title">Mapping & Visualization</h3>
-                        <p class="card-text secondaryfont">We provide spatial queries, geoprocessing tools, network analysis for routes, terrain and elevation analysis, and geostatistics to study spatial patterns and trends.</p>
-                    <a href="#" class="button-80" role="button">Read more
-                            <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.996 511.996" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965 H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099 c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"></path> </g> </g> </g></svg>
-
-                          </a>
-                    </div>
-                </div>
-            </li>
-
-              
-              <li class="slide-visible">
-                  <div class="card  h-100">
-                      <div class="ratio ratio-16x9">
-                          <img src="assets/images/code.jpg" class="card-img-top" loading="lazy" alt="...">
-                      </div>
-                      <div class="card-body  p-3 p-xl-5">
-                          <h3 class="card-title h5 sm-card-title">Geocoding & Reverse Geocoding</h3>
-                          <p class="card-text secondaryfont">We convert addresses to geographic coordinates and vice versa, with batch processing for large datasets.</p>
-                         <a href="#" class="button-80" role="button">Read more
-                            <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.996 511.996" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965 H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099 c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"></path> </g> </g> </g></svg>
-
-                          </a>
-                      </div>
-                  </div>
-              </li>
-              
-          </ul>
-      
-          <button type="button" class="slider-nav" aria-label="Go left"></button>
-          <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
-      
-          <div class="slider-indicators">
-              <button class="" aria-label="Go to slide"></button>
-              <button aria-label="Go to slide"></button>
-              <button aria-label="Go to slide"></button>
-              <button aria-label="Go to slide" class="active"></button>
-              <button aria-label="Go to slide"></button>
-          </div>
-      </div>
-
-      </div>
-    </div>
-  </div>
-
-
-</section>
-
-  <section class="bg-dark">
-    <!-- <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 gchead3 pt-5 mt-2 ps-2 mb-3" >Geospatial endurance!!</h1>
-   
-     <h5 class="p-4 preenter_head_b">Powerful 
-                    
-                        <a class="enter_head_b"> 
-                      features and flexibility
-                        </a>
-                      </h5> -->
-
-
-<div class="container" data-aos="fade-up"
-data-aos-anchor-placement="top-center">
-  <div class="row">
-    <div class="col">
-      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 gchead3 pt-5 mt-2  mb-3" >Geospatial endurance!!</h1>
-      <!-- <p class="ps-2  display-6 text-muted">We offer more than what you want</p>  -->
-  
-       <h5 class=" preenter_head_b">Powerful 
-                        <!-- <h3 class="preenter">Navigate -->
-  
-                          <!-- EN: Login -->
-                          <a class="enter_head_b">  <!-- EN: to your Account -->
-                        features and flexibility
-                          </a>
-                        </h5>
-
-    </div>
-  </div>
-  <div class="row">
     
-    <div class="col-md-8 pb-5">
-
-      <div class="row row-cols row-col align-items-stretch g-4">
-        <div class="col-md-6">
-          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 feature1" >
-            <div class="d-flex flex-column h-100 p-5 pb-3 text-white ">
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Performance & Scalability</h3>
-              <!-- <h2>dsds</h2> -->
-              <ul class="d-flex list-unstyled mt-auto">
-                <li class="me-auto">
-                  <!-- <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white"> -->
-                </li>
-                <li class="d-flex align-items-center me-3">
-                  <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
-                  <!-- <small>Earth</small> -->
-                </li>
-                <li class="d-flex align-items-center">
-                  <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
-                  <!-- <small>3d</small> -->
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-md-6">
-          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg feature2" >
-            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Customization & Extensibility</h3>
-              <ul class="d-flex list-unstyled mt-auto">
-                <li class="me-auto">
-                  <!-- <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white"> -->
-                </li>
-                <li class="d-flex align-items-center me-3">
-                  <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
-                  <!-- <small>india</small> -->
-                </li>
-                <li class="d-flex align-items-center">
-                  <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
-                  <!-- <small>4d</small> -->
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-  
-        
-      </div>
-
-
-
-
-        <!-- <div class="row">
-
-          <div class="col-md-3">1</div>
-
-          <div class="col-md-3">1</div>
-
-          <div class="col-md-3">1</div>
-
-          
-        </div>
+    <section class="home">
+      <div class="container">
+        <!-- <img src="assets/images/im.svg" class="d-block mx-lg-auto img-fluid roundedim" alt="Bootstrap Themes" width="700" height="500" loading="lazy"> -->
         <div class="row">
 
-          <div class="col-md-3">1</div>
+          <div class="col-md-6">
+            <img data-aos="fade-right" src="assets/images/im.svg" class="d-block mx-lg-auto img-fluid roundedim" alt="Bootstrap Themes"
+              width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-md-6">
+            <div class="description">
+              <h1 class="title" data-sr-id="0"  data-aos="fade-left"
+                style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 0.6s ease-in 0.3s, transform 0.6s ease-in 0.3s;">
+                <span class="gradient-text">Unlock the Power of </span>Geospatial Intelligence
+              </h1>
+              <p class="paragraph" data-sr-id="2"  data-aos="fade-left"
+                style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all, opacity 0.6s ease-in 0.8s, transform 0.6s ease-in 0.8s;">
+                Transform the way you manage, visualize, and analyze geographic data. Our platform offers powerful tools
+                for geospatial data management, real-time mapping, and advanced analysis. From 2D and 3D visualizations
+                to field data collection and asset tracking, we provide seamless solutions to bring your data to life
+                and drive smarter decisions.
 
-          <div class="col-md-3">1</div>
+              </p>
 
-          <div class="col-md-3">1</div>
+              <a href="#" type="submit" class="btny" aria-label="submit">
+                <span>Know about GIS </span>
+                <svg width="15" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.003 512.003" xml:space="preserve"
+                  fill="#ffffff" stroke="#ffffff">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path style="fill:#ffffff;"
+                      d="M5.205,506.802c6.928,6.928,18.148,6.928,25.077,0L476.534,60.551v240.943 c0,9.801,7.933,17.735,17.735,17.735c9.801,0,17.735-7.933,17.735-17.735V17.739c0-9.801-7.933-17.735-17.735-17.735H210.514 c-9.801,0-17.735,7.933-17.735,17.735s7.933,17.735,17.735,17.735h240.931L5.205,481.725 C-1.735,488.654-1.735,499.874,5.205,506.802z">
+                    </path>
+                  </g>
+                </svg>
+              </a>
 
-          
-        </div> -->
-    </div>
-
-    <div class="col-md-4 pt-0 pb-5">
-      <div class="h-100 p-0 bg-body-tertiary-no text-white border-0 rounded-3">
-        <h2>Optimized Performance, Scalability, and Customization</h2>
-        <p class="secondaryfont">Handle massive geospatial datasets efficiently while utilizing cloud infrastructure for scalable storage and processing. Ensure smooth map rendering with caching and tiling, and offer extensive customization through custom tools and scripting support for automation and advanced workflows.</p>
-        <a class="btn btn-outline-secondary"  href="#">Read more</a>
-      </div>
-    </div>
-
-
-  </div>
-
-</div>
-    
-  </section>
-
-  <!-- <section class="">
-
-    <div class="container px-4 py-0">
-
-      
-
-                          </div>
-       </section> -->
-                          <section class="map animbg88">
-
-
-                          
-
-                         
-
-
-
-<div class="container" data-aos="fade-up"
-data-aos-anchor-placement="top-center">
-<div class="row flex-lg-row-reverse align-items-center 0g-5 0py-5">
-  <div class="col-10 col-sm-8 col-lg-6">
-    <img src="assets/images/asset.svg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-  </div>
-  <div class="col-lg-6">
-    <h1 class="display-5 fw-bold text-body-emphasis lh-1  gchead4 pt-0 mt-0  " >Navigate, Manage, Succeed</h1>
-   
-     <h5 class=" preenter_head_c ">Advanced
-                      <!-- <h3 class="preenter">Navigate -->
-
-                        <!-- EN: Login -->
-                        <a class="enter_head_c">  <!-- EN: to your Account -->
-                           Geospatial Solutions
-                        </a>
-                      </h5>
-    <!-- <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned hero with image</h1> -->
-    <p class="lead secondaryfont">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-   
-  </div>
-</div>
-
-
-<!-- <div class="row">
-                                
-
-                                <div class="col-md-12  align-items-start ">
-                                 
-            <p class="text-body-secondary secondaryfont h5">A comprehensive suite of geospatial platforms tailored for diverse industries, including smart city management, logistics, real estate, land administration, and asset tracking. These solutions enable real-time monitoring and management of urban infrastructure, optimize delivery routes and vehicle tracking, assist in property analysis and land administration, provide indoor navigation for large spaces, and track distributed assets using GPS and GIS technology for improved decision-making and operational efficiency.</p>
-           
-                                </div>
-
-                              </div> -->
-
-                              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3  ">
-                              
-
-                                       <!-- <svg width="100" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17 22V16C17 14.1144 17 13.1716 16.4142 12.5858C15.8284 12 14.8856 12 13 12H11C9.11438 12 8.17157 12 7.58579 12.5858C7 13.1716 7 14.1144 7 16V22" stroke="#1C274C" stroke-width="1.5"></path> <path opacity="0.5" d="M21 21.9999V7.77195C21 6.4311 21 5.76068 20.6439 5.24676C20.2877 4.73283 19.66 4.49743 18.4045 4.02663C15.9492 3.10591 14.7216 2.64555 13.8608 3.2421C13 3.83864 13 5.14974 13 7.77195V11.9999" stroke="#1C274C" stroke-width="1.5"></path> <path opacity="0.5" d="M3.25 8C3.25 8.41421 3.58579 8.75 4 8.75C4.41421 8.75 4.75 8.41421 4.75 8H3.25ZM9.25 8C9.25 8.41421 9.58579 8.75 10 8.75C10.4142 8.75 10.75 8.41421 10.75 8H9.25ZM9.70711 4.79289L9.17678 5.32322L9.17678 5.32322L9.70711 4.79289ZM6.25 4C6.25 4.41421 6.58579 4.75 7 4.75C7.41421 4.75 7.75 4.41421 7.75 4H6.25ZM7.75 2C7.75 1.58579 7.41421 1.25 7 1.25C6.58579 1.25 6.25 1.58579 6.25 2H7.75ZM3.75 22V12H2.25V22H3.75ZM7 8.75C7.96401 8.75 8.61157 8.75159 9.09461 8.81654C9.55607 8.87858 9.75357 8.9858 9.88388 9.11612L10.9445 8.05546C10.4891 7.59999 9.92227 7.41432 9.29448 7.32991C8.68826 7.24841 7.92161 7.25 7 7.25V8.75ZM11.75 12C11.75 11.0784 11.7516 10.3117 11.6701 9.70552C11.5857 9.07773 11.4 8.51093 10.9445 8.05546L9.88388 9.11612C10.0142 9.24643 10.1214 9.44393 10.1835 9.90539C10.2484 10.3884 10.25 11.036 10.25 12H11.75ZM7 7.25C6.07839 7.25 5.31174 7.24841 4.70552 7.32991C4.07773 7.41432 3.51093 7.59999 3.05546 8.05546L4.11612 9.11612C4.24643 8.9858 4.44393 8.87858 4.90539 8.81654C5.38843 8.75159 6.03599 8.75 7 8.75V7.25ZM3.75 12C3.75 11.036 3.75159 10.3884 3.81654 9.90539C3.87858 9.44393 3.9858 9.24643 4.11612 9.11612L3.05546 8.05546C2.59999 8.51093 2.41432 9.07773 2.32991 9.70552C2.24841 10.3117 2.25 11.0784 2.25 12H3.75ZM4.75 8V6.5H3.25V8H4.75ZM6 5.25H8V3.75H6V5.25ZM9.25 6.5V8H10.75V6.5H9.25ZM8 5.25C8.49261 5.25 8.78661 5.25159 8.99734 5.27992C9.09389 5.29291 9.14226 5.3082 9.16404 5.31716C9.16908 5.31923 9.1724 5.32085 9.17433 5.32186C9.17624 5.32286 9.17708 5.32341 9.17717 5.32347C9.17723 5.32351 9.177 5.32335 9.17665 5.32307C9.1763 5.32279 9.17632 5.32277 9.17678 5.32322L10.2374 4.26256C9.92841 3.95354 9.55269 3.84109 9.19721 3.7933C8.8633 3.74841 8.4502 3.75 8 3.75V5.25ZM10.75 6.5C10.75 6.0498 10.7516 5.6367 10.7067 5.30279C10.6589 4.94731 10.5465 4.57159 10.2374 4.26256L9.17678 5.32322C9.17723 5.32368 9.17721 5.3237 9.17693 5.32335C9.17665 5.323 9.17649 5.32277 9.17653 5.32283C9.17659 5.32292 9.17714 5.32376 9.17814 5.32567C9.17915 5.3276 9.18077 5.33092 9.18284 5.33596C9.1918 5.35774 9.20709 5.40611 9.22008 5.50266C9.24841 5.71339 9.25 6.00739 9.25 6.5H10.75ZM4.75 6.5C4.75 6.00739 4.75159 5.71339 4.77992 5.50266C4.79291 5.40611 4.8082 5.35774 4.81716 5.33596C4.81923 5.33092 4.82085 5.3276 4.82186 5.32567C4.82286 5.32376 4.82341 5.32292 4.82347 5.32283C4.82351 5.32277 4.82335 5.323 4.82307 5.32335C4.82279 5.3237 4.82277 5.32368 4.82322 5.32322L3.76256 4.26256C3.45354 4.57159 3.34109 4.94731 3.2933 5.30279C3.24841 5.6367 3.25 6.0498 3.25 6.5H4.75ZM6 3.75C5.5498 3.75 5.1367 3.74841 4.80279 3.7933C4.44731 3.84109 4.07159 3.95354 3.76256 4.26256L4.82322 5.32322C4.82368 5.32277 4.8237 5.32279 4.82335 5.32307C4.823 5.32335 4.82277 5.32351 4.82283 5.32347C4.82292 5.32341 4.82376 5.32286 4.82567 5.32186C4.8276 5.32085 4.83092 5.31923 4.83596 5.31716C4.85774 5.3082 4.90611 5.29291 5.00266 5.27992C5.21339 5.25159 5.50739 5.25 6 5.25V3.75ZM7.75 4V2H6.25V4H7.75Z" fill="#1C274C"></path> <path d="M22 22L2 22" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> <path opacity="0.5" d="M10 15H14" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> <path opacity="0.5" d="M10 18H14" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> </g></svg> -->
-                      
-                      
-                                   
-                               
-                                    <div class="col">
-                                      <div class="card card_pro card-1">
-                                        <h3>Smart City Management Platform</h3>
-                                        <p class="secondaryfont">A platform to monitor and manage urban infrastructure (traffic, waste, energy, and public safety) in real time using geospatial data</p>
-                                      </div>
-                                    </div>
-                                    <div class="col">
-                                      <div class="card card_pro card-2">
-
-                                       
-                                        <h3>Logistics and Fleet Management</h3>
-                                        <p class="secondaryfont">A geospatial tool designed for logistics, transportation, and e-commerce businesses to optimize delivery routes, track vehicles in real time, and enhance asset utilization.</p>
-                                      </div>
-                                    </div>
-                                    <div class="col">
-                                      <div class="card card_pro card-3">
-                                        <h3>Cadastral and Land Administration </h3>
-                                        <p class="secondaryfont">A GIS-based system for land parcel mapping, ownership tracking, and boundary resolution..</p>
-                                      </div>
-                                    </div>
-                                  <!-- </div>
-                                </div> -->
-
-                                </div>
-
-                                <div class="row mt-3  row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 ">
-                                  
-                              
-                               
-                                  <div class="col">
-                                    <div class="card card_pro card-4">
-                                      <h3>Real Estate and Property Management </h3>
-                                      <p class="secondaryfont">A GIS platform for property analysis, market trends, and asset management to support informed decisions.</p>
-                                    </div>
-                                  </div>
-                                  <div class="col">
-                                    <div class="card card_pro card-5">
-                                      <h3>Asset Location  Tracking</h3>
-                                      <p class="secondaryfont">GPS and GIS tools track real-time asset locations (e.g., vehicles, equipment) to optimize usage, monitor movement, and manage infrastructure like utility poles and pipelines.</p>
-                                    </div>
-                                  </div>
-                                  <div class="col">
-                                    <div class="card card_pro card-6">
-                                      <h3>Indoor Mapping and Navigation</h3>
-                                      <p class="secondaryfont">A GIS tool for indoor mapping and navigation to help users navigate complex spaces.
-
-
-
-
-
-
-                                      </p>
-                                    </div>
-                                  </div>
-                                <!-- </div>
-                              </div> -->
-
-                              </div>
-
-                            
-                            <div class="row">
-
-                              <div class="col  ">
-                                <div class="bggradgreen p-3 mt-3">
-                                <h5 class="secondaryfont">
-                                Experience our cutting-edge geospatial platforms in action—tailored for smart cities, logistics, real estate, and more. Click here for a demo and product showcase!
-                              </h5>  <a href="#" class="btn btn-outline-warning btn-sm">View demo</a>
-                            </div>
-                              </div>
-
-                            </div>
-
-                           
-
-</div>
-
-
-                            <div class="container px-4 py-5 pt-4">
-                          <!-- <div class="border-bottom"></div> -->
-
-      <!-- <h2 class="pb-2 border-bottom">Sectors and Applications</h2> -->
-  
-
-     
-    </div>
-
-  </section>
-
-   </main>
-<section class="footerdivider" >
-   <div class="container">
-    <footer class="py-5">
-      <div class="row">
-        <div class="col-6 col-md-2 mb-3">
-          <h5>Get to Know</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary secondaryfont">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary secondaryfont">About us</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary secondaryfont">Solutions</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary secondaryfont">Why We</a></li>
-          </ul>
-        </div>
-  
-        <div class="col-6 col-md-2 mb-3">
-          <h5>Resources</h5>
-          <ul class="nav flex-column ">
-           
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary secondaryfont">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary secondaryfont">Demos</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary secondaryfont">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary secondaryfont">FAQs</a></li>
-          </ul>
-        </div>
-  
-        <!-- <div class="col-6 col-md-2 mb-3">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-          </ul>
-        </div> -->
-  
-        <div class="col-md-5 offset-md-1 mb-3">
-          <form>
-            <h5>Subscribe to our newsletter</h5>
-            <p class="secondaryfont">Monthly digest of what's new and exciting from us.</p>
-            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-              <label for="newsletter1" class="visually-hidden">Email address</label>
-              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-              <button class="btn btn-primary" type="button">Subscribe</button>
             </div>
-          </form>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+
+
+    </section>
+
+
+    <section>
+
+      <div class="container" data-aos="fade-up">
+    <div class="p-2">
+        <div class="row flex-lg-row-reverse align-items-center mt-2 mb-2 py-5 box1 rounded p-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="assets/images/box1.svg" class="img-fluid" alt="Bootstrap Themes"  loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">What we do at Geoconsole</h1>
+            <p class="lead drop-cap-geo">Geoconsole is a leading provider of advanced geospatial solutions, empowering businesses and governments with cutting-edge tools for data management, analysis, and visualization. Specializing in geospatial data storage, mapping, and real-time tracking, Geoconsole delivers innovative platforms designed to optimize operations across industries such as smart city management, logistics, real estate, and land administration. With robust capabilities in 2D/3D mapping, geospatial analytics, and mobile compatibility, Geoconsole ensures seamless integration, performance, and scalability for complex geospatial needs.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              
+            </div>
+          </div>
         </div>
       </div>
-  
-      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-        <p>© 2024 Geoconsole™. All rights reserved.</p>
-        <ul class="list-unstyled d-flex">
-          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-        </ul>
+    
       </div>
-    </footer>
-  </div>
-</section>
-    <script src="geo/assets/js/bootstrap.bundle.min.js"
-       ></script>
+    
+    
+    </section>
 
-       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-       <script>
-          AOS.init();
-        // (c) 2020 Written by Simon Köhler in Panama
-     // github.com/koehlersimon
-     // simon-koehler.com
-     
-     // No JavaScript needed for this example anymore!
-     
-    //  document.addEventListener('click',function(e){
-    //    // Hamburger menu
-    //    if(e.target.classList.contains('hamburger-toggle')){
-    //      e.target.children[0].classList.toggle('active');
-    //    }
-    //  })   
-
-   
+    <section class="whitebg ">
+      <div class="container">
       
-     </script>
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="gchead4 pt-5 mt-2 mb-1">What we do</h1>
+            <!-- <p class="ps-2  display-6 text-muted">We offer more than what you want</p>  -->
+       
+             <h5 class="p-4 preenter_head">Capabilities 
+                              <!-- <h3 class="preenter">Navigate -->
+      
+                                <!-- EN: Login -->
+                                <a class="enter_head">  <!-- EN: to your Account -->
+                                  That Go Further
+                                </a>
+                              </h5>
+      
+      
+        </div>
+      
+            
+      
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-12 slider-section">
+
+              <div class="owl-carousel custom-carousel owl-theme">
+                <div class="item active"  data-aos="fade-left" style="background-image: url(assets/images/slider/space.jpg);">
+                  <div class="item-desc">
+                    <h3>Geospatial Data Management</h3>
+                    <p>We support spatial databases and formats like CSV, GeoTIFF, and shapefiles. Our system enables data import/export, version control for tracking changes, and metadata management for enhanced organization and compliance.
+<br/>
+                      <!-- <a href="#" class="button-80" role="button">Read more
+                        <svg fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.996 511.996" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M508.245,246.953L363.435,102.133c-5.001-5.001-13.099-5.001-18.099,0c-5.001,5-5.001,13.099,0,18.099l122.965,122.965 H12.8c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h455.492L345.327,391.763c-5.001,5-5.001,13.099,0,18.099 c5.009,5.001,13.099,5.001,18.108,0l144.811-144.811C513.246,260.051,513.246,251.953,508.245,246.953z"></path> </g> </g> </g></svg>
+
+                      </a> -->
+
+                    </p>
+                  </div>
+                </div>
+                <div class="item"  data-aos="fade-left" style="background-image: url(assets/images/slider/analysis.jpg);">
+                  <div class="item-desc">
+                    <h3>Geospatial Analysis</h3>
+                    <p>We provide spatial queries, geoprocessing tools, network analysis for routes, terrain and elevation analysis, and geostatistics to study spatial patterns and trends..</p>
+                  </div>
+                </div>
+                <div class="item"  data-aos="fade-left" style="background-image: url(assets/images/slider/survey.jpg);">
+                  <div class="item-desc">
+                    <h3>Data Capture & Editing</h3>
+                    <p>We offer digitizing tools for creating map features, attribute editing, offline field data collection, and GPS integration for location-based updates and tracking.
+
+                    </p>
+                  </div>
+                </div>
+                <div class="item"  data-aos="fade-left" style="background-image: url(assets/images/slider/visualize.jpg);">
+                  <div class="item-desc">
+                    <h3>Mapping & Visualization</h3>
+                    <p>We provide spatial queries, geoprocessing tools, network analysis for routes, terrain and elevation analysis, and geostatistics to study spatial patterns and trends.
+
+                    </p>
+                  </div>
+                </div>
+                <div class="item" style="background-image: url(assets/images/slider/code.jpg);">
+                  <div class="item-desc">
+                    <h3>Geocoding & Reverse Geocoding</h3>
+                    <p>We convert addresses to geographic coordinates and vice versa, with batch processing for large datasets.</p>
+                  </div>
+                </div>
+               
+              </div>
+        
+
+            </div>
+          </div>
+        </div>
+      
+          </section>
+    
+         
+          
+          <section class="whitebg ">
+            <div class="container">
+            
+              <div class="row">
+                <div class="col-md-12">
+                
+                  <!-- <p class="ps-2  display-6 text-muted">We offer more than what you want</p>  -->
+             
+                   
+
+                                    <div class="container-fluid">
+                                      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                                        <div class="col-10 col-sm-8 col-lg-6">
+                                          <img data-aos="fade-left" src="assets/images/tool.svg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                                        </div>
+                                        <div class="col-lg-6" >
+                                        
+                                          <h1 class="gchead4  mb-1">Our Speciality</h1>
+                                          <h5 class="p-4 preenter_head">Geospatial  
+                                            <!-- <h3 class="preenter">Navigate -->
+                    
+                                              <!-- EN: Login -->
+                                              <a class="enter_head">  <!-- EN: to your Account -->
+                                                Endurance
+                                              </a>
+                                            </h5>
+                    
+
+                                          <p class="lead" data-aos="fade-up">We Handle massive geospatial datasets efficiently while utilizing cloud infrastructure for scalable storage and processing. Ensure smooth map rendering with caching and tiling, and offer extensive customization through custom tools and scripting support for automation and advanced workflows.</p>
+
+                                          <P>
+                                            <div class="row row-cols row-col align-items-stretch g-4">
+                                              <div class="col-md-6" data-aos="fade-up">
+                                                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 feature1">
+                                                  <div class="d-flex flex-column h-100 p-5 pb-3 text-white ">
+                                                    <h3 class="pt-1 mt-2 mb-2  lh-1 fw-bold">Performance &amp; Scalability</h3>
+                                                    <p>Our platform is optimized for fast processing and supports large datasets, ensuring smooth performance and seamless scaling to meet growing demands.
+                                                    </p>
+                                                    <!-- <h2>dsds</h2> -->
+                                                    <ul class="d-flex list-unstyled mt-auto">
+                                                      <li class="me-auto">
+                                                        <!-- <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white"> -->
+                                                      </li>
+                                                      <li class="d-flex align-items-center me-3">
+                                                        <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                                                        <!-- <small>Earth</small> -->
+                                                      </li>
+                                                      <li class="d-flex align-items-center">
+                                                        <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                                                        <!-- <small>3d</small> -->
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                        
+                                              <div class="col-md-6" data-aos="fade-up">
+                                                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg feature2">
+                                                  <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                                    <h3 class="pt-1 mt-2 mb-2  lh-1 fw-bold">Customization &amp; Extensibility</h3>
+                                                    <p>
+                                                      We provide flexible tools for tailoring features and integrating custom workflows, enabling seamless extension to meet specific user needs.
+
+                                                    </p>
+                                                    <ul class="d-flex list-unstyled mt-auto">
+                                                      <li class="me-auto">
+                                                        <!-- <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white"> -->
+                                                      </li>
+                                                      <li class="d-flex align-items-center me-3">
+                                                        <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                                                        <!-- <small>india</small> -->
+                                                      </li>
+                                                      <li class="d-flex align-items-center">
+                                                        <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                                                        <!-- <small>4d</small> -->
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                        
+                                              
+                                            </div>
+
+                                          </P>
+                                          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                           
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+
+            
+              </div>
+            
+                  
+            
+                </div>
+
+
+                </div>
+
+                </section>
+
+
+
+
+                
+    <section class="whitebg ">
+      <div class="container">
+      
+        <div class="row" data-aos="fade-up" >
+          <div class="col-md-12">
+            <h1 class="gchead4 pt-0 mt-0 mb-1">Advanced Geospatial Solutions
+              </h1>
+            <!-- <p class="ps-2  display-6 text-muted">We offer more than what you want</p>  -->
+       
+             <h5 class="p-4 preenter_head">Navigate, 
+                              <!-- <h3 class="preenter">Navigate -->
+      
+                                <!-- EN: Login -->
+                                <a class="enter_head">  <!-- EN: to your Account -->
+                                  Manage, Succeed
+                                </a>
+                              </h5>
+      
+      
+        </div>
+      
+            
+      
+          </div>
+
+          <div class="row" data-aos="fade-right" >
+<div class="col lead">
+  Leverage cutting-edge geospatial tools to optimize urban management, logistics, land administration, real estate analysis, asset tracking, and indoor navigation. Our comprehensive solutions empower businesses and governments to make informed decisions and enhance operational efficiency using advanced geospatial data.
+</div>
+
+          </div>
+
+
+
+          <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-1">
+            <div class="col">
+              <a href="#" class="text-decoration-none" data-aos="fade-left" >
+              <div class="card card-rotate-on-hover card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg pro pro1" >
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                  <h3 class="pt-5 mt-5 mb-4 display-60 lh-1 fw-bold tops">Smart City Management Platform</h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto tops">
+                      <img src="assets/images/app.svg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white rotate-on-hover tops">
+                    </li>
+                   
+                  </ul>
+                </div>
+              </div>
+              </a>
+            </div>
+      
+            <div class="col">
+              <a href="#" class="text-decoration-none" data-aos="fade-left" >
+              <div class="card card-rotate-on-hover card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg pro pro2" >
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                  <h3 class="pt-5 mt-5 mb-4 display-60 lh-1 fw-bold tops">Logistics and Fleet Management</h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto tops">
+                      <img src="assets/images/app.svg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white rotate-on-hover">
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+              </a>
+            </div>
+      
+            <div class="col">
+              <a href="#" class="text-decoration-none" data-aos="fade-left" >
+              <div class="card card-rotate-on-hover card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg pro pro3">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                  <h3 class="pt-5 mt-5 mb-4 display-60 lh-1 fw-bold tops">Cadastral and Land Administration
+                  </h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto tops">
+                      <img src="assets/images/app.svg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white rotate-on-hover">
+                    </li>
+                   
+                  </ul>
+                </div>
+              </div>
+              </a>
+            </div>
+          </div>
+
+
+          <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-4">
+            <div class="col">
+              <a href="#" class="text-decoration-none" data-aos="fade-left" >
+              <div class="card card-rotate-on-hover card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg pro pro4" >
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                  <h3 class="pt-5 mt-5 mb-4 display-60 lh-1 fw-bold tops">Real Estate and Property Management</h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto tops">
+                      <img src="assets/images/app.svg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white rotate-on-hover">
+                    </li>
+                   
+                  </ul>
+                </div>
+              </div>
+              </a>
+            </div>
+      
+            <div class="col">
+              <a href="#" class="text-decoration-none" data-aos="fade-left" >
+              <div class="card card-rotate-on-hover card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg pro pro5" >
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                  <h3 class="pt-5 mt-5 mb-4 display-60 lh-1 fw-bold tops">Asset Location Tracking</h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto tops">
+                      <img src="assets/images/app.svg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white rotate-on-hover">
+                    </li>
+                   
+                  </ul>
+                </div>
+              </div>
+              </a>
+            </div>
+      
+            <div class="col">
+
+              
+              <a href="#" class="text-decoration-none" data-aos="fade-left" >
+              <div class="card card-rotate-on-hover card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg pro pro6">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                  <h3 class="pt-5 mt-5 mb-4 display-60 lh-1 fw-bold tops">Indoor Mapping and Navigation</h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto tops">
+                      <img src="assets/images/app.svg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white rotate-on-hover tops">
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+              </a>
+
+            </div>
+          </div>
+
+
+
+          </div>
+
+          </section>
+
+
+          <section class="whitebg ">
+            <div class="container">
+            
+              <div class="row" data-aos="fade-up" >
+                <div class="col-md-12 mt-5">
+                  <h1 class="gchead4 pt-0 mt-0 mb-1">WHO CAN  USE GEOSONSOLE
+                    </h1>
+                  <!-- <p class="ps-2  display-6 text-muted">We offer more than what you want</p>  -->
+             
+                   <h5 class="p-4 preenter_head">Geospatial data for  
+                                    <!-- <h3 class="preenter">Navigate -->
+            
+                                      <!-- EN: Login -->
+                                      <a class="enter_head">  <!-- EN: to your Account -->
+                                        Decision-making and Management
+                                      </a>
+                                    </h5>
+            
+            
+              </div>
+            
+                  
+            
+                </div>
+
+
+                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                  <div class="feature col" data-aos="fade-left" >
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3">
+                      <svg class="bi" width="1em" height="1em"><use xlink:href="#map"></use></svg>
+                    </div>
+                    <h3 class="fs-2 text-body-emphasis">Private Sector and Enterprises
+                    </h3>
+                    <p  class="lead">
+                    
+                      GeoConsole supports government agencies in urban planning, land administration, environmental management, and disaster response. It enables efficient city infrastructure management, cadastral mapping, resource monitoring, and emergency planning, helping authorities make data-driven decisions to improve public services.
+
+                    </p>
+                    
+                  </div>
+                  <div class="feature col" data-aos="fade-left" >
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center  bg-gradient fs-2 mb-3">
+                      <svg class="bi" width="1em" height="1em"><use xlink:href="#map"></use></svg>
+                    </div>
+                    <h3 class="fs-2 text-body-emphasis">Public Sector and Government
+
+                    </h3>
+                    <p  class="lead">
+                      For businesses, GeoConsole provides tools for real estate analysis, logistics optimization, and utility management. Companies can leverage geospatial data to track assets, streamline operations, plan network expansions, and make informed decisions that boost efficiency and profitability.</p>
+                    
+                  </div>
+                  <div class="feature col" data-aos="fade-left" >
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3">
+                      <svg class="bi" width="1em" height="1em"><use xlink:href="#map"></use></svg>
+                    </div>
+                    <h3 class="fs-2 text-body-emphasis">Research and Specialized Services</h3>
+                    <p class="lead">GeoConsole is a valuable resource for academia, agriculture, and tourism. Researchers can use it for spatial analysis and environmental studies, while farmers benefit from precision farming and land management tools. In tourism, it helps map attractions and guide visitors through complex spaces.</p>
+                   
+                  </div>
+                </div>
+
+
+
+
+
+                </div>
+
+                </section>
+
+
+          <section class="whitebg" data-aos="fade-up" >
+
+<div class="container">
+
+  <div class="rowss">
+
+    <div class="cols">
+      <div class="row">
+
+        <div class="col  ">
+          <div class="bggradgreen p-3 mt-1 mb-3">
+          <h5 class="secondaryfont">
+          Experience our cutting-edge geospatial platforms in action—tailored for smart cities, logistics, real estate, and more. Click here for a demo and product showcase!
+        </h5>  <a href="#" class="btn btn-outline-warning btn-sm">View demo</a>
+      </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+          </section>
+
+
+
+          <section class="footerdivider " data-aos="fade-up" >
+            <div class="container ">
+             <footer class="py-5 ">
+               <div class="row mt-3">
+                 <div class="col-6 col-md-2 mb-3">
+                   <h5>Get to Know</h5>
+                   <ul class="nav flex-column">
+                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary secondaryfont">Home</a></li>
+                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary secondaryfont">About us</a></li>
+                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary secondaryfont">Solutions</a></li>
+                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary secondaryfont">Why We</a></li>
+                   </ul>
+                 </div>
+           
+                 <div class="col-6 col-md-2 mb-3">
+                   <h5>Resources</h5>
+                   <ul class="nav flex-column ">
+                    
+                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary secondaryfont">Features</a></li>
+                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary secondaryfont">Demos</a></li>
+                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary secondaryfont">Pricing</a></li>
+                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary secondaryfont">FAQs</a></li>
+                   </ul>
+                 </div>
+           
+                 <!-- <div class="col-6 col-md-2 mb-3">
+                   <h5>Section</h5>
+                   <ul class="nav flex-column">
+                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                   </ul>
+                 </div> -->
+           
+                 <div class="col-md-5 offset-md-1 mb-3">
+                   <form>
+                     <h5>Subscribe to our newsletter</h5>
+                     <p class="secondaryfont">Monthly digest of what's new and exciting from us.</p>
+                     <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                       <label for="newsletter1" class="visually-hidden">Email address</label>
+                       <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                       <button class="btn btn-primary" type="button">Subscribe</button>
+                     </div>
+                   </form>
+                 </div>
+               </div>
+           
+               <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-topnm">
+                 <p>© 2024 Geoconsole™. All rights reserved.</p>
+                 <ul class="list-unstyled d-flex">
+                   <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                    </ul>
+               </div>
+         
+               <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-topn">
+         
+                           Cookies Policy- Data privacy
+         
+               </div>
+         
+             </footer>
+           </div>
+         </section>
+
+
+
+<!-- Bootstrap Cookie Policy Popup -->
+<div id="cookieConsent" class="position-fixed bottom-0 start-0 w-100 p-3" style="z-index: 1050; display: none;">
+  <div class="toast show w-100 align-items-center text-bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex justify-content-between">
+      <div class="toast-body">
+        We use cookies for website functionality and analytics. By using our site, you accept our cookie policy.
+      </div>
+      <div class="d-flex align-items-center p-2">
+        <button type="button" class="btn btn-primary btn-sm" onclick="acceptCookies()">Accept Cookies</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+
+    
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="assets/owl/dist/owl.carousel.min.js"></script>
+    <script>
+
+// Function to check cookie consent status
+function checkCookieConsent() {
+    return localStorage.getItem('cookieAccepted') === 'true';
+  }
+
+  // Function to show cookie consent popup
+  function showCookieConsent() {
+    if (!checkCookieConsent()) {
+      document.getElementById('cookieConsent').style.display = 'block';
+    }
+  }
+
+  // Function to accept cookies
+  function acceptCookies() {
+    localStorage.setItem('cookieAccepted', 'true');
+    document.getElementById('cookieConsent').style.display = 'none';
+  }
+
+  // Show the cookie consent popup on page load
+  window.onload = function() {
+    showCookieConsent();
+  };
+
+
+
+
+      AOS.init();
+
+     
+      $(".custom-carousel").owlCarousel({
+  autoWidth: true,
+  loop: true,
+  autoplay: true,
+      autoplayTimeout: 3600,
+      autoplayHoverPause: true,
+      loop: true
+});
+$(document).ready(function () {
+  $(".custom-carousel .item").click(function () {
+    $(".custom-carousel .item").not($(this)).removeClass("active");
+    $(this).toggleClass("active");
+  });
+});
+
+
+
+
+    </script>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B4N71FKRCD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B4N71FKRCD');
+</script>
+
+
 </body>
 
 </html>
