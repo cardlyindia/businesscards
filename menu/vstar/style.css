@@ -1,0 +1,131 @@
+body {
+    font-family: Poppins, sans-serif;
+    background-color: #fff3e0;
+    color: #4e342e;
+    margin: 0;
+    /* padding: 20px; */
+}
+
+.content {
+    background-color: #fff3e0;
+    color: #4e342e;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px#000000;
+    font-size: 2.5em;
+}
+
+/* h3 {
+    font-size: 1.5em;
+} */
+.category {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffe0b2;
+    border-radius: 10px;
+}
+
+.category h2 {
+    color: #bf360c;
+    border-bottom: 2px solid #d84315;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 5px 0;
+    /* font-size: 1.2em; */
+    font-size: 1.1em;
+    /* font-family: Lora, serif; */
+}
+
+.item-group {
+    margin-top: 15px;
+}
+
+.bgimage {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* display: block; */
+    height: 100%;
+    position: relative;
+    width: 100%;
+    background-image: url('catteringbg.jpeg');
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.copyright {
+    color: #4e342e;
+    text-decoration: none;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 16px;
+    padding-bottom: 20px;
+}
+
+
+/* footer */
+
+footer {
+    background-color: #ffe0b2;
+    color: #494949;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-content {
+    margin: 10px 0;
+}
+
+.footer-content h4, .footer-content h5 {
+    margin: 5px 0;
+    color: #494949;
+}
+
+.footer-content .phone, .footer-content .mail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.footer-content .phone a, .footer-content .mail a {
+    color: #494949;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-content a:hover {
+    color: #000000;
+}
+
+.copyright {
+    display: block;
+    text-align: center;
+    color: #494949;
+    margin-top: 20px;
+}
