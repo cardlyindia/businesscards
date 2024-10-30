@@ -1,22 +1,23 @@
 body {
     font-family: Poppins, sans-serif;
-    background-color: #fff3e0;
+    background-color: #ffffff;
     color: #4e342e;
     margin: 0;
-    /* padding: 20px; */
+    padding: 0; 
 }
 
 .content {
     background-color: #fff3e0;
-    color: #4e342e;
+    color:#ffffff;
+    background-image: url('foodbg2.jpg');
     margin: 0;
     padding: 20px;
 }
 
 h1 {
     text-align: center;
-    color: #ffffff;
-    text-shadow: 1px 1px 1px#000000;
+    color: white;
+    text-shadow: 1px 1px 1px black;
     font-size: 2.5em;
 }
 
@@ -26,8 +27,9 @@ h1 {
 .category {
     margin-top: 20px;
     padding: 15px;
-    background-color: #ffe0b2;
-    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px rgb(0, 0, 0,0.5);
+    border-radius: 20px;
 }
 
 .category h2 {
@@ -45,6 +47,7 @@ li {
     padding: 5px 0;
     /* font-size: 1.2em; */
     font-size: 1.1em;
+    color: #000000;
     /* font-family: Lora, serif; */
 }
 
@@ -63,8 +66,8 @@ li {
     background-image: url('catteringbg.jpeg');
     padding-top: 25px;
     padding-bottom: 25px;
-}
-
+} 
+/*
 .copyright {
     color: #4e342e;
     text-decoration: none;
@@ -74,13 +77,13 @@ li {
     text-align: center;
     margin-top: 16px;
     padding-bottom: 20px;
-}
+} */
 
 
 /* footer */
 
 footer {
-    background-color: #ffe0b2;
+    background-color: #ffffff;
     color: #494949;
     padding: 20px;
     margin-top: 30px;
