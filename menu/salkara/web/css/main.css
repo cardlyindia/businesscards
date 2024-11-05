@@ -1,0 +1,188 @@
+.search-box {
+  position: fixed;
+  /* top: 50%; */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2f3640;
+  height: 60px;
+  padding: 10px;
+  border-radius: 40px;
+  text-transform: capitalize;
+  transition: all 0.1s;
+}
+
+.freesearch {
+  position: fixed;
+  bottom: 73px;
+  z-index: 1000;
+  left: 0;
+  width: 100%;
+  text-align: center;
+
+}
+
+.search-box:hover {
+  width: 300px;
+  transition: 0.1s all;
+
+}
+/* Custom table styles */
+#selectedItemsList table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#selectedItemsList th, #selectedItemsList td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  color: #333;
+}
+
+#selectedItemsList th {
+  /* background-color: #f9680e;  */
+  color: rgb(0, 0, 0); /* White text for header */
+  font-weight: bold;
+}
+
+#selectedItemsList tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light gray for even rows */
+}
+
+#selectedItemsList tr:hover {
+  background-color: #f1f1f1; /* Light gray hover effect */
+}
+
+#selectedItemsList td {
+  font-size: 14px; 
+}
+
+.summarybg {
+  /* height: 100%; */
+  /* width: 100%; */
+  padding-bottom: 50%;
+  background-color: white;
+}
+
+/* .transpbag {
+    background-color: rgba(0, 0, 0, 0.466);
+} */
+.search-btn {
+  color: rgb(255, 255, 255);
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transition:  all 0.5s ease-in-out; */
+  transition: 0.1s all;
+  text-decoration: none;
+}
+
+.search-text {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  color: white;
+  font-size: 1em;
+  line-height: 40px;
+  width: 0;
+  /* transition:  all 0.5s ease-in-out; */
+}
+
+.search-box:hover>.search-text {
+  width: 220px;
+  text-transform: capitalize;
+}
+
+/* .search-box:hover>.search-btn {
+  background-color: white;
+} */
+
+/* Hide the checkbox but keep it accessible */
+.menu-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Style for highlighting the entire container when checked */
+.checkbox-container {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  width: 96%;
+  transition: background-color 0.3s ease;
+}
+
+
+.checkbox-container.checked {
+  border: 1px solid #2f3640;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  color: inherit;
+  width: 96%;
+  border-radius: 10px;
+  background-color: #4545451e;
+
+}
+
+
+
+
+.incrementbutton {
+  display: flex;
+  padding-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+#selectedItemsList {
+  list-style-type: none; /* Disables bullet points */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+}
+
+.buttonincr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  padding-bottom: 10p;
+  border: 1px solid #2f3640;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.buttonincr:hover {
+  cursor: pointer;
+}
+
+
+
+.qntitynumber {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  min-width: 40px;
+  text-align: center;
+}
+
+.dim {
+  color: gray;
+}
+.modal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.modal-content {
+  border-radius: 10px; /* Optional: Add some rounding for better design */
+}
