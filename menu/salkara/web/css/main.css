@@ -26,6 +26,33 @@
   transition: 0.1s all;
 
 }
+
+.showincrementdiv {
+  display: flex;
+  align-items: center; /* Vertically center the content */
+}
+
+.incrementbutton {
+  flex: 1; /* Make the increment button take up flexible space */
+  display: flex; /* Align items within the increment button */
+  align-items: center; /* Vertically center items within the increment button */
+  justify-content: space-between; /* Space items horizontally within the increment button */
+  width: 50%;
+  margin: 0 auto; 
+  padding-left: 50px;
+  padding-top: 10px;
+}
+.clrselecsvg{
+  color: #ff0000;
+}
+.showclrslcDiv {
+  /* Add some spacing between the two elements */
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+.clrselecsvg{
+  margin-right: auto;
+}
 /* Custom table styles */
 #selectedItemsList table {
   width: 100%;
