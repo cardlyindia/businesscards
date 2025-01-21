@@ -1,0 +1,1467 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BARCODE CLOTHINGS
+
+  </title>
+
+  <link rel="icon" href="logo.jpg" sizes="32x32" />
+
+
+
+
+  <!-- new elements -->
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="theme-color" content="#000000" />
+
+  <meta name='robots' content='max-image-preview:large' />
+  <link rel="manifest" href="../pwa-manifest.json">
+  <link rel="apple-touch-icon-precomposed" sizes="192x192" href="../icon/apple-touch-icon.png">
+  <meta name="generator" content="Cardly" />
+  <link rel="canonical" href="#" />
+  <link rel='shortlink' href='#' />
+  <meta name="theme-color" content="#D5E0EB">
+  <meta name="apple-mobile-web-app-title" content="Cardly :)">
+  <meta name="application-name" content="Cardly :)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content=" Cardly :)">
+  <meta name="apple-touch-fullscreen" content="YES">
+  <link rel="apple-touch-startup-image" href="../icon/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="../icon/android-chrome-192x192.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="../icon/android-chrome-512x512.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- new elements -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+    * {
+      font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    .redbg {
+      background: rgba(236, 236, 236, 0.692);
+    }
+
+    .whitebg,
+    .justwhitebg {
+      background: #fff !important;
+    }
+
+    html {
+      scroll-behavior: auto !important;
+    }
+
+    .white {
+      background: white !important;
+      border-radius: 19px !important;
+      border: 1px solid #000;
+    }
+
+    .card {
+      border: 0px !important;
+    }
+
+    .card-body1 {
+      padding: 0px 0px 0px 0px !important;
+    }
+
+
+
+    .contact-card1 {
+
+
+      margin: 0px !important;
+      border-radius: 0px !important;
+      border: 1px 0px 1px 0px solid #dfdfdf !important;
+      background-color: rgb(76 76 76 / 10%);
+      /* rgba(117, 117, 117, 0.1) */
+
+      border: 1px 0px 1px 0px solid rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(30px);
+      margin-top: 10px !important;
+    }
+
+
+
+    .whitebg:hover {
+      background-color: rgba(137, 178, 240, 0.288) !important;
+
+    }
+
+
+    .imagecp {
+      /*margin-top: 15px;*/
+      object-fit: cover;
+      width: 100%;
+      height: 350px;
+      border-radius: 0px;
+    }
+
+    .link {
+      text-decoration: none;
+      color: #8b8b8b;
+      font-size: 12px !important;
+    }
+
+
+    .name {
+      font-weight: 700;
+    }
+
+    .c0card {
+      border-radius: 0px !important;
+    }
+
+    /* Container holding the image and the text */
+
+    .container-im {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+
+    /* Bottom left text */
+
+    .bottom-left {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+    }
+
+
+    /* Top left text */
+
+    .top-left {
+      position: absolute;
+      top: 25px;
+      left: 16px;
+    }
+
+
+    /* Top right text */
+
+    .top-right {
+      position: absolute;
+      top: 25px;
+      right: 16px;
+    }
+
+
+    /* Bottom right text */
+
+    .bottom-right {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+    }
+
+
+    /* Centered text */
+
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+
+    .centered-left {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translate(0%, -50%);
+    }
+
+
+
+
+    /* [1] The container */
+    .img-hover-zoom {
+
+      border-radius: 0px;
+      overflow: hidden;
+      /* [1.2] Hide the overflowing of child elements */
+    }
+
+    /* [2] Transition property for smooth transformation of images */
+    .img-hover-zoom img.zoom {
+      transition: transform .5s ease;
+    }
+
+    /* [3] Finally, transforming the image when container gets hovered */
+    .img-hover-zoom:hover img.zoom {
+      transform: scale(1.5);
+    }
+
+
+
+
+
+    /* Brightness-zoom Container */
+    .img-hover-zoom--brightness img.zoom {
+      transition: transform 2s, filter 1.5s ease-in-out;
+      transform-origin: center center;
+      filter: brightness(50%);
+
+    }
+
+    /* The Transformation */
+    .img-hover-zoom--brightness:hover img.zoom {
+      filter: brightness(100%);
+      transform: scale(1.3);
+      height: 350px;
+    }
+
+
+
+
+
+
+
+
+    .profile_rounded {
+      max-height: 180px !important;
+      border-radius: 50%;
+    }
+
+    .name {
+      margin-top: 0px !important;
+      /* text-shadow: #000; */
+      /* color: #000; */
+    }
+
+    .verified {
+      height: 25px;
+      margin-top: -6px;
+    }
+
+    .nfcwifi {
+      margin-top: -4px;
+      color: #ffffff54;
+
+    }
+
+    .btn-grad {
+      background-image: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #FF512F 100%);
+
+
+      text-align: center;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: white;
+      /* box-shadow: 0 0 20px #eee; */
+      border-radius: 10px;
+      display: block;
+    }
+
+    .btn-grad:hover {
+      background-position: right center;
+      /* change the direction of the change here */
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .bg-grand {
+
+      /* background-image: linear-gradient( 110.3deg,  rgba(73,93,109,1) 4.3%, rgba(49,55,82,1) 96.7% ); */
+      background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
+
+      color: white;
+    }
+
+
+
+
+
+    .btn-grad2 {
+
+      /* background-image: linear-gradient(to right, rgb(1 134 218), rgb(182 49 167));
+  border: 0;
+
+ 
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+           
+            border-radius: 10px;
+            display: block; */
+
+      display: inline-block;
+      padding: 10px 15px 10px 15px;
+      border: 0;
+      text-decoration: none;
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(30px);
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: bold;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    .btn-grad2:hover {
+
+
+      background-image: linear-gradient(to right, rgb(1 134 218), rgb(182 49 167));
+      color: #fff;
+      border: 1px solid rgba(236, 225, 225, 0.918);
+    }
+
+
+    .lastrow {
+      margin-bottom: 15px !important;
+    }
+
+
+
+    .cardlybrand {
+      font-weight: bold;
+      color: #ffffff54;
+    }
+
+    .subbrand {
+      color: #ffffff54;
+    }
+
+    h1,
+    h2 {
+      margin-bottom: 0px !important;
+      line-height: 30px !important;
+    }
+
+    h2 {
+      text-decoration: none !important;
+      font-weight: normal !important;
+    }
+
+    .ctitle {
+      font-weight: 300 !important;
+      color: #05529b;
+      font-size: 15px !important;
+    }
+
+    .cdata {
+      font-weight: 700 !important;
+      color: #585858;
+      font-size: 18px !important;
+    }
+
+    .contactme {
+      margin-top: -4px;
+    }
+
+    .bodyc {
+      /* background: #d8d8d8; */
+      padding: 10px !important;
+    }
+
+    .wp51px {
+      height: 49px;
+    }
+
+    .wp50px {
+      height: 50px;
+    }
+
+    .wmailpx {
+      height: 55px;
+    }
+
+    .upi {
+      height: 35px;
+    }
+
+    .aboutbox {
+      background: #181818 !important;
+    }
+
+    .contentw {
+      padding: 30px !important;
+    }
+
+
+
+    .socialme {
+      /* fill: red !important; */
+      fill: #4a2280 !important;
+      height: 50px !important;
+    }
+
+    .socialme:hover {
+      /* fill: red !important; */
+      fill: #dd0303 !important;
+
+    }
+
+    a.socialbox {
+      text-decoration: none !important;
+    }
+
+    .cardlyfooter {
+
+      border-top: 1px solid #8181811e;
+      color: #00000054;
+    }
+
+    .socialboxlink {
+      text-decoration: none;
+    }
+
+    @media only screen and (max-width: 600px) {
+      /* .profile_rounded
+            {
+                max-height: 157px !important;
+                border-radius: 50%;
+            }
+            
+
+
+.centered-left {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-20%, -50%);
+} */
+
+      .verified {
+        height: 25px;
+      }
+
+
+      .wp51px {
+        height: 30px;
+      }
+
+      .wp50px {
+        height: 29px;
+      }
+
+      .wmailpx {
+        height: 35px;
+      }
+
+      .upi {
+        height: 20px;
+      }
+
+      .socialme {
+
+        height: 35px !important;
+      }
+
+      .bodyc {
+        margin: 0px !important;
+        padding: 0px !important;
+      }
+
+
+      .contact-card1 {
+
+
+        margin: 0px 10px !important;
+        border-radius: 5px !important;
+        border: 1px 0px 1px 0px solid #dfdfdf !important;
+        background-color: rgb(76 76 76 / 10%);
+        /* rgba(117, 117, 117, 0.1) */
+
+        border: 1px 0px 1px 0px solid rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(30px);
+        margin-top: 10px !important;
+
+      }
+
+
+    }
+
+    .nobg {
+      background: none !important;
+    }
+
+
+
+
+
+
+    .socialme {
+      fill: #221f1f;
+      /* Replace with your desired color value */
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+    }
+
+    .clipboard {
+      display: none;
+      visibility: hidden;
+    }
+
+    .visible {
+      display: block;
+      visibility: visible;
+    }
+    
+  </style>
+</head>
+
+<body class="redbg">
+
+
+  <div class="container bodyc">
+
+
+    <div class="card text-center    white c0card">
+      <!-- <div class="card-header ">
+                <a href="https://technologytalks.in/guiding-cios-and-it-executives-to-accelerate-digital-business/" class="d-flex align-items-center text-dark text-decoration-none">
+               
+                <img src="" height="32" class="me-2">
+                <span class="fs-4">Gartner, Inc. and/or its affiliates</span>
+                </a>
+            </div> -->
+      <!-- <img src="unsplash-photo-3.jpg" class="card-img-top imagecp news-story-img" alt="...">
+            -->
+      <div class="container-im img-hover-zoom img-hover-zoom--brightness">
+        <img src="background.jpg" style = "width: 100%;" class="card-img-top imagecp news-story-img zoom" alt="...">
+
+
+        <div class="bottom-left">
+          <div>
+
+            <a href="tel:+917034073757" class="btn btn-grad2 btn-sm">
+
+              <svg class="contactme" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21.97 18.33C21.97 18.69 21.89 19.06 21.72 19.42C21.55 19.78 21.33 20.12 21.04 20.44C20.55 20.98 20.01 21.37 19.4 21.62C18.8 21.87 18.15 22 17.45 22C16.43 22 15.34 21.76 14.19 21.27C13.04 20.78 11.89 20.12 10.75 19.29C9.6 18.45 8.51 17.52 7.47 16.49C6.44 15.45 5.51 14.36 4.68 13.22C3.86 12.08 3.2 10.94 2.72 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C11.27 13.75 11.79 14.24 12.32 14.69C12.84 15.13 13.27 15.43 13.61 15.61C13.66 15.63 13.72 15.66 13.79 15.69C13.87 15.72 13.95 15.73 14.04 15.73C14.21 15.73 14.34 15.67 14.45 15.56L15.21 14.81C15.46 14.56 15.7 14.37 15.93 14.25C16.16 14.11 16.39 14.04 16.64 14.04C16.83 14.04 17.03 14.08 17.25 14.17C17.47 14.26 17.7 14.39 17.95 14.56L21.26 16.91C21.52 17.09 21.7 17.3 21.81 17.55C21.91 17.8 21.97 18.05 21.97 18.33Z"
+                  stroke="#fff" stroke-width="1.5" stroke-miterlimit="10" />
+              </svg>
+
+              Call Now</a>
+
+
+
+            <a href="https://wa.me/+917034073757" class="btn btn-grad2 btn-sm">
+
+
+
+              <svg class="contactme" width="24px" height="24px" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill="#fff"
+                  d="M17.6 6.31999C16.8669 5.58141 15.9943 4.99596 15.033 4.59767C14.0716 4.19938 13.0406 3.99622 12 3.99999C10.6089 4.00135 9.24248 4.36819 8.03771 5.06377C6.83294 5.75935 5.83208 6.75926 5.13534 7.96335C4.4386 9.16745 4.07046 10.5335 4.06776 11.9246C4.06507 13.3158 4.42793 14.6832 5.12 15.89L4 20L8.2 18.9C9.35975 19.5452 10.6629 19.8891 11.99 19.9C14.0997 19.9001 16.124 19.0668 17.6222 17.5816C19.1205 16.0965 19.9715 14.0796 19.99 11.97C19.983 10.9173 19.7682 9.87634 19.3581 8.9068C18.948 7.93725 18.3505 7.05819 17.6 6.31999ZM12 18.53C10.8177 18.5308 9.65701 18.213 8.64 17.61L8.4 17.46L5.91 18.12L6.57 15.69L6.41 15.44C5.55925 14.0667 5.24174 12.429 5.51762 10.8372C5.7935 9.24545 6.64361 7.81015 7.9069 6.80322C9.1702 5.79628 10.7589 5.28765 12.3721 5.37368C13.9853 5.4597 15.511 6.13441 16.66 7.26999C17.916 8.49818 18.635 10.1735 18.66 11.93C18.6442 13.6859 17.9355 15.3645 16.6882 16.6006C15.441 17.8366 13.756 18.5301 12 18.53ZM15.61 13.59C15.41 13.49 14.44 13.01 14.26 12.95C14.08 12.89 13.94 12.85 13.81 13.05C13.6144 13.3181 13.404 13.5751 13.18 13.82C13.07 13.96 12.95 13.97 12.75 13.82C11.6097 13.3694 10.6597 12.5394 10.06 11.47C9.85 11.12 10.26 11.14 10.64 10.39C10.6681 10.3359 10.6827 10.2759 10.6827 10.215C10.6827 10.1541 10.6681 10.0941 10.64 10.04C10.64 9.93999 10.19 8.95999 10.03 8.56999C9.87 8.17999 9.71 8.23999 9.58 8.22999H9.19C9.08895 8.23154 8.9894 8.25465 8.898 8.29776C8.8066 8.34087 8.72546 8.403 8.66 8.47999C8.43562 8.69817 8.26061 8.96191 8.14676 9.25343C8.03291 9.54495 7.98287 9.85749 8 10.17C8.0627 10.9181 8.34443 11.6311 8.81 12.22C9.6622 13.4958 10.8301 14.5293 12.2 15.22C12.9185 15.6394 13.7535 15.8148 14.58 15.72C14.8552 15.6654 15.1159 15.5535 15.345 15.3915C15.5742 15.2296 15.7667 15.0212 15.91 14.78C16.0428 14.4856 16.0846 14.1583 16.03 13.84C15.94 13.74 15.81 13.69 15.61 13.59Z" />
+              </svg>
+
+              Whatsapp</a>
+
+
+
+          </div>
+          <div class="timed">
+
+          </div>
+        </div>
+        <div class="top-left cardlybrand text-start">
+
+          <svg width="20px" class="nfcwifi" height="20px" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke="#ffffff54"
+              d="M16.3 19.5002C17.4 17.2002 18 14.7002 18 12.0002C18 9.30024 17.4 6.70024 16.3 4.50024M12.7 17.8003C13.5 16.0003 14 14.0003 14 12.0003C14 10.0003 13.5 7.90034 12.7 6.10034M9.1001 16.1001C9.7001 14.8001 10.0001 13.4001 10.0001 12.0001C10.0001 10.6001 9.7001 9.10015 9.1001 7.90015M5.5 14.3003C5.8 13.6003 6 12.8003 6 12.0003C6 11.2003 5.8 10.3003 5.5 9.60034"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+          NFC PREMIUM
+        </div>
+        <div class="top-right">
+          <a href="barcode.vcf" style="text-decoration: none;">
+            <button id="" class="btn btn-grad btn-sm">
+
+              <svg fill="#fff" width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4,21a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V3a1,1,0,0,0-1-1H5A1,1,0,0,0,4,3ZM12,7.5a2,2,0,1,1-2,2A2,2,0,0,1,12,7.5ZM8.211,16.215a4,4,0,0,1,7.578,0A.993.993,0,0,1,14.83,17.5H9.18A1,1,0,0,1,8.211,16.215Z" />
+              </svg>
+              Save Contact</button></a>
+         
+
+        </div>
+        <div class="bottom-right subbrand"></div>
+        <div class="centered-left ">
+
+
+
+
+          <div class="row">
+            <div class="col-3 ">
+
+              <img src="logo.jpg" class=" img-fluid    profile_rounded" alt="...">
+
+
+
+            </div>
+            <div class="col-9   align-self-center   ">
+
+
+
+              <div class="text-start ">
+                <h1 class="name">BARCODE <svg class="verified" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M20.9588 9.9552C23.2624 6.58863 19.7818 2.22411 15.9871 3.72081C14.7912 -0.179234 9.2088 -0.179235 8.01298 3.72081C4.21822 2.22411 0.737623 6.58863 3.04122 9.9552C-0.494948 11.9889 0.747257 17.4314 4.81562 17.7294C4.20085 21.762 9.23046 24.1842 12 21.1892C14.7696 24.1842 19.7992 21.762 19.1844 17.7294C23.2528 17.4314 24.495 11.9889 20.9588 9.9552ZM9.88784 4.44062C10.442 2.24749 13.558 2.24749 14.1122 4.44062C14.3862 5.525 15.5746 6.0973 16.5933 5.63543C18.6534 4.70131 20.5962 7.1375 19.2271 8.93817C18.5501 9.8285 18.8436 11.1144 19.8399 11.6229C21.8547 12.6512 21.1613 15.6891 18.8999 15.7413C17.7817 15.7672 16.9593 16.7984 17.1829 17.8943C17.6352 20.1107 14.8278 21.4627 13.3769 19.7272C12.6595 18.8691 11.3405 18.8691 10.6231 19.7272C9.17228 21.4627 6.36486 20.1107 6.81712 17.8943C7.04074 16.7984 6.21835 15.7672 5.10019 15.7413C2.83873 15.6891 2.14535 12.6512 4.16018 11.6229C5.1564 11.1144 5.44991 9.8285 4.77295 8.93817C3.40382 7.1375 5.34661 4.70131 7.40679 5.63543C8.42544 6.0973 9.61383 5.525 9.88784 4.44062ZM16.7572 9.65322C17.118 9.23506 17.0714 8.6036 16.6533 8.24283C16.2351 7.88206 15.6036 7.92859 15.2429 8.34676L10.7627 13.5396L8.70025 11.5168C8.30595 11.13 7.67282 11.1362 7.2861 11.5305C6.89938 11.9248 6.90552 12.5579 7.29981 12.9446L10.1233 15.7139C10.3206 15.9074 10.5891 16.0106 10.8652 15.9991C11.1412 15.9876 11.4002 15.8624 11.5807 15.6532L16.7572 9.65322Z"
+                      fill="#1de9ff" />
+                  </svg></h5>
+                  <h2 class="text-decoration-none">Clothings | Vithura</h2>
+
+              </div>
+
+
+
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+        <div class="centered-left ">
+
+
+          <!-- <div class="container">
+
+
+                      
+
+
+                    </div> -->
+
+
+
+
+
+        </div>
+      </div>
+
+
+      <div class="card-body card-body1 redbg  ">
+
+
+
+        <div class="container-fluid-not">
+
+
+          <a href="https://wa.me/+917034073757" class="socialbox">
+            <div class="card contact-card1 whitebg">
+
+              <div class="card-body">
+
+
+                <div class="row">
+
+                  <!-- <div class="col-1 align-self-center">s</div> -->
+                  <div class="col-8 align-self-center text-start">
+                    <h4 class="ctitle">Whatsapp
+
+
+
+                      <svg class="clipboard" width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10 8V7C10 6.05719 10 5.58579 10.2929 5.29289C10.5858 5 11.0572 5 12 5H17C17.9428 5 18.4142 5 18.7071 5.29289C19 5.58579 19 6.05719 19 7V12C19 12.9428 19 13.4142 18.7071 13.7071C18.4142 14 17.9428 14 17 14H16M7 19H12C12.9428 19 13.4142 19 13.7071 18.7071C14 18.4142 14 17.9428 14 17V12C14 11.0572 14 10.5858 13.7071 10.2929C13.4142 10 12.9428 10 12 10H7C6.05719 10 5.58579 10 5.29289 10.2929C5 10.5858 5 11.0572 5 12V17C5 17.9428 5 18.4142 5.29289 18.7071C5.58579 19 6.05719 19 7 19Z"
+                          stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+
+
+
+
+                    </h4>
+                    <h3 class="cdata">+91 703 4073 757</h3>
+
+
+                  </div>
+                  <div class="col align-self-center text-end">
+                    <svg class="wp51px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M17.4145 14.3822C17.1173 14.2334 15.6564 13.5147 15.384 13.4153C15.1117 13.3162 14.9136 13.2667 14.7154 13.5641C14.5173 13.8615 13.9478 14.5309 13.7745 14.7293C13.6012 14.9275 13.4278 14.9524 13.1307 14.8036C12.8335 14.6549 11.876 14.3411 10.7411 13.3287C9.85769 12.5407 9.26129 11.5677 9.08799 11.2702C8.91461 10.9727 9.06943 10.8119 9.21822 10.6637C9.35195 10.5306 9.51546 10.3166 9.66399 10.1431C9.81257 9.96961 9.86209 9.84558 9.96114 9.6474C10.0602 9.44899 10.0107 9.27553 9.93634 9.12682C9.86209 8.97808 9.26779 7.51537 9.02016 6.92034C8.77895 6.34096 8.53397 6.41944 8.35157 6.41024C8.17844 6.40165 7.98013 6.39981 7.78207 6.39981C7.58397 6.39981 7.26201 6.47418 6.98958 6.77159C6.71727 7.06908 5.94959 7.78806 5.94959 9.25059C5.94959 10.7133 7.01434 12.1263 7.16296 12.3246C7.31158 12.523 9.25829 15.5244 12.2393 16.8116C12.9482 17.1178 13.5017 17.3006 13.9333 17.4375C14.6451 17.6637 15.2929 17.6318 15.805 17.5552C16.3759 17.47 17.5631 16.8364 17.8107 16.1424C18.0583 15.4481 18.0583 14.8532 17.984 14.7293C17.9097 14.6053 17.7116 14.5309 17.4145 14.3822ZM11.9925 21.7853H11.9886C10.2148 21.7846 8.47517 21.3081 6.9575 20.4075L6.59654 20.1932L2.85541 21.1746L3.85395 17.527L3.61899 17.153C2.62951 15.5792 2.10688 13.7603 2.10765 11.8925C2.10983 6.44257 6.54415 2.0086 11.9965 2.0086C14.6367 2.00954 17.1185 3.03905 18.9849 4.9075C20.8511 6.77582 21.8782 9.25932 21.8772 11.9005C21.875 17.3509 17.4408 21.7853 11.9925 21.7853ZM20.4052 3.48773C18.1599 1.2398 15.1739 0.00128304 11.9925 0C5.43736 0 0.102301 5.33471 0.0996495 11.8918C0.0987941 13.9879 0.646396 16.0337 1.68711 17.8373L0 24L6.30443 22.3462C8.04154 23.2937 9.99728 23.7931 11.9877 23.7937H11.9926C18.547 23.7937 23.8825 18.4585 23.8852 11.9013C23.8864 8.72361 22.6505 5.73566 20.4052 3.48777"
+                        fill="#509444" />
+                    </svg>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </a>
+          <a href="tel:+917034073757" class="socialbox whitebg">
+            <div class="card contact-card1  whitebg ">
+
+              <div class="card-body">
+
+                <div class="row">
+
+                  <!-- <div class="col-1 align-self-center">s</div> -->
+                  <div class="col-8 align-self-center text-start">
+                    <h4 class="ctitle">Mobile
+
+
+
+                      <svg class="clipboard" width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10 8V7C10 6.05719 10 5.58579 10.2929 5.29289C10.5858 5 11.0572 5 12 5H17C17.9428 5 18.4142 5 18.7071 5.29289C19 5.58579 19 6.05719 19 7V12C19 12.9428 19 13.4142 18.7071 13.7071C18.4142 14 17.9428 14 17 14H16M7 19H12C12.9428 19 13.4142 19 13.7071 18.7071C14 18.4142 14 17.9428 14 17V12C14 11.0572 14 10.5858 13.7071 10.2929C13.4142 10 12.9428 10 12 10H7C6.05719 10 5.58579 10 5.29289 10.2929C5 10.5858 5 11.0572 5 12V17C5 17.9428 5 18.4142 5.29289 18.7071C5.58579 19 6.05719 19 7 19Z"
+                          stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+
+
+
+                    </h4>
+                    <h3 class="cdata">+91 703 4073 757 </h3>
+
+
+                  </div>
+                  <div class="col align-self-center text-end">
+
+
+
+
+
+                    <svg class="wp50px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+                      <style type="text/css">
+                        .st0 {
+                          fill: #157de6;
+                        }
+                      </style>
+                      <g>
+                        <path class="st0"
+                          d="M337.168,289.578c-5.129-5.133-13.457-5.133-18.598,0l-16.031,16.038c-4.68,4.68-12.122,5.149-17.352,1.102
+                                   c0,0-15.332-10.109-40.402-35.179c-25.07-25.07-35.175-40.414-35.175-40.414c-4.055-5.226-3.578-12.656,1.102-17.343l16.031-16.031
+                                   c5.141-5.134,5.141-13.462,0-18.594l-35.34-35.343c-5.133-5.133-13.453-5.133-18.594,0c-0.122,0.125-1.906,1.906-21.309,21.32
+                                   c-22.602,22.594,7.293,91.82,57.574,142.118c50.289,50.281,119.527,80.164,142.121,57.578
+                                   c19.394-19.406,21.184-21.203,21.305-21.32c5.141-5.133,5.141-13.461,0-18.586L337.168,289.578z" />
+                        <path class="st0"
+                          d="M256,0C114.614,0,0,114.617,0,256s114.614,256,256,256s256-114.617,256-256S397.386,0,256,0z M256,472
+                                   c-119.102,0-216-96.898-216-216S136.898,40,256,40s216,96.898,216,216S375.102,472,256,472z" />
+                      </g>
+                    </svg>
+
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </a>
+          <!-- <a target="_self" href="https://santhikrishnapalace.com" class="socialboxlink whitebg">
+
+            <div class="card contact-card1 whitebg">
+
+              <div class="card-body">
+
+                <div class="row">
+                  <div class="col-8 align-self-center text-start">
+                    <h4 class="ctitle">Website
+
+
+                      <svg class="clipboard" width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10 8V7C10 6.05719 10 5.58579 10.2929 5.29289C10.5858 5 11.0572 5 12 5H17C17.9428 5 18.4142 5 18.7071 5.29289C19 5.58579 19 6.05719 19 7V12C19 12.9428 19 13.4142 18.7071 13.7071C18.4142 14 17.9428 14 17 14H16M7 19H12C12.9428 19 13.4142 19 13.7071 18.7071C14 18.4142 14 17.9428 14 17V12C14 11.0572 14 10.5858 13.7071 10.2929C13.4142 10 12.9428 10 12 10H7C6.05719 10 5.58579 10 5.29289 10.2929C5 10.5858 5 11.0572 5 12V17C5 17.9428 5 18.4142 5.29289 18.7071C5.58579 19 6.05719 19 7 19Z"
+                          stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+
+
+
+
+                    </h4>
+                    <h3 class="cdata">www.santhikrishnapalace.com</h3>
+
+
+                  </div>
+                  <div class="col align-self-center text-end">
+
+
+
+
+
+                    <svg class="wp51px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.5 5H16.5C17.12 5 17.67 5.02 18.16 5.09C20.79 5.38 21.5 6.62 21.5 10V14C21.5 17.38 20.79 18.62 18.16 18.91C17.67 18.98 17.12 19 16.5 19H7.5C6.88 19 6.33 18.98 5.84 18.91C3.21 18.62 2.5 17.38 2.5 14V10C2.5 6.62 3.21 5.38 5.84 5.09C6.33 5.02 6.88 5 7.5 5Z"
+                        stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path opacity="0.4" d="M4.5 2H19.5" stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path opacity="0.4" d="M5 22H20" stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+
+
+
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </a> -->
+
+
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Rate Our Services</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" mode=“autoplay” speed=“1”
+                    aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+
+
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-12">
+
+                        Your Feedback is valuable! Would you like to review us now?
+                        <br />
+
+                        <svg class="mb-2 mt-2" width="80%" height="100" viewBox="0 0 881 130" version="1.1"
+                          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                          xml:space="preserve" xmlns:serif="http://www.serif.com/"
+                          style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                          <g transform="matrix(1,0,0,1,-634.728,-382.568)">
+                            <path
+                              d="M702.68,382.568L718.721,431.938L770.632,431.938L728.635,462.45L744.677,511.82L702.68,481.308L660.683,511.82L676.724,462.45L634.728,431.938L686.639,431.938L702.68,382.568Z"
+                              style="fill:rgb(255,216,0);" />
+                          </g>
+                          <g transform="matrix(1,0,0,1,-447.914,-382.568)">
+                            <path
+                              d="M702.68,382.568L718.721,431.938L770.632,431.938L728.635,462.45L744.677,511.82L702.68,481.308L660.683,511.82L676.724,462.45L634.728,431.938L686.639,431.938L702.68,382.568Z"
+                              style="fill:rgb(255,216,0);" />
+                          </g>
+                          <g transform="matrix(1,0,0,1,-261.961,-382.568)">
+                            <path
+                              d="M702.68,382.568L718.721,431.938L770.632,431.938L728.635,462.45L744.677,511.82L702.68,481.308L660.683,511.82L676.724,462.45L634.728,431.938L686.639,431.938L702.68,382.568Z"
+                              style="fill:rgb(255,216,0);" />
+                          </g>
+                          <g transform="matrix(1,0,0,1,-76.0238,-382.568)">
+                            <path
+                              d="M702.68,382.568L718.721,431.938L770.632,431.938L728.635,462.45L744.677,511.82L702.68,481.308L660.683,511.82L676.724,462.45L634.728,431.938L686.639,431.938L702.68,382.568Z"
+                              style="fill:rgb(255,216,0);" />
+                          </g>
+                          <g transform="matrix(1,0,0,1,109.853,-382.568)">
+                            <path
+                              d="M702.68,382.568L718.721,431.938L770.632,431.938L728.635,462.45L744.677,511.82L702.68,481.308L660.683,511.82L676.724,462.45L634.728,431.938L686.639,431.938L702.68,382.568Z"
+                              style="fill:rgb(255,216,0);" />
+                          </g>
+                        </svg>
+                        <br />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+
+                  <a href="https://maps.app.goo.gl/FBnLiJdGjhetS1vf9"
+                    class="btn btn-primary">Rate Now</a>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Later</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <a href="mailto:faizy1837@gmail.com" class="socialbox whitebg">
+            <div class="card contact-card1 whitebg ">
+
+              <div class="card-body">
+
+                <div class="row">
+
+                  <!-- <div class="col-1 align-self-center">s</div> -->
+                  <div class="col-10 align-self-center text-start">
+                    <h4 class="ctitle">Email
+
+
+
+                      <svg class="clipboard" width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10 8V7C10 6.05719 10 5.58579 10.2929 5.29289C10.5858 5 11.0572 5 12 5H17C17.9428 5 18.4142 5 18.7071 5.29289C19 5.58579 19 6.05719 19 7V12C19 12.9428 19 13.4142 18.7071 13.7071C18.4142 14 17.9428 14 17 14H16M7 19H12C12.9428 19 13.4142 19 13.7071 18.7071C14 18.4142 14 17.9428 14 17V12C14 11.0572 14 10.5858 13.7071 10.2929C13.4142 10 12.9428 10 12 10H7C6.05719 10 5.58579 10 5.29289 10.2929C5 10.5858 5 11.0572 5 12V17C5 17.9428 5 18.4142 5.29289 18.7071C5.58579 19 6.05719 19 7 19Z"
+                          stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+
+
+
+
+                    </h4>
+                    <h3 class="cdata">faizy1837@gmail.com</h3>
+
+
+                  </div>
+                  <div class="col align-self-center text-end">
+
+
+
+
+
+
+                    <svg fill="#000000" class="wmailpx" viewBox="0 0 24 24" id="email" data-name="Flat Color"
+                      xmlns="http://www.w3.org/2000/svg" class="icon flat-color">
+                      <rect id="primary" x="2" y="4" width="20" height="16" rx="2" style="fill: rgb(0, 0, 0);"></rect>
+                      <path id="secondary"
+                        d="M21.25,4.45A2,2,0,0,0,20,4H4a2,2,0,0,0-1.25.45A1,1,0,0,0,2.76,6l8,6.29a2,2,0,0,0,2.48,0l8-6.29a1,1,0,0,0,0-1.56Z"
+                        style="fill: rgb(44, 169, 188);"></path>
+                    </svg>
+                    <!-- <svg class="wp51px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="style=linear">
+                                    <g id="email">
+                                    <path id="vector" d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path id="vector_2" d="M18.7698 7.7688L13.2228 12.0551C12.5025 12.6116 11.4973 12.6116 10.777 12.0551L5.22998 7.7688" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
+                                    </g>
+                                    </g>
+                                    </svg> -->
+
+
+
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </a>
+
+          <!-- <a href="upi://pay?pa=Q29160658@ybl&pn=PhonePeMerchant&mc=0000&mode=02&purpose=00&orgid=180001&sign=MEUCIQCBPft2/qZ1qtfKgnqre4PtxEXcLjB+5UwRHZMfRkx4rwIgO254CGA52a1DYRTlPlGs/v6wdX7lbgHlBYiXLz+jxWY=" class="socialboxlink whitebg ">
+
+
+            <div class="card contact-card1 whitebg ">
+
+              <div class="card-body">
+
+                <div class="row">
+
+                  <div class="col-8 align-self-center text-start">
+                    <h4 class="ctitle">Payments
+
+
+
+                      <svg class="clipboard" width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10 8V7C10 6.05719 10 5.58579 10.2929 5.29289C10.5858 5 11.0572 5 12 5H17C17.9428 5 18.4142 5 18.7071 5.29289C19 5.58579 19 6.05719 19 7V12C19 12.9428 19 13.4142 18.7071 13.7071C18.4142 14 17.9428 14 17 14H16M7 19H12C12.9428 19 13.4142 19 13.7071 18.7071C14 18.4142 14 17.9428 14 17V12C14 11.0572 14 10.5858 13.7071 10.2929C13.4142 10 12.9428 10 12 10H7C6.05719 10 5.58579 10 5.29289 10.2929C5 10.5858 5 11.0572 5 12V17C5 17.9428 5 18.4142 5.29289 18.7071C5.58579 19 6.05719 19 7 19Z"
+                          stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+
+
+
+
+                    </h4>
+                    <h3 class="cdata">Q29160658@ybl</h3>
+
+
+                  </div>
+                  <div class="col align-self-center text-end">
+
+
+
+
+
+                    <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
+                      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                      xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="UPI Logo.svg"
+                      inkscape:version="1.0 (4035a4fb49, 2020-05-01)" id="svg347" version="1.1"
+                      viewBox="0 0 130.54 46.118" class="upi">
+                      <defs id="defs341">
+                        <clipPath id="clipPath28" clipPathUnits="userSpaceOnUse">
+                          <path id="path26" d="M 0,216 H 432 V 0 H 0 Z" />
+                        </clipPath>
+                      </defs>
+                      <sodipodi:namedview inkscape:window-maximized="0" inkscape:window-y="0" inkscape:window-x="122"
+                        inkscape:window-height="1030" inkscape:window-width="1375" showgrid="false"
+                        inkscape:document-rotation="0" inkscape:current-layer="layer1" inkscape:document-units="mm"
+                        inkscape:cy="704.43148" inkscape:cx="-205.74726" inkscape:zoom="0.5" inkscape:pageshadow="2"
+                        inkscape:pageopacity="0.0" borderopacity="1.0" bordercolor="#666666" pagecolor="#ffffff"
+                        id="base" />
+                      <metadata id="metadata344">
+                        <rdf:RDF>
+                          <cc:Work rdf:about="">
+                            <dc:format>image/svg+xml</dc:format>
+                            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                            <dc:title></dc:title>
+                          </cc:Work>
+                        </rdf:RDF>
+                      </metadata>
+                      <g id="layer1" inkscape:groupmode="layer" inkscape:label="Layer 1">
+                        <g id="g22" transform="matrix(0.35277777,0,0,-0.35277777,-10.926321,61.158633)">
+                          <g id="g24" clip-path="url(#clipPath28)">
+                            <g id="g30" transform="translate(33.9766,61.0674)">
+                              <path
+                                d="M 0,0 H 2.77 L 0.196,-10.751 c -0.382,-1.595 -0.31,-2.796 0.218,-3.597 0.526,-0.802 1.505,-1.203 2.936,-1.203 1.422,0 2.588,0.401 3.499,1.203 0.912,0.801 1.559,2.002 1.941,3.597 L 11.363,0 h 2.806 l -2.637,-11.017 c -0.573,-2.394 -1.594,-4.186 -3.056,-5.374 -1.463,-1.19 -3.381,-1.784 -5.754,-1.784 -2.375,0 -4.004,0.593 -4.891,1.778 -0.888,1.184 -1.043,2.978 -0.468,5.38 z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path32" />
+                            </g>
+                            <g id="g34" transform="translate(47.7734,43.3633)">
+                              <path
+                                d="M 0,0 4.406,18.405 12.778,7.582 C 13.002,7.277 13.228,6.95 13.451,6.603 13.674,6.256 13.902,5.866 14.136,5.43 l 2.939,12.274 h 2.593 L 15.265,-0.687 6.717,10.329 C 6.488,10.626 6.275,10.94 6.076,11.271 5.875,11.602 5.694,11.949 5.528,12.311 L 2.581,0 Z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path36" />
+                            </g>
+                            <g id="g38" transform="translate(67.2119,43.3633)">
+                              <path d="M 0,0 4.238,17.704 H 7.042 L 2.805,0 Z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path40" />
+                            </g>
+                            <g id="g42" transform="translate(74.0488,43.3633)">
+                              <path
+                                d="m 0,0 4.238,17.704 h 9.63 L 13.283,15.262 H 6.458 L 5.401,10.848 h 6.825 L 11.622,8.321 H 4.796 L 2.805,0 Z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path44" />
+                            </g>
+                            <g id="g46" transform="translate(86.7686,43.3633)">
+                              <path d="M 0,0 4.238,17.704 H 7.042 L 2.805,0 Z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path48" />
+                            </g>
+                            <g id="g50" transform="translate(93.6055,43.3633)">
+                              <path
+                                d="m 0,0 4.238,17.704 h 9.63 L 13.283,15.262 H 6.458 L 5.395,10.824 H 12.22 L 11.616,8.296 H 4.791 l -1.37,-5.72 h 6.825 L 9.63,0 Z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path52" />
+                            </g>
+                            <g id="g54" transform="translate(109.8818,45.9639)">
+                              <path
+                                d="m 0,0 h 2.358 c 1.296,0 2.29,0.089 2.981,0.266 0.691,0.177 1.325,0.476 1.906,0.895 0.789,0.571 1.448,1.283 1.978,2.134 0.529,0.85 0.93,1.841 1.2,2.97 0.269,1.129 0.343,2.117 0.221,2.966 -0.123,0.852 -0.441,1.563 -0.956,2.136 -0.387,0.418 -0.898,0.718 -1.536,0.896 -0.639,0.176 -1.679,0.265 -3.125,0.265 H 4.013 2.999 Z m -3.427,-2.601 4.238,17.705 h 3.783 c 2.46,0 4.16,-0.126 5.102,-0.38 0.94,-0.255 1.717,-0.681 2.328,-1.277 0.811,-0.782 1.327,-1.786 1.549,-3.01 C 13.794,9.211 13.716,7.812 13.34,6.24 12.964,4.668 12.373,3.275 11.567,2.062 10.763,0.848 9.766,-0.153 8.58,-0.943 7.683,-1.54 6.721,-1.965 5.699,-2.22 4.674,-2.473 3.146,-2.601 1.11,-2.601 H 0.355 Z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path56" />
+                            </g>
+                            <g id="g58" transform="translate(136.8799,53.666)">
+                              <path
+                                d="M 0,0 H 0.72 C 2.275,0 3.354,0.175 3.956,0.521 4.559,0.867 4.964,1.48 5.174,2.359 5.4,3.302 5.283,3.968 4.821,4.354 4.359,4.741 3.387,4.936 1.902,4.936 h -0.72 z m -0.741,-2.356 -1.902,-7.947 H -5.271 L -1.032,7.401 H 3.211 C 4.468,7.401 5.377,7.331 5.937,7.19 6.495,7.05 6.956,6.817 7.32,6.494 7.763,6.083 8.054,5.529 8.194,4.832 8.333,4.134 8.303,3.366 8.103,2.529 7.901,1.69 7.563,0.916 7.087,0.206 6.611,-0.503 6.053,-1.06 5.415,-1.462 4.897,-1.785 4.326,-2.015 3.7,-2.151 3.073,-2.289 2.132,-2.356 0.875,-2.356 H 0.322 Z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path60" />
+                            </g>
+                            <g id="g62" transform="translate(148.4458,50.3164)">
+                              <path
+                                d="M 0,0 H 4.809 L 4.006,4.04 C 3.968,4.297 3.932,4.593 3.901,4.928 3.872,5.263 3.852,5.636 3.839,6.047 3.653,5.66 3.466,5.299 3.279,4.964 3.093,4.63 2.912,4.322 2.734,4.04 Z M 6.092,-6.953 5.225,-2.394 H -1.612 L -4.707,-6.953 H -7.652 L 5.109,11.452 9.05,-6.953 Z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path64" />
+                            </g>
+                            <g id="g66" transform="translate(161.5161,43.3633)">
+                              <path
+                                d="m 0,0 1.938,8.103 -3.512,9.601 h 2.947 l 2.18,-6.01 c 0.05,-0.154 0.11,-0.355 0.179,-0.605 0.07,-0.25 0.138,-0.519 0.202,-0.81 0.176,0.282 0.357,0.55 0.538,0.799 0.181,0.25 0.364,0.479 0.549,0.689 l 5.133,5.937 H 12.96 L 4.72,8.103 2.781,0 Z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path68" />
+                            </g>
+                            <g id="g70" transform="translate(188.2803,52.1074)">
+                              <path
+                                d="M 0,0 C 0.001,0.137 0.041,0.515 0.119,1.136 0.179,1.652 0.226,2.08 0.26,2.419 0.093,2.015 -0.104,1.611 -0.33,1.209 -0.557,0.806 -0.817,0.395 -1.114,-0.025 l -6.773,-9.433 -2.21,9.626 c -0.094,0.396 -0.166,0.779 -0.214,1.149 -0.048,0.371 -0.081,0.738 -0.097,1.102 -0.096,-0.372 -0.218,-0.76 -0.367,-1.168 -0.149,-0.407 -0.327,-0.833 -0.536,-1.276 l -3.938,-8.719 h -2.58 l 8.495,18.455 2.418,-11.175 c 0.035,-0.177 0.086,-0.472 0.148,-0.883 0.062,-0.411 0.135,-0.919 0.22,-1.523 0.286,0.508 0.698,1.152 1.24,1.934 0.144,0.21 0.254,0.371 0.328,0.484 L 2.667,9.711 2.422,-8.744 h -2.606 z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path72" />
+                            </g>
+                            <g id="g74" transform="translate(192.9419,43.3633)">
+                              <path
+                                d="m 0,0 4.239,17.704 h 9.63 L 13.284,15.262 H 6.458 L 5.396,10.824 h 6.825 L 11.617,8.296 H 4.791 L 3.422,2.576 h 6.825 L 9.629,0 Z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path76" />
+                            </g>
+                            <g id="g78" transform="translate(205.791,43.3633)">
+                              <path
+                                d="M 0,0 4.406,18.405 12.778,7.582 C 13.002,7.277 13.228,6.95 13.451,6.603 13.674,6.256 13.902,5.866 14.136,5.43 l 2.939,12.274 h 2.594 L 15.265,-0.687 6.717,10.329 C 6.488,10.626 6.275,10.94 6.076,11.271 5.875,11.602 5.694,11.949 5.528,12.311 L 2.581,0 Z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path80" />
+                            </g>
+                            <g id="g82" transform="translate(234.4102,58.625)">
+                              <path
+                                d="M 0,0 -3.653,-15.262 H -6.458 L -2.806,0 h -4.585 l 0.585,2.442 H 5.146 L 4.562,0 Z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path84" />
+                            </g>
+                            <g id="g86" transform="translate(237.3213,46.9072)">
+                              <path
+                                d="M 0,0 2.494,1.063 C 2.519,0.274 2.763,-0.329 3.229,-0.744 3.695,-1.16 4.368,-1.367 5.25,-1.367 c 0.832,0 1.552,0.238 2.156,0.714 0.605,0.475 1.004,1.112 1.195,1.91 C 8.85,2.298 8.229,3.225 6.744,4.038 6.536,4.159 6.376,4.248 6.266,4.305 4.591,5.256 3.529,6.117 3.081,6.887 2.634,7.657 2.542,8.598 2.808,9.71 c 0.345,1.443 1.103,2.612 2.272,3.507 1.169,0.895 2.527,1.343 4.076,1.343 1.273,0 2.278,-0.252 3.013,-0.756 0.736,-0.505 1.156,-1.228 1.26,-2.171 L 10.96,10.472 c -0.214,0.556 -0.496,0.963 -0.846,1.222 -0.351,0.258 -0.795,0.387 -1.328,0.387 -0.754,0 -1.402,-0.203 -1.943,-0.604 C 6.305,11.073 5.952,10.533 5.789,9.855 5.535,8.791 6.272,7.8 8.001,6.881 8.134,6.809 8.238,6.751 8.313,6.711 9.826,5.906 10.81,5.117 11.261,4.347 11.713,3.576 11.802,2.615 11.525,1.463 11.124,-0.215 10.291,-1.547 9.025,-2.534 7.759,-3.521 6.249,-4.015 4.498,-4.015 c -1.471,0 -2.592,0.346 -3.364,1.04 C 0.36,-2.282 -0.018,-1.291 0,0"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path88" />
+                            </g>
+                            <g id="g90" transform="translate(258.0459,43.3633)">
+                              <path d="M 0,0 4.238,17.704 H 7.043 L 2.805,0 Z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path92" />
+                            </g>
+                            <g id="g94" transform="translate(264.8828,43.3633)">
+                              <path
+                                d="M 0,0 4.406,18.405 12.778,7.582 C 13.002,7.277 13.228,6.95 13.451,6.603 13.674,6.256 13.902,5.866 14.136,5.43 l 2.939,12.274 h 2.593 L 15.265,-0.687 6.717,10.329 c -0.229,0.297 -0.443,0.611 -0.642,0.942 -0.2,0.331 -0.382,0.678 -0.548,1.04 L 2.581,0 Z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path96" />
+                            </g>
+                            <g id="g98" transform="translate(293.502,58.625)">
+                              <path
+                                d="M 0,0 -3.654,-15.262 H -6.458 L -2.806,0 h -4.585 l 0.585,2.442 H 5.146 L 4.562,0 Z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path100" />
+                            </g>
+                            <g id="g102" transform="translate(296.5557,43.3633)">
+                              <path
+                                d="m 0,0 4.238,17.704 h 9.63 L 13.284,15.262 H 6.459 L 5.396,10.824 h 6.825 L 11.616,8.296 H 4.791 L 3.422,2.576 h 6.825 L 9.63,0 Z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path104" />
+                            </g>
+                            <g id="g106" transform="translate(314.6416,53.5225)">
+                              <path
+                                d="M 0,0 H 0.508 C 1.992,0 3.021,0.176 3.593,0.531 4.165,0.886 4.561,1.514 4.775,2.418 5.009,3.393 4.913,4.081 4.484,4.479 4.059,4.88 3.138,5.079 1.724,5.079 H 1.216 Z m -0.712,-2.237 -1.897,-7.922 h -2.628 l 4.239,17.704 h 3.913 c 1.147,0 2.019,-0.076 2.614,-0.23 C 6.125,7.162 6.605,6.909 6.968,6.553 7.4,6.127 7.68,5.573 7.81,4.896 7.937,4.22 7.904,3.478 7.712,2.673 7.373,1.254 6.773,0.143 5.913,-0.66 5.053,-1.461 3.951,-1.944 2.608,-2.104 l 4.014,-8.055 H 3.45 l -3.844,7.922 z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path108" />
+                            </g>
+                            <g id="g110" transform="translate(322.9258,43.3633)">
+                              <path
+                                d="m 0,0 4.238,17.704 h 9.63 L 13.284,15.262 H 6.458 L 5.401,10.848 h 6.826 L 11.622,8.321 H 4.797 L 2.805,0 Z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path112" />
+                            </g>
+                            <g id="g114" transform="translate(340.0449,50.3164)">
+                              <path
+                                d="M 0,0 H 4.81 L 4.007,4.04 C 3.968,4.297 3.933,4.593 3.902,4.928 3.873,5.263 3.853,5.636 3.84,6.047 3.653,5.66 3.466,5.299 3.28,4.964 3.094,4.63 2.912,4.322 2.734,4.04 Z M 6.093,-6.953 5.226,-2.394 H -1.611 L -4.706,-6.953 H -7.652 L 5.109,11.452 9.051,-6.953 Z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path116" />
+                            </g>
+                            <g id="g118" transform="translate(367.3555,56.7627)">
+                              <path
+                                d="m 0,0 c -0.627,0.693 -1.341,1.213 -2.143,1.56 -0.8,0.345 -1.688,0.52 -2.663,0.52 -1.885,0 -3.569,-0.621 -5.048,-1.862 -1.481,-1.242 -2.457,-2.85 -2.93,-4.826 -0.457,-1.911 -0.258,-3.486 0.596,-4.727 0.854,-1.242 2.158,-1.864 3.909,-1.864 1.023,0 2.039,0.186 3.051,0.557 1.012,0.371 2.033,0.931 3.06,1.682 l -0.779,-3.254 c -0.887,-0.556 -1.808,-0.972 -2.761,-1.245 -0.954,-0.274 -1.949,-0.411 -2.986,-0.411 -1.32,0 -2.488,0.221 -3.501,0.665 -1.014,0.443 -1.843,1.095 -2.484,1.959 -0.638,0.846 -1.047,1.843 -1.222,2.993 -0.178,1.148 -0.111,2.372 0.199,3.671 0.311,1.297 0.83,2.516 1.555,3.657 0.724,1.141 1.619,2.143 2.681,3.005 1.066,0.871 2.206,1.529 3.42,1.978 1.215,0.446 2.468,0.671 3.757,0.671 1.014,0 1.944,-0.152 2.791,-0.455 C -0.651,3.973 0.131,3.516 0.85,2.901 Z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path120" />
+                            </g>
+                            <g id="g122" transform="translate(367.627,43.3633)">
+                              <path
+                                d="m 0,0 4.238,17.704 h 9.63 L 13.283,15.262 H 6.459 L 5.396,10.824 h 6.825 L 11.616,8.296 H 4.791 L 3.422,2.576 h 6.825 L 9.63,0 Z"
+                                style="fill:#696a6a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path124" />
+                            </g>
+                            <g id="g126" transform="translate(316.4629,76.4951)">
+                              <path d="M 0,0 H -19.283 L 7.535,96.855 h 19.284 z"
+                                style="fill:#66686c;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path128" />
+                            </g>
+                            <g id="g130" transform="translate(306.4521,170.2881)">
+                              <path
+                                d="m 0,0 c -1.337,1.843 -3.399,2.773 -6.2,2.773 h -106.036 l -5.252,-18.97 h 19.294 v 0.011 h 77.169 l -5.614,-20.272 h -77.171 l 0.007,0.042 h -19.286 l -16.007,-57.787 h 19.296 l 10.742,38.786 h 86.746 c 2.709,0 5.259,0.924 7.657,2.772 2.393,1.85 3.968,4.131 4.723,6.855 L 0.809,-6.996 C 1.593,-4.181 1.322,-1.845 0,0"
+                                style="fill:#66686c;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path132" />
+                            </g>
+                            <g id="g134" transform="translate(156.1196,82.541)">
+                              <path
+                                d="m 0,0 c -1.065,-3.835 -4.557,-6.488 -8.538,-6.488 h -99.491 c -2.711,0 -4.726,0.924 -6.051,2.77 -1.324,1.848 -1.608,4.134 -0.851,6.857 l 24.276,87.387 h 19.301 l -21.683,-78.05 h 77.206 l 21.683,78.05 h 19.297 z"
+                                style="fill:#66686c;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path136" />
+                            </g>
+                            <g id="g138" transform="translate(376.5859,173.1689)">
+                              <path d="m 0,0 24.414,-48.553 -51.322,-48.54 z"
+                                style="fill:#27803b;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path140" />
+                            </g>
+                            <g id="g142" transform="translate(359.4717,173.1689)">
+                              <path d="m 0,0 24.396,-48.553 -51.343,-48.54 z"
+                                style="fill:#e9661c;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path144" />
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+
+
+
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </a> -->
+          <a target="_blank" href="https://maps.app.goo.gl/FBnLiJdGjhetS1vf9" class="socialbox">
+            <div class="card contact-card1 lastrow whitebg">
+
+              <div class="card-body">
+
+                <div class="row">
+
+                  <!-- <div class="col-1 align-self-center">s</div> -->
+                  <div class="col-8 align-self-center text-start">
+                    <h4 class="ctitle">Locate
+
+                      <!-- <a href="#"> -->
+
+                      <svg class="clipboard" width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10 8V7C10 6.05719 10 5.58579 10.2929 5.29289C10.5858 5 11.0572 5 12 5H17C17.9428 5 18.4142 5 18.7071 5.29289C19 5.58579 19 6.05719 19 7V12C19 12.9428 19 13.4142 18.7071 13.7071C18.4142 14 17.9428 14 17 14H16M7 19H12C12.9428 19 13.4142 19 13.7071 18.7071C14 18.4142 14 17.9428 14 17V12C14 11.0572 14 10.5858 13.7071 10.2929C13.4142 10 12.9428 10 12 10H7C6.05719 10 5.58579 10 5.29289 10.2929C5 10.5858 5 11.0572 5 12V17C5 17.9428 5 18.4142 5.29289 18.7071C5.58579 19 6.05719 19 7 19Z"
+                          stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+
+                      <!-- </a> -->
+
+
+                    </h4>
+                    <h3 class="cdata">Google maps</h3>
+
+
+                  </div>
+                  <div class="col align-self-center text-end">
+
+
+                    <!-- <a href="#" class="btn btn-grad3 btn-sm"> -->
+
+
+
+
+                    <svg class="wp51px" viewBox="14.32 4.87961494 37.85626587 52.79038506"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="m37.34 7.82c-1.68-.53-3.48-.82-5.34-.82-5.43 0-10.29 2.45-13.54 6.31l8.35 7.02z"
+                        fill="#1a73e8" />
+                      <path d="m18.46 13.31a17.615 17.615 0 0 0 -4.14 11.36c0 3.32.66 6.02 1.75 8.43l10.74-12.77z"
+                        fill="#ea4335" />
+                      <path
+                        d="m32 17.92a6.764 6.764 0 0 1 5.16 11.13l10.52-12.51a17.684 17.684 0 0 0 -10.35-8.71l-10.51 12.51a6.74 6.74 0 0 1 5.18-2.42"
+                        fill="#4285f4" />
+                      <path
+                        d="m32 31.44c-3.73 0-6.76-3.03-6.76-6.76a6.7 6.7 0 0 1 1.58-4.34l-10.75 12.77c1.84 4.07 4.89 7.34 8.03 11.46l13.06-15.52a6.752 6.752 0 0 1 -5.16 2.39"
+                        fill="#fbbc04" />
+                      <path
+                        d="m36.9 48.8c5.9-9.22 12.77-13.41 12.77-24.13 0-2.94-.72-5.71-1.99-8.15l-23.57 28.05c1 1.31 2.01 2.7 2.99 4.24 3.58 5.54 2.59 8.86 4.9 8.86s1.32-3.33 4.9-8.87"
+                        fill="#34a853" />
+                    </svg>
+
+
+                    <!-- </a> -->
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </a>
+        </div>
+
+        <div class="container-fluid-not">
+
+
+          <div class="card contact-card1 p-4 justwhitebg">
+
+            <div class="card-title">
+
+              <h3>My Presence in Social Media </h3>
+
+            </div>
+            <div class="card-body">
+              <div class="container">
+                <div class="row justify-content-center">
+
+                  <div class="col-md-12 d-flex gap-2 justify-content-center">
+
+
+                    <!-- <a target="_blank" href="https://www.facebook.com/share/19o8ABVS1B/?mibextid=LQQJ4d" class="socialbox">
+                      <div class="card nobg">
+                        <div class="card-body nobg">
+                          <svg class="socialme" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2 6C2 3.79086 3.79086 2 6 2H18C20.2091 2 22 3.79086 22 6V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6ZM6 4C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H12V13H11C10.4477 13 10 12.5523 10 12C10 11.4477 10.4477 11 11 11H12V9.5C12 7.567 13.567 6 15.5 6H16.1C16.6523 6 17.1 6.44772 17.1 7C17.1 7.55228 16.6523 8 16.1 8H15.5C14.6716 8 14 8.67157 14 9.5V11H16.1C16.6523 11 17.1 11.4477 17.1 12C17.1 12.5523 16.6523 13 16.1 13H14V20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6Z" />
+                          </svg>
+                          <p class="card-text">Facebook</p>
+
+                        </div>
+                      </div>
+                    </a> -->
+
+                    <a target="_blank" href="https://www.instagram.com/barcode_clothing_store/profilecard/?igsh=MXZiNTI1aGMza3Q4eg==" class="socialbox">
+                      <div class="card nobg">
+                        <div class="card-body nobg">
+
+                          <svg class="socialme" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2 6C2 3.79086 3.79086 2 6 2H18C20.2091 2 22 3.79086 22 6V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6ZM6 4C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6ZM12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9ZM7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12ZM17.5 8C18.3284 8 19 7.32843 19 6.5C19 5.67157 18.3284 5 17.5 5C16.6716 5 16 5.67157 16 6.5C16 7.32843 16.6716 8 17.5 8Z">
+                          </svg>
+                          <p class="card-text">Instagram</p>
+
+                        </div>
+                      </div>
+                    </a>
+
+                    <!-- <a target="_blank" href="https://www.youtube.com/channel/UCkY01c0SYvVhClgRgnk4oGg"
+                      class="socialbox">
+                      <div class="card nobg">
+                        <div class="card-body nobg">
+
+
+                          <svg class="socialme" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M7.84499 4.77535C10.4365 4.40822 13.5635 4.40822 16.155 4.77535C18.5096 5.10891 20.3341 6.76142 20.6831 8.54141C21.1056 10.6962 21.1056 13.3038 20.6831 15.4586C20.3341 17.2386 18.5096 18.8911 16.1551 19.2247C13.5635 19.5918 10.4365 19.5918 7.84499 19.2247C5.49049 18.8911 3.666 17.2386 3.31691 15.4586C2.89434 13.3038 2.89438 10.6962 3.31692 8.54142C3.66596 6.76141 5.49048 5.10891 7.84499 4.77535ZM16.4356 2.79512C13.658 2.40163 10.3421 2.40163 7.56446 2.79512C4.54986 3.22219 1.90016 5.37282 1.35429 8.15657C0.881927 10.5655 0.881875 13.4345 1.3543 15.8434C1.90021 18.6272 4.54984 20.7778 7.56446 21.2049C10.3421 21.5984 13.658 21.5984 16.4356 21.2049C19.4502 20.7778 22.0999 18.6272 22.6458 15.8434C23.1181 13.4345 23.1181 10.5655 22.6458 8.15658C22.0999 5.37281 19.4502 3.22219 16.4356 2.79512ZM10.5547 7.16795C10.2478 6.96338 9.8533 6.94431 9.52814 7.11833C9.20299 7.29234 9 7.6312 9 8V16C9 16.3688 9.20299 16.7077 9.52814 16.8817C9.8533 17.0557 10.2478 17.0366 10.5547 16.8321L16.5547 12.8321C16.8329 12.6466 17 12.3344 17 12C17 11.6656 16.8329 11.3534 16.5547 11.1679L10.5547 7.16795ZM14.1972 12L11 14.1315V9.86852L14.1972 12Z" />
+                          </svg>
+
+                          <p class="card-text">Youtube</p>
+
+                        </div>
+                      </div>
+                    </a> -->
+
+                  </div>
+                  <!-- <div class="col">
+
+                    <a href="#" class="socialbox">
+                      <div class="card nobg">
+                        <div class="card-body nobg">
+
+                          <svg class="socialme" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M14.8486 5.65845C13.1442 5.65845 11.7626 7.0401 11.7626 8.74446C11.7626 8.95304 11.7831 9.15581 11.822 9.35119C11.8846 9.66589 11.7924 9.99153 11.5741 10.2267C11.3558 10.4619 11.0379 10.578 10.7194 10.5389C8.51116 10.268 6.50248 9.35556 4.88498 7.9954C4.91649 8.59732 5.12515 9.23671 5.57799 9.90654L6.25677 10.9106L5.14211 11.3863L4.92704 11.4781C5.0869 11.6609 5.2791 11.8487 5.49369 12.0332C5.73717 12.2425 5.97247 12.4165 6.14726 12.5381C6.23408 12.5985 6.30452 12.645 6.35171 12.6755C6.37527 12.6907 6.39294 12.7018 6.40383 12.7086L6.41495 12.7155L6.41519 12.7157L6.41551 12.7159L6.41578 12.7161L6.41619 12.7163L6.41647 12.7165L7.96448 13.655L6.34397 14.4653C6.26374 14.5054 6.18367 14.5412 6.10393 14.573C6.42924 14.8471 6.82517 15.0995 7.2464 15.2986L8.63623 15.9556L7.47226 16.9598C6.8369 17.508 6.19778 17.9166 5.36946 18.1326C6.59681 18.7875 8.00315 19.1596 9.49941 19.1596C14.3045 19.1596 18.1746 15.325 18.1746 10.6256V10.1059L18.5998 9.80721C19.2636 9.34107 19.7329 8.71068 20.0689 7.99004H18.5398H17.9084L17.637 7.41994C17.1401 6.37633 16.0772 5.65845 14.8486 5.65845ZM3.56882 12.9581C3.38031 13.174 3.29093 13.4642 3.33193 13.7553C3.44474 14.5563 3.92441 15.2462 4.45444 15.7728C4.59838 15.9158 4.75232 16.0531 4.91396 16.184C4.88926 16.1909 4.86437 16.1975 4.83925 16.2038C4.35789 16.3243 3.70926 16.3494 2.62755 16.2434C2.20934 16.2024 1.81014 16.4273 1.62841 16.8062C1.44668 17.185 1.5212 17.6371 1.81492 17.9376C3.75693 19.9245 6.48413 21.1596 9.49941 21.1596C15.212 21.1596 19.8978 16.7239 20.1628 11.126C21.4521 10.0429 22.0976 8.57673 22.4458 7.24263C22.5241 6.94292 22.459 6.62387 22.2696 6.37873C22.0803 6.13359 21.788 5.99004 21.4783 5.99004H19.1247C18.2201 4.58853 16.6437 3.65845 14.8486 3.65845C12.1796 3.65845 9.99072 5.71435 9.7793 8.32892C7.91032 7.84456 6.2705 6.78758 5.05863 5.35408C4.83759 5.09261 4.49814 4.9624 4.15894 5.00897C3.81974 5.05554 3.52794 5.27241 3.38555 5.58378C2.78087 6.90597 2.66434 8.43104 3.34116 9.98046L3.10746 10.0802C2.64466 10.2777 2.40073 10.7884 2.5379 11.2725C2.72276 11.925 3.14129 12.5011 3.56882 12.9581Z" />
+                          </svg>
+                          <p class="card-text">Twitter</p>
+
+                        </div>
+                      </div>
+                    </a>
+
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 
+        <div class="container-fluid justwhitebg  mt-3">
+
+          <img src="logo.jpg" class="img-fluid m-3"> 
+
+        </div> -->
+
+        <!-- <div class="container-fluid bg-grand">
+          <div class="p-5 text-start"> -->
+        <!-- <img src="logo.jpg" class="img-fluid"> -->
+        <!-- <h1 class="text">Our Services</h1>
+            <p class="col mt-2 mx-auto fs-5 text">
+              Digital Branding | Digital Marketing | Website Design | Social Media Marketing | Corporate Video | Digital Visiting card | Key Duplication | Key Programming | Key Repairing | ID Card Lamination | NFC Visiting Card | QR-NFC Profile Stand | QR-NFC Online Menu | LED Scrolling Board | Polymer & Pre Inked Stamp | Sun Control Film Fixing | Name Board & Number Plate | Vinyl Printing & Cutting Board | Plastic Coated Visiting Card | Multi Color Wedding | Customized Momento Making | Stage Decoration | Welcome Hostess</p> -->
+        <!-- <div class="d-inline-flex gap-2 mb-5">
+                    <button class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
+                      Call to action
+                      <svg class="bi ms-2" width="24" height="24"><use xlink:href="#arrow-right-short"></use></svg>
+                    </button>
+                   
+                  </div> -->
+        <!-- </div>
+        </div> -->
+
+
+
+
+
+      </div>
+      <div class="card-footer cardlyfooter ">
+        <a target="_blank" class="link" href="https://cardly.in"> Designed by Cardly/</a>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+    crossorigin="anonymous"></script>
+  <script src="colornode.js"></script>
+
+  <script>
+    $(window).load(function () {
+      setTimeout(() => {
+        $('#exampleModal').modal('show');
+      }, 1000);
+    });
+
+    var imgHoverZoomElements = document.querySelectorAll(".img-hover-zoom");
+    var ticking = false;
+
+    // Function to apply zoom effect based on scroll position
+    function applyImageZoom() {
+      var scroll = window.pageYOffset || document.documentElement.scrollTop;
+
+      imgHoverZoomElements.forEach(function (element) {
+        var zoomedImage = element.querySelector("img.zoom");
+        var scaleFactor = 1 + scroll / 500; // Adjust the divisor for desired zoom effect sensitivity
+
+        zoomedImage.style.transform = "scale(" + scaleFactor + ")";
+      });
+
+      ticking = false;
+    }
+
+    // Throttle scroll event
+    function handleScroll() {
+      if (!ticking) {
+        requestAnimationFrame(applyImageZoom);
+        ticking = true;
+      }
+    }
+
+    // Debounce resize event
+    function debounce(func, delay) {
+      var timeout;
+      return function () {
+        clearTimeout(timeout);
+        timeout = setTimeout(func, delay);
+      };
+    }
+
+    // Initiate smooth scrolling effect
+    requestAnimationFrame(applyImageZoom);
+
+    // Add event listeners for scroll and resize events
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", debounce(applyImageZoom, 250));
+
+    const removeClass = (className) => {
+      const elements = document.querySelectorAll(`.${className}`);
+      for (const element of elements) {
+        element.classList.remove(className);
+      }
+    };
+
+
+
+    navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
+      if (result.state == "granted" || result.state == "prompt") {
+      }
+    });
+
+
+    
+
+
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GED109S1GN"></script>
+  <script src='main.js'></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-GED109S1GN');
+  </script>
+
+</body>
+
+</html>
