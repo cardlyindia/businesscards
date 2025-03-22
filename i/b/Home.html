@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marriage Invitation</title>
+  <link rel="icon" href="bgimage.jpg" type="image/jpeg" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400..800&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: "Baloo Chettan 2", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: url('bgimage.jpg') no-repeat center center/cover;
+      color: white;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .invitation-container {
+      position: relative;
+      z-index: 1;
+      padding: 40px;
+      border: 2px solid white;
+      border-radius: 15px;
+      background: rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+    }
+
+    .bride-groom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .bride-groom h1 {
+      font-size: 3.5em;
+      margin: 10px 0;
+      font-weight: bold;
+      font-family: "Dancing Script", cursive;
+    }
+
+    .bride-groom span {
+      font-size: 1.5em;
+      font-style: italic;
+    }
+
+    .date,
+    .timing,
+    .location {
+      font-size: 1.5em;
+      margin-top: 10px;
+      font-weight: 500;
+      font-family: "Baloo Chettan 2", sans-serif;
+    }
+
+    .button-container {
+      margin-top: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 40px;
+      border-radius: 50px;
+      background: linear-gradient(45deg, white, #ccc);
+      color: black;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+      text-decoration: none;
+      font-size: 1.3em;
+      font-weight: bold;
+      box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.5);
+      font-family: "Baloo Chettan 2", sans-serif;
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay"></div>
+  <div class="invitation-container">
+    <div class="bride-groom">
+      <h1>Sandhya S Nair</h1>
+      <span>&</span>
+      <h1>Ajay K J</h1>
+    </div>
+    <p class="date">June 8, 2025</p>
+    <p class="timing">Sweekaranam: 9:00 AM</p>
+    <p class="timing">Muhurtham: 10:00 AM - 10:50 AM</p>
+    <p class="location">Venue: KKM International</p>
+    <div class="button-container">
+      <a href="https://maps.app.goo.gl/FRrYVY69FHUra1mZA" class="button">
+        <i class="fas fa-map-marker-alt"></i> View Location
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>
