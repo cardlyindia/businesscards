@@ -458,6 +458,159 @@
             padding-top: 18px;
         }
 
+        /* Review Feedback Modal Overlay & Card */
+        .feedback-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .feedback-modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .feedback-modal-card {
+            background: var(--bg-card-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 28px;
+            max-width: 500px;
+            width: 100%;
+            padding: 36px 30px 30px;
+            text-align: center;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(212, 175, 55, 0.2);
+            position: relative;
+            transform: translateY(30px) scale(0.95);
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .feedback-modal-overlay.active .feedback-modal-card {
+            transform: translateY(0) scale(1);
+        }
+
+        .feedback-modal-close {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(28, 28, 30, 0.06);
+            border: none;
+            color: var(--charcoal-dark);
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.25s ease;
+        }
+
+        .feedback-modal-close:hover {
+            background: rgba(28, 28, 30, 0.15);
+            transform: rotate(90deg);
+        }
+
+        .feedback-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gold-light-bg);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: #9E7817;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+        }
+
+        .feedback-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: var(--charcoal-dark);
+            line-height: 1.35;
+            margin-bottom: 8px;
+        }
+
+        .feedback-text {
+            font-size: 0.95rem;
+            color: var(--charcoal-medium);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .feedback-svg-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0 20px 0;
+        }
+
+        .feedback-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .review-now-btn {
+            background: var(--gold-cta);
+            color: var(--btn-text-dark);
+            border: none;
+            padding: 16px 28px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 10px 24px rgba(212, 175, 55, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .review-now-btn:hover {
+            background: var(--gold-cta-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 14px 30px rgba(212, 175, 55, 0.55);
+        }
+
+        .maybe-later-btn {
+            background: transparent;
+            border: none;
+            color: var(--charcoal-light);
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 8px;
+            transition: color 0.2s ease;
+        }
+
+        .maybe-later-btn:hover {
+            color: var(--charcoal-dark);
+        }
+
         @media (max-width: 640px) {
             .white-card {
                 padding: 36px 24px;
@@ -472,6 +625,12 @@
             }
             .save-contact-btn {
                 justify-content: center;
+            }
+            .feedback-modal-card {
+                padding: 28px 20px 24px;
+            }
+            .feedback-title {
+                font-size: 1.25rem;
             }
         }
     </style>
@@ -662,6 +821,52 @@
                 &copy; 2026 RK Wedding Mall, Vithura &bull; Kalunk Junction
             </div>
 
+        </div>
+    </div>
+
+    <!-- Feedback / Google Review Modal Popup -->
+    <div class="feedback-modal-overlay" id="feedback-modal">
+        <div class="feedback-modal-card">
+            <button class="feedback-modal-close" id="close-feedback-modal" aria-label="Close modal">&times;</button>
+            <div class="feedback-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                Google Review
+            </div>
+            <h3 class="feedback-title">Your Feedback is valuable!</h3>
+            <p class="feedback-text">Would you like to review us now?</p>
+            
+            <div class="feedback-svg-wrapper">
+                <svg class="mb-2 mt-2" width="80%" height="100" viewBox="0 0 881 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                    <defs>
+                        <linearGradient id="goldStarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#FFE259"/>
+                            <stop offset="100%" stop-color="#FFA751"/>
+                        </linearGradient>
+                        <filter id="starGlow" x="-20%" y="-20%" width="140%" height="140%">
+                            <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#D4AF37" flood-opacity="0.4"/>
+                        </filter>
+                    </defs>
+                    <g filter="url(#starGlow)" fill="url(#goldStarGrad)">
+                        <path transform="translate(140.5, 65) scale(2.2)" d="M 0,-20 L 5.88,-6.18 L 20.95,-4.89 L 9.51,5.15 L 12.74,19.89 L 0,12.2 L -12.74,19.89 L -9.51,5.15 L -20.95,-4.89 L -5.88,-6.18 Z" />
+                        <path transform="translate(290.5, 65) scale(2.2)" d="M 0,-20 L 5.88,-6.18 L 20.95,-4.89 L 9.51,5.15 L 12.74,19.89 L 0,12.2 L -12.74,19.89 L -9.51,5.15 L -20.95,-4.89 L -5.88,-6.18 Z" />
+                        <path transform="translate(440.5, 65) scale(2.2)" d="M 0,-20 L 5.88,-6.18 L 20.95,-4.89 L 9.51,5.15 L 12.74,19.89 L 0,12.2 L -12.74,19.89 L -9.51,5.15 L -20.95,-4.89 L -5.88,-6.18 Z" />
+                        <path transform="translate(590.5, 65) scale(2.2)" d="M 0,-20 L 5.88,-6.18 L 20.95,-4.89 L 9.51,5.15 L 12.74,19.89 L 0,12.2 L -12.74,19.89 L -9.51,5.15 L -20.95,-4.89 L -5.88,-6.18 Z" />
+                        <path transform="translate(740.5, 65) scale(2.2)" d="M 0,-20 L 5.88,-6.18 L 20.95,-4.89 L 9.51,5.15 L 12.74,19.89 L 0,12.2 L -12.74,19.89 L -9.51,5.15 L -20.95,-4.89 L -5.88,-6.18 Z" />
+                    </g>
+                </svg>
+            </div>
+
+            <div class="feedback-actions">
+                <a href="https://www.google.com/maps/place/R+K+Wedding+Mall,+Vithura/@8.6702257,77.0816999,17z/data=!3m2!4b1!5s0x3b05c96df6ce1bf7:0x40728c7175c78b6b!4m6!3m5!1s0x3b05c96df6c1e8a5:0xb9e3d67419da6ee6!8m2!3d8.6702204!4d77.0842748!16s%2Fg%2F11hbqq9b9x?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="review-now-btn" id="review-google-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/>
+                    </svg>
+                    Review Us on Google
+                </a>
+                <button class="maybe-later-btn" id="maybe-later-btn">Maybe Later</button>
+            </div>
         </div>
     </div>
 
@@ -1057,6 +1262,39 @@ END:VCARD`;
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
         });
+
+        /* ------------------------------------------------------------------
+           FEEDBACK & GOOGLE REVIEW POPUP MODAL (Triggers after few seconds)
+        ------------------------------------------------------------------ */
+        const feedbackModal = document.getElementById('feedback-modal');
+        const closeFeedbackBtn = document.getElementById('close-feedback-modal');
+        const maybeLaterBtn = document.getElementById('maybe-later-btn');
+        const reviewGoogleBtn = document.getElementById('review-google-btn');
+
+        // Trigger review popup modal after 4.5 seconds
+        setTimeout(() => {
+            if (feedbackModal) {
+                feedbackModal.classList.add('active');
+            }
+        }, 4500);
+
+        function closeFeedbackPopup() {
+            if (feedbackModal) {
+                feedbackModal.classList.remove('active');
+            }
+        }
+
+        if (closeFeedbackBtn) closeFeedbackBtn.addEventListener('click', closeFeedbackPopup);
+        if (maybeLaterBtn) maybeLaterBtn.addEventListener('click', closeFeedbackPopup);
+        if (reviewGoogleBtn) reviewGoogleBtn.addEventListener('click', closeFeedbackPopup);
+
+        if (feedbackModal) {
+            feedbackModal.addEventListener('click', (e) => {
+                if (e.target === feedbackModal) {
+                    closeFeedbackPopup();
+                }
+            });
+        }
     </script>
 </body>
 </html>
