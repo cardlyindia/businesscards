@@ -165,13 +165,26 @@
         .location-pill {
             font-size: 0.76rem;
             font-weight: 700;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             text-transform: uppercase;
             color: var(--charcoal-dark); /* 30% Deep Charcoal */
             background: rgba(28, 28, 30, 0.05);
             border: 1px solid var(--border-subtle);
             padding: 6px 18px;
             border-radius: 30px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .location-pill:hover {
+            background: var(--gold-cta);
+            color: var(--btn-text-dark);
+            border-color: var(--gold-cta);
+            box-shadow: 0 6px 16px rgba(212, 175, 55, 0.35);
+            transform: translateY(-2px);
         }
 
         .card-title {
@@ -697,7 +710,13 @@
             <div class="card-header">
                 <div class="gold-divider-crest">
                     <span class="crest-line"></span>
-                    <span class="location-pill">KALUNK JUNCTION, VITHURA</span>
+                    <a href="https://maps.app.goo.gl/381zVsUhkBRkjheDA" target="_blank" rel="noopener noreferrer" class="location-pill" title="View Store Location on Google Maps">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        KALUNK JUNCTION, VITHURA
+                    </a>
                     <span class="crest-line"></span>
                 </div>
                 <h1 class="card-title">RK WEDDING MALL</h1>
@@ -786,6 +805,20 @@
 
             <div class="contact-bar">
                 
+                <!-- Store Location -->
+                <a href="https://maps.app.goo.gl/381zVsUhkBRkjheDA" target="_blank" rel="noopener noreferrer" class="contact-pill location" title="Open Store Location in Google Maps">
+                    <div class="pill-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div>
+                        <div style="font-size:0.72rem; opacity:0.75; text-transform:uppercase; letter-spacing:1px;">Location</div>
+                        <div>Get Directions</div>
+                    </div>
+                </a>
+
                 <!-- WhatsApp -->
                 <a href="https://wa.me/919961680000?text=Hello%20RK%20Wedding%20Mall" target="_blank" class="contact-pill wa">
                     <div class="pill-icon">
@@ -946,8 +979,8 @@ ORG:RK Wedding Mall
 TEL;TYPE=CELL,VOICE:+919961680000
 EMAIL:rkwedding111@gmail.com
 ADR;TYPE=WORK:;;Kalunk Junction;Vithura;;;India
-NOTE:Shopping destination for clothing, appliances, footwear, cosmetics, perfumes & branded watches at Kalunk Junction, Vithura.
-URL:https://www.instagram.com/rk_wedding_mall_vithura
+NOTE:Shopping destination for clothing, appliances, footwear, cosmetics, perfumes & branded watches at Kalunk Junction, Vithura. Location: https://maps.app.goo.gl/381zVsUhkBRkjheDA
+URL:https://maps.app.goo.gl/381zVsUhkBRkjheDA
 END:VCARD`;
 
             const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8' });
