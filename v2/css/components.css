@@ -3,30 +3,121 @@
    Navbar, Buttons, Service Cards, Features, FAQ, Footer & Mobile CTA
    ========================================================================== */
 
-/* --- Navbar & Header --- */
+/* --- Bootstrap 5 Navbar & Header --- */
 .site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: var(--header-height);
-  z-index: 1000;
-  transition: all var(--transition-normal);
-}
-
-.site-header.scrolled {
   background: var(--surface-glass);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
   border-bottom: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
+  padding: 0.75rem 0;
+  transition: all var(--transition-normal);
+  z-index: 1050;
 }
 
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
+[data-theme="light"] .site-header {
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.site-header .navbar-brand {
+  margin-right: 0;
+}
+
+@media (max-width: 991.98px) {
+  .nav-cta-desktop,
+  #nav-cta,
+  #header-order-cta {
+    display: none !important;
+  }
+
+  .site-header .navbar-toggler {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .site-header .navbar-toggler {
+    display: none !important;
+  }
+
+  .nav-cta-desktop,
+  #nav-cta {
+    display: inline-flex !important;
+  }
+}
+
+.site-header .navbar-toggler-icon {
+  width: 22px;
+  height: 22px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28248, 250, 252, 0.95%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  transition: transform var(--transition-fast);
+}
+
+[data-theme="light"] .site-header .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2815, 23, 42, 0.95%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Morph to Close X icon when expanded */
+.site-header .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28248, 250, 252, 0.95%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M6 6l18 18M6 24L24 6'/%3e%3c/svg%3e");
+}
+
+[data-theme="light"] .site-header .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2815, 23, 42, 0.95%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M6 6l18 18M6 24L24 6'/%3e%3c/svg%3e");
+}
+
+@media (max-width: 991.98px) {
+  .site-header .navbar-collapse {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 1.25rem;
+    margin-top: 0.75rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
+  }
+
+  .site-header .navbar-nav .nav-link {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.65rem 0;
+    color: var(--text-primary) !important;
+  }
+}
+
+/* Ultra-Narrow Screen Optimization (< 360px - Galaxy Z Fold, Surface Duo, Small iPhones) */
+@media (max-width: 359.98px) {
+  .container, .container-fluid {
+    padding-left: 0.65rem !important;
+    padding-right: 0.65rem !important;
+  }
+
+  .brand-logo {
+    font-size: 1.05rem !important;
+    gap: 0.35rem !important;
+  }
+
+  .brand-icon {
+    width: 28px !important;
+    height: 28px !important;
+    border-radius: 8px !important;
+  }
+
+  .brand-icon svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .theme-toggle-btn,
+  .site-header .navbar-toggler {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  .site-header .navbar-toggler-icon {
+    width: 18px !important;
+    height: 18px !important;
+  }
 }
 
 .brand-logo {
@@ -70,15 +161,15 @@
 }
 
 .nav-menu {
-  display: none;
+  display: none !important;
   align-items: center;
-  gap: 2.25rem;
+  gap: 2rem;
   list-style: none;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1024px) {
   .nav-menu {
-    display: flex;
+    display: flex !important;
   }
 }
 
@@ -117,7 +208,7 @@
   gap: 0.5rem;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .nav-cta-desktop,
   #nav-cta,
   #header-order-cta {
@@ -171,7 +262,7 @@
   cursor: pointer;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1024px) {
   .mobile-menu-toggle {
     display: none !important;
   }

@@ -1,0 +1,376 @@
+/* ==========================================================================
+   CARDLY INDEX2 - NEXT-GEN LUXURY OBSIDIAN & HOLOGRAPHIC DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+  --bg-dark: #05070c;
+  --bg-dark-card: rgba(13, 17, 26, 0.75);
+  --bg-dark-card-hover: rgba(22, 28, 42, 0.85);
+  
+  --accent-cyan: #00F2FE;
+  --accent-blue: #4FACFE;
+  --accent-purple: #9d4edd;
+  --accent-rose: #F355DA;
+  --accent-gold: #EAB308;
+  
+  --gradient-neon: linear-gradient(135deg, #00F2FE 0%, #4FACFE 40%, #9d4edd 75%, #F355DA 100%);
+  --gradient-gold: linear-gradient(135deg, #FFE066 0%, #EAB308 50%, #CA8A04 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+  
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-neon: rgba(0, 242, 254, 0.25);
+  --border-glass: rgba(255, 255, 255, 0.12);
+  
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-pill: 9999px;
+  
+  --shadow-neon: 0 0 35px rgba(0, 242, 254, 0.22);
+  --shadow-card: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="light"] {
+  --bg-dark: #f8fafc;
+  --bg-dark-card: rgba(255, 255, 255, 0.88);
+  --bg-dark-card-hover: rgba(255, 255, 255, 0.98);
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --border-glass: rgba(15, 23, 42, 0.12);
+  --shadow-card: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* Global Reset & Body */
+body.index2-body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.03em;
+}
+
+/* Neon Glow Elements */
+.neon-glow-bg {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-cyan {
+  width: 450px;
+  height: 450px;
+  background: rgba(0, 242, 254, 0.18);
+  top: -100px;
+  left: 20%;
+}
+
+.glow-purple {
+  width: 500px;
+  height: 500px;
+  background: rgba(157, 78, 221, 0.16);
+  top: 35%;
+  right: -100px;
+}
+
+/* Index2 Glass Card Component */
+.index2-glass-card {
+  background: var(--bg-dark-card);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.index2-glass-card:hover {
+  background: var(--bg-dark-card-hover);
+  border-color: var(--border-neon);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-neon), var(--shadow-card);
+}
+
+/* Neon Pill Badge */
+.neon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1.1rem;
+  border-radius: var(--radius-pill);
+  background: rgba(0, 242, 254, 0.1);
+  border: 1px solid var(--border-neon);
+  color: var(--accent-cyan);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.neon-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 10px var(--accent-cyan);
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.3); }
+}
+
+/* Gradient Text */
+.text-gradient-neon {
+  background: var(--gradient-neon);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Index2 Header Navbar */
+.index2-navbar {
+  background: rgba(5, 7, 12, 0.82);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border-bottom: 1px solid var(--border-glass);
+  padding: 0.85rem 0;
+  transition: all 0.3s ease;
+  z-index: 1050;
+}
+
+[data-theme="light"] .index2-navbar {
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.index2-brand {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--text-main);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* Navbar Action Controls & Button Overflow Prevention */
+@media (max-width: 991.98px) {
+  .nav-cta-desktop,
+  #nav-cta {
+    display: none !important;
+  }
+  
+  .site-header .navbar-toggler {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .site-header .navbar-toggler {
+    display: none !important;
+  }
+  
+  .nav-cta-desktop,
+  #nav-cta {
+    display: inline-flex !important;
+  }
+}
+
+/* Primary Button */
+.btn-neon {
+  background: var(--gradient-neon);
+  color: #05070c !important;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 0.75rem 1.6rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.35);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-neon:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 35px rgba(0, 242, 254, 0.6);
+  color: #05070c !important;
+}
+
+.btn-glass {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-main) !important;
+  font-weight: 600;
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-pill);
+  padding: 0.75rem 1.6rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(12px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--border-neon);
+  color: var(--text-main) !important;
+  transform: translateY(-2px);
+}
+
+/* 3D Stage Container */
+.index2-hero-stage {
+  padding-top: calc(75px + 2.5rem);
+  padding-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.index2-canvas-box {
+  width: 100%;
+  height: 340px;
+  border-radius: var(--radius-lg);
+  background: radial-gradient(circle at center, rgba(15, 23, 42, 0.9) 0%, rgba(5, 7, 12, 0.98) 100%);
+  border: 1px solid var(--border-neon);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 50px rgba(0, 242, 254, 0.15);
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+@media (min-width: 768px) {
+  .index2-canvas-box {
+    height: 480px;
+  }
+}
+
+#index2-three-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Card Switcher Bar */
+.index2-switcher {
+  position: absolute;
+  bottom: 0.85rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem;
+  background: rgba(5, 7, 12, 0.92);
+  backdrop-filter: blur(24px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-pill);
+  z-index: 10;
+  max-width: calc(100% - 1.5rem);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.index2-switcher::-webkit-scrollbar {
+  display: none;
+}
+
+.index2-switcher-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+.index2-switcher-btn.active {
+  background: var(--gradient-neon);
+  color: #05070c;
+  font-weight: 700;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+}
+
+/* Stats Counter Pill */
+.stat-pill {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-dark-card);
+  border: 1px solid var(--border-glass);
+}
+
+.stat-num {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--accent-cyan);
+  line-height: 1;
+}
+
+.stat-lbl {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Feature Bento Grid Card */
+.bento-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(0, 242, 254, 0.1);
+  border: 1px solid var(--border-neon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-cyan);
+  margin-bottom: 1.25rem;
+}
+
+/* Ultra-Narrow Mobile Tweaks (< 360px) */
+@media (max-width: 359.98px) {
+  .index2-brand {
+    font-size: 1.15rem;
+  }
+  
+  .index2-brand-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .btn-neon, .btn-glass {
+    padding: 0.6rem 1.1rem;
+    font-size: 0.85rem;
+  }
+  
+  .index2-canvas-box {
+    height: 290px;
+  }
+}

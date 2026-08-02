@@ -1,681 +1,1001 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Primary Meta Tags -->
-  <title>Cardly | Digital Business Cards, NFC Cards, QR Menus & Digital Identity Solutions</title>
-  <meta name="title" content="Cardly | Digital Business Cards, NFC Cards, QR Menus & Digital Identity Solutions">
-  <meta name="description" content="Create premium Digital Business Cards, NFC Cards, Restaurant QR Menus, Google Review Cards, PDF Visiting Cards, Social Media Cards and complete Digital Identity Solutions for businesses and professionals.">
-  <meta name="keywords" content="Digital Business Card, NFC Business Card, Smart Visiting Card, Restaurant QR Menu, Digital Menu, Google Review Card, QR Business Card, Digital Identity, Business Profile, Portfolio Website, Digital Catalog, Contactless Menu, Restaurant Menu QR, Business Branding">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#38BDF8">
-  <link rel="canonical" href="https://cardly.in/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- Favicon & PWA -->
-  <link rel="icon" type="image/svg+xml" href="v2/public/favicon.svg">
-  <link rel="manifest" href="v2/public/manifest.json">
+    <!-- Primary Meta Tags -->
+    <title>Cardly | Digital Business Cards, NFC Cards, QR Menus & Digital Identity Solutions</title>
+    <meta name="title" content="Cardly | Digital Business Cards, NFC Cards, QR Menus & Digital Identity Solutions">
+    <meta name="description" content="Create premium Digital Business Cards, NFC Cards, Restaurant QR Menus, Google Review Cards, PDF Visiting Cards, Social Media Cards and complete Digital Identity Solutions for businesses and professionals.">
+    <meta name="keywords" content="Digital Business Card, NFC Business Card, Smart Visiting Card, Restaurant QR Menu, Digital Menu, Google Review Card, QR Business Card, Digital Identity, Business Profile, Portfolio Website, Digital Catalog, Contactless Menu, Restaurant Menu QR, Business Branding">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#00D4FF">
+    <link rel="canonical" href="https://cardly.in/">
 
-  <!-- OpenGraph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://cardly.in/">
-  <meta property="og:title" content="Cardly | Digital Business Cards, NFC Cards & Digital Identity Solutions">
-  <meta property="og:description" content="Elevate your professional brand with premium NFC Cards, Digital Business Cards, Restaurant QR Menus, and Google Review Cards. Instant sharing, no app required.">
-  <meta property="og:image" content="https://cardly.in/public/og-image.png">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cardly.in/">
+    <meta property="og:site_name" content="Cardly">
+    <meta property="og:title" content="Cardly | Digital Business Cards, NFC Cards & Digital Identity Solutions">
+    <meta property="og:description" content="Create premium Digital Business Cards, NFC Cards, Restaurant QR Menus, Google Review Cards, PDF Visiting Cards, Social Media Cards and complete Digital Identity Solutions.">
+    <meta property="og:image" content="https://cardly.in/v2/images/unnamed.jpg">
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://cardly.in/">
-  <meta property="twitter:title" content="Cardly | Digital Business Cards & NFC Identity Solutions">
-  <meta property="twitter:description" content="Create premium Digital Business Cards, NFC Cards, Restaurant QR Menus, Google Review Cards and complete Digital Identity Solutions.">
-  <meta property="twitter:image" content="https://cardly.in/public/og-image.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cardlynfc">
+    <meta name="twitter:title" content="Cardly | Digital Business Cards & NFC Identity Solutions">
+    <meta name="twitter:description" content="Create premium Digital Business Cards, NFC Cards, Restaurant QR Menus, Google Review Cards and complete Digital Identity Solutions.">
 
-  <!-- Structured Data JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://cardly.in/#organization",
-        "name": "Cardly Digital Identity Solutions",
-        "url": "https://cardly.in/",
-        "logo": "https://cardly.in/public/favicon.svg",
-        "email": "cardlyindia@gmail.com",
-        "sameAs": [
-          "https://www.instagram.com/cardlynfc/"
-        ]
-      },
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://cardly.in/#localbusiness",
-        "name": "Cardly Digital Identity",
-        "email": "cardlyindia@gmail.com",
-        "url": "https://cardly.in/",
-        "priceRange": "$$",
-        "image": "https://cardly.in/public/favicon.svg",
-        "description": "Provider of NFC Business Cards, Digital Business Cards, Restaurant QR Menus, and Google Review Cards."
-      },
-      {
-        "@type": "Product",
-        "@id": "https://cardly.in/#product-nfc",
-        "name": "Cardly Premium NFC & Digital Identity Suite",
-        "description": "Smart contactless digital business cards, NFC cards, restaurant QR menus, and Google review cards.",
-        "brand": {
-          "@type": "Brand",
-          "name": "Cardly"
+    <!-- Favicon & PWA -->
+    <link rel="icon" type="image/svg+xml" href="v2/public/favicon.svg">
+    <link rel="manifest" href="v2/public/manifest.json">
+
+    <!-- Theme Preamble -->
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('theme');
+                if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', t || 'dark');
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
+    <style>
+        /* =========================================================
+           Design Tokens & Reset
+           ========================================================= */
+        :root {
+            --h-brand: 220;
+            --bg: hsl(var(--h-brand), 20%, 8%);
+            --bg-elevated: hsl(var(--h-brand), 20%, 11%);
+            --surface: hsla(var(--h-brand), 20%, 14%, .62);
+            --surface-solid: hsl(var(--h-brand), 20%, 14%);
+            --text: hsl(var(--h-brand), 15%, 96%);
+            --text-secondary: hsl(var(--h-brand), 12%, 64%);
+            --border: hsla(var(--h-brand), 20%, 35%, .35);
+            --radius: 18px;
+            --radius-sm: 12px;
+            --shadow: 0 10px 40px rgba(0, 0, 0, .35);
+            --glass-blur: 18px;
+            --glass-sat: 160%;
+            --accent-cyan: #00D4FF;
+            --accent-purple: #8B5CF6;
+            --gradient-brand: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            --transition: .35s cubic-bezier(.25, .46, .45, .94);
         }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How do Cardly NFC Business Cards work?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Cardly NFC cards contain an embedded smart chip. Simply tap the card on any modern iPhone or Android smartphone to instantly share your digital contact profile, social links, portfolio, or menu without needing an app."
+
+        [data-theme="light"] {
+            --bg: hsl(var(--h-brand), 18%, 95%);
+            --bg-elevated: hsl(var(--h-brand), 18%, 100%);
+            --surface: hsla(var(--h-brand), 18%, 100%, .72);
+            --surface-solid: hsl(var(--h-brand), 18%, 100%);
+            --text: hsl(var(--h-brand), 28%, 12%);
+            --text-secondary: hsl(var(--h-brand), 14%, 44%);
+            --border: hsla(var(--h-brand), 20%, 80%, .55);
+            --shadow: 0 10px 40px rgba(0, 0, 0, .07);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+            transition: background .35s ease, color .35s ease;
+            overflow-x: hidden;
+        }
+
+        /* Background grid */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, .025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, .025) 1px, transparent 1px);
+            background-size: 70px 70px;
+            pointer-events: none;
+            z-index: 0;
+            mask-image: radial-gradient(circle at 50% 0%, black 35%, transparent 80%);
+        }
+
+        [data-theme="light"] body::before {
+            background-image:
+                linear-gradient(rgba(0, 0, 0, .04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, .04) 1px, transparent 1px);
+        }
+
+        .glass {
+            background: var(--surface);
+            backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
+            -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            border-radius: var(--radius);
+        }
+
+        .gradient-text {
+            background: var(--gradient-brand);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px) scale(.98);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            transition: opacity .8s var(--transition), transform .8s var(--transition);
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(1100px, 92vw);
+            z-index: 1000;
+            padding: 12px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 999px;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -.04em;
+            text-decoration: none;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: .95rem;
+            transition: color .2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        .theme-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--surface-solid);
+            border: 1px solid var(--border);
+            color: var(--text);
+            cursor: pointer;
+            transition: transform .2s, box-shadow .2s;
+            flex-shrink: 0;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.07);
+            box-shadow: 0 0 18px rgba(0, 212, 255, .15);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: transform .2s, box-shadow .2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: var(--gradient-brand);
+            color: #fff;
+            box-shadow: 0 6px 24px rgba(0, 212, 255, .25), 0 6px 24px rgba(139, 92, 246, .25);
+        }
+
+        .btn-secondary {
+            background: var(--surface);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 140px 24px 80px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        #hero-canvas {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: auto;
+            touch-action: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: 999px;
+            background: rgba(0, 212, 255, 0.12);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            color: var(--accent-cyan);
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-cyan);
+            box-shadow: 0 0 10px var(--accent-cyan);
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5.8vw, 4.8rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -.04em;
+            margin-bottom: 18px;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.05rem, 2vw, 1.3rem);
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin: 0 auto 36px;
+            line-height: 1.6;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Sections */
+        .section {
+            padding: 90px 24px;
+            position: relative;
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent-cyan);
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 700;
+            letter-spacing: -.04em;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1rem, 1.6vw, 1.15rem);
+            color: var(--text-secondary);
+            max-width: 580px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 22px;
+        }
+
+        .product-card {
+            padding: 32px 26px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            text-align: left;
+            transition: transform .3s, border-color .3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-brand);
+            opacity: .7;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .product-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            margin-bottom: 2px;
+            color: var(--accent-cyan);
+        }
+
+        .product-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .product-card p {
+            color: var(--text-secondary);
+            font-size: .95rem;
+            line-height: 1.55;
+            flex: 1;
+        }
+
+        .product-link {
+            text-decoration: none;
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-size: .95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-item {
+            padding: 28px 24px;
+            border-radius: var(--radius-sm);
+        }
+
+        .feature-icon-text {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+
+        .feature-item h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .feature-item p {
+            color: var(--text-secondary);
+            font-size: .92rem;
+            line-height: 1.5;
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-item summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 22px 8px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary::after {
+            content: "+";
+            font-family: var(--font-mono);
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+        }
+
+        .faq-item[open] summary::after {
+            content: "−";
+        }
+
+        .faq-item p {
+            color: var(--text-secondary);
+            line-height: 1.65;
+            padding: 0 8px 22px;
+            font-size: .95rem;
+        }
+
+        /* Footer */
+        .footer {
+            margin: 40px 24px 24px;
+            padding: 40px 32px 24px;
+            border-radius: var(--radius);
+        }
+
+        .footer-flex {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            align-items: center;
+            text-align: center;
+        }
+
+        @media (min-width: 640px) {
+            .footer-flex {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
             }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I update my details after purchasing a card?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes! Your Cardly profile is 100% digital and dynamic. You can update your phone number, social links, menu items, or bio anytime without reprinting your card."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How do I order Cardly products?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Simply click the 'Get Started' or 'Order Now' button to fill out our official inquiry & custom design request Google Form. Our team will contact you directly."
-            }
-          }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://cardly.in/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Solutions",
-            "item": "https://cardly.in/#solutions"
-          }
-        ]
-      }
-    ]
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-cyan);
+        }
+    </style>
+
+    <script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
   }
-  </script>
-
-  <!-- External Libraries (Three.js CDN) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="v2/css/main.css">
-  <link rel="stylesheet" href="v2/css/components.css">
-  <link rel="stylesheet" href="v2/css/hero-3d.css">
+}
+</script>
 </head>
+
 <body>
 
-  <!-- Ambient Glow Orbs -->
-  <div class="bg-glow bg-glow-cyan" style="top: -150px; left: 50%; transform: translateX(-50%);"></div>
-  <div class="bg-glow bg-glow-rose" style="top: 45%; right: -180px;"></div>
+    <!-- Navigation (Brand Logo + Theme Switcher Alone - Zero Menu Links) -->
+    <nav class="nav glass">
+        <a href="#" class="logo"><span class="gradient-text">CARDLY</span></a>
 
-  <!-- Header / Navigation -->
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="#" class="brand-logo">
-        <span class="brand-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
-        </span>
-        <span>CARDLY</span>
-      </a>
-
-      <ul class="nav-menu">
-        <li><a href="#solutions" class="nav-link">Solutions</a></li>
-        <li><a href="#features" class="nav-link">Features</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#faq" class="nav-link">FAQ</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-
-      <div class="nav-actions">
-        <button class="theme-toggle-btn" aria-label="Toggle Theme">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle></svg>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+            <svg id="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+                <circle cx="12" cy="12" r="5" />
+                <path d="M12 1v2M12 21v2M4.224.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+            </svg>
+            <svg id="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
         </button>
-        <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-cta-desktop" id="nav-cta">
-          Get Started
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </a>
-        <button class="mobile-menu-toggle" aria-label="Open Mobile Menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
-  </header>
+    </nav>
 
-  <!-- Mobile Drawer Menu -->
-  <div class="mobile-overlay"></div>
-  <aside class="mobile-nav-drawer">
-    <div class="mobile-nav-top">
-      <ul class="mobile-nav-list">
-        <li><a href="#solutions" class="mobile-nav-link">Solutions</a></li>
-        <li><a href="#features" class="mobile-nav-link">Features</a></li>
-        <li><a href="#about" class="mobile-nav-link">About</a></li>
-        <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
-        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
-      </ul>
-    </div>
-    <div style="margin-top: 2rem;">
-      <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
-        Get Started
-      </a>
-    </div>
-  </aside>
-
-  <main id="main-content">
-    <!-- Centered Master Hero Section with Interactive 3D Card Scene -->
-    <section class="hero-section" id="hero">
-      <div class="container">
-        
-        <!-- Hero Text -->
-        <div class="hero-center-box">
-          <div class="hero-badge">
-            <span class="badge-dot"></span>
-            <span>Central Digital Identity & QR Hub</span>
-          </div>
-          
-          <h1 class="heading-xl hero-title">
-            Your Digital Identity <br><span class="gradient-text">Starts Here</span>
-          </h1>
-          
-          <p class="subheading hero-description">
-            Create unforgettable first impressions with premium digital business cards, NFC cards, restaurant menus, QR solutions, Google review cards and much more.
-          </p>
-
-          <div class="hero-cta-group">
-            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" id="hero-primary-cta">
-              Get Started
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-            <a href="#solutions" class="btn btn-secondary btn-lg" id="hero-secondary-cta">
-              Explore Solutions
-            </a>
-          </div>
-        </div>
-
-        <!-- Centered 3D Viewport with Floating Glass Badges -->
-        <div class="hero-canvas-wrapper-centered">
-          
-          <div class="hero-floating-pill floating-pill-left">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><path d="M6 18h12M6 14h12M6 10h12M6 6h12"></path><circle cx="12" cy="12" r="9"></circle></svg>
-            <span>✦ 100% Touchless NFC Tap</span>
-          </div>
-
-          <div class="hero-floating-pill floating-pill-right">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F472B6" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            <span>⭐ Instant Google Reviews</span>
-          </div>
-
-          <div class="hero-canvas-container" id="three-canvas-wrapper">
-            <div class="canvas-glow-1"></div>
-            <div class="canvas-glow-2"></div>
-
-            <canvas id="three-canvas"></canvas>
-
-            <!-- 3D Card Switcher Controls -->
-            <div class="card-switcher-overlay">
-              <button class="switcher-btn active" data-card="0">NFC Business Card</button>
-              <button class="switcher-btn" data-card="1">QR Restaurant Menu</button>
-              <button class="switcher-btn" data-card="2">Google Review Card</button>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Central Digital Identity & QR Hub</span>
             </div>
-          </div>
 
+            <h1 class="hero-title">Your Digital Identity <br><span class="gradient-text">Starts Here</span></h1>
+            
+            <p class="hero-subtitle">
+                Create unforgettable first impressions with premium digital business cards, NFC cards, restaurant menus, QR solutions, Google review cards and much more.
+            </p>
+
+            <div class="hero-ctas">
+                <a href="https://forms.gle/XEzzq6fHmLAErCg3A" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Get Started →</a>
+                <a href="#solutions" class="btn btn-secondary">Explore Solutions</a>
+            </div>
         </div>
-
-      </div>
     </section>
 
-    <!-- Services & Solutions Section (Bento Grid Layout) -->
-    <section class="section" id="solutions">
-      <div class="container">
-        <div class="section-header text-center mx-auto" style="max-width: 700px;">
-          <span class="section-tag">Comprehensive Products</span>
-          <h2 class="heading-lg">Central Hub for All Digital Identity Solutions</h2>
-          <p class="subheading mx-auto" style="margin-top: 1rem;">
-            From smart contactless business cards to dynamic restaurant menus and instant review collectors.
-          </p>
+    <!-- Services & Solutions Section -->
+    <section id="solutions" class="section">
+        <div class="section-header reveal">
+            <span class="section-tag">Comprehensive Products</span>
+            <h2 class="section-title">Central Hub for All <span class="gradient-text">Digital Identity Solutions</span></h2>
+            <p class="section-subtitle">From smart contactless business cards to dynamic restaurant menus and instant review collectors.</p>
         </div>
 
-        <div class="bento-grid">
-          
-          <!-- 1: Bento Featured Double Width Card -->
-          <div class="glass-card service-card bento-card-featured-wide reveal">
-            <div>
-              <div class="service-icon-wrapper">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="3"></rect><circle cx="8" cy="10" r="2"></circle><path d="M16 10h-4M16 14H8"></path></svg>
-              </div>
-              <h3 class="service-title">Digital Business Cards</h3>
-              <p class="service-desc">Share contact details, bio, social media profiles, and rich media instantly with a single tap or scan.</p>
-            </div>
-            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
-              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-          </div>
+        <div class="products-grid">
+            <!-- 1 Digital Business Cards -->
+            <article class="glass product-card reveal">
+                <div class="product-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+                </div>
+                <h3>Digital Business Cards</h3>
+                <p>Share your complete contact details, social links, portfolio, and bio with a single tap or scan. No app required.</p>
+                <a href="https://forms.gle/XEzzq6fHmLAErCg3A" class="product-link" target="_blank" rel="noopener noreferrer">Inquire Now →</a>
+            </article>
 
-          <!-- 2 -->
-          <div class="glass-card service-card reveal">
-            <div>
-              <div class="service-icon-wrapper">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18h12M6 14h12M6 10h12M6 6h12"></path><circle cx="12" cy="12" r="9"></circle></svg>
-              </div>
-              <h3 class="service-title">NFC Business Cards</h3>
-              <p class="service-desc">Premium matte, gloss, or metal NFC-enabled physical cards that link seamlessly to your digital profile.</p>
-            </div>
-            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
-              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-          </div>
+            <!-- 2 NFC Smart Cards -->
+            <article class="glass product-card reveal">
+                <div class="product-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18h12M6 14h12M6 10h12M6 6h12"></path><circle cx="12" cy="12" r="9"></circle></svg>
+                </div>
+                <h3>NFC Smart Cards</h3>
+                <p>Premium physical matte, glossy, metallic, or custom-designed NFC cards that instantly transfer details to modern smartphones.</p>
+                <a href="https://forms.gle/XEzzq6fHmLAErCg3A" class="product-link" target="_blank" rel="noopener noreferrer">Custom Order →</a>
+            </article>
 
-          <!-- 3 -->
-          <div class="glass-card service-card reveal">
-            <div>
-              <div class="service-icon-wrapper">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
-              </div>
-              <h3 class="service-title">Restaurant QR Menus</h3>
-              <p class="service-desc">Touchless, interactive digital food & beverage menus with live price updates and dish categorization.</p>
-            </div>
-            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
-              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-          </div>
+            <!-- 3 Restaurant QR Menus -->
+            <article class="glass product-card reveal">
+                <div class="product-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                </div>
+                <h3>Restaurant QR Menus</h3>
+                <p>Contactless, dynamic digital menus for cafes & fine dining. Update prices, daily specials, and items in real time.</p>
+                <a href="https://forms.gle/XEzzq6fHmLAErCg3A" class="product-link" target="_blank" rel="noopener noreferrer">View Menu Solutions →</a>
+            </article>
 
-          <!-- 4 -->
-          <div class="glass-card service-card reveal">
-            <div>
-              <div class="service-icon-wrapper">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              </div>
-              <h3 class="service-title">Google Review Cards</h3>
-              <p class="service-desc">Boost 5-star Google business ratings on the spot. Customers tap NFC or scan QR to open your review page.</p>
-            </div>
-            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
-              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-          </div>
+            <!-- 4 Interactive PDF Cards -->
+            <article class="glass product-card reveal">
+                <div class="product-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                </div>
+                <h3>Interactive PDF Cards</h3>
+                <p>Clickable interactive PDF business cards designed for WhatsApp & email sharing. Tap any button to call, email, or chat.</p>
+                <a href="https://forms.gle/XEzzq6fHmLAErCg3A" class="product-link" target="_blank" rel="noopener noreferrer">Request Sample →</a>
+            </article>
 
-          <!-- 5 -->
-          <div class="glass-card service-card reveal">
-            <div>
-              <div class="service-icon-wrapper">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-              </div>
-              <h3 class="service-title">PDF Visiting Cards</h3>
-              <p class="service-desc">Interactive, clickable vector PDF business cards formatted for WhatsApp, email signatures, and mobile sharing.</p>
-            </div>
-            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
-              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-          </div>
+            <!-- 5 Social Media Hub Cards -->
+            <article class="glass product-card reveal">
+                <div class="product-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </div>
+                <h3>Social Media Hub Cards</h3>
+                <p>Consolidate Instagram, LinkedIn, YouTube, WhatsApp, and website links into one sleek bio link & NFC card.</p>
+                <a href="https://forms.gle/XEzzq6fHmLAErCg3A" class="product-link" target="_blank" rel="noopener noreferrer">Build Social Hub →</a>
+            </article>
 
-          <!-- 6 -->
-          <div class="glass-card service-card reveal">
-            <div>
-              <div class="service-icon-wrapper">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-              </div>
-              <h3 class="service-title">Social Media Cards</h3>
-              <p class="service-desc">Single link-in-bio digital hubs uniting Instagram, YouTube, LinkedIn, TikTok, and personal messaging channels.</p>
-            </div>
-            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
-              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-          </div>
-
-          <!-- 7 -->
-          <div class="glass-card service-card reveal">
-            <div>
-              <div class="service-icon-wrapper">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-              </div>
-              <h3 class="service-title">Business Landing Pages</h3>
-              <p class="service-desc">Ultra-fast, mobile-optimized standalone websites crafted to showcase products, capture leads, and convert clients.</p>
-            </div>
-            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
-              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-          </div>
-
-          <!-- 8 -->
-          <div class="glass-card service-card reveal">
-            <div>
-              <div class="service-icon-wrapper">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-              </div>
-              <h3 class="service-title">Digital Catalogs</h3>
-              <p class="service-desc">Interactive product & inventory e-catalogs for wholesalers, retail outlets, and manufacturing brands.</p>
-            </div>
-            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
-              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-          </div>
-
-          <!-- 9 -->
-          <div class="glass-card service-card reveal">
-            <div>
-              <div class="service-icon-wrapper">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-              </div>
-              <h3 class="service-title">Custom Brand Identity</h3>
-              <p class="service-desc">Bespoke logo engineering, color palettes, vector icon creation, and luxury NFC card graphic typography.</p>
-            </div>
-            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
-              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-          </div>
-
-          <!-- 10 -->
-          <div class="glass-card service-card reveal">
-            <div>
-              <div class="service-icon-wrapper">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-              </div>
-              <h3 class="service-title">Portfolio Websites</h3>
-              <p class="service-desc">Sleek digital galleries for architects, designers, photographers, artists, and creative agencies.</p>
-            </div>
-            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
-              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-          </div>
-
-          <!-- 11 -->
-          <div class="glass-card service-card reveal">
-            <div>
-              <div class="service-icon-wrapper">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-              </div>
-              <h3 class="service-title">Company Profiles</h3>
-              <p class="service-desc">Comprehensive digital corporate brochures outlining services, team rosters, achievements, and inquiry forms.</p>
-            </div>
-            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
-              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-          </div>
-
-          <!-- 12 -->
-          <div class="glass-card service-card reveal">
-            <div>
-              <div class="service-icon-wrapper">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
-              </div>
-              <h3 class="service-title">QR Marketing Solutions</h3>
-              <p class="service-desc">Dynamic QR codes for trade show stands, print advertising campaigns, table talkers, and product packaging.</p>
-            </div>
-            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
-              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-          </div>
-
+            <!-- 6 Google Review Cards -->
+            <article class="glass product-card reveal">
+                <div class="product-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <h3>Google Review NFC Cards</h3>
+                <p>Collect instant 5-star customer reviews at checkout or counter. Customers tap their phone and leave feedback in seconds.</p>
+                <a href="https://forms.gle/XEzzq6fHmLAErCg3A" class="product-link" target="_blank" rel="noopener noreferrer">Boost Your Reviews →</a>
+            </article>
         </div>
-      </div>
     </section>
 
-    <!-- Features & Benefits Section -->
-    <section class="section" id="features" style="background: var(--bg-secondary);">
-      <div class="container">
-        <div class="section-header text-center mx-auto" style="max-width: 700px;">
-          <span class="section-tag">Why Choose Cardly</span>
-          <h2 class="heading-lg">Engineered for Modern Networking</h2>
-          <p class="subheading mx-auto" style="margin-top: 1rem;">
-            Designed to give your business an immediate edge with seamless technology and eco-friendly convenience.
-          </p>
+    <!-- Why Choose Cardly / Features -->
+    <section id="features" class="section">
+        <div class="section-header reveal">
+            <span class="section-tag">Designed for Perfection</span>
+            <h2 class="section-title">Why Professionals <span class="gradient-text">Choose Cardly</span></h2>
+            <p class="section-subtitle">Engineered with modern WebGL 3D previews, ultra-fast loading, dark mode elegance, and zero subscription traps.</p>
         </div>
 
         <div class="features-grid">
-          <!-- 1 -->
-          <div class="glass-card feature-card reveal">
-            <div class="feature-icon">⚡</div>
-            <div class="feature-content">
-              <h4>Instant Sharing</h4>
-              <p>Share contacts, links, and documents in under a second with NFC or QR code scanning.</p>
+            <div class="glass feature-item reveal">
+                <div class="feature-icon-text">⚡</div>
+                <h4>Instant NFC Tap & Scan</h4>
+                <p>Works seamlessly on iOS and Android smartphones without requiring any app download.</p>
             </div>
-          </div>
-
-          <!-- 2 -->
-          <div class="glass-card feature-card reveal">
-            <div class="feature-icon">📱</div>
-            <div class="feature-content">
-              <h4>No App Required</h4>
-              <p>Works natively in standard smartphone camera & web browsers. Zero app downloads needed.</p>
+            <div class="glass feature-item reveal">
+                <div class="feature-icon-text">🎨</div>
+                <h4>Dynamic & Editable Profile</h4>
+                <p>Update phone numbers, menu items, prices, or bio anytime without reprinting your card.</p>
             </div>
-          </div>
-
-          <!-- 3 -->
-          <div class="glass-card feature-card reveal">
-            <div class="feature-icon">📲</div>
-            <div class="feature-content">
-              <h4>Universal Compatibility</h4>
-              <p>100% compatible with all modern iOS iPhones and Android smartphones.</p>
+            <div class="glass feature-item reveal">
+                <div class="feature-icon-text">🌐</div>
+                <h4>Centralized Identity Hub</h4>
+                <p>Unify your business contact details, social links, PDF catalog, Google reviews, and menus under one URL.</p>
             </div>
-          </div>
-
-          <!-- 4 -->
-          <div class="glass-card feature-card reveal">
-            <div class="feature-icon">🔳</div>
-            <div class="feature-content">
-              <h4>High-Res QR Code</h4>
-              <p>Each card features a crisp vector QR code backup for instant fallback scanning.</p>
+            <div class="glass feature-item reveal">
+                <div class="feature-icon-text">🌙</div>
+                <h4>Dark & Light Theme First</h4>
+                <p>Designed with luxury dark aesthetics and full light mode accessibility for maximum visual impact.</p>
             </div>
-          </div>
-
-          <!-- 5 -->
-          <div class="glass-card feature-card reveal">
-            <div class="feature-icon">📡</div>
-            <div class="feature-content">
-              <h4>NFC Tap Technology</h4>
-              <p>Embedded high-range NTAG chip for effortless tap-and-connect interaction.</p>
+            <div class="glass feature-item reveal">
+                <div class="feature-icon-text">🚀</div>
+                <h4>SEO Friendly & Lightning Fast</h4>
+                <p>Built with pure HTML5, CSS3, and Vanilla JavaScript for maximum search engine indexability and instant page loads.</p>
             </div>
-          </div>
-
-          <!-- 6 -->
-          <div class="glass-card feature-card reveal">
-            <div class="feature-icon">🔄</div>
-            <div class="feature-content">
-              <h4>Unlimited Updates</h4>
-              <p>Update your details, job title, social links, or menu items anytime without reprinting.</p>
+            <div class="glass feature-item reveal">
+                <div class="feature-icon-text">📋</div>
+                <h4>Direct Custom Ordering</h4>
+                <p>Zero checkout friction. Place your custom design order directly via our official inquiry form.</p>
             </div>
-          </div>
-
-          <!-- 7 -->
-          <div class="glass-card feature-card reveal">
-            <div class="feature-icon">🌱</div>
-            <div class="feature-content">
-              <h4>Eco Friendly</h4>
-              <p>Eliminate paper waste completely. Replace thousands of paper business cards with one smart card.</p>
-            </div>
-          </div>
-
-          <!-- 8 -->
-          <div class="glass-card feature-card reveal">
-            <div class="feature-icon">✨</div>
-            <div class="feature-content">
-              <h4>Premium Luxury Design</h4>
-              <p>Crafted with ultra-sleek materials, glassmorphism UI, and dark luxury aesthetics.</p>
-            </div>
-          </div>
-
-          <!-- 9 -->
-          <div class="glass-card feature-card reveal">
-            <div class="feature-icon">🎨</div>
-            <div class="feature-content">
-              <h4>Custom Branding</h4>
-              <p>Tailored with your official company logo, custom brand palette, and professional layout.</p>
-            </div>
-          </div>
-
-          <!-- 10 -->
-          <div class="glass-card feature-card reveal">
-            <div class="feature-icon">📊</div>
-            <div class="feature-content">
-              <h4>Analytics Ready</h4>
-              <p>Track how often your profile or menu is viewed, tapped, and shared by clients.</p>
-            </div>
-          </div>
-
-          <!-- 11 -->
-          <div class="glass-card feature-card reveal">
-            <div class="feature-icon">💼</div>
-            <div class="feature-content">
-              <h4>Professional Identity</h4>
-              <p>Leave a memorable, high-tech impression during meetings, conferences, and networking events.</p>
-            </div>
-          </div>
-
-          <!-- 12 -->
-          <div class="glass-card feature-card reveal">
-            <div class="feature-icon">🕒</div>
-            <div class="feature-content">
-              <h4>Always Up To Date</h4>
-              <p>Never worry about outdated phone numbers or discarded printed paper materials again.</p>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- About Section -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="glass-card" style="padding: 4.5rem 2.5rem; text-align: center; border-radius: var(--radius-lg);">
-          <span class="section-tag" style="margin-bottom: 1.5rem;">About Cardly</span>
-          <h2 class="heading-lg" style="margin-bottom: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-            Modernizing How Businesses & Individuals Connect
-          </h2>
-          <p class="subheading mx-auto" style="max-width: 850px; font-size: 1.2rem; line-height: 1.8;">
-            Cardly helps businesses modernize the way they connect with customers through digital identity products, QR experiences, NFC technology, restaurant menu solutions, and smart business branding.
-          </p>
+    <section id="about" class="section">
+        <div class="glass p-5 reveal" style="padding: 40px;">
+            <span class="section-tag">About Cardly</span>
+            <h2 class="section-title" style="text-align: left; margin-bottom: 16px;">Empowering Businesses & Individuals in the Contactless Era</h2>
+            <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px;">
+                Cardly is India's premier digital identity brand, transforming paper business cards and traditional menus into interactive, eco-friendly digital experiences.
+            </p>
+            <p style="color: var(--text-secondary); line-height: 1.65; margin-bottom: 30px;">
+                Whether you need a custom NFC business card for networking, a live digital menu for your restaurant, or a Google review card to boost your local search ranking, Cardly provides a unified identity hub tailored to your brand.
+            </p>
+            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Order Your Custom Card →</a>
         </div>
-      </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="section" id="faq" style="background: var(--bg-secondary);">
-      <div class="container">
-        <div class="section-header text-center mx-auto" style="max-width: 700px;">
-          <span class="section-tag">Got Questions?</span>
-          <h2 class="heading-lg">Frequently Asked Questions</h2>
+    <section id="faq" class="section">
+        <div class="section-header reveal">
+            <span class="section-tag">Got Questions?</span>
+            <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+            <p class="section-subtitle">Everything you need to know about Cardly NFC business cards, digital menus, and custom ordering.</p>
         </div>
 
-        <div class="faq-list">
-          <div class="glass-card faq-item reveal active">
-            <button class="faq-question">
-              <span>How do Cardly NFC cards work?</span>
-              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-answer">
-              Cardly NFC cards contain an embedded micro-chip. Simply tap the card near any modern smartphone (iPhone or Android) and a popup notification will instantly open your digital business profile, restaurant menu, or Google review page.
-            </div>
-          </div>
-
-          <div class="glass-card faq-item reveal">
-            <button class="faq-question">
-              <span>Do my clients need to install any app to view my card?</span>
-              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-answer">
-              No app is required! Cardly works seamlessly using native mobile browser technology. Anyone can tap or scan your card and view your full interactive profile instantly.
-            </div>
-          </div>
-
-          <div class="glass-card faq-item reveal">
-            <button class="faq-question">
-              <span>Can I update my menu items or contact details later?</span>
-              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-answer">
-              Yes! Your Cardly link is completely dynamic. You can update your phone numbers, social links, pricing, or restaurant menu dishes at any time without needing to replace your physical card.
-            </div>
-          </div>
-
-          <div class="glass-card faq-item reveal">
-            <button class="faq-question">
-              <span>How do I order Cardly products for my business?</span>
-              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-answer">
-              Simply click the "Get Started" or "Order Now" button on our site to access our official Google Form inquiry link. Fill in your customization details and our team will get in touch with you directly!
-            </div>
-          </div>
+        <div class="faq-container">
+            <details class="faq-item">
+                <summary>How do Cardly NFC Business Cards work?</summary>
+                <p>Cardly NFC cards contain an embedded smart chip. Simply tap the card on any modern iPhone or Android smartphone to instantly share your digital contact profile, social links, portfolio, or menu without needing any app.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Can I update my details after purchasing a card?</summary>
+                <p>Yes! Your Cardly profile is 100% digital and dynamic. You can update your phone number, social links, menu items, or bio anytime without needing to reprint your physical card.</p>
+            </details>
+            <details class="faq-item">
+                <summary>How do I order Cardly products?</summary>
+                <p>Simply click the "Get Started" or "Order Now" button on our website to fill out our official inquiry & custom design request Google Form. Our design team will contact you directly to process your order.</p>
+            </details>
+            <details class="faq-item">
+                <summary>What products do you offer besides NFC cards?</summary>
+                <p>We provide complete digital identity solutions including Restaurant QR Menus, Google Review Cards, Interactive PDF Visiting Cards, Social Media Hub Cards, and custom business branding cards.</p>
+            </details>
         </div>
-      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="contact-box glass-card reveal">
-          <span class="section-tag" style="margin-bottom: 1.5rem;">Get In Touch</span>
-          <h2 class="heading-lg" style="margin-bottom: 1rem;">Ready to Upgrade Your Digital Identity?</h2>
-          <p class="subheading mx-auto">
-            Contact us directly or submit your inquiry through our Google order form.
-          </p>
-
-          <div class="contact-links">
-            <a href="mailto:cardlyindia@gmail.com" class="contact-chip">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              <span>cardlyindia@gmail.com</span>
-            </a>
-
-            <a href="https://www.instagram.com/cardlynfc/" target="_blank" rel="noopener noreferrer" class="contact-chip">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-              <span>@cardlynfc</span>
-            </a>
-          </div>
-
-          <div>
-            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" id="contact-order-now-cta">
-              Order Now
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-          </div>
+    <!-- Contact & Direct Order Section -->
+    <section id="contact" class="section" style="text-align:center">
+        <div class="section-header reveal">
+            <span class="section-tag">Start Your Order</span>
+            <h2 class="section-title">Ready to Upgrade Your <span class="gradient-text">Professional Brand?</span></h2>
+            <p class="section-subtitle">Click below to open our official custom design request Google Form. No online payment required during inquiry.</p>
         </div>
-      </div>
+
+        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:12px">
+            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Order Now →</a>
+            <a href="mailto:cardlyindia@gmail.com" class="btn btn-secondary">Email Us (cardlyindia@gmail.com)</a>
+            <a href="https://www.instagram.com/cardlynfc/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Instagram @cardlynfc</a>
+        </div>
     </section>
-  </main>
 
-  <!-- Site Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <p>&copy; 2026 Cardly. All rights reserved. Central Hub for Digital Identity & QR Menu Solutions.</p>
-      </div>
-      <div style="display: flex; gap: 1.5rem; align-items: center;">
-        <a href="mailto:cardlyindia@gmail.com" style="transition: color 0.2s;">cardlyindia@gmail.com</a>
-        <span>•</span>
-        <a href="https://www.instagram.com/cardlynfc/" target="_blank" rel="noopener noreferrer" style="transition: color 0.2s;">Instagram</a>
-      </div>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer glass">
+        <div class="footer-flex">
+            <div>
+                <div class="logo" style="margin-bottom:6px"><span class="gradient-text">CARDLY</span></div>
+                <p style="color:var(--text-secondary);font-size:.9rem;">© 2026 Cardly. All rights reserved. Central Hub for Digital Identity & QR Menu Solutions.</p>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:cardlyindia@gmail.com">cardlyindia@gmail.com</a>
+                <span style="color: var(--text-secondary);">•</span>
+                <a href="https://www.instagram.com/cardlynfc/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
+        </div>
+    </footer>
 
+    <!-- Three.js Module -->
+    <script type="module">
+        import * as THREE from 'three';
 
-  <!-- Scripts -->
-  <script src="v2/js/theme.js"></script>
-  <script src="v2/js/three-hero.js"></script>
-  <script src="v2/js/animations.js"></script>
-  <script src="v2/js/app.js"></script>
+        /* Theme Controller */
+        const html = document.documentElement;
+        const btn = document.getElementById('theme-toggle');
+        const sun = document.getElementById('icon-sun');
+        const moon = document.getElementById('icon-moon');
 
+        function getStoredTheme() {
+            try { return localStorage.getItem('theme'); } catch (e) { return null; }
+        }
+        function setStoredTheme(t) {
+            try { localStorage.setItem('theme', t); } catch (e) { }
+        }
+
+        function updateIcons() {
+            const isLight = html.getAttribute('data-theme') === 'light';
+            sun.style.display = isLight ? 'block' : 'none';
+            moon.style.display = isLight ? 'none' : 'block';
+        }
+
+        btn.addEventListener('click', () => {
+            const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            setStoredTheme(next);
+            updateIcons();
+        });
+
+        updateIcons();
+
+        /* Scroll Reveal */
+        const revealObs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+        /* Three.js Hero Scene */
+        const canvas = document.getElementById('hero-canvas');
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        let scene, camera, renderer, group, particles;
+        let mouseX = 0, mouseY = 0;
+        let isDragging = false, prevX = 0;
+        let rotY = 0;
+        let initialized = false;
+
+        function getThemeColors() {
+            const isLight = html.getAttribute('data-theme') === 'light';
+            return {
+                fog: isLight ? 0xeef0f5 : 0x060a12,
+                ambient: isLight ? 0xffffff : 0xffffff,
+                ambientInt: isLight ? 0.6 : 0.4
+            };
+        }
+
+        function initThree() {
+            if (initialized) return;
+            initialized = true;
+
+            const w = canvas.clientWidth;
+            const h = canvas.clientHeight;
+
+            scene = new THREE.Scene();
+            const c = getThemeColors();
+            scene.fog = new THREE.FogExp2(c.fog, 0.035);
+
+            camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 50);
+            camera.position.z = 7;
+
+            renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+            renderer.setSize(w, h);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            renderer.toneMapping = THREE.ACESFilmicToneMapping;
+
+            const col = getThemeColors();
+            const ambient = new THREE.AmbientLight(col.ambient, col.ambientInt);
+            scene.add(ambient);
+
+            const p1 = new THREE.PointLight(0x00D4FF, 18, 12);
+            p1.position.set(-4, 3, 3);
+            scene.add(p1);
+
+            const p2 = new THREE.PointLight(0x8B5CF6, 16, 12);
+            p2.position.set(4, -2, 3);
+            scene.add(p2);
+
+            group = new THREE.Group();
+            scene.add(group);
+
+            const geo = new THREE.BoxGeometry(1.8, 1.0, 0.05);
+            const matBase = new THREE.MeshPhysicalMaterial({
+                color: 0xffffff,
+                metalness: 0.05,
+                roughness: 0.15,
+                transmission: 0.5,
+                thickness: 0.6,
+                clearcoat: 1.0,
+                transparent: true,
+                opacity: 0.85,
+                side: THREE.DoubleSide
+            });
+
+            const configs = [
+                { pos: [-2.2, 1.0, 0.2], rot: [0.2, -0.4, 0.05], em: 0x00D4FF },
+                { pos: [2.0, 0.6, -0.3], rot: [-0.3, 0.5, -0.05], em: 0x8B5CF6 },
+                { pos: [0.3, -1.1, 0.5], rot: [0.1, 2.2, 0.1], em: 0x00D4FF },
+                { pos: [-1.0, 1.8, -0.6], rot: [0.4, -1.0, 0.0], em: 0x8B5CF6 },
+                { pos: [1.6, -1.4, 0.0], rot: [-0.2, 0.8, 0.0], em: 0x00D4FF }
+            ];
+
+            window._cardlyCards = [];
+
+            configs.forEach((cfg) => {
+                const m = new THREE.Mesh(geo, matBase.clone());
+                m.position.set(...cfg.pos);
+                m.rotation.set(...cfg.rot);
+                m.material.emissive = new THREE.Color(cfg.em);
+                m.material.emissiveIntensity = 0.25;
+                group.add(m);
+                window._cardlyCards.push({
+                    mesh: m,
+                    rotSpeed: [(Math.random() - .5) * 0.003, (Math.random() - .5) * 0.003, 0],
+                    floatSpeed: 0.6 + Math.random() * 0.5,
+                    floatAmp: 0.15 + Math.random() * 0.1,
+                    phase: Math.random() * Math.PI * 2
+                });
+            });
+
+            const pGeo = new THREE.BufferGeometry();
+            const count = 250;
+            const pos = new Float32Array(count * 3);
+            for (let i = 0; i < count * 3; i++) pos[i] = (Math.random() - .5) * 16;
+            pGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+            const pMat = new THREE.PointsMaterial({ color: getThemeColors().ambient, size: 0.04, transparent: true, opacity: 0.5 });
+            particles = new THREE.Points(pGeo, pMat);
+            scene.add(particles);
+
+            document.addEventListener('mousemove', onMouseMove, { passive: true });
+            canvas.addEventListener('mousedown', e => { isDragging = true; prevX = e.clientX; });
+            document.addEventListener('mouseup', () => isDragging = false);
+            canvas.addEventListener('mousemove', e => {
+                if (!isDragging) return;
+                const d = e.clientX - prevX;
+                rotY += d * 0.004;
+                prevX = e.clientX;
+            });
+            canvas.addEventListener('touchstart', e => { isDragging = true; prevX = e.touches[0].clientX; }, { passive: true });
+            canvas.addEventListener('touchend', () => isDragging = false);
+            canvas.addEventListener('touchmove', e => {
+                if (!isDragging) return;
+                const d = e.touches[0].clientX - prevX;
+                rotY += d * 0.004;
+                prevX = e.touches[0].clientX;
+            }, { passive: true });
+
+            window.addEventListener('resize', onResize, { passive: true });
+
+            const themeObs = new MutationObserver(() => {
+                const nc = getThemeColors();
+                if (scene.fog) scene.fog.color.set(nc.fog);
+                if (particles && particles.material) particles.material.color.set(nc.ambient);
+            });
+            themeObs.observe(html, { attributes: true, attributeFilter: ['data-theme'] });
+
+            animate();
+        }
+
+        function onMouseMove(e) {
+            mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+            mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
+        }
+
+        function onResize() {
+            const w = canvas.clientWidth;
+            const h = canvas.clientHeight;
+            camera.aspect = w / h;
+            camera.updateProjectionMatrix();
+            renderer.setSize(w, h);
+        }
+
+        const clock = new THREE.Clock();
+        function animate() {
+            requestAnimationFrame(animate);
+            const t = clock.getElapsedTime();
+
+            group.rotation.y = rotY + Math.sin(t * 0.2) * 0.15;
+
+            if (window._cardlyCards) {
+                window._cardlyCards.forEach(c => {
+                    c.mesh.position.y += Math.sin(t * c.floatSpeed + c.phase) * 0.003;
+                    c.mesh.rotation.x += c.rotSpeed[0];
+                    c.mesh.rotation.y += c.rotSpeed[1];
+                });
+            }
+
+            const targetX = mouseX * 0.6;
+            const targetY = mouseY * 0.4;
+            camera.position.x += (targetX - camera.position.x) * 0.05;
+            camera.position.y += (targetY - camera.position.y) * 0.05;
+            camera.lookAt(0, 0, 0);
+
+            if (particles) { particles.rotation.y = t * 0.03; particles.rotation.x = t * 0.01; }
+
+            renderer.render(scene, camera);
+        }
+
+        try {
+            if (!prefersReduced && window.WebGLRenderingContext) {
+                initThree();
+            } else {
+                canvas.style.display = 'none';
+            }
+        } catch (e) {
+            canvas.style.display = 'none';
+        }
+    </script>
 </body>
+
 </html>
