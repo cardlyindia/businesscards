@@ -1,12 +1,8 @@
 /**
  * CARDLY - THREE.JS 3D HERO CANVAS & CARD ANIMATION SYSTEM
- * Professional Physical NFC Card Layout across all 3 cards:
- * - Card 1: NFC Business Card (SAJEC / unnamed.jpg layout)
- * - Card 2: Luxury Black & Gold Restaurant QR Menu Card ("Chef's Special Menu")
- * - Card 3: Google 5-Star Review NFC Card
- * - Perfectly Aligned CARDLY.IN Logo (x: 940, y: 520) & Bottom NFC Bar across all cards
- * - 100% Opaque Cards with Printed CARDLY.IN Back Side Artwork
- * - True 3D Rounded Geometry Shape (THREE.ExtrudeGeometry)
+ * Mobile-Responsive Camera Distance & Touch Event Optimization
+ * - Auto-adjusts Camera Z (8.2 on mobile, 6.8 on tablet, 5.5 on desktop)
+ * - Touch-safe pan-y support for mobile page scrolling
  */
 
 (function () {
@@ -26,6 +22,18 @@
   if (!canvas || typeof THREE === 'undefined') {
     console.warn('Three.js or canvas element not found.');
     return;
+  }
+
+  // Calculate Responsive Camera Z Distance
+  function getResponsiveCameraZ() {
+    const width = window.innerWidth;
+    if (width < 480) {
+      return 8.2; // Move camera back on small mobile so 3D card fits inside screen!
+    } else if (width < 768) {
+      return 6.8;
+    } else {
+      return 5.5;
+    }
   }
 
   // --- 3D Rounded Geometry Shape Generator ---
@@ -227,9 +235,7 @@
     drawCardBackgroundWithCorners(ctx, 1024, 600, type, cornerRadius);
 
     if (type === 'nfc') {
-      // ==========================================
       // CARD 1: NFC BUSINESS CARD (unnamed.jpg)
-      // ==========================================
       drawRoundRect(ctx, 16, 16, 992, 568, cornerRadius - 8, null, 'rgba(255, 255, 255, 0.15)', 3);
 
       const avatarX = 140;
@@ -295,9 +301,7 @@
       ctx.restore();
 
     } else if (type === 'menu') {
-      // ==========================================
       // CARD 2: LUXURY BLACK & GOLD RESTAURANT QR MENU
-      // ==========================================
       drawRoundRect(ctx, 16, 16, 992, 568, cornerRadius - 8, null, 'rgba(234, 179, 8, 0.65)', 3);
 
       const iconX = 140;
@@ -326,7 +330,6 @@
 
       drawRoundRect(ctx, 70, 345, 610, 120, 16, 'rgba(255, 255, 255, 0.04)', 'rgba(234, 179, 8, 0.3)', 2);
 
-      // CHEF'S SPECIAL MENU (Tasting removed)
       ctx.fillStyle = '#FDE047';
       ctx.font = 'bold 22px "Plus Jakarta Sans", sans-serif';
       ctx.fillText('✦ Chef\'s Special Menu', 95, 390, 560);
@@ -360,9 +363,7 @@
       ctx.restore();
 
     } else if (type === 'review') {
-      // ==========================================
       // CARD 3: GOOGLE 5-STAR REVIEW NFC CARD
-      // ==========================================
       drawRoundRect(ctx, 16, 16, 992, 568, cornerRadius - 8, null, 'rgba(245, 158, 11, 0.65)', 3);
 
       const iconX = 140;
@@ -544,7 +545,7 @@
     scene = new THREE.Scene();
 
     camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
-    camera.position.set(0, 0, 5.5);
+    camera.position.set(0, 0, getResponsiveCameraZ());
 
     renderer = new THREE.WebGLRenderer({
       canvas: canvas,
@@ -637,11 +638,13 @@
   }
 
   function setupEvents() {
+    // Window Resize with Dynamic Responsive Camera Distance
     window.addEventListener('resize', () => {
       if (!container) return;
       const w = container.clientWidth;
       const h = container.clientHeight;
       camera.aspect = w / h;
+      camera.position.z = getResponsiveCameraZ();
       camera.updateProjectionMatrix();
       renderer.setSize(w, h);
     });
@@ -674,20 +677,30 @@
       isDragging = false;
     });
 
+    // Touch Event Handlers (Safe for vertical mobile scrolling)
+    let touchStartY = 0;
+    let touchStartX = 0;
+
     canvas.addEventListener('touchstart', (e) => {
       if (e.touches.length === 1) {
         isDragging = true;
         previousMousePosition = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
       }
     }, { passive: true });
 
     window.addEventListener('touchmove', (e) => {
       if (!isDragging || !currentCardMesh || e.touches.length !== 1) return;
+      
       const deltaX = e.touches[0].clientX - previousMousePosition.x;
       const deltaY = e.touches[0].clientY - previousMousePosition.y;
 
-      currentCardMesh.rotation.y += deltaX * 0.01;
-      currentCardMesh.rotation.x += deltaY * 0.01;
+      // Only rotate card on horizontal swipe gestures to keep vertical scrolling smooth
+      if (Math.abs(deltaX) > Math.abs(deltaY) * 0.8) {
+        currentCardMesh.rotation.y += deltaX * 0.012;
+        currentCardMesh.rotation.x += deltaY * 0.008;
+      }
 
       previousMousePosition = { x: e.touches[0].clientX, y: e.touches[0].clientY };
     }, { passive: true });
