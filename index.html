@@ -1,247 +1,688 @@
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
-    <title>Cardly.in - Premium NFC-Enabled Business Cards</title>
-  <meta name="description" content="Cardly.in is your one-stop-shop for premium NFC-enabled business cards. Our mission is to help you make a great first impression with our high-quality and customizable business cards.">
-  <meta name="keywords" content="NFC business cards, premium business cards, customizable business cards">
-  <meta name="author" content="Cardly.in">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
-  <link rel="canonical" href="https://cardly.in/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Cardly | Digital Business Cards, NFC Cards, QR Menus & Digital Identity Solutions</title>
+  <meta name="title" content="Cardly | Digital Business Cards, NFC Cards, QR Menus & Digital Identity Solutions">
+  <meta name="description" content="Create premium Digital Business Cards, NFC Cards, Restaurant QR Menus, Google Review Cards, PDF Visiting Cards, Social Media Cards and complete Digital Identity Solutions for businesses and professionals.">
+  <meta name="keywords" content="Digital Business Card, NFC Business Card, Smart Visiting Card, Restaurant QR Menu, Digital Menu, Google Review Card, QR Business Card, Digital Identity, Business Profile, Portfolio Website, Digital Catalog, Contactless Menu, Restaurant Menu QR, Business Branding">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#38BDF8">
+  <link rel="canonical" href="https://cardly.in/">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  <link href="assets/aos/aos.css" rel="stylesheet">
-  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/svg+xml" href="v2/public/favicon.svg">
+  <link rel="manifest" href="v2/public/manifest.json">
+
+  <!-- OpenGraph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cardly.in/">
+  <meta property="og:title" content="Cardly | Digital Business Cards, NFC Cards & Digital Identity Solutions">
+  <meta property="og:description" content="Elevate your professional brand with premium NFC Cards, Digital Business Cards, Restaurant QR Menus, and Google Review Cards. Instant sharing, no app required.">
+  <meta property="og:image" content="https://cardly.in/public/og-image.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://cardly.in/">
+  <meta property="twitter:title" content="Cardly | Digital Business Cards & NFC Identity Solutions">
+  <meta property="twitter:description" content="Create premium Digital Business Cards, NFC Cards, Restaurant QR Menus, Google Review Cards and complete Digital Identity Solutions.">
+  <meta property="twitter:image" content="https://cardly.in/public/og-image.png">
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://cardly.in/#organization",
+        "name": "Cardly Digital Identity Solutions",
+        "url": "https://cardly.in/",
+        "logo": "https://cardly.in/public/favicon.svg",
+        "email": "cardlyindia@gmail.com",
+        "sameAs": [
+          "https://www.instagram.com/cardlynfc/"
+        ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://cardly.in/#localbusiness",
+        "name": "Cardly Digital Identity",
+        "email": "cardlyindia@gmail.com",
+        "url": "https://cardly.in/",
+        "priceRange": "$$",
+        "image": "https://cardly.in/public/favicon.svg",
+        "description": "Provider of NFC Business Cards, Digital Business Cards, Restaurant QR Menus, and Google Review Cards."
+      },
+      {
+        "@type": "Product",
+        "@id": "https://cardly.in/#product-nfc",
+        "name": "Cardly Premium NFC & Digital Identity Suite",
+        "description": "Smart contactless digital business cards, NFC cards, restaurant QR menus, and Google review cards.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Cardly"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do Cardly NFC Business Cards work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cardly NFC cards contain an embedded smart chip. Simply tap the card on any modern iPhone or Android smartphone to instantly share your digital contact profile, social links, portfolio, or menu without needing an app."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I update my details after purchasing a card?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! Your Cardly profile is 100% digital and dynamic. You can update your phone number, social links, menu items, or bio anytime without reprinting your card."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I order Cardly products?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Simply click the 'Get Started' or 'Order Now' button to fill out our official inquiry & custom design request Google Form. Our team will contact you directly."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://cardly.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Solutions",
+            "item": "https://cardly.in/#solutions"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- External Libraries (Three.js CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="v2/css/main.css">
+  <link rel="stylesheet" href="v2/css/components.css">
+  <link rel="stylesheet" href="v2/css/hero-3d.css">
 </head>
-
 <body>
 
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex justify-content-between align-items-center">
+  <!-- Ambient Glow Orbs -->
+  <div class="bg-glow bg-glow-cyan" style="top: -150px; left: 50%; transform: translateX(-50%);"></div>
+  <div class="bg-glow bg-glow-rose" style="top: 45%; right: -180px;"></div>
 
-      <div class="logo">
-        <h1><a href="i#">Cardly</a></h1>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <span class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+        </span>
+        <span>CARDLY</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="#solutions" class="nav-link">Solutions</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle Theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle></svg>
+        </button>
+        <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="nav-cta">
+          Get Started
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Open Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
+    </div>
+  </header>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="active " href="index.html">Home</a></li>
-          <li><a target="_blank" href="https://forms.gle/XEzzq6fHmLAErCg3A">Buy Now</a></li>
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-overlay"></div>
+  <aside class="mobile-nav-drawer">
+    <div class="mobile-nav-top">
+      <ul class="mobile-nav-list">
+        <li><a href="#solutions" class="mobile-nav-link">Solutions</a></li>
+        <li><a href="#features" class="mobile-nav-link">Features</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </div>
+    <div style="margin-top: 2rem;">
+      <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+        Get Started
+      </a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- Centered Master Hero Section with Interactive 3D Card Scene -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        
+        <!-- Hero Text -->
+        <div class="hero-center-box">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Central Digital Identity & QR Hub</span>
+          </div>
           
-          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#"> Drop Down 1</a></li>
-                 
-                </ul>
-              </li>
-              <li><a href="#">Drop  2</a></li>
-          </li>
-          <li><a href="contact.html">Contact Us</a></li> -->
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+          <h1 class="heading-xl hero-title">
+            Your Digital Identity <br><span class="gradient-text">Starts Here</span>
+          </h1>
+          
+          <p class="subheading hero-description">
+            Create unforgettable first impressions with premium digital business cards, NFC cards, restaurant menus, QR solutions, Google review cards and much more.
+          </p>
 
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section class="hero-section" id="hero">
-
-    <div class="wave">
-
-      <svg width="100%" height="355px" viewBox="0 0 1920 355" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <g id="Apple-TV" transform="translate(0.000000, -402.000000)" fill="#FFFFFF">
-            <path d="M0,439.134243 C175.04074,464.89273 327.944386,477.771974 458.710937,477.771974 C654.860765,477.771974 870.645295,442.632362 1205.9828,410.192501 C1429.54114,388.565926 1667.54687,411.092417 1920,477.771974 L1920,757 L1017.15166,757 L0,757 L0,439.134243 Z" id="Path"></path>
-          </g>
-        </g>
-      </svg>
-
-    </div>
-
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-12 hero-text-image">
-          <div class="row">
-            <div class="col-lg-8 text-center text-lg-start">
-              <h1 data-aos="fade-right">Promote Your Brand Using Cardly</h1>
-              <p class="mb-5" data-aos="fade-right" data-aos-delay="100">Next generation businesses cards with privacy options</p>
-              <p data-aos="fade-right" data-aos-delay="200" data-aos-offset="-500"><a href="https://forms.gle/XEzzq6fHmLAErCg3A" class="btn btn-outline-white">Buy Now</a></p>
-            </div>
-            <div class="col-lg-4 iphone-wrap">
-              <img src="assets/img/phone.png" alt="Image" class="phone-1" data-aos="fade-right">
-              <img src="assets/img/card.png" alt="Image" class="phone-2" data-aos="fade-right" data-aos-delay="200">
-            </div>
+          <div class="hero-cta-group">
+            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" id="hero-primary-cta">
+              Get Started
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#solutions" class="btn btn-secondary btn-lg" id="hero-secondary-cta">
+              Explore Solutions
+            </a>
           </div>
         </div>
-      </div>
-    </div>
 
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-
-    <section class="container my-5">
-        <h1>Welcome to Cardly</h1>
-        <p>Your one-stop-shop for premium NFC-enabled business cards.</p>
-        <p>We understand the importance of making a great first impression, and our mission is to help you do just that.Our NFC business cards are designed to provide you with a simple and convenient way to share your contact information with others. With just a tap, you can instantly transfer your contact details, website URL, social media profiles, and more to your recipient's smartphone or tablet. It's fast, easy, and hassle-free.</p>
-
-        <p>We pride ourselves on using the latest and most advanced technology to produce high-quality NFC-enabled business cards that are both durable and long-lasting. Our cards are designed to withstand wear and tear, so you can be sure that your contact information will always be easily accessible and readily available to your clients, colleagues, and potential partners.</p>
-
-        <p>At Cardly.in, we believe that your business card should be a reflection of your brand identity. That's why we offer a wide range of customization options to help you create a unique and professional design that truly represents who you are and what you do. From custom colors and fonts to logos and images, we can help you create a business card that is both memorable and effective.</p>
-
-        <p>We also believe in being environmentally responsible, which is why all of our NFC business cards are made from sustainable materials. Our commitment to sustainability means that you can promote your business while also doing your part to protect the planet.</p>
-
-        <p>Whether you're a business owner, entrepreneur, or creative professional, our NFC-enabled business cards can help you make a lasting impression and stand out from the competition. Thank you for choosing Cardly.in, and we look forward to helping you take your business to the next level.</p>
-</section>
-
-    <!-- ======= Home Section ======= -->
-
-    
-
-    <section class="section">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-4 me-auto">
-            <h2 class="mb-4">Seamlessly Communicate</h2>
-            <p class="mb-4">You can share your social media and contacs using cardly NFC business cards seamlessly with a tap</p>
-            <p><a href="https://www.youtube.com/watch?v=gHmlW8V53hg" class="btn btn-primary">Watch Now</a></p>
+        <!-- Centered 3D Viewport with Floating Glass Badges -->
+        <div class="hero-canvas-wrapper-centered">
+          
+          <div class="hero-floating-pill floating-pill-left">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><path d="M6 18h12M6 14h12M6 10h12M6 6h12"></path><circle cx="12" cy="12" r="9"></circle></svg>
+            <span>✦ 100% Touchless NFC Tap</span>
           </div>
-          <div class="col-md-6" data-aos="fade-left">
-            <img src="assets/img/undraw_svg_2.svg" alt="Image" class="img-fluid">
+
+          <div class="hero-floating-pill floating-pill-right">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F472B6" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <span>⭐ Instant Google Reviews</span>
+          </div>
+
+          <div class="hero-canvas-container" id="three-canvas-wrapper">
+            <div class="canvas-glow-1"></div>
+            <div class="canvas-glow-2"></div>
+
+            <canvas id="three-canvas"></canvas>
+
+            <!-- 3D Card Switcher Controls -->
+            <div class="card-switcher-overlay">
+              <button class="switcher-btn active" data-card="0">NFC Business Card</button>
+              <button class="switcher-btn" data-card="1">QR Restaurant Menu</button>
+              <button class="switcher-btn" data-card="2">Google Review Card</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Services & Solutions Section (Bento Grid Layout) -->
+    <section class="section" id="solutions">
+      <div class="container">
+        <div class="section-header text-center mx-auto" style="max-width: 700px;">
+          <span class="section-tag">Comprehensive Products</span>
+          <h2 class="heading-lg">Central Hub for All Digital Identity Solutions</h2>
+          <p class="subheading mx-auto" style="margin-top: 1rem;">
+            From smart contactless business cards to dynamic restaurant menus and instant review collectors.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          
+          <!-- 1: Bento Featured Double Width Card -->
+          <div class="glass-card service-card bento-card-featured-wide reveal">
+            <div>
+              <div class="service-icon-wrapper">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="3"></rect><circle cx="8" cy="10" r="2"></circle><path d="M16 10h-4M16 14H8"></path></svg>
+              </div>
+              <h3 class="service-title">Digital Business Cards</h3>
+              <p class="service-desc">Share contact details, bio, social media profiles, and rich media instantly with a single tap or scan.</p>
+            </div>
+            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
+              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- 2 -->
+          <div class="glass-card service-card reveal">
+            <div>
+              <div class="service-icon-wrapper">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18h12M6 14h12M6 10h12M6 6h12"></path><circle cx="12" cy="12" r="9"></circle></svg>
+              </div>
+              <h3 class="service-title">NFC Business Cards</h3>
+              <p class="service-desc">Premium matte, gloss, or metal NFC-enabled physical cards that link seamlessly to your digital profile.</p>
+            </div>
+            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
+              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- 3 -->
+          <div class="glass-card service-card reveal">
+            <div>
+              <div class="service-icon-wrapper">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+              </div>
+              <h3 class="service-title">Restaurant QR Menus</h3>
+              <p class="service-desc">Touchless, interactive digital food & beverage menus with live price updates and dish categorization.</p>
+            </div>
+            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
+              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- 4 -->
+          <div class="glass-card service-card reveal">
+            <div>
+              <div class="service-icon-wrapper">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <h3 class="service-title">Google Review Cards</h3>
+              <p class="service-desc">Boost 5-star Google business ratings on the spot. Customers tap NFC or scan QR to open your review page.</p>
+            </div>
+            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
+              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- 5 -->
+          <div class="glass-card service-card reveal">
+            <div>
+              <div class="service-icon-wrapper">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+              </div>
+              <h3 class="service-title">PDF Visiting Cards</h3>
+              <p class="service-desc">Interactive, clickable vector PDF business cards formatted for WhatsApp, email signatures, and mobile sharing.</p>
+            </div>
+            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
+              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- 6 -->
+          <div class="glass-card service-card reveal">
+            <div>
+              <div class="service-icon-wrapper">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              </div>
+              <h3 class="service-title">Social Media Cards</h3>
+              <p class="service-desc">Single link-in-bio digital hubs uniting Instagram, YouTube, LinkedIn, TikTok, and personal messaging channels.</p>
+            </div>
+            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
+              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- 7 -->
+          <div class="glass-card service-card reveal">
+            <div>
+              <div class="service-icon-wrapper">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+              </div>
+              <h3 class="service-title">Business Landing Pages</h3>
+              <p class="service-desc">Ultra-fast, mobile-optimized standalone websites crafted to showcase products, capture leads, and convert clients.</p>
+            </div>
+            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
+              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- 8 -->
+          <div class="glass-card service-card reveal">
+            <div>
+              <div class="service-icon-wrapper">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              </div>
+              <h3 class="service-title">Digital Catalogs</h3>
+              <p class="service-desc">Interactive product & inventory e-catalogs for wholesalers, retail outlets, and manufacturing brands.</p>
+            </div>
+            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
+              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- 9 -->
+          <div class="glass-card service-card reveal">
+            <div>
+              <div class="service-icon-wrapper">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+              </div>
+              <h3 class="service-title">Custom Brand Identity</h3>
+              <p class="service-desc">Bespoke logo engineering, color palettes, vector icon creation, and luxury NFC card graphic typography.</p>
+            </div>
+            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
+              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- 10 -->
+          <div class="glass-card service-card reveal">
+            <div>
+              <div class="service-icon-wrapper">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <h3 class="service-title">Portfolio Websites</h3>
+              <p class="service-desc">Sleek digital galleries for architects, designers, photographers, artists, and creative agencies.</p>
+            </div>
+            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
+              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- 11 -->
+          <div class="glass-card service-card reveal">
+            <div>
+              <div class="service-icon-wrapper">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              </div>
+              <h3 class="service-title">Company Profiles</h3>
+              <p class="service-desc">Comprehensive digital corporate brochures outlining services, team rosters, achievements, and inquiry forms.</p>
+            </div>
+            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
+              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- 12 -->
+          <div class="glass-card service-card reveal">
+            <div>
+              <div class="service-icon-wrapper">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              </div>
+              <h3 class="service-title">QR Marketing Solutions</h3>
+              <p class="service-desc">Dynamic QR codes for trade show stands, print advertising campaigns, table talkers, and product packaging.</p>
+            </div>
+            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="service-action">
+              Request Order <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Features & Benefits Section -->
+    <section class="section" id="features" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header text-center mx-auto" style="max-width: 700px;">
+          <span class="section-tag">Why Choose Cardly</span>
+          <h2 class="heading-lg">Engineered for Modern Networking</h2>
+          <p class="subheading mx-auto" style="margin-top: 1rem;">
+            Designed to give your business an immediate edge with seamless technology and eco-friendly convenience.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- 1 -->
+          <div class="glass-card feature-card reveal">
+            <div class="feature-icon">⚡</div>
+            <div class="feature-content">
+              <h4>Instant Sharing</h4>
+              <p>Share contacts, links, and documents in under a second with NFC or QR code scanning.</p>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="glass-card feature-card reveal">
+            <div class="feature-icon">📱</div>
+            <div class="feature-content">
+              <h4>No App Required</h4>
+              <p>Works natively in standard smartphone camera & web browsers. Zero app downloads needed.</p>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="glass-card feature-card reveal">
+            <div class="feature-icon">📲</div>
+            <div class="feature-content">
+              <h4>Universal Compatibility</h4>
+              <p>100% compatible with all modern iOS iPhones and Android smartphones.</p>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="glass-card feature-card reveal">
+            <div class="feature-icon">🔳</div>
+            <div class="feature-content">
+              <h4>High-Res QR Code</h4>
+              <p>Each card features a crisp vector QR code backup for instant fallback scanning.</p>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="glass-card feature-card reveal">
+            <div class="feature-icon">📡</div>
+            <div class="feature-content">
+              <h4>NFC Tap Technology</h4>
+              <p>Embedded high-range NTAG chip for effortless tap-and-connect interaction.</p>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="glass-card feature-card reveal">
+            <div class="feature-icon">🔄</div>
+            <div class="feature-content">
+              <h4>Unlimited Updates</h4>
+              <p>Update your details, job title, social links, or menu items anytime without reprinting.</p>
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div class="glass-card feature-card reveal">
+            <div class="feature-icon">🌱</div>
+            <div class="feature-content">
+              <h4>Eco Friendly</h4>
+              <p>Eliminate paper waste completely. Replace thousands of paper business cards with one smart card.</p>
+            </div>
+          </div>
+
+          <!-- 8 -->
+          <div class="glass-card feature-card reveal">
+            <div class="feature-icon">✨</div>
+            <div class="feature-content">
+              <h4>Premium Luxury Design</h4>
+              <p>Crafted with ultra-sleek materials, glassmorphism UI, and dark luxury aesthetics.</p>
+            </div>
+          </div>
+
+          <!-- 9 -->
+          <div class="glass-card feature-card reveal">
+            <div class="feature-icon">🎨</div>
+            <div class="feature-content">
+              <h4>Custom Branding</h4>
+              <p>Tailored with your official company logo, custom brand palette, and professional layout.</p>
+            </div>
+          </div>
+
+          <!-- 10 -->
+          <div class="glass-card feature-card reveal">
+            <div class="feature-icon">📊</div>
+            <div class="feature-content">
+              <h4>Analytics Ready</h4>
+              <p>Track how often your profile or menu is viewed, tapped, and shared by clients.</p>
+            </div>
+          </div>
+
+          <!-- 11 -->
+          <div class="glass-card feature-card reveal">
+            <div class="feature-icon">💼</div>
+            <div class="feature-content">
+              <h4>Professional Identity</h4>
+              <p>Leave a memorable, high-tech impression during meetings, conferences, and networking events.</p>
+            </div>
+          </div>
+
+          <!-- 12 -->
+          <div class="glass-card feature-card reveal">
+            <div class="feature-icon">🕒</div>
+            <div class="feature-content">
+              <h4>Always Up To Date</h4>
+              <p>Never worry about outdated phone numbers or discarded printed paper materials again.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-
-    <section class="section">
+    <!-- About Section -->
+    <section class="section" id="about">
       <div class="container">
-
-        <div class="row justify-content-center text-center">
-          <div class="col-md-7 mb-5">
-            <h2 class="section-heading">Need customizations? Choose the right Branding solution you need</h2>
-            <!-- <p>Seamless Networking Solutions for Individuals, Groups, and Enterprises.</p> -->
-          </div>
+        <div class="glass-card" style="padding: 4.5rem 2.5rem; text-align: center; border-radius: var(--radius-lg);">
+          <span class="section-tag" style="margin-bottom: 1.5rem;">About Cardly</span>
+          <h2 class="heading-lg" style="margin-bottom: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+            Modernizing How Businesses & Individuals Connect
+          </h2>
+          <p class="subheading mx-auto" style="max-width: 850px; font-size: 1.2rem; line-height: 1.8;">
+            Cardly helps businesses modernize the way they connect with customers through digital identity products, QR experiences, NFC technology, restaurant menu solutions, and smart business branding.
+          </p>
         </div>
-        <div class="row align-items-stretch">
+      </div>
+    </section>
 
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <div class="pricing h-100 text-center">
-              <span>&nbsp;</span>
-              <h3>Individual</h3>
-              <ul class="list-unstyled">
-                <li>Create stunning business cards for your personal purpose</li>
-            
-              </ul>
-              <div class="price-cta">
-                
-                <p><a href="https://forms.gle/XEzzq6fHmLAErCg3A" class="btn btn-white">Apply</a></p>
-              </div>
+    <!-- FAQ Section -->
+    <section class="section" id="faq" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header text-center mx-auto" style="max-width: 700px;">
+          <span class="section-tag">Got Questions?</span>
+          <h2 class="heading-lg">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="glass-card faq-item reveal active">
+            <button class="faq-question">
+              <span>How do Cardly NFC cards work?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              Cardly NFC cards contain an embedded micro-chip. Simply tap the card near any modern smartphone (iPhone or Android) and a popup notification will instantly open your digital business profile, restaurant menu, or Google review page.
             </div>
           </div>
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <div class="pricing h-100 text-center popular">
-              <span class="popularity">POPULAR</span>
-              <h3>Groups</h3>
-              <ul class="list-unstyled">
-                <li>Suitable for Groups and Associations</li>
-                <li>Choose from available Templates</li>
-                <li>Web Profiles</li>
-              </ul>
-              <div class="price-cta">
-                <strong class="price">Custom Pricing</strong>
-                <p><a href="mailto: cardlyindia@gmail.com" class="btn btn-white">Contact Sales</a></p>
-              </div>
+
+          <div class="glass-card faq-item reveal">
+            <button class="faq-question">
+              <span>Do my clients need to install any app to view my card?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              No app is required! Cardly works seamlessly using native mobile browser technology. Anyone can tap or scan your card and view your full interactive profile instantly.
             </div>
           </div>
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <div class="pricing h-100 text-center">
-              <span class="popularity">PREMIUM</span>
-              <h3>Enterprises</h3>
-              <ul class="list-unstyled">
-                <li>For Comapanies and large groups</li>
-                <li>Design Customizations</li>
-                <li>Web Profiles</li>
-                <li>Premium Support</li>
-              </ul>
-              <div class="price-cta">
-                <strong class="price">Custom Pricing</strong>
-                <p><a href="mailto: cardlyindia@gmail.com" class="btn btn-white">Contact Sales</a></p>
-              </div>
+
+          <div class="glass-card faq-item reveal">
+            <button class="faq-question">
+              <span>Can I update my menu items or contact details later?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              Yes! Your Cardly link is completely dynamic. You can update your phone numbers, social links, pricing, or restaurant menu dishes at any time without needing to replace your physical card.
+            </div>
+          </div>
+
+          <div class="glass-card faq-item reveal">
+            <button class="faq-question">
+              <span>How do I order Cardly products for my business?</span>
+              <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              Simply click the "Get Started" or "Order Now" button on our site to access our official Google Form inquiry link. Fill in your customization details and our team will get in touch with you directly!
             </div>
           </div>
         </div>
       </div>
     </section>
 
-
-    
-    <!-- ======= CTA Section ======= -->
-    <section class="section cta-section">
+    <!-- Contact Section -->
+    <section class="section" id="contact">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 me-auto text-center text-md-start mb-5 mb-md-0">
-            <h2>Make a lasting impression. Be top-of-mind for clients, colleagues, and partners.</h2>
+        <div class="contact-box glass-card reveal">
+          <span class="section-tag" style="margin-bottom: 1.5rem;">Get In Touch</span>
+          <h2 class="heading-lg" style="margin-bottom: 1rem;">Ready to Upgrade Your Digital Identity?</h2>
+          <p class="subheading mx-auto">
+            Contact us directly or submit your inquiry through our Google order form.
+          </p>
+
+          <div class="contact-links">
+            <a href="mailto:cardlyindia@gmail.com" class="contact-chip">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>cardlyindia@gmail.com</span>
+            </a>
+
+            <a href="https://www.instagram.com/cardlynfc/" target="_blank" rel="noopener noreferrer" class="contact-chip">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              <span>@cardlynfc</span>
+            </a>
           </div>
-          <div class="col-md-5 text-center text-md-end">
-            <p><a href="https://forms.gle/XEzzq6fHmLAErCg3A" class="btn d-inline-flex align-items-center"><i class="bx bx-id-card"></i><span>Get It Now</span></a></p>
+
+          <div>
+            <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" id="contact-order-now-cta">
+              Order Now
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
           </div>
         </div>
       </div>
-    </section><!-- End CTA Section -->
+    </section>
+  </main>
 
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-     
-
-      <div class="row justify-content-center text-center">
-        <div class="col-md-7">
-          <p class="copyright">&copy; Cardly India</p>
-         
-        </div>
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p>&copy; 2026 Cardly. All rights reserved. Central Hub for Digital Identity & QR Menu Solutions.</p>
       </div>
-
+      <div style="display: flex; gap: 1.5rem; align-items: center;">
+        <a href="mailto:cardlyindia@gmail.com" style="transition: color 0.2s;">cardlyindia@gmail.com</a>
+        <span>•</span>
+        <a href="https://www.instagram.com/cardlynfc/" target="_blank" rel="noopener noreferrer" style="transition: color 0.2s;">Instagram</a>
+      </div>
     </div>
   </footer>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Sticky Mobile CTA Bar -->
+  <div class="sticky-mobile-cta">
+    <a href="https://forms.gle/XEzzq6fHmLAErCg3A" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="mobile-sticky-cta-btn">
+      Get Your Digital Card
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </a>
+  </div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/aos/aos.js"></script>
-  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GED109S1GN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GED109S1GN');
-</script>
+  <!-- Scripts -->
+  <script src="v2/js/theme.js"></script>
+  <script src="v2/js/three-hero.js"></script>
+  <script src="v2/js/animations.js"></script>
+  <script src="v2/js/app.js"></script>
 
 </body>
-
 </html>
