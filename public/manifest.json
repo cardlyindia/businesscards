@@ -1,0 +1,17 @@
+{
+  "name": "Cardly | Digital Business Cards & NFC Identity Solutions",
+  "short_name": "Cardly",
+  "description": "Create premium Digital Business Cards, NFC Cards, Restaurant QR Menus, Google Review Cards and Digital Identity Solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090B",
+  "theme_color": "#00D4FF",
+  "icons": [
+    {
+      "src": "/public/favicon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
