@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-22 (later)
+- Google Analytics 4 (`G-GED109S1GN`): Google's standard tag in the `<head>` of every page, plus events for orders, calls, UPI, contact, PDF download, reviews and Cardly clicks.
+- Menu card viewer: the zoom label now shows **100%** instead of "Fit".
+- Language switch hidden for now (`SHOW_LANGUAGE = false`).
+
 ## 2026-11-22: Salkara 2 (new site)
 
 **Menu**
@@ -22,4 +27,4 @@
 - New Google Maps and Google review links.
 
 **Not changed**
-- The old site in `SALKARA/salkara/` keeps working on its own. Its menu and PDF were updated earlier the same day, and backups are in `_backups/`.
+- The old site in `SALKARA/salkara0/` keeps working on its own. Its menu and PDF were updated earlier the same day, and backups are in `_backups/`.

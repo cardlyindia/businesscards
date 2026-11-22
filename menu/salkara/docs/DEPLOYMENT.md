@@ -11,7 +11,7 @@ If macOS says the file "can't be opened", right-click it → **Open** → **Open
 
 **Any computer with Python** (Mac, Windows or Linux):
 ```bash
-cd path/to/salkara2
+cd path/to/salkara
 python3 -m http.server 8000
 ```
 Then open http://localhost:8000 (on Windows, use `python` instead of `python3`).
@@ -26,9 +26,9 @@ Then open http://localhost:8000 (on Windows, use `python` instead of `python3`).
 1. **Choose hosting with https.** Most hosts include it for free. Any of these will work:
    - **Shared hosting with cPanel** (Hostinger, GoDaddy, etc.): upload the folder's contents to `public_html` (or to a sub-folder such as `public_html/salkara/`).
      The included `.htaccess` sets sensible cache rules on these Apache hosts.
-   - **Netlify / Cloudflare Pages / Vercel:** drag and drop the `salkara2` folder; no build settings are needed.
+   - **Netlify / Cloudflare Pages / Vercel:** drag and drop the `salkara` folder; no build settings are needed.
    - **GitHub Pages:** push the folder to a repository and enable Pages.
-2. Upload **everything** in `salkara2`, keeping the folder structure. The `docs/` folder and `start-server.command` are optional.
+2. Upload **everything** in `salkara`, keeping the folder structure. The `docs/` folder and `start-server.command` are optional.
 3. Open the site address on your phone and test it:
    - the menu loads, search works, and adding dishes updates the total;
    - the Menu Card page shows the PDF, and Download works;
@@ -67,5 +67,5 @@ If you add a new *script or stylesheet* that every page needs, also add it to th
 ---
 
 ## Old site
-The previous site is in `SALKARA/salkara/`, with its own updated menu and PDF. The new site does not depend on it.
+The previous site is in `SALKARA/salkara0/`, with its own updated menu and PDF. The new site does not depend on it.
 When the new site is live you can retire the old one, but keep `_backups/` until you're sure.

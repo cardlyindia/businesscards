@@ -2,6 +2,9 @@
  * SALKARA site settings. Change values here; no other file needs editing.
  */
 
+/* Google Analytics: the tag (ID G-GED109S1GN) is in the <head> of index.html, menu.html and pdf.html.
+   See docs/SETTINGS.md to change or remove it. */
+
 /* Cardly promotion popup: "Y" = show it, "N" = never show it */
 var SHOW_ADD = "Y";
 

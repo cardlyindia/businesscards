@@ -1,5 +1,40 @@
 # Settings
 
+## Google Analytics (`G-GED109S1GN`)
+
+Google's standard tag is placed at the top of the `<head>` of **every page**: `index.html`, `menu.html` and `pdf.html`.
+
+```html
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GED109S1GN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GED109S1GN');
+</script>
+```
+
+- **Change the ID:** replace `G-GED109S1GN` in **both places** of that block, in **all three** pages.
+- **Turn analytics off:** delete the block from all three pages. The extra events then stop automatically.
+- **New page:** if you add a page, paste the same block right after `<meta charset="utf-8">`.
+
+`assets/js/analytics.js` adds page view details plus these events, which you'll see in GA under *Reports → Engagement → Events*:
+
+
+| Event | When |
+|---|---|
+| `view_order` | the visitor opens their order list |
+| `call` | taps a phone number |
+| `upi_pay` | taps Pay with UPI |
+| `save_contact` | taps Save Contact |
+| `menu_pdf_download` | downloads the menu card PDF |
+| `rate_us` / `find_us` | opens the Google review page / Google Maps |
+| `cardly_click` | taps "Visit Cardly" in the promotion popup |
+
+This is the only part of the site that loads anything from outside it (Google's `gtag.js`).
+
 ## Cardly promotion popup — `assets/js/config.js`
 
 ```js

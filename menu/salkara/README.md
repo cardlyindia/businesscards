@@ -3,6 +3,7 @@
 Website for Salkara Restaurant, with a digital food menu, the printed menu card (PDF), and contact and payment links.
 It is a **static website**: plain HTML, CSS and JavaScript with no database and no build step.
 Everything it needs (fonts, icons, PDF viewer, images) is inside this folder, and no CDN is used.
+The only outside service is Google Analytics (tag in the `<head>` of every page).
 
 | Page | What it is |
 |---|---|
@@ -27,6 +28,7 @@ Everything it needs (fonts, icons, PDF viewer, images) is inside this folder, an
 | Add a dish photo or mark a dish popular | Add the photo to `assets/img/dishes/`, then update the JSON | [docs/EDITING-MENU.md](docs/EDITING-MENU.md#photos-and-popular-dishes) |
 | Replace the printed menu PDF | Overwrite `files/salkara.pdf` | [docs/EDITING-MENU.md](docs/EDITING-MENU.md#replace-the-pdf-menu-card) |
 | Turn the Cardly popup on or off | `SHOW_ADD` in `assets/js/config.js` | [docs/SETTINGS.md](docs/SETTINGS.md) |
+| Change or turn off Google Analytics | Google tag in the `<head>` of the 3 pages | [docs/SETTINGS.md](docs/SETTINGS.md#google-analytics-g-ged109s1gn) |
 | Show or hide the Malayalam switch | `SHOW_LANGUAGE` in `assets/js/i18n.js` | [docs/SETTINGS.md](docs/SETTINGS.md) |
 | Change phone numbers, links or hours | See the table of locations | [docs/SETTINGS.md](docs/SETTINGS.md#contact-details-and-links) |
 | Preview on this Mac | Double-click `start-server.command` | [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md#preview-on-your-computer) |
@@ -40,7 +42,7 @@ Everything it needs (fonts, icons, PDF viewer, images) is inside this folder, an
 ## Folder structure
 
 ```
-salkara2/
+salkara/
 ├── index.html              Home page
 ├── menu.html               Web menu
 ├── pdf.html                Menu card viewer
@@ -54,7 +56,8 @@ salkara2/
 ├── assets/
 │   ├── data/menu.json      ← ALL dishes, prices, Malayalam names, photos
 │   ├── js/
-│   │   ├── config.js       ← settings: Cardly popup (SHOW_ADD), its timing
+│   │   ├── config.js       ← settings: Cardly popup (SHOW_ADD) and its timing
+│   │   ├── analytics.js    Google Analytics events for key taps (tag is in each page's <head>)
 │   │   ├── i18n.js         ← page text in English & Malayalam, SHOW_LANGUAGE
 │   │   ├── menu.js         Builds the menu from menu.json (search, order list…)
 │   │   ├── nav.js          ☰ side menu (also holds the Rate Us / Maps links)

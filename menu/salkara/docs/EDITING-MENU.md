@@ -119,7 +119,7 @@ Common mistakes:
 
 ## Replace the PDF menu card
 Overwrite `files/salkara.pdf` with the new PDF and keep the **same file name**. The Menu Card page and its Download button use it automatically.
-A backup of the previous PDF is in `SALKARA/_backups/` and `salkara/salkara.backup-2026-11-22.pdf`.
+A backup of the previous PDF is in `SALKARA/_backups/` and `salkara0/salkara.backup-2026-11-22.pdf`.
 
 ## Page text (buttons, headings, footer)
 Text that isn't a dish or category, such as "View order", "Popular dishes" and the footer lines, is in
