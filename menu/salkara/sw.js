@@ -7,7 +7,7 @@
      background ("stale while revalidate"). If a file changed, visitors see an "Update" notice.
    - To force every visitor to drop ALL saved files at once, change VERSION below.
 */
-var VERSION = "2026-11-22.4";
+var VERSION = "2026-11-22.6";
 var CACHE = "salkara-" + VERSION;
 var PRECACHE = [
   "./",

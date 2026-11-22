@@ -826,3 +826,35 @@ html:lang(ml) body * { letter-spacing: 0 !important; }
 /* Language switch hidden (SHOW_LANGUAGE = false in assets/js/i18n.js) */
 .lang-off [data-lang-toggle], .lang-off [data-lang-toggle-row] { display: none !important; }
 .lang-off .topbar__theme { display: inline-flex !important; }
+
+/* Phones: search gets its own full-width row under the logo bar */
+@media (max-width: 699px) {
+  .page-menu { --header-h: 112px; }
+  .page-menu .topbar__inner { flex-wrap: wrap; height: auto; min-height: var(--header-h); padding-top: 8px; padding-bottom: 8px; row-gap: 8px; align-content: center; }
+  .page-menu .topbar__brand { display: flex !important; margin-right: auto; }
+  .page-menu .topbar__logo { height: 32px; }
+  .page-menu .topbar .search { order: 10; flex: 1 1 100%; max-width: none; height: 44px; }
+  .page-menu .topbar__theme { display: inline-flex !important; }
+}
+
+/* Banner: the logo is already in the header, so the banner leads with the tagline instead */
+.banner__logo { display: none; }
+.banner__inner { padding-top: 22px; padding-bottom: 22px; }
+.banner__script { order: -1; margin: 0 0 4px; font-size: 2.1rem; }
+.banner__tag { margin: 0 0 14px; }
+@media (min-width: 700px) {
+  .banner__script { font-size: 3rem; }
+  .banner__tag { margin-bottom: 0; }
+}
+:lang(ml) .banner__script { font-size: 1.5rem; }
+@media (min-width: 700px) { .banner .deco-tomato { right: 3%; top: -34px; width: 110px; height: 110px; } }
+.banner__text { display: flex; flex-direction: column; align-items: center; }
+.banner .deco-tomato { width: 78px; height: 78px; top: -26px; right: -22px; left: auto; }
+@media (min-width: 700px) {
+  .banner__text { align-items: flex-start; }
+  .banner__script { font-size: 2.4rem; }
+  .banner .deco-tomato { right: 3%; top: -34px; width: 110px; height: 110px; left: auto; }
+}
+@media (min-width: 1024px) { .banner__script { font-size: 3rem; } }
+@media (max-width: 699px) { .banner .deco-tomato { display: none; } }
+@media (max-width: 374px) { .banner__script { font-size: 1.75rem; } .banner__tag { font-size: .72rem; } }

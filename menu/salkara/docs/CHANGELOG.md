@@ -1,6 +1,8 @@
 # Changelog
 
 ## 2026-11-22 (later)
+- Menu page: the Salkara logo no longer repeats in the banner under the header; the banner now leads with "Choose the food you love."
+- Phones: the menu page search box now has its own full-width row under the logo bar (it was squeezed to a few characters).
 - Google Analytics 4 (`G-GED109S1GN`): Google's standard tag in the `<head>` of every page, plus events for orders, calls, UPI, contact, PDF download, reviews and Cardly clicks.
 - Menu card viewer: the zoom label now shows **100%** instead of "Fit".
 - Language switch hidden for now (`SHOW_LANGUAGE = false`).

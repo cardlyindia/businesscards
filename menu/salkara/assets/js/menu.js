@@ -274,9 +274,13 @@
       }
     }
   }
+  function headerOffset() {   // height of everything stuck to the top (logo bar + search + category chips)
+    var t = document.querySelector(".topbar"), c = document.querySelector(".chips");
+    return (t ? t.offsetHeight : 64) + (c && c.offsetHeight && getComputedStyle(c).display !== "none" ? c.offsetHeight : 0);
+  }
   function spy() {
     if (!MENU.length) return;
-    var offset = (window.innerWidth >= 1024 ? 64 : 120) + 24, current = MENU[0].id;
+    var offset = headerOffset() + 24, current = MENU[0].id;
     for (var i = 0; i < MENU.length; i++) {
       var sec = $(MENU[i].id);
       if (sec.style.display === "none") continue;
@@ -307,7 +311,7 @@
   function jumpTo(id) {
     var sec = $(id);
     if (!sec) return;
-    var header = window.innerWidth >= 1024 ? 64 + 8 : 64 + 56 + 4;
+    var header = headerOffset() + 4;
     smoothTo(sec.getBoundingClientRect().top + (window.pageYOffset || 0) - header);
     if (history.replaceState) history.replaceState(null, "", "#" + id);
   }
