@@ -1,0 +1,349 @@
+{
+  "_readme": "Salkara menu. Edit names (en = English, ml = Malayalam) and prices here. price: number, or null for 'Daily rate'. popular: true shows the dish in the Popular strip (needs a photo). photo: file name in assets/img/dishes/ without extension (.webp and .jpg).",
+  "groups": {
+    "food": {
+      "en": "Kitchen",
+      "ml": "ഭക്ഷണം"
+    },
+    "drinks": {
+      "en": "Juice Hub",
+      "ml": "ജ്യൂസ് ഹബ്"
+    }
+  },
+  "categories": [
+    {
+      "id": "beverages-breads",
+      "group": "food",
+      "name": {
+        "en": "Beverages & Breads",
+        "ml": "ചായയും പലഹാരങ്ങളും"
+      },
+      "items": [
+        { "en": "Tea", "ml": "ചായ", "price": 12 },
+        { "en": "Snacks", "ml": "പലഹാരങ്ങൾ", "price": 12 },
+        { "en": "Coffee", "ml": "കാപ്പി", "price": 20 },
+        { "en": "Porotta", "ml": "പൊറോട്ട", "price": 12 },
+        { "en": "Chapathy", "ml": "ചപ്പാത്തി", "price": 10 },
+        { "en": "Orotti", "ml": "ഒറോട്ടി", "price": 10 },
+        { "en": "Appam", "ml": "അപ്പം", "price": 10 },
+        { "en": "Pathiri", "ml": "പത്തിരി", "price": 8 },
+        { "en": "Idiappam", "ml": "ഇടിയപ്പം", "price": 10 },
+        { "en": "Puttu", "ml": "പുട്ട്", "price": 20 },
+        { "en": "Dosa", "ml": "ദോശ", "price": 10 },
+        { "en": "Masala Dosa", "ml": "മസാല ദോശ", "price": 70 },
+        { "en": "Ghee Roast", "ml": "നെയ് റോസ്റ്റ്", "price": 60 },
+        { "en": "Papper Roast", "ml": "പേപ്പർ റോസ്റ്റ്", "price": 60 }
+      ]
+    },
+    {
+      "id": "veg",
+      "group": "food",
+      "name": {
+        "en": "Veg",
+        "ml": "വെജ്"
+      },
+      "items": [
+        { "en": "Dal Fry", "ml": "ദാൽ ഫ്രൈ", "price": 80 },
+        { "en": "Gobi Manchurian", "ml": "ഗോബി മഞ്ചൂരിയൻ", "price": 100 },
+        { "en": "Gobi Chilly", "ml": "ഗോബി ചില്ലി", "price": 100 },
+        { "en": "Gobi 65", "ml": "ഗോബി 65", "price": 100 },
+        { "en": "Mix Vegetable Masala", "ml": "മിക്സ് വെജിറ്റബിൾ മസാല", "price": 80 },
+        { "en": "Mushroom Masala", "ml": "മഷ്റൂം മസാല", "price": 100 },
+        { "en": "Mushroom Chilly", "ml": "മഷ്റൂം ചില്ലി", "price": 100 },
+        { "en": "Mushroom Kadai", "ml": "മഷ്റൂം കടായി", "price": 100 },
+        { "en": "Paneer Butter Masala", "ml": "പനീർ ബട്ടർ മസാല", "price": 120 },
+        { "en": "Paneer Chilly", "ml": "പനീർ ചില്ലി", "price": 150 },
+        { "en": "Paneer Kadai", "ml": "പനീർ കടായി", "price": 150 },
+        { "en": "Paneer Manchurian", "ml": "പനീർ മഞ്ചൂരിയൻ", "price": 150 },
+        { "en": "Tomato Fry", "ml": "തക്കാളി ഫ്രൈ", "price": 60 }
+      ]
+    },
+    {
+      "id": "egg",
+      "group": "food",
+      "name": {
+        "en": "Egg",
+        "ml": "മുട്ട"
+      },
+      "items": [
+        { "en": "Egg Chilly", "ml": "മുട്ട ചില്ലി", "price": 70 },
+        { "en": "Egg Curry", "ml": "മുട്ടക്കറി", "price": 40 },
+        { "en": "Egg and Green Peas", "ml": "മുട്ട ഗ്രീൻപീസ്", "price": 70 },
+        { "en": "Egg and Tomato", "ml": "മുട്ട തക്കാളി", "price": 70 },
+        { "en": "Egg Masala", "ml": "മുട്ട മസാല", "price": 70 },
+        { "en": "Omelette Double", "ml": "ഡബിൾ ഓംലെറ്റ്", "price": 30 }
+      ]
+    },
+    {
+      "id": "chicken",
+      "group": "food",
+      "name": {
+        "en": "Chicken",
+        "ml": "ചിക്കൻ"
+      },
+      "items": [
+        { "en": "Chicken Curry Full", "ml": "ചിക്കൻ കറി ഫുൾ", "price": 160, "photo": "chicken-curry", "popular": true },
+        { "en": "Chicken Curry Half", "ml": "ചിക്കൻ കറി ഹാഫ്", "price": 110, "photo": "chicken-curry" },
+        { "en": "Chicken Roast Full", "ml": "ചിക്കൻ റോസ്റ്റ് ഫുൾ", "price": 160 },
+        { "en": "Chicken Roast Half", "ml": "ചിക്കൻ റോസ്റ്റ് ഹാഫ്", "price": 110 },
+        { "en": "Chicken Fry Full", "ml": "ചിക്കൻ ഫ്രൈ ഫുൾ", "price": 160 },
+        { "en": "Chicken Fry Half", "ml": "ചിക്കൻ ഫ്രൈ ഹാഫ്", "price": 110 },
+        { "en": "Chicken Chilly Full", "ml": "ചിക്കൻ ചില്ലി ഫുൾ", "price": 160 },
+        { "en": "Chicken Chilly Half", "ml": "ചിക്കൻ ചില്ലി ഹാഫ്", "price": 110 },
+        { "en": "Chicken Thoran Full", "ml": "ചിക്കൻ തോരൻ ഫുൾ", "price": 160 },
+        { "en": "Chicken Thoran Half", "ml": "ചിക്കൻ തോരൻ ഹാഫ്", "price": 110 },
+        { "en": "Chicken 65 Full", "ml": "ചിക്കൻ 65 ഫുൾ", "price": 160 },
+        { "en": "Chicken 65 Half", "ml": "ചിക്കൻ 65 ഹാഫ്", "price": 110 },
+        { "en": "Dragon Chicken", "ml": "ഡ്രാഗൺ ചിക്കൻ", "price": 180 },
+        { "en": "Chicken Kondatom", "ml": "ചിക്കൻ കൊണ്ടാട്ടം", "price": 180 },
+        { "en": "Garlic Chicken", "ml": "ഗാർലിക് ചിക്കൻ", "price": 180 },
+        { "en": "Ginger Chicken", "ml": "ജിഞ്ചർ ചിക്കൻ", "price": 180 },
+        { "en": "Butter Chicken", "ml": "ബട്ടർ ചിക്കൻ", "price": 200 },
+        { "en": "Chicken Manchurian", "ml": "ചിക്കൻ മഞ്ചൂരിയൻ", "price": 180 },
+        { "en": "Pepper Chicken", "ml": "പെപ്പർ ചിക്കൻ", "price": 180 },
+        { "en": "Chicken Kadai", "ml": "ചിക്കൻ കടായി", "price": 180 },
+        { "en": "Chicken Masala", "ml": "ചിക്കൻ മസാല", "price": 180 },
+        { "en": "Chicken Lollipop", "ml": "ചിക്കൻ ലോലിപോപ്പ്", "price": 200 }
+      ]
+    },
+    {
+      "id": "arabic",
+      "group": "food",
+      "name": {
+        "en": "Arabic",
+        "ml": "അറബിക്"
+      },
+      "items": [
+        { "en": "Chicken Shawarma Roll", "ml": "ചിക്കൻ ഷവർമ റോൾ", "price": 100 },
+        { "en": "Romali Shawarma Roll", "ml": "റുമാലി ഷവർമ റോൾ", "price": 120 },
+        { "en": "Romali Shawarma Plate", "ml": "റുമാലി ഷവർമ പ്ലേറ്റ്", "price": 150 },
+        { "en": "Chicken Shawarma Plate", "ml": "ചിക്കൻ ഷവർമ പ്ലേറ്റ്", "price": 130 },
+        { "en": "Chicken Shawai Full", "ml": "ചിക്കൻ ഷവായ് ഫുൾ", "price": 480 },
+        { "en": "Chicken Shawai Half", "ml": "ചിക്കൻ ഷവായ് ഹാഫ്", "price": 240 },
+        { "en": "Chicken Shawai Quarter", "ml": "ചിക്കൻ ഷവായ് ക്വാർട്ടർ", "price": 140 },
+        { "en": "Chicken Al Faham Full", "ml": "ചിക്കൻ അൽ ഫഹം ഫുൾ", "price": 480, "photo": "al-faham", "popular": true },
+        { "en": "Chicken Al Faham Half", "ml": "ചിക്കൻ അൽ ഫഹം ഹാഫ്", "price": 240, "photo": "al-faham" },
+        { "en": "Chicken Al Faham Quarter", "ml": "ചിക്കൻ അൽ ഫഹം ക്വാർട്ടർ", "price": 140, "photo": "al-faham" },
+        { "en": "Peri Peri Al Faham Full", "ml": "പെരി പെരി അൽ ഫഹം ഫുൾ", "price": 500 },
+        { "en": "Peri Peri Al Faham Half", "ml": "പെരി പെരി അൽ ഫഹം ഹാഫ്", "price": 250 },
+        { "en": "Peri Peri Al Faham Quarter", "ml": "പെരി പെരി അൽ ഫഹം ക്വാർട്ടർ", "price": 140 }
+      ]
+    },
+    {
+      "id": "beef",
+      "group": "food",
+      "name": {
+        "en": "Beef",
+        "ml": "ബീഫ്"
+      },
+      "items": [
+        { "en": "Dragon Beef", "ml": "ഡ്രാഗൺ ബീഫ്", "price": 200 },
+        { "en": "Beef Dry Fry", "ml": "ബീഫ് ഡ്രൈ ഫ്രൈ", "price": 200 },
+        { "en": "Beef Kadai", "ml": "ബീഫ് കടായി", "price": 160 },
+        { "en": "Beef Kondatom", "ml": "ബീഫ് കൊണ്ടാട്ടം", "price": 180 },
+        { "en": "Beef Coconut Fry", "ml": "ബീഫ് തേങ്ങാക്കൊത്ത് ഫ്രൈ", "price": 180 },
+        { "en": "Beef Fry", "ml": "ബീഫ് ഫ്രൈ", "price": 140 },
+        { "en": "Beef Chilly", "ml": "ബീഫ് ചില്ലി", "price": 150 },
+        { "en": "Beef Masala", "ml": "ബീഫ് മസാല", "price": 160 },
+        { "en": "Beef Pepper Fry", "ml": "ബീഫ് പെപ്പർ ഫ്രൈ", "price": 160 },
+        { "en": "Beef Roast", "ml": "ബീഫ് റോസ്റ്റ്", "price": 140 },
+        { "en": "Beef Varattiyathu", "ml": "ബീഫ് വരട്ടിയത്", "price": 160 },
+        { "en": "Beef Curry", "ml": "ബീഫ് കറി", "price": 140 }
+      ]
+    },
+    {
+      "id": "fish",
+      "group": "food",
+      "name": {
+        "en": "Fish",
+        "ml": "മീൻ & ചെമ്മീൻ"
+      },
+      "note": {
+        "en": "Daily rate. Ask our staff for today’s price.",
+        "ml": "ദിവസ നിരക്ക്. ഇന്നത്തെ വില ഞങ്ങളുടെ ജീവനക്കാരോട് ചോദിക്കൂ."
+      },
+      "items": [
+        { "en": "Fish Masala", "ml": "മീൻ മസാല", "price": null },
+        { "en": "Fish Fry", "ml": "മീൻ ഫ്രൈ", "price": null },
+        { "en": "Fish Tawa Fry", "ml": "മീൻ തവ ഫ്രൈ", "price": null },
+        { "en": "Fish Pollichathu", "ml": "മീൻ പൊള്ളിച്ചത്", "price": null },
+        { "en": "Fish Chilly", "ml": "മീൻ ചില്ലി", "price": null },
+        { "en": "Prawns Fry", "ml": "ചെമ്മീൻ ഫ്രൈ", "price": null },
+        { "en": "Prawns Masala", "ml": "ചെമ്മീൻ മസാല", "price": null },
+        { "en": "Prawns Pollichathu", "ml": "ചെമ്മീൻ പൊള്ളിച്ചത്", "price": null },
+        { "en": "Prawns Roast", "ml": "ചെമ്മീൻ റോസ്റ്റ്", "price": null },
+        { "en": "Prawns Tawa Fry", "ml": "ചെമ്മീൻ തവ ഫ്രൈ", "price": null }
+      ]
+    },
+    {
+      "id": "noodles",
+      "group": "food",
+      "name": {
+        "en": "Noodles",
+        "ml": "നൂഡിൽസ്"
+      },
+      "items": [
+        { "en": "Mix Noodles", "ml": "മിക്സ് നൂഡിൽസ്", "price": 160 },
+        { "en": "Chicken Noodles", "ml": "ചിക്കൻ നൂഡിൽസ്", "price": 140 },
+        { "en": "Beef Noodles", "ml": "ബീഫ് നൂഡിൽസ്", "price": 140 },
+        { "en": "Egg Noodles", "ml": "എഗ്ഗ് നൂഡിൽസ്", "price": 120 },
+        { "en": "Vegetable Noodles", "ml": "വെജിറ്റബിൾ നൂഡിൽസ്", "price": 100 }
+      ]
+    },
+    {
+      "id": "porotta",
+      "group": "food",
+      "name": {
+        "en": "Porotta",
+        "ml": "പൊറോട്ട"
+      },
+      "items": [
+        { "en": "Chicken Kothu Porotta", "ml": "ചിക്കൻ കൊത്തു പൊറോട്ട", "price": 140 },
+        { "en": "Beef Kothu Porotta", "ml": "ബീഫ് കൊത്തു പൊറോട്ട", "price": 150 },
+        { "en": "Egg Kothu Porotta", "ml": "മുട്ട കൊത്തു പൊറോട്ട", "price": 120 },
+        { "en": "Veg Kothu Porotta", "ml": "വെജ് കൊത്തു പൊറോട്ട", "price": 80 },
+        { "en": "Mixed Kothu Porotta", "ml": "മിക്സഡ് കൊത്തു പൊറോട്ട", "price": 160 },
+        { "en": "Chicken Kizhi Porotta", "ml": "ചിക്കൻ കിഴി പൊറോട്ട", "price": 160 },
+        { "en": "Beef Kizhi Porotta", "ml": "ബീഫ് കിഴി പൊറോട്ട", "price": 170 }
+      ]
+    },
+    {
+      "id": "rice",
+      "group": "food",
+      "name": {
+        "en": "Rice",
+        "ml": "റൈസ് & ബിരിയാണി"
+      },
+      "items": [
+        { "en": "Vegetable Fried Rice", "ml": "വെജിറ്റബിൾ ഫ്രൈഡ് റൈസ്", "price": 100 },
+        { "en": "Chicken Fried Rice", "ml": "ചിക്കൻ ഫ്രൈഡ് റൈസ്", "price": 150 },
+        { "en": "Beef Fried Rice", "ml": "ബീഫ് ഫ്രൈഡ് റൈസ്", "price": 150 },
+        { "en": "Egg Fried Rice", "ml": "എഗ്ഗ് ഫ്രൈഡ് റൈസ്", "price": 120 },
+        { "en": "Mixed Fried Rice", "ml": "മിക്സഡ് ഫ്രൈഡ് റൈസ്", "price": 160 },
+        { "en": "Schezwan Mix Fried Rice", "ml": "ഷെസ്വാൻ മിക്സ് ഫ്രൈഡ് റൈസ്", "price": 170 },
+        { "en": "Schezwan Beef Fried Rice", "ml": "ഷെസ്വാൻ ബീഫ് ഫ്രൈഡ് റൈസ്", "price": 160 },
+        { "en": "Schezwan Chicken Fried Rice", "ml": "ഷെസ്വാൻ ചിക്കൻ ഫ്രൈഡ് റൈസ്", "price": 160 },
+        { "en": "Schezwan Egg Fried Rice", "ml": "ഷെസ്വാൻ എഗ്ഗ് ഫ്രൈഡ് റൈസ്", "price": 130 },
+        { "en": "Schezwan Vegetable Fried Rice", "ml": "ഷെസ്വാൻ വെജിറ്റബിൾ ഫ്രൈഡ് റൈസ്", "price": 110 },
+        { "en": "Chicken Biriyani", "ml": "ചിക്കൻ ബിരിയാണി", "price": 150 },
+        { "en": "Beef Biriyani", "ml": "ബീഫ് ബിരിയാണി", "price": 150 },
+        { "en": "Buffalo Biriyani", "ml": "പോത്ത് ബിരിയാണി", "price": 160 },
+        { "en": "Egg Biriyani", "ml": "മുട്ട ബിരിയാണി", "price": 110 },
+        { "en": "Ghee Rice", "ml": "നെയ്ച്ചോർ", "price": 80 },
+        { "en": "Meals", "ml": "ഊണ്", "price": 90 },
+        { "en": "Pothi Meals", "ml": "പൊതിച്ചോറ്", "price": 120 }
+      ]
+    },
+    {
+      "id": "kuzhi-mandi",
+      "group": "food",
+      "name": {
+        "en": "Kuzhi Mandi",
+        "ml": "കുഴിമന്തി"
+      },
+      "items": [
+        { "en": "Shawai Mandi Full", "ml": "ഷവായ് മന്തി ഫുൾ", "price": 840 },
+        { "en": "Shawai Mandi Half", "ml": "ഷവായ് മന്തി ഹാഫ്", "price": 420 },
+        { "en": "Shawai Mandi Quarter", "ml": "ഷവായ് മന്തി ക്വാർട്ടർ", "price": 210 },
+        { "en": "Al Faham Mandi Full", "ml": "അൽ ഫഹം മന്തി ഫുൾ", "price": 840 },
+        { "en": "Al Faham Mandi Half", "ml": "അൽ ഫഹം മന്തി ഹാഫ്", "price": 420 },
+        { "en": "Al Faham Mandi Quarter", "ml": "അൽ ഫഹം മന്തി ക്വാർട്ടർ", "price": 210 },
+        { "en": "Peri Peri Al Faham Mandi Full", "ml": "പെരി പെരി അൽ ഫഹം മന്തി ഫുൾ", "price": 880 },
+        { "en": "Peri Peri Al Faham Mandi Half", "ml": "പെരി പെരി അൽ ഫഹം മന്തി ഹാഫ്", "price": 440 },
+        { "en": "Peri Peri Al Faham Mandi Quarter", "ml": "പെരി പെരി അൽ ഫഹം മന്തി ക്വാർട്ടർ", "price": 210 },
+        { "en": "Honey Chilly Al Faham Mandi Full", "ml": "ഹണി ചില്ലി അൽ ഫഹം മന്തി ഫുൾ", "price": 880 },
+        { "en": "Honey Chilly Al Faham Mandi Half", "ml": "ഹണി ചില്ലി അൽ ഫഹം മന്തി ഹാഫ്", "price": 440 },
+        { "en": "Honey Chilly Al Faham Mandi Quarter", "ml": "ഹണി ചില്ലി അൽ ഫഹം മന്തി ക്വാർട്ടർ", "price": 210 },
+        { "en": "Mexican Al Faham Mandi Full", "ml": "മെക്സിക്കൻ അൽ ഫഹം മന്തി ഫുൾ", "price": 880 },
+        { "en": "Mexican Al Faham Mandi Half", "ml": "മെക്സിക്കൻ അൽ ഫഹം മന്തി ഹാഫ്", "price": 440 },
+        { "en": "Mexican Al Faham Mandi Quarter", "ml": "മെക്സിക്കൻ അൽ ഫഹം മന്തി ക്വാർട്ടർ", "price": 210 }
+      ]
+    },
+    {
+      "id": "juices",
+      "group": "drinks",
+      "name": {
+        "en": "Juices",
+        "ml": "ജ്യൂസുകൾ"
+      },
+      "items": [
+        { "en": "Orange", "ml": "ഓറഞ്ച്", "price": 50, "photo": "orange-juice", "popular": true },
+        { "en": "Grapes", "ml": "മുന്തിരി", "price": 50 },
+        { "en": "Pineapple", "ml": "പൈനാപ്പിൾ", "price": 50, "photo": "pineapple-juice", "popular": true },
+        { "en": "Apple", "ml": "ആപ്പിൾ", "price": 60 },
+        { "en": "Mango", "ml": "മാമ്പഴം", "price": 50 },
+        { "en": "Watermelon", "ml": "തണ്ണിമത്തൻ", "price": 40 },
+        { "en": "Carrot", "ml": "കാരറ്റ്", "price": 50 },
+        { "en": "Mixed", "ml": "മിക്സഡ്", "price": 60 }
+      ]
+    },
+    {
+      "id": "mojitos",
+      "group": "drinks",
+      "name": {
+        "en": "Mojitos",
+        "ml": "മോജിറ്റോ"
+      },
+      "items": [
+        { "en": "Passion Fruit Mojito", "ml": "പാഷൻ ഫ്രൂട്ട് മോജിറ്റോ", "price": 70 },
+        { "en": "Kiwi Mojito", "ml": "കിവി മോജിറ്റോ", "price": 70 },
+        { "en": "Green Apple Mojito", "ml": "ഗ്രീൻ ആപ്പിൾ മോജിറ്റോ", "price": 70 },
+        { "en": "Green Mojito", "ml": "ഗ്രീൻ മോജിറ്റോ", "price": 70, "photo": "green-mojito", "popular": true },
+        { "en": "Mango Mojito", "ml": "മാംഗോ മോജിറ്റോ", "price": 70 }
+      ]
+    },
+    {
+      "id": "specials",
+      "group": "drinks",
+      "name": {
+        "en": "Specials",
+        "ml": "സ്പെഷ്യൽസ്"
+      },
+      "items": [
+        { "en": "Falooda", "ml": "ഫലൂദ", "price": 80 },
+        { "en": "Royal Falooda", "ml": "റോയൽ ഫലൂദ", "price": 120 },
+        { "en": "Vanilla Falooda", "ml": "വാനില ഫലൂദ", "price": 100 },
+        { "en": "Strawberry Falooda", "ml": "സ്ട്രോബെറി ഫലൂദ", "price": 100 },
+        { "en": "Special Falooda", "ml": "സ്പെഷ്യൽ ഫലൂദ", "price": 120 },
+        { "en": "Fruit Salad", "ml": "ഫ്രൂട്ട് സാലഡ്", "price": 80 },
+        { "en": "Fruit Salad Special", "ml": "ഫ്രൂട്ട് സാലഡ് സ്പെഷ്യൽ", "price": 100 },
+        { "en": "Puttu Ice Cream", "ml": "പുട്ട് ഐസ്ക്രീം", "price": 200 }
+      ]
+    },
+    {
+      "id": "shakes",
+      "group": "drinks",
+      "name": {
+        "en": "Shakes",
+        "ml": "ഷേക്കുകൾ"
+      },
+      "items": [
+        { "en": "Vanilla Shake", "ml": "വാനില ഷേക്ക്", "price": 60 },
+        { "en": "Strawberry Shake", "ml": "സ്ട്രോബെറി ഷേക്ക്", "price": 60 },
+        { "en": "Pista Shake", "ml": "പിസ്ത ഷേക്ക്", "price": 60 },
+        { "en": "Butter Scotch Shake", "ml": "ബട്ടർസ്കോച്ച് ഷേക്ക്", "price": 60 },
+        { "en": "Chocolate Shake", "ml": "ചോക്ലേറ്റ് ഷേക്ക്", "price": 60 },
+        { "en": "Orange Shake", "ml": "ഓറഞ്ച് ഷേക്ക്", "price": 60 },
+        { "en": "Mango Shake", "ml": "മാംഗോ ഷേക്ക്", "price": 60 },
+        { "en": "Badam Shake", "ml": "ബദാം ഷേക്ക്", "price": 60 },
+        { "en": "Apple Shake", "ml": "ആപ്പിൾ ഷേക്ക്", "price": 60 },
+        { "en": "Date Shake", "ml": "ഈന്തപ്പഴം ഷേക്ക്", "price": 60 },
+        { "en": "Fruit and Nut Shake", "ml": "ഫ്രൂട്ട് & നട്ട് ഷേക്ക്", "price": 60 }
+      ]
+    },
+    {
+      "id": "lime",
+      "group": "drinks",
+      "name": {
+        "en": "Lime",
+        "ml": "ലൈം"
+      },
+      "items": [
+        { "en": "Ginger Lime", "ml": "ഇഞ്ചി ലൈം", "price": 20 },
+        { "en": "Grape Lime", "ml": "മുന്തിരി ലൈം", "price": 20 },
+        { "en": "Pineapple Lime", "ml": "പൈനാപ്പിൾ ലൈം", "price": 20 },
+        { "en": "Mint Lime", "ml": "മിന്റ് ലൈം", "price": 20 }
+      ]
+    }
+  ]
+}

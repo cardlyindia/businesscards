@@ -1,0 +1,24 @@
+# Optional settings for Apache hosting (cPanel, Hostinger, GoDaddy, etc.).
+# Other hosts simply ignore this file. Everything is wrapped in <IfModule> so it can't break the site.
+
+<IfModule mod_mime.c>
+  AddType application/manifest+json .webmanifest
+  AddType font/woff2 .woff2
+  AddType image/webp .webp
+  AddType text/vcard .vcf
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Always re-check these so menu / price / page changes reach visitors immediately
+  <FilesMatch "(\.html|\.json|sw\.js|\.webmanifest)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  # Everything else may be stored by the browser; sw.js re-checks it in the background
+  <FilesMatch "\.(css|js|woff2?|png|jpe?g|webp|svg|pdf)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>

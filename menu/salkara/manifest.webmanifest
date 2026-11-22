@@ -1,0 +1,14 @@
+{
+  "name": "Salkara Restaurant, Vithura",
+  "short_name": "Salkara",
+  "description": "Restaurant · Cafeteria · Juice Hub",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#171111",
+  "theme_color": "#171111",
+  "icons": [
+    { "src": "assets/img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/img/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
