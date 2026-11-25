@@ -228,7 +228,7 @@
         { "en": "Chicken Biriyani", "ml": "ചിക്കൻ ബിരിയാണി", "price": 150 },
         { "en": "Beef Biriyani", "ml": "ബീഫ് ബിരിയാണി", "price": 150 },
         { "en": "Buffalo Biriyani", "ml": "പോത്ത് ബിരിയാണി", "price": 160 },
-        { "en": "Egg Biriyani", "ml": "മുട്ട ബിരിയാണി", "price": 110 },
+        { "en": "Egg Biriyani", "ml": "മുട്ട ബിരിയാണി", "price": 120 },
         { "en": "Ghee Rice", "ml": "നെയ്ച്ചോർ", "price": 80 },
         { "en": "Meals", "ml": "ഊണ്", "price": 90 },
         { "en": "Pothi Meals", "ml": "പൊതിച്ചോറ്", "price": 120 }
@@ -244,19 +244,19 @@
       "items": [
         { "en": "Shawai Mandi Full", "ml": "ഷവായ് മന്തി ഫുൾ", "price": 840 },
         { "en": "Shawai Mandi Half", "ml": "ഷവായ് മന്തി ഹാഫ്", "price": 420 },
-        { "en": "Shawai Mandi Quarter", "ml": "ഷവായ് മന്തി ക്വാർട്ടർ", "price": 210 },
+        { "en": "Shawai Mandi Quarter", "ml": "ഷവായ് മന്തി ക്വാർട്ടർ", "price": 220 },
         { "en": "Al Faham Mandi Full", "ml": "അൽ ഫഹം മന്തി ഫുൾ", "price": 840 },
         { "en": "Al Faham Mandi Half", "ml": "അൽ ഫഹം മന്തി ഹാഫ്", "price": 420 },
-        { "en": "Al Faham Mandi Quarter", "ml": "അൽ ഫഹം മന്തി ക്വാർട്ടർ", "price": 210 },
+        { "en": "Al Faham Mandi Quarter", "ml": "അൽ ഫഹം മന്തി ക്വാർട്ടർ", "price": 220 },
         { "en": "Peri Peri Al Faham Mandi Full", "ml": "പെരി പെരി അൽ ഫഹം മന്തി ഫുൾ", "price": 880 },
         { "en": "Peri Peri Al Faham Mandi Half", "ml": "പെരി പെരി അൽ ഫഹം മന്തി ഹാഫ്", "price": 440 },
-        { "en": "Peri Peri Al Faham Mandi Quarter", "ml": "പെരി പെരി അൽ ഫഹം മന്തി ക്വാർട്ടർ", "price": 210 },
+        { "en": "Peri Peri Al Faham Mandi Quarter", "ml": "പെരി പെരി അൽ ഫഹം മന്തി ക്വാർട്ടർ", "price": 220 },
         { "en": "Honey Chilly Al Faham Mandi Full", "ml": "ഹണി ചില്ലി അൽ ഫഹം മന്തി ഫുൾ", "price": 880 },
         { "en": "Honey Chilly Al Faham Mandi Half", "ml": "ഹണി ചില്ലി അൽ ഫഹം മന്തി ഹാഫ്", "price": 440 },
-        { "en": "Honey Chilly Al Faham Mandi Quarter", "ml": "ഹണി ചില്ലി അൽ ഫഹം മന്തി ക്വാർട്ടർ", "price": 210 },
+        { "en": "Honey Chilly Al Faham Mandi Quarter", "ml": "ഹണി ചില്ലി അൽ ഫഹം മന്തി ക്വാർട്ടർ", "price": 220 },
         { "en": "Mexican Al Faham Mandi Full", "ml": "മെക്സിക്കൻ അൽ ഫഹം മന്തി ഫുൾ", "price": 880 },
         { "en": "Mexican Al Faham Mandi Half", "ml": "മെക്സിക്കൻ അൽ ഫഹം മന്തി ഹാഫ്", "price": 440 },
-        { "en": "Mexican Al Faham Mandi Quarter", "ml": "മെക്സിക്കൻ അൽ ഫഹം മന്തി ക്വാർട്ടർ", "price": 210 }
+        { "en": "Mexican Al Faham Mandi Quarter", "ml": "മെക്സിക്കൻ അൽ ഫഹം മന്തി ക്വാർട്ടർ", "price": 220 }
       ]
     },
     {
@@ -339,10 +339,10 @@
         "ml": "ലൈം"
       },
       "items": [
-        { "en": "Ginger Lime", "ml": "ഇഞ്ചി ലൈം", "price": 20 },
-        { "en": "Grape Lime", "ml": "മുന്തിരി ലൈം", "price": 20 },
-        { "en": "Pineapple Lime", "ml": "പൈനാപ്പിൾ ലൈം", "price": 20 },
-        { "en": "Mint Lime", "ml": "മിന്റ് ലൈം", "price": 20 }
+        { "en": "Ginger Lime", "ml": "ഇഞ്ചി ലൈം", "price": 25 },
+        { "en": "Grape Lime", "ml": "മുന്തിരി ലൈം", "price": 25 },
+        { "en": "Pineapple Lime", "ml": "പൈനാപ്പിൾ ലൈം", "price": 25 },
+        { "en": "Mint Lime", "ml": "മിന്റ് ലൈം", "price": 25 }
       ]
     }
   ]
