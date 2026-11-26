@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cardly Gym — Workout plans, form guides & Indian diet</title>
+<meta name="description" content="Free offline gym app: personalised workout plans, animated exercise form guides, and Indian diet plans for the whole family.">
+<meta name="theme-color" content="#0e1015">
+<meta name="color-scheme" content="dark light">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cardly Gym">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:title" content="Cardly Gym">
+<meta property="og:description" content="Workout plans, animated form guides and Indian diet plans — offline on your phone.">
+<meta property="og:image" content="icons/icon-512.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="icons/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#/today" aria-label="Cardly Gym home"><img src="icons/favicon.svg" alt="" width="26" height="26"><span>Cardly<b>Gym</b></span></a>
+  <button id="who" class="who" data-act="who" aria-label="Switch profile"></button>
+</header>
+<main id="view" class="view" aria-live="polite">
+  <noscript><div class="card">Please enable JavaScript to use Cardly Gym.</div></noscript>
+</main>
+<div id="rest" class="resttimer" hidden></div>
+<nav id="nav" class="nav" aria-label="Main"></nav>
+<div id="toast" class="toast" role="status"></div>
+<div id="print" class="print-area"></div>
+<script src="js/anim.js"></script>
+<script src="js/exercises.js"></script>
+<script src="js/diet.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
